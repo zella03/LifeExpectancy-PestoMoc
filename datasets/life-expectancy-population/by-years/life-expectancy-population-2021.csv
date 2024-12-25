@@ -1,0 +1,145 @@
+Country,Year,Total,Life_expectancy,Population
+Albania,2021,female,79.173,1420794
+Albania,2021,male,74.087,1390872
+Albania,2021,total,76.463,2811666
+Andorra,2021,female,..,38353
+Andorra,2021,male,..,40011
+Andorra,2021,total,..,78364
+Austria,2021,female,83.7,4549341
+Austria,2021,male,78.8,4406456
+Austria,2021,total,81.190243902439,8955797
+Belarus,2021,female,77.697,4967859
+Belarus,2021,male,67.298,4334726
+Belarus,2021,total,72.3706829268293,9302585
+Belgium,2021,female,84.3,5873102
+Belgium,2021,male,79.4,5713093
+Belgium,2021,total,81.790243902439,11586195
+Bosnia and Herzegovina,2021,female,77.53,1701558
+Bosnia and Herzegovina,2021,male,73.108,1543349
+Bosnia and Herzegovina,2021,total,75.3,3244907
+Bulgaria,2021,female,75.1,3547246
+Bulgaria,2021,male,68,3330497
+Bulgaria,2021,total,71.4634146341463,6877743
+Channel Islands,2021,female,83.355,84339
+Channel Islands,2021,male,79.115,82402
+Channel Islands,2021,total,81.232,166741
+Croatia,2021,female,79.6,2009887
+Croatia,2021,male,73.4,1869094
+Croatia,2021,total,76.4243902439025,3878981
+Cyprus,2021,female,83.204,653366
+Cyprus,2021,male,79.209,663943
+Cyprus,2021,total,81.203,1317309
+Czechia,2021,female,80.5,5326877
+Czechia,2021,male,74.1,5178895
+Czechia,2021,total,77.2219512195122,10505772
+Denmark,2021,female,83.3,2942923
+Denmark,2021,male,79.6,2913810
+Denmark,2021,total,81.4048780487805,5856733
+Estonia,2021,female,81.4,699762
+Estonia,2021,male,72.7,631170
+Estonia,2021,total,76.9439024390244,1330932
+Faroe Islands,2021,female,85.3,25719
+Faroe Islands,2021,male,81,27596
+Faroe Islands,2021,total,83.0975609756098,53315
+Finland,2021,female,84.6,2802531
+Finland,2021,male,79.3,2738486
+Finland,2021,total,81.8853658536585,5541017
+France,2021,female,85.5,34973992
+France,2021,male,79.3,32868819
+France,2021,total,82.3243902439024,67842811
+Germany,2021,female,83.3,42124059
+Germany,2021,male,78.4,41072019
+Germany,2021,total,80.790243902439,83196078
+Gibraltar,2021,female,81.701,18513
+Gibraltar,2021,male,77.108,18345
+Gibraltar,2021,total,79.329,36858
+Greece,2021,female,82.9,5448694
+Greece,2021,male,77.4,5120513
+Greece,2021,total,80.0829268292683,10569207
+Hungary,2021,female,77.8,5054636
+Hungary,2021,male,70.7,4655255
+Hungary,2021,total,74.1634146341463,9709891
+Iceland,2021,female,84.6,181612
+Iceland,2021,male,81.8,190908
+Iceland,2021,total,83.1658536585366,372520
+Ireland,2021,female,84.3,2541196
+Ireland,2021,male,80.5,2491968
+Ireland,2021,total,82.3536585365854,5033164
+Isle of Man,2021,female,82.531,42436
+Isle of Man,2021,male,78.564,41670
+Isle of Man,2021,total,80.525,84106
+Italy,2021,female,84.9,30270742
+Italy,2021,male,80.5,28862431
+Italy,2021,total,82.6463414634146,59133173
+Kosovo,2021,female,79.553,907378
+Kosovo,2021,male,74.151,878702
+Kosovo,2021,total,76.806,1786080
+Latvia,2021,female,78,1013110
+Latvia,2021,male,68.2,871380
+Latvia,2021,total,72.9804878048781,1884490
+Liechtenstein,2021,female,86.4,19737
+Liechtenstein,2021,male,82.5,19445
+Liechtenstein,2021,total,84.4024390243902,39182
+Lithuania,2021,female,78.8,1484266
+Lithuania,2021,male,69.5,1316573
+Lithuania,2021,total,74.0365853658537,2800839
+Luxembourg,2021,female,84.8,317795
+Luxembourg,2021,male,80.5,322269
+Luxembourg,2021,total,82.5975609756098,640064
+Moldova,2021,female,73.547,1399856
+Moldova,2021,male,64.443,1195953
+Moldova,2021,total,68.846,2595809
+Monaco,2021,female,..,19652
+Monaco,2021,male,..,18875
+Monaco,2021,total,..,38527
+Montenegro,2021,female,77,321247
+Montenegro,2021,male,70.8,297964
+Montenegro,2021,total,73.8243902439024,619211
+Netherlands,2021,female,83,8830353
+Netherlands,2021,male,79.7,8702691
+Netherlands,2021,total,81.309756097561,17533044
+North Macedonia,2021,female,75.5,943403
+North Macedonia,2021,male,71.1,893711
+North Macedonia,2021,total,73.2463414634146,1837114
+Norway,2021,female,84.7,2680009
+Norway,2021,male,81.7,2728311
+Norway,2021,total,83.1634146341463,5408320
+Poland,2021,female,79.6,19050967
+Poland,2021,male,71.6,17930592
+Poland,2021,total,75.5024390243902,36981559
+Portugal,2021,female,84.4,5430708
+Portugal,2021,male,78.5,4931123
+Portugal,2021,total,81.3780487804878,10361831
+Romania,2021,female,76.6,9858388
+Romania,2021,male,69.2,9263671
+Romania,2021,total,72.809756097561,19122059
+Russian Federation,2021,female,74.51,77505719
+Russian Federation,2021,male,65.51,67241043
+Russian Federation,2021,total,69.900243902439,144746762
+San Marino,2021,female,..,17567
+San Marino,2021,male,..,16685
+San Marino,2021,total,..,34252
+Serbia,2021,female,75.7,3578623
+Serbia,2021,male,70,3255703
+Serbia,2021,total,72.780487804878,6834326
+Slovakia,2021,female,78.2,2786819
+Slovakia,2021,male,71.2,2660428
+Slovakia,2021,total,74.6146341463415,5447247
+Slovenia,2021,female,83.8,1050160
+Slovenia,2021,male,77.7,1057919
+Slovenia,2021,total,80.6756097560976,2108079
+Spain,2021,female,86.2,24129935
+Spain,2021,male,80.4,23285859
+Spain,2021,total,83.2292682926829,47415794
+Sweden,2021,female,84.9,5173965
+Sweden,2021,male,81.3,5241846
+Sweden,2021,total,83.0560975609756,10415811
+Switzerland,2021,female,85.8,4383967
+Switzerland,2021,male,81.8,4320579
+Switzerland,2021,total,83.7512195121951,8704546
+Ukraine,2021,female,74.36,23654574
+Ukraine,2021,male,65.16,20644066
+Ukraine,2021,total,69.6478048780488,44298640
+United Kingdom,2021,female,82.8,34044290
+United Kingdom,2021,male,78.7,32982002
+United Kingdom,2021,total,80.7,67026292

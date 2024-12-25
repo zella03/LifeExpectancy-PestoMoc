@@ -1,0 +1,145 @@
+Country,Year,Total,Life_expectancy,Population
+Albania,2005,female,79.493,1533025
+Albania,2005,male,74.033,1478462
+Albania,2005,total,76.621,3011487
+Andorra,2005,female,..,37047
+Andorra,2005,male,..,40374
+Andorra,2005,total,..,77421
+Austria,2005,female,82.2,4228409
+Austria,2005,male,76.6,3999420
+Austria,2005,total,79.3317073170732,8227829
+Belarus,2005,female,75.1,5158397
+Belarus,2005,male,62.9,4505518
+Belarus,2005,total,68.8512195121951,9663915
+Belgium,2005,female,81.9,5350962
+Belgium,2005,male,76.2,5127655
+Belgium,2005,total,78.9804878048781,10478617
+Bosnia and Herzegovina,2005,female,78.332,2137876
+Bosnia and Herzegovina,2005,male,72.36,1958617
+Bosnia and Herzegovina,2005,total,75.42,4096493
+Bulgaria,2005,female,76.3,3933247
+Bulgaria,2005,male,69,3725725
+Bulgaria,2005,total,72.5609756097561,7658972
+Channel Islands,2005,female,82.472,78362
+Channel Islands,2005,male,78.073,74764
+Channel Islands,2005,total,80.344,153126
+Croatia,2005,female,78.83,2238918
+Croatia,2005,male,71.83,2071227
+Croatia,2005,total,75.2446341463415,4310145
+Cyprus,2005,female,80.287,510623
+Cyprus,2005,male,75.953,525528
+Cyprus,2005,total,78.101,1036151
+Czechia,2005,female,79.1,5221570
+Czechia,2005,male,72.9,4989646
+Czechia,2005,total,75.9243902439025,10211216
+Denmark,2005,female,80.2,2737880
+Denmark,2005,male,75.6,2681552
+Denmark,2005,total,77.8439024390244,5419432
+Estonia,2005,female,78.1,724989
+Estonia,2005,male,67.3,629786
+Estonia,2005,total,72.5682926829268,1354775
+Faroe Islands,2005,female,81.8,23249
+Faroe Islands,2005,male,76.9,25110
+Faroe Islands,2005,total,79.290243902439,48359
+Finland,2005,female,82.3,2678810
+Finland,2005,male,75.5,2567286
+Finland,2005,total,78.8170731707317,5246096
+France,2005,female,83.8,32596067
+France,2005,male,76.7,30584787
+France,2005,total,80.1634146341463,63180854
+Germany,2005,female,81.8,42371865
+Germany,2005,male,76.2,40097557
+Germany,2005,total,78.9317073170732,82469422
+Gibraltar,2005,female,85.203,14608
+Gibraltar,2005,male,77.598,14555
+Gibraltar,2005,total,81.442,29163
+Greece,2005,female,81.8,5570703
+Greece,2005,male,76.8,5416611
+Greece,2005,total,79.2390243902439,10987314
+Hungary,2005,female,76.9,5296345
+Hungary,2005,male,68.6,4790720
+Hungary,2005,total,72.6487804878049,10087065
+Iceland,2005,female,83.5,147563
+Iceland,2005,male,79.6,149171
+Iceland,2005,total,81.5024390243902,296734
+Ireland,2005,female,81.3,2083670
+Ireland,2005,male,76.7,2076244
+Ireland,2005,total,78.9439024390244,4159914
+Isle of Man,2005,female,79.786,40312
+Isle of Man,2005,male,75.403,39204
+Isle of Man,2005,total,77.623,79516
+Italy,2005,female,83.6,29857167
+Italy,2005,male,78.1,28112317
+Italy,2005,total,80.7829268292683,57969484
+Kosovo,2005,female,77.276,910335
+Kosovo,2005,male,73.975,908019
+Kosovo,2005,total,75.616,1818354
+Latvia,2005,female,77.4,1211961
+Latvia,2005,male,65.6,1026838
+Latvia,2005,total,71.3560975609756,2238799
+Liechtenstein,2005,female,84.1,17618
+Liechtenstein,2005,male,77.4,17135
+Liechtenstein,2005,total,80.6682926829268,34753
+Lithuania,2005,female,77.4,1776890
+Lithuania,2005,male,65.4,1545638
+Lithuania,2005,total,71.2536585365854,3322528
+Luxembourg,2005,female,82.3,235021
+Luxembourg,2005,male,76.7,230137
+Luxembourg,2005,total,79.4317073170732,465158
+Moldova,2005,female,72.045,1553975
+Moldova,2005,male,64.229,1335010
+Moldova,2005,total,68.169,2888985
+Monaco,2005,female,..,16558
+Monaco,2005,male,..,15652
+Monaco,2005,total,..,32210
+Montenegro,2005,female,76.8,320604
+Montenegro,2005,male,71.3,293657
+Montenegro,2005,total,73.9829268292683,614261
+Netherlands,2005,female,81.6,8262888
+Netherlands,2005,male,77.2,8056980
+Netherlands,2005,total,79.3463414634146,16319868
+North Macedonia,2005,female,75.9,1022219
+North Macedonia,2005,male,71.6,983111
+North Macedonia,2005,total,73.6975609756098,2005330
+Norway,2005,female,82.5,2330270
+Norway,2005,male,77.7,2293021
+Norway,2005,total,80.0414634146342,4623291
+Poland,2005,female,79.4,19705143
+Poland,2005,male,70.8,18460302
+Poland,2005,total,74.9951219512195,38165445
+Portugal,2005,female,81.4,5447658
+Portugal,2005,male,74.9,5055672
+Portugal,2005,total,78.0707317073171,10503330
+Romania,2005,female,75.6,11072935
+Romania,2005,male,68.4,10246750
+Romania,2005,total,71.9121951219512,21319685
+Russian Federation,2005,female,72.47,76950535
+Russian Federation,2005,male,58.92,66568279
+Russian Federation,2005,total,65.529756097561,143518814
+San Marino,2005,female,..,15466
+San Marino,2005,male,..,14370
+San Marino,2005,total,..,29836
+Serbia,2005,female,75.6,3911861
+Serbia,2005,male,70.2,3528908
+Serbia,2005,total,72.8341463414634,7440769
+Slovakia,2005,female,77.9,2761613
+Slovakia,2005,male,70.1,2611194
+Slovakia,2005,total,73.9048780487805,5372807
+Slovenia,2005,female,81.3,1021111
+Slovenia,2005,male,74.1,979363
+Slovenia,2005,total,77.6121951219512,2000474
+Spain,2005,female,83.5,22092917
+Spain,2005,male,77,21560238
+Spain,2005,total,80.1707317073171,43653155
+Sweden,2005,female,82.8,4552997
+Sweden,2005,male,78.4,4476575
+Sweden,2005,total,80.5463414634146,9029572
+Switzerland,2005,female,83.9,3795494
+Switzerland,2005,male,78.7,3641621
+Switzerland,2005,total,81.2365853658537,7437115
+Ukraine,2005,female,73.97,25447598
+Ukraine,2005,male,62.23,22137958
+Ukraine,2005,total,67.9568292682927,47585556
+United Kingdom,2005,female,81.2,31014712
+United Kingdom,2005,male,77,29386494
+United Kingdom,2005,total,79.0487804878049,60401206

@@ -1,0 +1,145 @@
+Country,Year,Total,Life_expectancy,Population
+Albania,2015,female,81.183,1455176
+Albania,2015,male,76.404,1425527
+Albania,2015,total,78.644,2880703
+Andorra,2015,female,..,35669
+Andorra,2015,male,..,36505
+Andorra,2015,total,..,72174
+Austria,2015,female,83.7,4406308
+Austria,2015,male,78.8,4236391
+Austria,2015,total,81.190243902439,8642699
+Belarus,2015,female,78.9,5059103
+Belarus,2015,male,68.6,4401973
+Belarus,2015,total,73.6243902439025,9461076
+Belgium,2015,female,83.4,5727501
+Belgium,2015,male,78.7,5546695
+Belgium,2015,total,80.9926829268293,11274196
+Bosnia and Herzegovina,2015,female,78.112,1846373
+Bosnia and Herzegovina,2015,male,74.18,1672168
+Bosnia and Herzegovina,2015,total,76.182,3518541
+Bulgaria,2015,female,78.2,3688361
+Bulgaria,2015,male,71.2,3489630
+Bulgaria,2015,total,74.6146341463415,7177991
+Channel Islands,2015,female,83.552,82618
+Channel Islands,2015,male,79.268,80836
+Channel Islands,2015,total,81.433,163454
+Croatia,2015,female,80.4,2152382
+Croatia,2015,male,74.3,1999343
+Croatia,2015,total,77.2756097560976,4151725
+Cyprus,2015,female,82.873,603502
+Cyprus,2015,male,79.051,616000
+Cyprus,2015,total,80.966,1219502
+Czechia,2015,female,81.6,5358877
+Czechia,2015,male,75.7,5187182
+Czechia,2015,total,78.5780487804878,10546059
+Denmark,2015,female,82.7,2859066
+Denmark,2015,male,78.8,2824417
+Denmark,2015,total,80.7024390243902,5683483
+Estonia,2015,female,82.2,699484
+Estonia,2015,male,73.2,615923
+Estonia,2015,total,77.590243902439,1315407
+Faroe Islands,2015,female,84.2,23654
+Faroe Islands,2015,male,79.5,25247
+Faroe Islands,2015,total,81.7926829268293,48901
+Finland,2015,female,84.4,2782780
+Finland,2015,male,78.7,2696751
+Finland,2015,total,81.4804878048781,5479531
+France,2015,female,85.6,34342402
+France,2015,male,79.2,32205870
+France,2015,total,82.3219512195122,66548272
+Germany,2015,female,83.1,41477200
+Germany,2015,male,78.3,40209411
+Germany,2015,total,80.6414634146341,81686611
+Gibraltar,2015,female,84.231,16614
+Gibraltar,2015,male,76.877,16579
+Gibraltar,2015,total,80.427,33193
+Greece,2015,female,83.7,5593702
+Greece,2015,male,78.5,5227181
+Greece,2015,total,81.0365853658537,10820883
+Hungary,2015,female,79,5151045
+Hungary,2015,male,72.3,4691983
+Hungary,2015,total,75.5682926829269,9843028
+Iceland,2015,female,83.8,164612
+Iceland,2015,male,81.2,166203
+Iceland,2015,total,82.4682926829268,330815
+Ireland,2015,female,83.4,2375796
+Ireland,2015,male,79.6,2326161
+Ireland,2015,total,81.4536585365854,4701957
+Isle of Man,2015,female,80.762,42158
+Isle of Man,2015,male,77.052,41435
+Isle of Man,2015,total,78.905,83593
+Italy,2015,female,84.9,31252203
+Italy,2015,male,80.3,29478379
+Italy,2015,total,82.5439024390244,60730582
+Kosovo,2015,female,81.632,909039
+Kosovo,2015,male,76.282,879235
+Kosovo,2015,total,78.922,1788274
+Latvia,2015,female,79.5,1069877
+Latvia,2015,male,69.7,907650
+Latvia,2015,total,74.4804878048781,1977527
+Liechtenstein,2015,female,84.5,18877
+Liechtenstein,2015,male,80.9,18617
+Liechtenstein,2015,total,82.6560975609756,37494
+Lithuania,2015,female,79.7,1567119
+Lithuania,2015,male,69.2,1337791
+Lithuania,2015,total,74.3219512195122,2904910
+Luxembourg,2015,female,84.7,284010
+Luxembourg,2015,male,80,285594
+Luxembourg,2015,total,82.2926829268293,569604
+Moldova,2015,female,73.838,1519685
+Moldova,2015,male,64.827,1316293
+Moldova,2015,total,69.24,2835978
+Monaco,2015,female,..,18749
+Monaco,2015,male,..,18008
+Monaco,2015,total,..,36757
+Montenegro,2015,female,78.6,322424
+Montenegro,2015,male,74.4,299735
+Montenegro,2015,total,76.4487804878049,622159
+Netherlands,2015,female,83.2,8558068
+Netherlands,2015,male,79.9,8381855
+Netherlands,2015,total,81.509756097561,16939923
+North Macedonia,2015,female,77.4,974197
+North Macedonia,2015,male,73.5,938233
+North Macedonia,2015,total,75.4024390243902,1912430
+Norway,2015,female,84.2,2577299
+Norway,2015,male,80.5,2611308
+Norway,2015,total,82.3048780487805,5188607
+Poland,2015,female,81.6,19568360
+Poland,2015,male,73.5,18418052
+Poland,2015,total,77.4512195121951,37986412
+Portugal,2015,female,84.3,5440729
+Portugal,2015,male,78.1,4917347
+Portugal,2015,total,81.1243902439025,10358076
+Romania,2015,female,78.6,10237760
+Romania,2015,male,71.4,9577856
+Romania,2015,total,74.9121951219512,19815616
+Russian Federation,2015,female,76.71,77580765
+Russian Federation,2015,male,65.92,67059951
+Russian Federation,2015,total,71.1834146341463,144640716
+San Marino,2015,female,..,16950
+San Marino,2015,male,..,15947
+San Marino,2015,total,..,32897
+Serbia,2015,female,77.9,3716749
+Serbia,2015,male,72.8,3378634
+Serbia,2015,total,75.2878048780488,7095383
+Slovakia,2015,female,80.2,2779328
+Slovakia,2015,male,73.1,2644473
+Slovakia,2015,total,76.5634146341463,5423801
+Slovenia,2015,female,83.9,1040389
+Slovenia,2015,male,77.8,1023142
+Slovenia,2015,total,80.7756097560976,2063531
+Spain,2015,female,85.7,23583086
+Spain,2015,male,80.1,22861746
+Spain,2015,total,82.8317073170732,46444832
+Sweden,2015,female,84.1,4897627
+Sweden,2015,male,80.4,4901559
+Sweden,2015,total,82.2048780487805,9799186
+Switzerland,2015,female,85.1,4184723
+Switzerland,2015,male,80.8,4097673
+Switzerland,2015,total,82.8975609756098,8282396
+Ukraine,2015,female,76.25,24462666
+Ukraine,2015,male,66.37,21322230
+Ukraine,2015,total,71.189512195122,45784896
+United Kingdom,2015,female,82.8,33182512
+United Kingdom,2015,male,79.2,31933707
+United Kingdom,2015,total,80.9560975609756,65116219

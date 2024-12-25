@@ -1,0 +1,145 @@
+Country,Year,Total,Life_expectancy,Population
+Albania,1990,female,76.433,1635564
+Albania,1990,male,70.05,1650978
+Albania,1990,total,73.144,3286542
+Andorra,1990,female,..,24823
+Andorra,1990,male,..,27774
+Andorra,1990,total,..,52597
+Austria,1990,female,79,4002436
+Austria,1990,male,72.3,3675414
+Austria,1990,total,75.5682926829269,7677850
+Belarus,1990,female,75.6,5411107
+Belarus,1990,male,66.3,4778241
+Belarus,1990,total,70.8365853658537,10189348
+Belgium,1990,female,79.54,5097009
+Belgium,1990,male,72.73,4870370
+Belgium,1990,total,76.0519512195122,9967379
+Bosnia and Herzegovina,1990,female,75.4,2280043
+Bosnia and Herzegovina,1990,male,69.211,2168609
+Bosnia and Herzegovina,1990,total,72.349,4448652
+Bulgaria,1990,female,75.15,4420477
+Bulgaria,1990,male,68.3,4297812
+Bulgaria,1990,total,71.6414634146342,8718289
+Channel Islands,1990,female,79.723,73957
+Channel Islands,1990,male,74.436,69130
+Channel Islands,1990,total,77.185,143087
+Croatia,1990,female,75.93,2483138
+Croatia,1990,male,68.59,2294230
+Croatia,1990,total,72.1704878048781,4777368
+Cyprus,1990,female,75.382,387074
+Cyprus,1990,male,71.722,401277
+Cyprus,1990,total,73.539,788351
+Czechia,1990,female,75.42,5318204
+Czechia,1990,male,67.54,5015151
+Czechia,1990,total,71.3839024390244,10333355
+Denmark,1990,female,77.73,2607423
+Denmark,1990,male,72.02,2533516
+Denmark,1990,total,74.8053658536585,5140939
+Estonia,1990,female,74.7,834760
+Estonia,1990,male,64.5,734414
+Estonia,1990,total,69.4756097560976,1569174
+Faroe Islands,1990,female,79.7,22887
+Faroe Islands,1990,male,72.7,24853
+Faroe Islands,1990,total,76.1146341463415,47740
+Finland,1990,female,78.88,2566950
+Finland,1990,male,70.94,2419481
+Finland,1990,total,74.8131707317073,4986431
+France,1990,female,80.8,29947113
+France,1990,male,72.6,28313899
+France,1990,total,76.6,58261012
+Germany,1990,female,78.419,41087494
+Germany,1990,male,71.911,38345535
+Germany,1990,total,75.0856341463415,79433029
+Gibraltar,1990,female,80.052,13287
+Gibraltar,1990,male,73.877,13913
+Gibraltar,1990,total,77.072,27200
+Greece,1990,female,79.5,5185788
+Greece,1990,male,74.5,5011004
+Greece,1990,total,76.9390243902439,10196792
+Hungary,1990,female,73.7,5393291
+Hungary,1990,male,65.14,4980697
+Hungary,1990,total,69.3156097560976,10373988
+Iceland,1990,female,80.71,126900
+Iceland,1990,male,75.49,127926
+Iceland,1990,total,78.0363414634146,254826
+Ireland,1990,female,77.72,1766871
+Ireland,1990,male,72.109,1747103
+Ireland,1990,total,74.8460731707317,3513974
+Isle of Man,1990,female,76.562,35695
+Isle of Man,1990,male,67.563,33221
+Isle of Man,1990,total,71.959,68916
+Italy,1990,female,80.3,29176825
+Italy,1990,male,73.8,27542415
+Italy,1990,total,76.9707317073171,56719240
+Kosovo,1990,female,72.489,978850
+Kosovo,1990,male,69.413,994940
+Kosovo,1990,total,70.917,1973790
+Latvia,1990,female,74.6,1424501
+Latvia,1990,male,64.2,1238650
+Latvia,1990,total,69.2731707317073,2663151
+Liechtenstein,1990,female,..,14420
+Liechtenstein,1990,male,..,14322
+Liechtenstein,1990,total,..,28742
+Lithuania,1990,female,76.17,1948011
+Lithuania,1990,male,66.39,1749827
+Lithuania,1990,total,71.1607317073171,3697838
+Luxembourg,1990,female,78.617,194899
+Luxembourg,1990,male,72.411,186951
+Luxembourg,1990,total,75.4383170731707,381850
+Moldova,1990,female,71.564,1595484
+Moldova,1990,male,64.302,1382428
+Moldova,1990,total,68.067,2977912
+Monaco,1990,female,..,15890
+Monaco,1990,male,..,14468
+Monaco,1990,total,..,30358
+Montenegro,1990,female,80.822,311401
+Montenegro,1990,male,70.562,294971
+Montenegro,1990,total,75.5668780487805,606372
+Netherlands,1990,female,80.11,7578922
+Netherlands,1990,male,73.8,7372588
+Netherlands,1990,total,76.8780487804878,14951510
+North Macedonia,1990,female,73.762,1060152
+North Macedonia,1990,male,68.826,1003537
+North Macedonia,1990,total,71.2338048780488,2063689
+Norway,1990,female,79.8,2144308
+Norway,1990,male,73.43,2097165
+Norway,1990,total,76.5373170731707,4241473
+Poland,1990,female,75.5,19545221
+Poland,1990,male,66.5,18565561
+Poland,1990,total,70.890243902439,38110782
+Portugal,1990,female,77.5,5171919
+Portugal,1990,male,70.6,4811299
+Portugal,1990,total,73.9658536585366,9983218
+Romania,1990,female,73.05,11951359
+Romania,1990,male,66.59,11250476
+Romania,1990,total,69.7412195121951,23201835
+Russian Federation,1990,female,74.3,78655071
+Russian Federation,1990,male,63.73,69314335
+Russian Federation,1990,total,68.8860975609756,147969406
+San Marino,1990,female,..,11980
+San Marino,1990,male,..,11495
+San Marino,1990,total,..,23475
+Serbia,1990,female,73.475,4106446
+Serbia,1990,male,67.138,3791491
+Serbia,1990,total,70.2292195121951,7897937
+Slovakia,1990,female,75.44,2711588
+Slovakia,1990,male,66.64,2587599
+Slovakia,1990,total,70.9326829268293,5299187
+Slovenia,1990,female,77.2,1029864
+Slovenia,1990,male,69.4,968297
+Slovenia,1990,total,73.2048780487805,1998161
+Spain,1990,female,80.51,19799160
+Spain,1990,male,73.34,19068162
+Spain,1990,total,76.8375609756098,38867322
+Sweden,1990,female,80.4,4330764
+Sweden,1990,male,74.81,4228071
+Sweden,1990,total,77.5368292682927,8558835
+Switzerland,1990,female,80.71,3436100
+Switzerland,1990,male,73.94,3279419
+Switzerland,1990,total,77.2424390243902,6715519
+Ukraine,1990,female,74.82,27915614
+Ukraine,1990,male,65.6,24138478
+Ukraine,1990,total,70.0975609756098,52054092
+United Kingdom,1990,female,78.8,29641433
+United Kingdom,1990,male,73.1,27606153
+United Kingdom,1990,total,75.8804878048781,57247586

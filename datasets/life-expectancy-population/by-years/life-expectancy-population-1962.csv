@@ -1,0 +1,145 @@
+Country,Year,Total,Life_expectancy,Population
+Albania,1962,female,59.75,848431
+Albania,1962,male,53.82,862888
+Albania,1962,total,56.671,1711319
+Andorra,1962,female,..,5394
+Andorra,1962,male,..,5692
+Andorra,1962,total,..,11086
+Austria,1962,female,72.48,3804071
+Austria,1962,male,66.29,3325793
+Austria,1962,total,69.309512195122,7129864
+Belarus,1962,female,73.04,4587148
+Belarus,1962,male,66.055,3764780
+Belarus,1962,total,69.4623170731708,8351928
+Belgium,1962,female,73.18,4708343
+Belgium,1962,male,67.4,4512235
+Belgium,1962,total,70.219512195122,9220578
+Bosnia and Herzegovina,1962,female,65.113,1796926
+Bosnia and Herzegovina,1962,male,59.877,1610606
+Bosnia and Herzegovina,1962,total,62.511,3407532
+Bulgaria,1962,female,71.3,4010589
+Bulgaria,1962,male,67.77,4002357
+Bulgaria,1962,total,69.4919512195122,8012946
+Channel Islands,1962,female,74.796,58153
+Channel Islands,1962,male,69.154,54800
+Channel Islands,1962,total,72.043,112953
+Croatia,1962,female,69.466,2220992
+Croatia,1962,male,63.615,1975720
+Croatia,1962,total,66.4691463414634,4196712
+Cyprus,1962,female,69.083,306160
+Cyprus,1962,male,62.121,295306
+Cyprus,1962,total,65.424,601466
+Czechia,1962,female,72.86,4957893
+Czechia,1962,male,66.86,4666767
+Czechia,1962,total,69.7868292682927,9624660
+Denmark,1962,female,74.43,2342793
+Denmark,1962,male,70.31,2304934
+Denmark,1962,total,72.319756097561,4647727
+Estonia,1962,female,72.643,689349
+Estonia,1962,male,65.124,552274
+Estonia,1962,total,68.7918048780488,1241623
+Faroe Islands,1962,female,..,16770
+Faroe Islands,1962,male,..,18193
+Faroe Islands,1962,total,..,34963
+Finland,1962,female,72.24,2325380
+Finland,1962,male,65.09,2166063
+Finland,1962,total,68.5778048780488,4491443
+France,1962,female,73.9,24851535
+France,1962,male,66.9,23537981
+France,1962,total,70.3146341463415,48389516
+Germany,1962,female,72.583,39462166
+Germany,1962,male,67.148,34563618
+Germany,1962,total,69.7992195121951,74025784
+Gibraltar,1962,female,70.826,11506
+Gibraltar,1962,male,67.938,10691
+Gibraltar,1962,total,69.481,22197
+Greece,1962,female,72.419,4303245
+Greece,1962,male,68.194,4144988
+Greece,1962,total,70.2549756097561,8448233
+Hungary,1962,female,70.14,5202039
+Hungary,1962,male,65.7,4859695
+Hungary,1962,total,67.8658536585366,10061734
+Iceland,1962,female,76.16,90191
+Iceland,1962,male,71.4,92187
+Iceland,1962,total,73.7219512195122,182378
+Ireland,1962,female,72.11,1411023
+Ireland,1962,male,67.973,1425027
+Ireland,1962,total,69.9910487804878,2836050
+Isle of Man,1962,female,69.745,26372
+Isle of Man,1962,male,58.982,22316
+Isle of Man,1962,total,64.293,48688
+Italy,1962,female,71.89,26213742
+Italy,1962,male,66.54,24665708
+Italy,1962,total,69.149756097561,50879450
+Kosovo,1962,female,63.629,512816
+Kosovo,1962,male,60.643,524134
+Kosovo,1962,total,62.134,1036950
+Latvia,1962,female,73.19,1209602
+Latvia,1962,male,65.85,971984
+Latvia,1962,total,69.430487804878,2181586
+Liechtenstein,1962,female,..,8908
+Liechtenstein,1962,male,..,8535
+Liechtenstein,1962,total,..,17443
+Lithuania,1962,female,72.44,1537169
+Lithuania,1962,male,65.91,1326181
+Lithuania,1962,total,69.0953658536585,2863350
+Luxembourg,1962,female,71.5,162523
+Luxembourg,1962,male,64.872,158227
+Luxembourg,1962,total,68.1051707317073,320750
+Moldova,1962,female,65.749,1163410
+Moldova,1962,male,57.663,983817
+Moldova,1962,total,61.922,2147227
+Monaco,1962,female,..,12131
+Monaco,1962,male,..,9947
+Monaco,1962,total,..,22078
+Montenegro,1962,female,68.272,265531
+Montenegro,1962,male,63.637,237027
+Montenegro,1962,total,65.8979756097561,502558
+Netherlands,1962,female,75.68,5924125
+Netherlands,1962,male,71.08,5881564
+Netherlands,1962,total,73.3239024390244,11805689
+North Macedonia,1962,female,58.727,755705
+North Macedonia,1962,male,56.377,716040
+North Macedonia,1962,total,57.5233414634146,1471745
+Norway,1962,female,76.05,1825866
+Norway,1962,male,70.97,1813052
+Norway,1962,total,73.4480487804878,3638918
+Poland,1962,female,70.5,15627529
+Poland,1962,male,64.5,14680971
+Poland,1962,total,67.4268292682927,30308500
+Portugal,1962,female,67.225,4691862
+Portugal,1962,male,61.282,4302123
+Portugal,1962,total,64.1810243902439,8993985
+Romania,1962,female,66.992,9596015
+Romania,1962,male,63.602,9080535
+Romania,1962,total,65.2556585365854,18676550
+Russian Federation,1962,female,71.647,67362193
+Russian Federation,1962,male,63.161,55228807
+Russian Federation,1962,total,67.300512195122,122591000
+San Marino,1962,female,..,7966
+San Marino,1962,male,..,8217
+San Marino,1962,total,..,16183
+Serbia,1962,female,66.187,3503835
+Serbia,1962,male,62.852,3236429
+Serbia,1962,total,64.4788292682927,6740264
+Slovakia,1962,female,72.652,2141480
+Slovakia,1962,male,68.002,2096708
+Slovakia,1962,total,70.2702926829268,4238188
+Slovenia,1962,female,72,855656
+Slovenia,1962,male,66.1,747993
+Slovenia,1962,total,68.9780487804878,1603649
+Spain,1962,female,72.08,15935490
+Spain,1962,male,67.08,15087876
+Spain,1962,total,69.5190243902439,31023366
+Sweden,1962,female,75.43,3788933
+Sweden,1962,male,71.37,3772655
+Sweden,1962,total,73.3504878048781,7561588
+Switzerland,1962,female,74.09,2867418
+Switzerland,1962,male,68.44,2706397
+Switzerland,1962,total,71.1960975609756,5573815
+Ukraine,1962,female,72.586,24307096
+Ukraine,1962,male,66.238,19636578
+Ukraine,1962,total,69.3345853658537,43943674
+United Kingdom,1962,female,74,27460134
+United Kingdom,1962,male,68,25789866
+United Kingdom,1962,total,70.9268292682927,53250000

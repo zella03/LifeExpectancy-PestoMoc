@@ -1,0 +1,145 @@
+Country,Year,Total,Life_expectancy,Population
+Albania,1986,female,74.9,1496984
+Albania,1986,male,69.12,1525651
+Albania,1986,total,71.95,3022635
+Andorra,1986,female,..,21517
+Andorra,1986,male,..,24217
+Andorra,1986,total,..,45734
+Austria,1986,female,77.8,3971398
+Austria,1986,male,71,3598396
+Austria,1986,total,74.3170731707317,7569794
+Belarus,1986,female,75.98,5354821
+Belarus,1986,male,67.33,4688179
+Belarus,1986,total,71.549512195122,10043000
+Belgium,1986,female,78.23,5045520
+Belgium,1986,male,71.4,4816303
+Belgium,1986,total,74.7317073170732,9861823
+Bosnia and Herzegovina,1986,female,74.144,2238641
+Bosnia and Herzegovina,1986,male,68.221,2123474
+Bosnia and Herzegovina,1986,total,71.239,4362115
+Bulgaria,1986,female,75.06,4523067
+Bulgaria,1986,male,68.56,4435104
+Bulgaria,1986,total,71.7307317073171,8958171
+Channel Islands,1986,female,78.303,70938
+Channel Islands,1986,male,72.763,66475
+Channel Islands,1986,total,75.616,137413
+Croatia,1986,female,75.24,2455359
+Croatia,1986,male,67.78,2266087
+Croatia,1986,total,71.4190243902439,4721446
+Cyprus,1986,female,74.572,365933
+Cyprus,1986,male,70.768,377172
+Cyprus,1986,total,72.651,743105
+Czechia,1986,female,74.68,5325406
+Czechia,1986,male,67.49,5016821
+Czechia,1986,total,70.9973170731707,10342227
+Denmark,1986,female,77.53,2597254
+Denmark,1986,male,71.77,2523280
+Denmark,1986,total,74.579756097561,5120534
+Estonia,1986,female,74.9,822867
+Estonia,1986,male,65.5,717323
+Estonia,1986,total,70.0853658536585,1540190
+Faroe Islands,1986,female,78.8,22082
+Faroe Islands,1986,male,71.9,24049
+Faroe Islands,1986,total,75.2658536585366,46131
+Finland,1986,female,78.76,2536340
+Finland,1986,male,70.56,2381814
+Finland,1986,total,74.56,4918154
+France,1986,female,79.8,29244161
+France,1986,male,71.6,27711841
+France,1986,total,75.6,56956002
+Germany,1986,female,77.638,40544645
+Germany,1986,male,71.31,37175791
+Germany,1986,total,74.3968292682927,77720436
+Gibraltar,1986,female,79.266,13925
+Gibraltar,1986,male,73.008,14403
+Gibraltar,1986,total,76.241,28328
+Greece,1986,female,79.059,5067817
+Greece,1986,male,74.029,4899396
+Greece,1986,total,76.4826585365854,9967213
+Hungary,1986,female,73.23,5509389
+Hungary,1986,male,65.31,5121175
+Hungary,1986,total,69.1734146341463,10630564
+Iceland,1986,female,80.69,120997
+Iceland,1986,male,75.42,122183
+Iceland,1986,total,77.9907317073171,243180
+Ireland,1986,female,76.625,1771234
+Ireland,1986,male,70.847,1768456
+Ireland,1986,total,73.6655365853659,3539690
+Isle of Man,1986,female,74.993,33700
+Isle of Man,1986,male,65.8,30995
+Isle of Man,1986,total,70.292,64695
+Italy,1986,female,79.1,29091915
+Italy,1986,male,72.6,27504240
+Italy,1986,total,75.7707317073171,56596155
+Kosovo,1986,female,71.15,907111
+Kosovo,1986,male,68.093,929861
+Kosovo,1986,total,69.587,1836972
+Latvia,1986,female,75.14,1396933
+Latvia,1986,male,66.32,1202959
+Latvia,1986,total,70.6224390243903,2599892
+Liechtenstein,1986,female,..,13710
+Liechtenstein,1986,male,..,13528
+Liechtenstein,1986,total,..,27238
+Lithuania,1986,female,76.46,1888079
+Lithuania,1986,male,67.91,1690835
+Lithuania,1986,total,72.0807317073171,3578914
+Luxembourg,1986,female,77.817,189218
+Luxembourg,1986,male,70.356,179137
+Luxembourg,1986,total,73.995512195122,368355
+Moldova,1986,female,70.987,1544639
+Moldova,1986,male,63.964,1338418
+Moldova,1986,total,67.635,2883057
+Monaco,1986,female,..,15338
+Monaco,1986,male,..,13755
+Monaco,1986,total,..,29093
+Montenegro,1986,female,77.88,312252
+Montenegro,1986,male,70.784,295459
+Montenegro,1986,total,74.2454634146342,607711
+Netherlands,1986,female,79.61,7384828
+Netherlands,1986,male,73.09,7187450
+Netherlands,1986,total,76.2704878048781,14572278
+North Macedonia,1986,female,72.357,1034318
+North Macedonia,1986,male,68.503,990414
+North Macedonia,1986,total,70.383,2024732
+Norway,1986,female,79.76,2107211
+Norway,1986,male,72.89,2060143
+Norway,1986,total,76.2412195121951,4167354
+Poland,1986,female,75.1,19185810
+Poland,1986,male,66.8,18270309
+Poland,1986,total,70.8487804878049,37456119
+Portugal,1986,female,76.8,5194674
+Portugal,1986,male,69.9,4838060
+Portugal,1986,total,73.2658536585366,10032734
+Romania,1986,female,72.59,11756158
+Romania,1986,male,66.55,11080683
+Romania,1986,total,69.4963414634146,22836841
+Russian Federation,1986,female,74.23,77503225
+Russian Federation,1986,male,64.78,67390775
+Russian Federation,1986,total,69.389756097561,144894000
+San Marino,1986,female,..,11463
+San Marino,1986,male,..,11173
+San Marino,1986,total,..,22636
+Serbia,1986,female,72.075,4069283
+Serbia,1986,male,65.884,3784541
+Serbia,1986,total,68.904,7853824
+Slovakia,1986,female,74.75,2650079
+Slovakia,1986,male,67.47,2543759
+Slovakia,1986,total,71.0212195121951,5193838
+Slovenia,1986,female,75.9,1013311
+Slovenia,1986,male,67.9,952653
+Slovenia,1986,total,71.8024390243903,1965964
+Spain,1986,female,79.85,19634605
+Spain,1986,male,73.33,18950019
+Spain,1986,total,76.5104878048781,38584624
+Sweden,1986,female,80.03,4237441
+Sweden,1986,male,73.98,4132388
+Sweden,1986,total,76.9312195121951,8369829
+Switzerland,1986,female,80.3,3334078
+Switzerland,1986,male,73.66,3170046
+Switzerland,1986,total,76.8990243902439,6504124
+Ukraine,1986,female,74.485,27692503
+Ukraine,1986,male,65.858,23626242
+Ukraine,1986,total,70.0662926829268,51318745
+United Kingdom,1986,female,77.9,29083931
+United Kingdom,1986,male,72.1,27597465
+United Kingdom,1986,total,74.9292682926829,56681396

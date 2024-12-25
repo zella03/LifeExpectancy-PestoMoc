@@ -1,0 +1,145 @@
+Country,Year,Total,Life_expectancy,Population
+Albania,1998,female,78.021,1590813
+Albania,1998,male,72.19,1537717
+Albania,1998,total,74.99,3128530
+Andorra,1998,female,..,31117
+Andorra,1998,male,..,34265
+Andorra,1998,total,..,65382
+Austria,1998,female,81,4124768
+Austria,1998,male,74.5,3852021
+Austria,1998,total,77.6707317073171,7976789
+Belarus,1998,female,74.4,5349815
+Belarus,1998,male,62.7,4722148
+Belarus,1998,total,68.4073170731707,10071963
+Belgium,1998,female,80.7,5214851
+Belgium,1998,male,74.4,4988157
+Belgium,1998,total,77.4731707317073,10203008
+Bosnia and Herzegovina,1998,female,76.386,2135066
+Bosnia and Herzegovina,1998,male,71.197,1954290
+Bosnia and Herzegovina,1998,total,73.901,4089356
+Bulgaria,1998,female,74.8,4225312
+Bulgaria,1998,male,67.5,4031474
+Bulgaria,1998,total,71.0609756097561,8256786
+Channel Islands,1998,female,81.167,75953
+Channel Islands,1998,male,76.443,70953
+Channel Islands,1998,total,78.898,146906
+Croatia,1998,female,76.22,2355033
+Croatia,1998,male,68.6,2177102
+Croatia,1998,total,72.3170731707317,4532135
+Cyprus,1998,female,78.417,449402
+Cyprus,1998,male,74,465146
+Cyprus,1998,total,76.182,914548
+Czechia,1998,female,78.1,5285821
+Czechia,1998,male,71.1,5008552
+Czechia,1998,total,74.5146341463415,10294373
+Denmark,1998,female,78.7,2683725
+Denmark,1998,male,73.7,2620494
+Denmark,1998,total,76.1390243902439,5304219
+Estonia,1998,female,75.3,740850
+Estonia,1998,male,63.7,645306
+Estonia,1998,total,69.3585365853659,1386156
+Faroe Islands,1998,female,81.1,21593
+Faroe Islands,1998,male,75.1,23081
+Faroe Islands,1998,total,78.0268292682927,44674
+Finland,1998,female,80.84,2640865
+Finland,1998,male,73.52,2512633
+Finland,1998,total,77.0907317073171,5153498
+France,1998,female,82.6,30988782
+France,1998,male,74.8,29201902
+France,1998,total,78.6048780487805,60190684
+Germany,1998,female,80.6,42159998
+Germany,1998,male,74.5,39887197
+Germany,1998,total,77.4756097560976,82047195
+Gibraltar,1998,female,83.913,13765
+Gibraltar,1998,male,77.143,13885
+Gibraltar,1998,total,80.663,27650
+Greece,1998,female,80.4,5435765
+Greece,1998,male,75.4,5284744
+Greece,1998,total,77.8390243902439,10720509
+Hungary,1998,female,75.186,5372227
+Hungary,1998,male,66.15,4894343
+Hungary,1998,total,70.5578048780488,10266570
+Iceland,1998,female,81.6,136794
+Iceland,1998,male,77.7,137253
+Iceland,1998,total,79.6024390243903,274047
+Ireland,1998,female,79.1,1868719
+Ireland,1998,male,73.4,1843977
+Ireland,1998,total,76.1804878048781,3712696
+Isle of Man,1998,female,76.726,37902
+Isle of Man,1998,male,72.4,35959
+Isle of Man,1998,total,74.603,73861
+Italy,1998,female,82.1,29332435
+Italy,1998,male,76,27574309
+Italy,1998,total,78.9756097560976,56906744
+Kosovo,1998,female,74.514,1029385
+Kosovo,1998,male,68.426,1049579
+Kosovo,1998,total,71.306,2078964
+Latvia,1998,female,74.8,1299805
+Latvia,1998,male,63.5,1110214
+Latvia,1998,total,69.0121951219512,2410019
+Liechtenstein,1998,female,82.1,16000
+Liechtenstein,1998,male,73.6,15668
+Liechtenstein,1998,total,77.7463414634146,31668
+Lithuania,1998,female,76.7,1884351
+Lithuania,1998,male,66,1664980
+Lithuania,1998,total,71.219512195122,3549331
+Luxembourg,1998,female,80.5,215621
+Luxembourg,1998,male,73.7,209079
+Luxembourg,1998,total,77.0170731707317,424700
+Moldova,1998,female,68.895,1572245
+Moldova,1998,male,62.011,1362982
+Moldova,1998,total,65.505,2935227
+Monaco,1998,female,..,16653
+Monaco,1998,male,..,15614
+Monaco,1998,total,..,32267
+Montenegro,1998,female,77.463,314874
+Montenegro,1998,male,69.363,292788
+Montenegro,1998,total,73.3142195121951,607662
+Netherlands,1998,female,80.7,7956014
+Netherlands,1998,male,75.2,7751195
+Netherlands,1998,total,77.8829268292683,15707209
+North Macedonia,1998,female,74.5,1031154
+North Macedonia,1998,male,70.2,976369
+North Macedonia,1998,total,72.2975609756098,2007523
+Norway,1998,female,81.3,2239099
+Norway,1998,male,75.5,2192365
+Norway,1998,total,78.3292682926829,4431464
+Poland,1998,female,77.3,19899397
+Poland,1998,male,68.9,18764084
+Poland,1998,total,72.9975609756098,38663481
+Portugal,1998,female,79.4,5261568
+Portugal,1998,male,72.2,4898628
+Portugal,1998,total,75.7121951219512,10160196
+Romania,1998,female,73.7,11671012
+Romania,1998,male,66.1,10836332
+Romania,1998,total,69.8073170731708,22507344
+Russian Federation,1998,female,73.13,78519648
+Russian Federation,1998,male,61.22,69151136
+Russian Federation,1998,total,67.029756097561,147670784
+San Marino,1998,female,..,13472
+San Marino,1998,male,..,12653
+San Marino,1998,total,..,26125
+Serbia,1998,female,74.388,3966739
+Serbia,1998,male,68.139,3601006
+Serbia,1998,total,71.1872926829268,7567745
+Slovakia,1998,female,76.7,2768903
+Slovakia,1998,male,68.6,2621613
+Slovakia,1998,total,72.5512195121951,5390516
+Slovenia,1998,female,78.7,1016065
+Slovenia,1998,male,71.1,965564
+Slovenia,1998,total,74.8073170731708,1981629
+Spain,1998,female,82.2,20482406
+Spain,1998,male,75.3,19741103
+Spain,1998,total,78.6658536585366,40223509
+Sweden,1998,female,81.9,4477031
+Sweden,1998,male,76.9,4373943
+Sweden,1998,total,79.3390243902439,8850974
+Switzerland,1998,female,82.5,3637956
+Switzerland,1998,male,76.3,3472045
+Switzerland,1998,total,79.3243902439025,7110001
+Ukraine,1998,female,73.84,26893290
+Ukraine,1998,male,63.17,23486441
+Ukraine,1998,total,68.3748780487805,50379731
+United Kingdom,1998,female,79.7,30166931
+United Kingdom,1998,male,74.8,28320210
+United Kingdom,1998,total,77.190243902439,58487141

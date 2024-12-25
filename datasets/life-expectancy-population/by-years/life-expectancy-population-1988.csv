@@ -1,0 +1,145 @@
+Country,Year,Total,Life_expectancy,Population
+Albania,1988,female,75.796,1558860
+Albania,1988,male,69.643,1583476
+Albania,1988,total,72.641,3142336
+Andorra,1988,female,..,23295
+Andorra,1988,male,..,26121
+Andorra,1988,total,..,49416
+Austria,1988,female,78.7,3969261
+Austria,1988,male,71.9,3616056
+Austria,1988,total,75.2170731707317,7585317
+Belarus,1988,female,75.9,5396631
+Belarus,1988,male,67,4743369
+Belarus,1988,total,71.3414634146341,10140000
+Belgium,1988,female,79.1,5064917
+Belgium,1988,male,72.2,4836747
+Belgium,1988,total,75.5658536585366,9901664
+Bosnia and Herzegovina,1988,female,74.465,2263849
+Bosnia and Herzegovina,1988,male,68.918,2150555
+Bosnia and Herzegovina,1988,total,71.755,4414404
+Bulgaria,1988,female,74.99,4543249
+Bulgaria,1988,male,68.38,4438197
+Bulgaria,1988,total,71.6043902439024,8981446
+Channel Islands,1988,female,79.525,72374
+Channel Islands,1988,male,74.33,67715
+Channel Islands,1988,total,77.045,140089
+Croatia,1988,female,75.34,2472406
+Croatia,1988,male,67.82,2282801
+Croatia,1988,total,71.4882926829268,4755207
+Cyprus,1988,female,75.273,376791
+Cyprus,1988,male,71.048,389444
+Cyprus,1988,total,73.129,766235
+Czechia,1988,female,75.36,5330381
+Czechia,1988,male,68.1,5024895
+Czechia,1988,total,71.6414634146342,10355276
+Denmark,1988,female,77.64,2601396
+Denmark,1988,male,72.04,2528120
+Denmark,1988,total,74.7717073170732,5129516
+Estonia,1988,female,75,832617
+Estonia,1988,male,66.6,729283
+Estonia,1988,total,70.6975609756098,1561900
+Faroe Islands,1988,female,79.3,22688
+Faroe Islands,1988,male,72.3,24667
+Faroe Islands,1988,total,75.7146341463415,47355
+Finland,1988,female,78.69,2549388
+Finland,1988,male,70.66,2397093
+Finland,1988,total,74.5770731707317,4946481
+France,1988,female,80.3,29594588
+France,1988,male,72.1,28003598
+France,1988,total,76.1,57598186
+Germany,1988,female,78.286,40579185
+Germany,1988,male,71.868,37565434
+Germany,1988,total,74.9987317073171,78144619
+Gibraltar,1988,female,81.123,13639
+Gibraltar,1988,male,73.441,14200
+Gibraltar,1988,total,77.36,27839
+Greece,1988,female,79.637,5103629
+Greece,1988,male,74.451,4933354
+Greece,1988,total,76.980756097561,10036983
+Hungary,1988,female,74.08,5499987
+Hungary,1988,male,66.16,5096500
+Hungary,1988,total,70.0234146341463,10596487
+Iceland,1988,female,79.9,124283
+Iceland,1988,male,74.4,125457
+Iceland,1988,total,77.0829268292683,249740
+Ireland,1988,female,77.32,1770187
+Ireland,1988,male,71.696,1754762
+Ireland,1988,total,74.4394146341463,3524949
+Isle of Man,1988,female,75.725,34635
+Isle of Man,1988,male,66.931,32045
+Isle of Man,1988,total,71.239,66680
+Italy,1988,female,79.7,29117007
+Italy,1988,male,73.2,27512281
+Italy,1988,total,76.3707317073171,56629288
+Kosovo,1988,female,71.841,947162
+Kosovo,1988,male,68.784,970720
+Kosovo,1988,total,70.28,1917882
+Latvia,1988,female,75.22,1421681
+Latvia,1988,male,66.23,1231753
+Latvia,1988,total,70.6153658536585,2653434
+Liechtenstein,1988,female,..,14052
+Liechtenstein,1988,male,..,13896
+Liechtenstein,1988,total,..,27948
+Lithuania,1988,female,76.29,1925370
+Lithuania,1988,male,67.45,1729679
+Lithuania,1988,total,71.7621951219512,3655049
+Luxembourg,1988,female,78.664,191429
+Luxembourg,1988,male,71.097,182021
+Luxembourg,1988,total,74.7882195121951,373450
+Moldova,1988,female,71.5,1581557
+Moldova,1988,male,64.51,1367334
+Moldova,1988,total,68.159,2948891
+Monaco,1988,female,..,15636
+Monaco,1988,male,..,14145
+Monaco,1988,total,..,29781
+Montenegro,1988,female,80.751,311915
+Montenegro,1988,male,71.939,295498
+Montenegro,1988,total,76.2375365853659,607413
+Netherlands,1988,female,80.24,7481646
+Netherlands,1988,male,73.7,7278448
+Netherlands,1988,total,76.890243902439,14760094
+North Macedonia,1988,female,72.796,1047966
+North Macedonia,1988,male,68.937,997771
+North Macedonia,1988,total,70.8194390243902,2045737
+Norway,1988,female,79.56,2127360
+Norway,1988,male,73.04,2082128
+Norway,1988,total,76.2204878048781,4209488
+Poland,1988,female,75.67,19380804
+Poland,1988,male,67.2,18443683
+Poland,1988,total,71.3317073170732,37824487
+Portugal,1988,female,77.3,5188460
+Portugal,1988,male,70.3,4831150
+Portugal,1988,total,73.7146341463415,10019610
+Romania,1988,female,72.41,11872419
+Romania,1988,male,66.51,11185243
+Romania,1988,total,69.3880487804878,23057662
+Russian Federation,1988,female,74.53,78267232
+Russian Federation,1988,male,64.64,68589768
+Russian Federation,1988,total,69.4643902439024,146857000
+San Marino,1988,female,..,11642
+San Marino,1988,male,..,11201
+San Marino,1988,total,..,22843
+Serbia,1988,female,72.678,4091412
+Serbia,1988,male,66.504,3792806
+Serbia,1988,total,69.5157073170732,7884218
+Slovakia,1988,female,75.5,2682578
+Slovakia,1988,male,67.12,2568018
+Slovakia,1988,total,71.2078048780488,5250596
+Slovenia,1988,female,76.8,1028387
+Slovenia,1988,male,68.3,966809
+Slovenia,1988,total,72.4463414634146,1995196
+Spain,1988,female,80.23,19733550
+Spain,1988,male,73.43,19033389
+Spain,1988,total,76.7470731707317,38766939
+Sweden,1988,female,79.95,4272232
+Sweden,1988,male,74.15,4164257
+Sweden,1988,total,76.9792682926829,8436489
+Switzerland,1988,female,80.73,3378091
+Switzerland,1988,male,73.89,3215295
+Switzerland,1988,total,77.2265853658537,6593386
+Ukraine,1988,female,74.8,27826294
+Ukraine,1988,male,66.4,23898559
+Ukraine,1988,total,70.4975609756098,51724853
+United Kingdom,1988,female,78.3,29328957
+United Kingdom,1988,male,72.6,27599370
+United Kingdom,1988,total,75.3804878048781,56928327

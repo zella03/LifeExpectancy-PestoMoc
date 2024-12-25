@@ -1,0 +1,145 @@
+Country,Year,Total,Life_expectancy,Population
+Albania,2010,female,80.688,1472265
+Albania,2010,male,75.493,1440756
+Albania,2010,total,77.936,2913021
+Andorra,2010,female,..,39099
+Andorra,2010,male,..,41607
+Andorra,2010,total,..,80706
+Austria,2010,female,83.5,4291038
+Austria,2010,male,77.8,4072366
+Austria,2010,total,80.5804878048781,8363404
+Belarus,2010,female,76.5,5074444
+Belarus,2010,male,64.6,4409392
+Belarus,2010,total,70.4048780487805,9483836
+Belgium,2010,female,83,5547894
+Belgium,2010,male,77.5,5347692
+Belgium,2010,total,80.1829268292683,10895586
+Bosnia and Herzegovina,2010,female,79.652,1996037
+Bosnia and Herzegovina,2010,male,74.341,1815435
+Bosnia and Herzegovina,2010,total,77.073,3811472
+Bulgaria,2010,female,77.2,3798253
+Bulgaria,2010,male,70,3597346
+Bulgaria,2010,total,73.5121951219512,7395599
+Channel Islands,2010,female,83.246,80492
+Channel Islands,2010,male,78.904,78129
+Channel Islands,2010,total,81.12,158621
+Croatia,2010,female,79.6,2227498
+Croatia,2010,male,73.5,2067929
+Croatia,2010,total,76.4756097560976,4295427
+Cyprus,2010,female,82.048,556764
+Cyprus,2010,male,77.362,571052
+Cyprus,2010,total,79.665,1127816
+Czechia,2010,female,80.6,5335541
+Czechia,2010,male,74.4,5138869
+Czechia,2010,total,77.4243902439025,10474410
+Denmark,2010,female,81.2,2797856
+Denmark,2010,male,77.1,2749827
+Denmark,2010,total,79.1,5547683
+Estonia,2010,female,80.5,711219
+Estonia,2010,male,70.6,620256
+Estonia,2010,total,75.4292682926829,1331475
+Faroe Islands,2010,female,83.3,23564
+Faroe Islands,2010,male,78.1,25093
+Faroe Islands,2010,total,80.6365853658537,48657
+Finland,2010,female,83.2,2731505
+Finland,2010,male,76.7,2631847
+Finland,2010,total,79.8707317073171,5363352
+France,2010,female,85.3,33538255
+France,2010,male,78.2,31487956
+France,2010,total,81.6634146341463,65026211
+Germany,2010,female,82.6,41932189
+Germany,2010,male,77.5,39844741
+Germany,2010,total,79.9878048780488,81776930
+Gibraltar,2010,female,84.096,15634
+Gibraltar,2010,male,77.8,15614
+Gibraltar,2010,total,80.958,31248
+Greece,2010,female,83,5677254
+Greece,2010,male,77.9,5444087
+Greece,2010,total,80.3878048780488,11121341
+Hungary,2010,female,78.1,5248302
+Hungary,2010,male,70.5,4751721
+Hungary,2010,total,74.2073170731707,10000023
+Iceland,2010,female,84.1,158087
+Iceland,2010,male,79.8,159954
+Iceland,2010,total,81.8975609756097,318041
+Ireland,2010,female,83.1,2295194
+Ireland,2010,male,78.5,2264961
+Ireland,2010,total,80.7439024390244,4560155
+Isle of Man,2010,female,81.371,42229
+Isle of Man,2010,male,76.615,41644
+Isle of Man,2010,total,78.983,83873
+Italy,2010,female,84.7,30558227
+Italy,2010,male,79.5,28719190
+Italy,2010,total,82.0365853658537,59277417
+Kosovo,2010,female,80.274,909172
+Kosovo,2010,male,75.133,879571
+Kosovo,2010,total,77.63,1788743
+Latvia,2010,female,78.4,1138157
+Latvia,2010,male,68.8,959398
+Latvia,2010,total,73.4829268292683,2097555
+Liechtenstein,2010,female,84.3,18183
+Liechtenstein,2010,male,79.5,17839
+Liechtenstein,2010,total,81.8414634146342,36022
+Lithuania,2010,female,78.8,1668541
+Lithuania,2010,male,68,1428741
+Lithuania,2010,total,73.2682926829268,3097282
+Luxembourg,2010,female,83.5,254867
+Luxembourg,2010,male,77.9,252086
+Luxembourg,2010,total,80.6317073170732,506953
+Moldova,2010,female,73.778,1533647
+Moldova,2010,male,64.993,1328707
+Moldova,2010,total,69.357,2862354
+Monaco,2010,female,..,16988
+Monaco,2010,male,..,16175
+Monaco,2010,total,..,33163
+Montenegro,2010,female,78.5,321579
+Montenegro,2010,male,73.6,297849
+Montenegro,2010,total,75.990243902439,619428
+Netherlands,2010,female,82.7,8406115
+Netherlands,2010,male,78.8,8209279
+Netherlands,2010,total,80.7024390243902,16615394
+North Macedonia,2010,female,77.2,990857
+North Macedonia,2010,male,72.9,955441
+North Macedonia,2010,total,74.9975609756098,1946298
+Norway,2010,female,83.2,2445506
+Norway,2010,male,78.9,2443746
+Norway,2010,total,80.9975609756098,4889252
+Poland,2010,female,80.6,19709311
+Poland,2010,male,72.1,18333483
+Poland,2010,total,76.2463414634146,38042794
+Portugal,2010,female,82.1,5515346
+Portugal,2010,male,76.1,5057754
+Portugal,2010,total,79.0268292682927,10573100
+Romania,2010,female,77.3,10488663
+Romania,2010,male,69.8,9758208
+Romania,2010,total,73.4585365853659,20246871
+Russian Federation,2010,female,74.88,76773041
+Russian Federation,2010,male,63.09,66076427
+Russian Federation,2010,total,68.8412195121951,142849468
+San Marino,2010,female,..,17268
+San Marino,2010,male,..,16002
+San Marino,2010,total,..,33270
+Serbia,2010,female,77,3821879
+Serbia,2010,male,71.8,3469557
+Serbia,2010,total,74.3365853658537,7291436
+Slovakia,2010,female,78.8,2767519
+Slovakia,2010,male,71.6,2623909
+Slovakia,2010,total,75.1121951219512,5391428
+Slovenia,2010,female,82.7,1034057
+Slovenia,2010,male,76.3,1014526
+Slovenia,2010,total,79.4219512195122,2048583
+Spain,2010,female,84.7,23524158
+Spain,2010,male,78.7,23052739
+Spain,2010,total,81.6268292682927,46576897
+Sweden,2010,female,83.5,4708436
+Sweden,2010,male,79.5,4669690
+Sweden,2010,total,81.4512195121951,9378126
+Switzerland,2010,female,84.5,3971699
+Switzerland,2010,male,80.1,3853210
+Switzerland,2010,total,82.2463414634147,7824909
+Ukraine,2010,female,75.5,24863372
+Ukraine,2010,male,65.28,21592631
+Ukraine,2010,total,70.2653658536586,46456003
+United Kingdom,2010,female,82.4,32103121
+United Kingdom,2010,male,78.5,30663244
+United Kingdom,2010,total,80.4024390243902,62766365

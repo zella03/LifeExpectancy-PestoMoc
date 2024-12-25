@@ -1,0 +1,145 @@
+Country,Year,Total,Life_expectancy,Population
+Albania,1987,female,75.356,1528470
+Albania,1987,male,69.476,1555135
+Albania,1987,total,72.352,3083605
+Andorra,1987,female,..,22471
+Andorra,1987,male,..,25182
+Andorra,1987,total,..,47653
+Austria,1987,female,78.2,3968978
+Austria,1987,male,71.5,3605608
+Austria,1987,total,74.7682926829268,7574586
+Belarus,1987,female,75.6,5387621
+Belarus,1987,male,66.6,4723379
+Belarus,1987,total,70.990243902439,10111000
+Belgium,1987,female,78.9,5049220
+Belgium,1987,male,72,4821014
+Belgium,1987,total,75.3658536585366,9870234
+Bosnia and Herzegovina,1987,female,74.252,2252234
+Bosnia and Herzegovina,1987,male,68.957,2138012
+Bosnia and Herzegovina,1987,total,71.676,4390246
+Bulgaria,1987,female,74.81,4534076
+Bulgaria,1987,male,68.4,4437283
+Bulgaria,1987,total,71.5268292682927,8971359
+Channel Islands,1987,female,79.191,71639
+Channel Islands,1987,male,73.838,67104
+Channel Islands,1987,total,76.623,138743
+Croatia,1987,female,75.24,2464690
+Croatia,1987,male,67.88,2275055
+Croatia,1987,total,71.470243902439,4739745
+Cyprus,1987,female,75.196,371422
+Cyprus,1987,male,71.037,383363
+Cyprus,1987,total,73.089,754785
+Czechia,1987,female,75.2,5326996
+Czechia,1987,male,67.87,5020322
+Czechia,1987,total,71.4456097560976,10347318
+Denmark,1987,female,77.79,2599995
+Denmark,1987,male,71.74,2527029
+Denmark,1987,total,74.6912195121951,5127024
+Estonia,1987,female,75.1,828347
+Estonia,1987,male,66.4,723874
+Estonia,1987,total,70.6439024390244,1552221
+Faroe Islands,1987,female,79,22363
+Faroe Islands,1987,male,72.1,24338
+Faroe Islands,1987,total,75.4658536585366,46701
+Finland,1987,female,78.71,2542778
+Finland,1987,male,70.67,2389345
+Finland,1987,total,74.5919512195122,4932123
+France,1987,female,80,29414890
+France,1987,male,71.8,27851277
+France,1987,total,75.8,57266167
+Germany,1987,female,78.103,40514474
+Germany,1987,male,71.668,37325446
+Germany,1987,total,74.8070243902439,77839920
+Gibraltar,1987,female,76.908,13790
+Gibraltar,1987,male,72.3,14306
+Gibraltar,1987,total,74.679,28096
+Greece,1987,female,78.827,5084876
+Greece,1987,male,73.854,4915719
+Greece,1987,total,76.2798536585366,10000595
+Hungary,1987,female,73.8,5504394
+Hungary,1987,male,65.7,5108347
+Hungary,1987,total,69.6512195121951,10612741
+Iceland,1987,female,79.9,122358
+Iceland,1987,male,74.9,123501
+Iceland,1987,total,77.3390243902439,245859
+Ireland,1987,female,77.356,1774179
+Ireland,1987,male,71.648,1765878
+Ireland,1987,total,74.4323902439024,3540057
+Isle of Man,1987,female,75.305,34123
+Isle of Man,1987,male,66.253,31474
+Isle of Man,1987,total,70.678,65597
+Italy,1987,female,79.6,29098645
+Italy,1987,male,73,27503286
+Italy,1987,total,76.219512195122,56601931
+Kosovo,1987,female,71.513,928257
+Kosovo,1987,male,68.417,952333
+Kosovo,1987,total,69.929,1880590
+Latvia,1987,female,75.19,1409321
+Latvia,1987,male,66.41,1217262
+Latvia,1987,total,70.6929268292683,2626583
+Liechtenstein,1987,female,..,13867
+Liechtenstein,1987,male,..,13690
+Liechtenstein,1987,total,..,27557
+Lithuania,1987,female,76.36,1906362
+Lithuania,1987,male,67.72,1710005
+Lithuania,1987,total,71.9346341463415,3616367
+Luxembourg,1987,female,77.432,190295
+Luxembourg,1987,male,70.88,180455
+Luxembourg,1987,total,74.0760975609756,370750
+Moldova,1987,female,71.331,1563153
+Moldova,1987,male,64.584,1353153
+Moldova,1987,total,68.121,2916306
+Monaco,1987,female,..,15492
+Monaco,1987,male,..,13954
+Monaco,1987,total,..,29446
+Montenegro,1987,female,78.542,312367
+Montenegro,1987,male,71.811,295777
+Montenegro,1987,total,75.0944146341464,608144
+Netherlands,1987,female,80.06,7432866
+Netherlands,1987,male,73.51,7232171
+Netherlands,1987,total,76.7051219512195,14665037
+North Macedonia,1987,female,72.325,1041114
+North Macedonia,1987,male,68.521,994043
+North Macedonia,1987,total,70.3766097560976,2035157
+Norway,1987,female,79.58,2116858
+Norway,1987,male,72.75,2070047
+Norway,1987,total,76.0817073170732,4186905
+Poland,1987,female,75.2,19294355
+Poland,1987,male,66.8,18373690
+Poland,1987,total,70.8975609756098,37668045
+Portugal,1987,female,77.2,5193343
+Portugal,1987,male,70.3,4836688
+Portugal,1987,total,73.6658536585366,10030031
+Romania,1987,female,72.3,11815386
+Romania,1987,male,66.3,11134044
+Romania,1987,total,69.2268292682927,22949430
+Russian Federation,1987,female,74.27,77904240
+Russian Federation,1987,male,64.84,68003760
+Russian Federation,1987,total,69.44,145908000
+San Marino,1987,female,..,11537
+San Marino,1987,male,..,11149
+San Marino,1987,total,..,22686
+Serbia,1987,female,72.265,4079646
+Serbia,1987,male,66.073,3788381
+Serbia,1987,total,69.0934878048781,7868027
+Slovakia,1987,female,75.13,2666496
+Slovakia,1987,male,67.24,2556344
+Slovakia,1987,total,71.0887804878049,5222840
+Slovenia,1987,female,76.1,1025529
+Slovenia,1987,male,68.1,964247
+Slovenia,1987,total,72.0024390243902,1989776
+Spain,1987,female,80.17,19687919
+Spain,1987,male,73.45,18996896
+Spain,1987,total,76.7280487804878,38684815
+Sweden,1987,female,80.15,4252702
+Sweden,1987,male,74.18,4145102
+Sweden,1987,total,77.0921951219512,8397804
+Switzerland,1987,female,80.66,3354304
+Switzerland,1987,male,73.9,3190802
+Switzerland,1987,total,77.1975609756098,6545106
+Ukraine,1987,female,74.9,27763193
+Ukraine,1987,male,66.3,23752539
+Ukraine,1987,total,70.4951219512195,51515732
+United Kingdom,1987,female,78.2,29134567
+United Kingdom,1987,male,72.5,27667483
+United Kingdom,1987,total,75.280487804878,56802050

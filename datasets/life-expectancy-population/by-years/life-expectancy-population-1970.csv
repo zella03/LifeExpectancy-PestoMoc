@@ -1,0 +1,145 @@
+Country,Year,Total,Life_expectancy,Population
+Albania,1970,female,67.371,1055496
+Albania,1970,male,62.407,1079983
+Albania,1970,total,64.824,2135479
+Andorra,1970,female,..,9328
+Andorra,1970,male,..,10649
+Andorra,1970,total,..,19977
+Austria,1970,female,73.5,3949122
+Austria,1970,male,66.5,3517964
+Austria,1970,total,69.9146341463415,7467086
+Belarus,1970,female,74.714,4879711
+Belarus,1970,male,66.964,4160289
+Belarus,1970,total,70.7444878048781,9040000
+Belgium,1970,female,74.25,4931415
+Belgium,1970,male,67.85,4724134
+Belgium,1970,total,70.9719512195122,9655549
+Bosnia and Herzegovina,1970,female,69.64,1976985
+Bosnia and Herzegovina,1970,male,63.656,1796262
+Bosnia and Herzegovina,1970,total,66.688,3773247
+Bulgaria,1970,female,73.51,4245223
+Bulgaria,1970,male,69.11,4244351
+Bulgaria,1970,total,71.2563414634146,8489574
+Channel Islands,1970,female,74.55,63417
+Channel Islands,1970,male,67.765,59871
+Channel Islands,1970,total,71.165,123288
+Croatia,1970,female,72.692,2303892
+Croatia,1970,male,65.118,2108360
+Croatia,1970,total,68.8126341463415,4412252
+Cyprus,1970,female,72.084,326848
+Cyprus,1970,male,66.003,320598
+Cyprus,1970,total,68.927,647446
+Czechia,1970,female,73,5083927
+Czechia,1970,male,66.05,4774144
+Czechia,1970,total,69.440243902439,9858071
+Denmark,1970,female,75.93,2482531
+Denmark,1970,male,70.88,2446226
+Denmark,1970,total,73.3434146341463,4928757
+Estonia,1970,female,74.005,737786
+Estonia,1970,male,65.034,622290
+Estonia,1970,total,69.4100975609756,1360076
+Faroe Islands,1970,female,..,18314
+Faroe Islands,1970,male,..,19955
+Faroe Islands,1970,total,..,38269
+Finland,1970,female,74.4,2381309
+Finland,1970,male,66.16,2224998
+Finland,1970,total,70.179512195122,4606307
+France,1970,female,75.5,26608142
+France,1970,male,68,25399027
+France,1970,total,71.6585365853659,52007169
+Germany,1970,female,73.547,41165133
+Germany,1970,male,67.495,37004156
+Germany,1970,total,70.4471951219512,78169289
+Gibraltar,1970,female,72.501,13241
+Gibraltar,1970,male,68.656,13393
+Gibraltar,1970,total,70.605,26634
+Greece,1970,female,75.32,4500065
+Greece,1970,male,70.343,4292741
+Greece,1970,total,72.7708048780488,8792806
+Hungary,1970,female,72.12,5327355
+Hungary,1970,male,66.35,5010555
+Hungary,1970,total,69.1646341463415,10337910
+Iceland,1970,female,77.34,101072
+Iceland,1970,male,70.69,103366
+Iceland,1970,total,73.9339024390244,204438
+Ireland,1970,female,73.335,1472238
+Ireland,1970,male,68.584,1485012
+Ireland,1970,total,70.9015609756098,2957250
+Isle of Man,1970,female,71.219,29400
+Isle of Man,1970,male,60.461,25900
+Isle of Man,1970,total,65.684,55300
+Italy,1970,female,74.55,27660059
+Italy,1970,male,68.71,26161791
+Italy,1970,total,71.5587804878049,53821850
+Kosovo,1970,female,66.037,620837
+Kosovo,1970,male,63.146,628718
+Kosovo,1970,total,64.584,1249555
+Latvia,1970,female,74.23,1281906
+Latvia,1970,male,65.65,1077258
+Latvia,1970,total,69.8353658536586,2359164
+Liechtenstein,1970,female,..,10641
+Liechtenstein,1970,male,..,10499
+Liechtenstein,1970,total,..,21140
+Lithuania,1970,female,75.03,1666461
+Lithuania,1970,male,66.78,1473228
+Lithuania,1970,total,70.8043902439024,3139689
+Luxembourg,1970,female,73.259,172847
+Luxembourg,1970,male,66.102,166324
+Luxembourg,1970,total,69.5932195121951,339171
+Moldova,1970,female,67.354,1319684
+Moldova,1970,male,60.028,1117906
+Moldova,1970,total,63.885,2437590
+Monaco,1970,female,..,13176
+Monaco,1970,male,..,11053
+Monaco,1970,total,..,24229
+Montenegro,1970,female,71.499,268225
+Montenegro,1970,male,66.8,244182
+Montenegro,1970,total,69.0921951219512,512407
+Netherlands,1970,female,76.5,6531528
+Netherlands,1970,male,70.81,6506998
+Netherlands,1970,total,73.5856097560976,13038526
+North Macedonia,1970,female,65.362,850895
+North Macedonia,1970,male,62.155,813313
+North Macedonia,1970,total,63.7193902439024,1664208
+Norway,1970,female,77.32,1947635
+Norway,1970,male,71.01,1928128
+Norway,1970,total,74.0880487804878,3875763
+Poland,1970,female,73.3,16795302
+Poland,1970,male,66.6,15868998
+Poland,1970,total,69.8682926829268,32664300
+Portugal,1970,female,70.3,4555435
+Portugal,1970,male,64,4124996
+Portugal,1970,total,67.0731707317073,8680431
+Romania,1970,female,69.859,10400962
+Romania,1970,male,65.219,9849436
+Romania,1970,total,67.4824146341464,20250398
+Russian Federation,1970,female,73.44,70990296
+Russian Federation,1970,male,63.08,59413704
+Russian Federation,1970,total,68.1336585365854,130404000
+San Marino,1970,female,..,8892
+San Marino,1970,male,..,9276
+San Marino,1970,total,..,18168
+Serbia,1970,female,68.617,3695012
+Serbia,1970,male,63.694,3469981
+Serbia,1970,total,66.0954634146342,7164993
+Slovakia,1970,female,72.922,2298071
+Slovakia,1970,male,66.656,2240152
+Slovakia,1970,total,69.7125853658537,4538223
+Slovenia,1970,female,72.4,907078
+Slovenia,1970,male,65,817813
+Slovenia,1970,total,68.609756097561,1724891
+Spain,1970,female,74.87,17310840
+Spain,1970,male,69.32,16503691
+Spain,1970,total,72.0273170731707,33814531
+Sweden,1970,female,77.2,4026616
+Sweden,1970,male,72.22,4016185
+Sweden,1970,total,74.6492682926829,8042801
+Switzerland,1970,female,76.16,3161282
+Switzerland,1970,male,70.03,3019595
+Switzerland,1970,total,73.020243902439,6180877
+Ukraine,1970,female,72.905,25913372
+Ukraine,1970,male,64.908,21347934
+Ukraine,1970,total,68.8089756097561,47261306
+United Kingdom,1970,female,75.2,28637461
+United Kingdom,1970,male,68.9,27025789
+United Kingdom,1970,total,71.9731707317073,55663250

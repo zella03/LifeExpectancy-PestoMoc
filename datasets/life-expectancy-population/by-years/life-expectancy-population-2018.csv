@@ -1,0 +1,145 @@
+Country,Year,Total,Life_expectancy,Population
+Albania,2018,female,81.608,1447593
+Albania,2018,male,77.037,1418783
+Albania,2018,total,79.184,2866376
+Andorra,2018,female,..,36959
+Andorra,2018,male,..,38203
+Andorra,2018,total,..,75162
+Austria,2018,female,84.1,4492681
+Austria,2018,male,79.4,4347840
+Austria,2018,total,81.6926829268293,8840521
+Belarus,2018,female,79.4,5040188
+Belarus,2018,male,69.2,4398597
+Belarus,2018,total,74.1756097560976,9438785
+Belgium,2018,female,83.9,5797464
+Belgium,2018,male,79.4,5629590
+Belgium,2018,total,81.5951219512195,11427054
+Bosnia and Herzegovina,2018,female,79.093,1776605
+Bosnia and Herzegovina,2018,male,75.034,1610395
+Bosnia and Herzegovina,2018,total,77.093,3387000
+Bulgaria,2018,female,78.6,3615981
+Bulgaria,2018,male,71.5,3409056
+Bulgaria,2018,total,74.9634146341464,7025037
+Channel Islands,2018,female,83.525,83393
+Channel Islands,2018,male,79.205,81556
+Channel Islands,2018,total,81.375,164949
+Croatia,2018,female,81.4,2067643
+Croatia,2018,male,74.9,1921132
+Croatia,2018,total,78.0707317073171,3988775
+Cyprus,2018,female,83.058,629591
+Cyprus,2018,male,79.67,641146
+Cyprus,2018,total,81.382,1270737
+Czechia,2018,female,82,5393705
+Czechia,2018,male,76.2,5236223
+Czechia,2018,total,79.0292682926829,10629928
+Denmark,2018,female,82.9,2910981
+Denmark,2018,male,79.1,2882655
+Denmark,2018,total,80.9536585365854,5793636
+Estonia,2018,female,82.7,698558
+Estonia,2018,male,74,623419
+Estonia,2018,total,78.2439024390244,1321977
+Faroe Islands,2018,female,84.8,24669
+Faroe Islands,2018,male,80.3,26329
+Faroe Islands,2018,total,82.4951219512195,50998
+Finland,2018,female,84.5,2794308
+Finland,2018,male,79.1,2721217
+Finland,2018,total,81.7341463414634,5515525
+France,2018,female,85.8,34643889
+France,2018,male,79.7,32514459
+France,2018,total,82.6756097560976,67158348
+Germany,2018,female,83.3,41970559
+Germany,2018,male,78.6,40935223
+Germany,2018,total,80.8926829268293,82905782
+Gibraltar,2018,female,84.226,17469
+Gibraltar,2018,male,80.018,17385
+Gibraltar,2018,total,82.154,34854
+Greece,2018,female,84.4,5544756
+Greece,2018,male,79.3,5188126
+Greece,2018,total,81.7878048780488,10732882
+Hungary,2018,female,79.6,5101829
+Hungary,2018,male,72.7,4673735
+Hungary,2018,total,76.0658536585366,9775564
+Iceland,2018,female,84.5,172530
+Iceland,2018,male,81.3,180191
+Iceland,2018,total,82.8609756097561,352721
+Ireland,2018,female,84.1,2456932
+Ireland,2018,male,80.4,2410384
+Ireland,2018,total,82.2048780487805,4867316
+Isle of Man,2018,female,82.488,42252
+Isle of Man,2018,male,78.709,41553
+Isle of Man,2018,total,80.596,83805
+Italy,2018,female,85.6,30972288
+Italy,2018,male,81.2,29449472
+Italy,2018,total,83.3463414634146,60421760
+Kosovo,2018,female,81.028,912947
+Kosovo,2018,male,76.353,884139
+Kosovo,2018,total,78.696,1797086
+Latvia,2018,female,79.7,1039977
+Latvia,2018,male,70.1,887197
+Latvia,2018,total,74.7829268292683,1927174
+Liechtenstein,2018,female,85.5,19283
+Liechtenstein,2018,male,80.7,18963
+Liechtenstein,2018,total,83.0414634146342,38246
+Lithuania,2018,female,80.7,1505324
+Lithuania,2018,male,70.9,1296219
+Lithuania,2018,total,75.6804878048781,2801543
+Luxembourg,2018,female,84.6,302293
+Luxembourg,2018,male,80.1,305657
+Luxembourg,2018,total,82.2951219512195,607950
+Moldova,2018,female,75.232,1455601
+Moldova,2018,male,65.921,1251602
+Moldova,2018,total,70.492,2707203
+Monaco,2018,female,..,19459
+Monaco,2018,male,..,18695
+Monaco,2018,total,..,38154
+Montenegro,2018,female,79.3,322452
+Montenegro,2018,male,74.5,299775
+Montenegro,2018,total,76.8414634146342,622227
+Netherlands,2018,female,83.4,8689741
+Netherlands,2018,male,80.3,8541883
+Netherlands,2018,total,81.8121951219512,17231624
+North Macedonia,2018,female,78.8,965958
+North Macedonia,2018,male,74.6,923093
+North Macedonia,2018,total,76.6487804878049,1889051
+Norway,2018,female,84.5,2635137
+Norway,2018,male,81.1,2676779
+Norway,2018,total,82.7585365853659,5311916
+Poland,2018,female,81.7,19552068
+Poland,2018,male,73.7,18422682
+Poland,2018,total,77.6024390243903,37974750
+Portugal,2018,female,84.5,5406817
+Portugal,2018,male,78.3,4877005
+Portugal,2018,total,81.3243902439024,10283822
+Romania,2018,female,79.2,10047974
+Romania,2018,male,71.7,9425996
+Romania,2018,total,75.3585365853659,19473970
+Russian Federation,2018,female,77.82,77890854
+Russian Federation,2018,male,67.75,67507252
+Russian Federation,2018,total,72.6621951219512,145398106
+San Marino,2018,female,..,17772
+San Marino,2018,male,..,16750
+San Marino,2018,total,..,34522
+Serbia,2018,female,78.4,3656731
+Serbia,2018,male,73.5,3325873
+Serbia,2018,total,75.890243902439,6982604
+Slovakia,2018,female,80.8,2787575
+Slovakia,2018,male,73.9,2659196
+Slovakia,2018,total,77.2658536585366,5446771
+Slovenia,2018,female,84.4,1040686
+Slovenia,2018,male,78.5,1033208
+Slovenia,2018,total,81.3780487804878,2073894
+Spain,2018,female,86.3,23806642
+Spain,2018,male,80.7,22991112
+Spain,2018,total,83.4317073170732,46797754
+Sweden,2018,female,84.3,5062643
+Sweden,2018,male,80.9,5112571
+Sweden,2018,total,82.5585365853659,10175214
+Switzerland,2018,female,85.7,4292491
+Switzerland,2018,male,81.9,4221838
+Switzerland,2018,total,83.7536585365854,8514329
+Ukraine,2018,female,76.72,24138295
+Ukraine,2018,male,66.69,21070612
+Ukraine,2018,total,71.5826829268293,45208907
+United Kingdom,2018,female,83.1,33803616
+United Kingdom,2018,male,79.5,32656728
+United Kingdom,2018,total,81.2560975609756,66460344

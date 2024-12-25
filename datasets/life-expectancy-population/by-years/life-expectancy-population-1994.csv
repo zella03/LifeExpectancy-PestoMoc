@@ -1,0 +1,145 @@
+Country,Year,Total,Life_expectancy,Population
+Albania,1994,female,77.258,1611664
+Albania,1994,male,71.202,1595872
+Albania,1994,total,74.131,3207536
+Andorra,1994,female,..,30253
+Andorra,1994,male,..,34359
+Andorra,1994,total,..,64612
+Austria,1994,female,79.8,4110155
+Austria,1994,male,73.2,3825963
+Austria,1994,total,76.419512195122,7936118
+Belarus,1994,female,74.3,5429670
+Belarus,1994,male,63.5,4797285
+Belarus,1994,total,68.7682926829268,10226955
+Belgium,1994,female,80.19,5168083
+Belgium,1994,male,73.36,4947520
+Belgium,1994,total,76.6917073170732,10115603
+Bosnia and Herzegovina,1994,female,75.222,1948712
+Bosnia and Herzegovina,1994,male,60.361,1776700
+Bosnia and Herzegovina,1994,total,67.209,3725412
+Bulgaria,1994,female,75.25,4302902
+Bulgaria,1994,male,67.36,4140689
+Bulgaria,1994,total,71.2087804878049,8443591
+Channel Islands,1994,female,80.28,75149
+Channel Islands,1994,male,75.52,70014
+Channel Islands,1994,total,78.005,145163
+Croatia,1994,female,76.28,2418915
+Croatia,1994,male,67.54,2233109
+Croatia,1994,total,71.8034146341463,4652024
+Cyprus,1994,female,76.526,414340
+Cyprus,1994,male,72.932,430327
+Cyprus,1994,total,74.72,844667
+Czechia,1994,female,76.64,5312406
+Czechia,1994,male,69.48,5021181
+Czechia,1994,total,72.9726829268293,10333587
+Denmark,1994,female,78.1,2637734
+Denmark,1994,male,72.78,2568446
+Denmark,1994,total,75.3751219512195,5206180
+Estonia,1994,female,72.8,780920
+Estonia,1994,male,60.5,681594
+Estonia,1994,total,66.5,1462514
+Faroe Islands,1994,female,80.7,21574
+Faroe Islands,1994,male,73.8,23120
+Faroe Islands,1994,total,77.1658536585366,44694
+Finland,1994,female,80.15,2612386
+Finland,1994,male,72.82,2475947
+Finland,1994,total,76.3956097560976,5088333
+France,1994,female,81.9,30528826
+France,1994,male,73.6,28796037
+France,1994,total,77.6487804878049,59324863
+Germany,1994,female,79.6,41850373
+Germany,1994,male,73.1,39587975
+Germany,1994,total,76.2707317073171,81438348
+Gibraltar,1994,female,82.698,13407
+Gibraltar,1994,male,75.404,13832
+Gibraltar,1994,total,79.164,27239
+Greece,1994,female,80.2,5338815
+Greece,1994,male,75.2,5174107
+Greece,1994,total,77.6390243902439,10512922
+Hungary,1994,female,74.31,5396140
+Hungary,1994,male,64.86,4947215
+Hungary,1994,total,69.469756097561,10343355
+Iceland,1994,female,81.47,132612
+Iceland,1994,male,77.13,133409
+Iceland,1994,total,79.2470731707317,266021
+Ireland,1994,female,78.659,1805688
+Ireland,1994,male,73.052,1784698
+Ireland,1994,total,75.7871219512195,3590386
+Isle of Man,1994,female,76.817,36706
+Isle of Man,1994,male,69.907,34462
+Isle of Man,1994,total,73.339,71168
+Italy,1994,female,81.2,29299642
+Italy,1994,male,74.8,27543758
+Italy,1994,total,77.9219512195122,56843400
+Kosovo,1994,female,73.794,1044054
+Kosovo,1994,male,70.527,1061202
+Kosovo,1994,total,72.125,2105256
+Latvia,1994,female,72.62,1356122
+Latvia,1994,male,59.04,1164620
+Latvia,1994,total,65.6643902439025,2520742
+Liechtenstein,1994,female,81.7,15328
+Liechtenstein,1994,male,75.3,15142
+Liechtenstein,1994,total,78.4219512195122,30470
+Lithuania,1994,female,74.82,1931354
+Lithuania,1994,male,62.54,1725790
+Lithuania,1994,total,68.530243902439,3657144
+Luxembourg,1994,female,79.7,204903
+Luxembourg,1994,male,73.2,198022
+Luxembourg,1994,total,76.3707317073171,402925
+Moldova,1994,female,68.705,1587101
+Moldova,1994,male,61.33,1379644
+Moldova,1994,total,65.07,2966745
+Monaco,1994,female,..,16313
+Monaco,1994,male,..,15062
+Monaco,1994,total,..,31375
+Montenegro,1994,female,76.457,315027
+Montenegro,1994,male,70.187,296362
+Montenegro,1994,total,73.2455365853659,611389
+Netherlands,1994,female,80.31,7792124
+Netherlands,1994,male,74.58,7590714
+Netherlands,1994,total,77.3751219512195,15382838
+North Macedonia,1994,female,74.1,1022927
+North Macedonia,1994,male,69.4,969739
+North Macedonia,1994,total,71.6926829268293,1992666
+Norway,1994,female,80.64,2192154
+Norway,1994,male,74.88,2144459
+Norway,1994,total,77.689756097561,4336613
+Poland,1994,female,76.1,19803188
+Poland,1994,male,67.5,18739464
+Poland,1994,total,71.6951219512195,38542652
+Portugal,1994,female,78.5,5179875
+Portugal,1994,male,71.5,4811650
+Portugal,1994,total,74.9146341463415,9991525
+Romania,1994,female,73.3,11735713
+Romania,1994,male,65.9,10994498
+Romania,1994,total,69.509756097561,22730211
+Russian Federation,1994,female,71.73,78789623
+Russian Federation,1994,male,57.55,69618289
+Russian Federation,1994,total,64.4670731707317,148407912
+San Marino,1994,female,..,12733
+San Marino,1994,male,..,12090
+San Marino,1994,total,..,24823
+Serbia,1994,female,74.457,3980942
+Serbia,1994,male,68.197,3641769
+Serbia,1994,total,71.2506585365854,7622711
+Slovakia,1994,female,76.5,2741811
+Slovakia,1994,male,68.3,2604520
+Slovakia,1994,total,72.3,5346331
+Slovenia,1994,female,77.4,1025474
+Slovenia,1994,male,69.6,963969
+Slovenia,1994,total,73.4048780487805,1989443
+Spain,1994,female,81.62,20143990
+Spain,1994,male,74.36,19405118
+Spain,1994,total,77.9014634146342,39549108
+Sweden,1994,female,81.37,4442007
+Sweden,1994,male,76.06,4338738
+Sweden,1994,total,78.650243902439,8780745
+Switzerland,1994,female,81.71,3577458
+Switzerland,1994,male,75.15,3416337
+Switzerland,1994,total,78.35,6993795
+Ukraine,1994,female,72.95,27825609
+Ukraine,1994,male,62.39,24250389
+Ukraine,1994,total,67.5412195121951,52075998
+United Kingdom,1994,female,79.6,29892451
+United Kingdom,1994,male,74.3,27973294
+United Kingdom,1994,total,76.8853658536585,57865745
