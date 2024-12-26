@@ -13,6 +13,9 @@ df_long = pd.melt(
 
 df_long["Year"] = df_long["Year"].str.extract(r"(\d{4})").astype(float).astype("Int64")
 df_long = df_long.dropna(subset=["Value", "Year"])
+df_long["Value"] = pd.to_numeric(df_long["Value"], errors="coerce")
+valid_countries = df_long.groupby("Country Name")["Value"].transform("count") > 0
+df_long = df_long[valid_countries]
 
 def classify_series(series_name):
     if pd.isna(series_name):

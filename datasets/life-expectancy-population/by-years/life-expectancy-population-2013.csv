@@ -1,145 +1,145 @@
 Country,Year,Total,Life_expectancy,Population
-Albania,2013,female,80.781,1462516
-Albania,2013,male,75.786,1432576
-Albania,2013,total,78.123,2895092
-Andorra,2013,female,..,36953
-Andorra,2013,male,..,38241
-Andorra,2013,total,..,75194
-Austria,2013,female,83.8,4340495
-Austria,2013,male,78.6,4139328
-Austria,2013,total,81.1365853658537,8479823
-Belarus,2013,female,77.9,5054425
-Belarus,2013,male,67.3,4388786
-Belarus,2013,total,72.4707317073171,9443211
-Belgium,2013,female,83.2,5675983
-Belgium,2013,male,78.1,5483424
-Belgium,2013,total,80.5878048780488,11159407
-Bosnia and Herzegovina,2013,female,78.624,1894411
-Bosnia and Herzegovina,2013,male,73.945,1716448
-Bosnia and Herzegovina,2013,total,76.33,3610859
-Bulgaria,2013,female,78.6,3730010
-Bulgaria,2013,male,71.3,3535105
-Bulgaria,2013,total,74.8609756097561,7265115
-Channel Islands,2013,female,83.659,81851
-Channel Islands,2013,male,79.31,79926
-Channel Islands,2013,total,81.516,161777
-Croatia,2013,female,80.2,2195721
-Croatia,2013,male,74.2,2038201
-Croatia,2013,total,77.1268292682927,4233922
-Cyprus,2013,female,82.405,585352
-Cyprus,2013,male,78.409,598543
-Cyprus,2013,total,80.402,1183895
-Czechia,2013,female,81.3,5348039
-Czechia,2013,male,75.2,5166233
-Czechia,2013,total,78.1756097560976,10514272
-Denmark,2013,female,82.4,2829486
-Denmark,2013,male,78.3,2785446
-Denmark,2013,total,80.3,5614932
-Estonia,2013,female,81.7,702440
-Estonia,2013,male,72.8,615557
-Estonia,2013,total,77.1414634146341,1317997
-Faroe Islands,2013,female,83.9,23400
-Faroe Islands,2013,male,79.1,24846
-Faroe Islands,2013,total,81.4414634146341,48246
-Finland,2013,female,84.1,2765375
-Finland,2013,male,78,2673597
-Finland,2013,total,80.9756097560976,5438972
-France,2013,female,85.6,34036175
-France,2013,male,79,31961757
-France,2013,total,82.219512195122,65997932
-Germany,2013,female,83,41140519
-Germany,2013,male,78.1,39505086
-Germany,2013,total,80.490243902439,80645605
-Gibraltar,2013,female,83.637,16215
-Gibraltar,2013,male,77.54,16192
-Gibraltar,2013,total,80.55,32407
-Greece,2013,female,84,5641796
-Greece,2013,male,78.7,5323415
-Greece,2013,total,81.2853658536585,10965211
-Hungary,2013,female,79.1,5183618
-Hungary,2013,male,72.2,4709464
-Hungary,2013,total,75.5658536585366,9893082
-Iceland,2013,female,83.7,161412
-Iceland,2013,male,80.5,162352
-Iceland,2013,total,82.0609756097561,323764
-Ireland,2013,female,83.1,2334083
-Ireland,2013,male,78.9,2289733
-Ireland,2013,total,80.9487804878049,4623816
-Isle of Man,2013,female,81.793,42395
-Isle of Man,2013,male,77.184,41746
-Isle of Man,2013,total,79.473,84141
-Italy,2013,female,85.2,31029952
-Italy,2013,male,80.3,29203996
-Italy,2013,total,82.690243902439,60233948
-Kosovo,2013,female,81.433,924593
-Kosovo,2013,male,75.876,893526
-Kosovo,2013,total,78.587,1818119
-Latvia,2013,female,78.9,1090947
-Latvia,2013,male,69.3,921700
-Latvia,2013,total,73.9829268292683,2012647
-Liechtenstein,2013,female,83.9,18654
-Liechtenstein,2013,male,80.7,18330
-Liechtenstein,2013,total,82.2609756097561,36984
-Lithuania,2013,female,79.6,1595328
-Lithuania,2013,male,68.5,1362361
-Lithuania,2013,total,73.9146341463415,2957689
-Luxembourg,2013,female,83.9,271615
-Luxembourg,2013,male,79.8,271745
-Luxembourg,2013,total,81.8,543360
-Moldova,2013,female,73.586,1529777
-Moldova,2013,male,64.75,1329781
-Moldova,2013,total,69.099,2859558
-Monaco,2013,female,..,18103
-Monaco,2013,male,..,17344
-Monaco,2013,total,..,35447
-Montenegro,2013,female,79,322077
-Montenegro,2013,male,74.1,299130
-Montenegro,2013,total,76.490243902439,621207
-Netherlands,2013,female,83.2,8497136
-Netherlands,2013,male,79.5,8307296
-Netherlands,2013,total,81.3048780487805,16804432
-North Macedonia,2013,female,77.5,978108
-North Macedonia,2013,male,73.4,944608
-North Macedonia,2013,total,75.4,1922716
-Norway,2013,female,83.8,2528278
-Norway,2013,male,79.8,2551345
-Norway,2013,total,81.7512195121951,5079623
-Poland,2013,female,81.2,19601840
-Poland,2013,male,73,18438356
-Poland,2013,total,77,38040196
-Portugal,2013,female,84,5478858
-Portugal,2013,male,77.6,4978437
-Portugal,2013,total,80.7219512195122,10457295
-Romania,2013,female,78.7,10336859
-Romania,2013,male,71.6,9646834
-Romania,2013,total,75.0634146341463,19983693
-Russian Federation,2013,female,76.3,77188611
-Russian Federation,2013,male,65.13,66617027
-Russian Federation,2013,total,70.5787804878049,143805638
-San Marino,2013,female,..,17029
-San Marino,2013,male,..,16012
-San Marino,2013,total,..,33041
-Serbia,2013,female,77.9,3753454
-Serbia,2013,male,72.6,3413099
-Serbia,2013,total,75.1853658536585,7166553
-Slovakia,2013,female,80.1,2775796
-Slovakia,2013,male,72.9,2637597
-Slovakia,2013,total,76.4121951219512,5413393
-Slovenia,2013,female,83.6,1039719
-Slovenia,2013,male,77.2,1020234
-Slovenia,2013,total,80.3219512195122,2059953
-Spain,2013,female,86.1,23631181
-Spain,2013,male,80.2,22988864
-Spain,2013,total,83.0780487804878,46620045
-Sweden,2013,female,83.8,4810264
-Sweden,2013,male,80.2,4790115
-Sweden,2013,total,81.9560975609756,9600379
-Switzerland,2013,female,85,4094044
-Switzerland,2013,male,80.7,3995302
-Switzerland,2013,total,82.7975609756098,8089346
-Ukraine,2013,female,76.22,24656161
-Ukraine,2013,male,66.34,21470609
-Ukraine,2013,total,71.159512195122,46126770
-United Kingdom,2013,female,82.9,32731068
-United Kingdom,2013,male,79.2,31397205
-United Kingdom,2013,total,81.0048780487805,64128273
+Albania,2013,female,80.781,1462516.0
+Albania,2013,male,75.786,1432576.0
+Albania,2013,total,78.123,2895092.0
+Andorra,2013,female,,36953.0
+Andorra,2013,male,,38241.0
+Andorra,2013,total,,75194.0
+Austria,2013,female,83.8,4340495.0
+Austria,2013,male,78.6,4139328.0
+Austria,2013,total,81.1365853658537,8479823.0
+Belarus,2013,female,77.9,5054425.0
+Belarus,2013,male,67.3,4388786.0
+Belarus,2013,total,72.4707317073171,9443211.0
+Belgium,2013,female,83.2,5675983.0
+Belgium,2013,male,78.1,5483424.0
+Belgium,2013,total,80.5878048780488,11159407.0
+Bosnia and Herzegovina,2013,female,78.624,1894411.0
+Bosnia and Herzegovina,2013,male,73.945,1716448.0
+Bosnia and Herzegovina,2013,total,76.33,3610859.0
+Bulgaria,2013,female,78.6,3730010.0
+Bulgaria,2013,male,71.3,3535105.0
+Bulgaria,2013,total,74.8609756097561,7265115.0
+Channel Islands,2013,female,83.659,81851.0
+Channel Islands,2013,male,79.31,79926.0
+Channel Islands,2013,total,81.516,161777.0
+Croatia,2013,female,80.2,2195721.0
+Croatia,2013,male,74.2,2038201.0
+Croatia,2013,total,77.1268292682927,4233922.0
+Cyprus,2013,female,82.405,585352.0
+Cyprus,2013,male,78.409,598543.0
+Cyprus,2013,total,80.402,1183895.0
+Czechia,2013,female,81.3,5348039.0
+Czechia,2013,male,75.2,5166233.0
+Czechia,2013,total,78.1756097560976,10514272.0
+Denmark,2013,female,82.4,2829486.0
+Denmark,2013,male,78.3,2785446.0
+Denmark,2013,total,80.3,5614932.0
+Estonia,2013,female,81.7,702440.0
+Estonia,2013,male,72.8,615557.0
+Estonia,2013,total,77.1414634146341,1317997.0
+Faroe Islands,2013,female,83.9,23400.0
+Faroe Islands,2013,male,79.1,24846.0
+Faroe Islands,2013,total,81.4414634146341,48246.0
+Finland,2013,female,84.1,2765375.0
+Finland,2013,male,78.0,2673597.0
+Finland,2013,total,80.9756097560976,5438972.0
+France,2013,female,85.6,34036175.0
+France,2013,male,79.0,31961757.0
+France,2013,total,82.219512195122,65997932.0
+Germany,2013,female,83.0,41140519.0
+Germany,2013,male,78.1,39505086.0
+Germany,2013,total,80.490243902439,80645605.0
+Gibraltar,2013,female,83.637,16215.0
+Gibraltar,2013,male,77.54,16192.0
+Gibraltar,2013,total,80.55,32407.0
+Greece,2013,female,84.0,5641796.0
+Greece,2013,male,78.7,5323415.0
+Greece,2013,total,81.2853658536585,10965211.0
+Hungary,2013,female,79.1,5183618.0
+Hungary,2013,male,72.2,4709464.0
+Hungary,2013,total,75.5658536585366,9893082.0
+Iceland,2013,female,83.7,161412.0
+Iceland,2013,male,80.5,162352.0
+Iceland,2013,total,82.0609756097561,323764.0
+Ireland,2013,female,83.1,2334083.0
+Ireland,2013,male,78.9,2289733.0
+Ireland,2013,total,80.9487804878049,4623816.0
+Isle of Man,2013,female,81.793,42395.0
+Isle of Man,2013,male,77.184,41746.0
+Isle of Man,2013,total,79.473,84141.0
+Italy,2013,female,85.2,31029952.0
+Italy,2013,male,80.3,29203996.0
+Italy,2013,total,82.690243902439,60233948.0
+Kosovo,2013,female,81.433,924593.0
+Kosovo,2013,male,75.876,893526.0
+Kosovo,2013,total,78.587,1818119.0
+Latvia,2013,female,78.9,1090947.0
+Latvia,2013,male,69.3,921700.0
+Latvia,2013,total,73.9829268292683,2012647.0
+Liechtenstein,2013,female,83.9,18654.0
+Liechtenstein,2013,male,80.7,18330.0
+Liechtenstein,2013,total,82.2609756097561,36984.0
+Lithuania,2013,female,79.6,1595328.0
+Lithuania,2013,male,68.5,1362361.0
+Lithuania,2013,total,73.9146341463415,2957689.0
+Luxembourg,2013,female,83.9,271615.0
+Luxembourg,2013,male,79.8,271745.0
+Luxembourg,2013,total,81.8,543360.0
+Moldova,2013,female,73.586,1529777.0
+Moldova,2013,male,64.75,1329781.0
+Moldova,2013,total,69.099,2859558.0
+Monaco,2013,female,,18103.0
+Monaco,2013,male,,17344.0
+Monaco,2013,total,,35447.0
+Montenegro,2013,female,79.0,322077.0
+Montenegro,2013,male,74.1,299130.0
+Montenegro,2013,total,76.490243902439,621207.0
+Netherlands,2013,female,83.2,8497136.0
+Netherlands,2013,male,79.5,8307296.0
+Netherlands,2013,total,81.3048780487805,16804432.0
+North Macedonia,2013,female,77.5,978108.0
+North Macedonia,2013,male,73.4,944608.0
+North Macedonia,2013,total,75.4,1922716.0
+Norway,2013,female,83.8,2528278.0
+Norway,2013,male,79.8,2551345.0
+Norway,2013,total,81.7512195121951,5079623.0
+Poland,2013,female,81.2,19601840.0
+Poland,2013,male,73.0,18438356.0
+Poland,2013,total,77.0,38040196.0
+Portugal,2013,female,84.0,5478858.0
+Portugal,2013,male,77.6,4978437.0
+Portugal,2013,total,80.7219512195122,10457295.0
+Romania,2013,female,78.7,10336859.0
+Romania,2013,male,71.6,9646834.0
+Romania,2013,total,75.0634146341463,19983693.0
+Russian Federation,2013,female,76.3,77188611.0
+Russian Federation,2013,male,65.13,66617027.0
+Russian Federation,2013,total,70.5787804878049,143805638.0
+San Marino,2013,female,,17029.0
+San Marino,2013,male,,16012.0
+San Marino,2013,total,,33041.0
+Serbia,2013,female,77.9,3753454.0
+Serbia,2013,male,72.6,3413099.0
+Serbia,2013,total,75.1853658536585,7166553.0
+Slovakia,2013,female,80.1,2775796.0
+Slovakia,2013,male,72.9,2637597.0
+Slovakia,2013,total,76.4121951219512,5413393.0
+Slovenia,2013,female,83.6,1039719.0
+Slovenia,2013,male,77.2,1020234.0
+Slovenia,2013,total,80.3219512195122,2059953.0
+Spain,2013,female,86.1,23631181.0
+Spain,2013,male,80.2,22988864.0
+Spain,2013,total,83.0780487804878,46620045.0
+Sweden,2013,female,83.8,4810264.0
+Sweden,2013,male,80.2,4790115.0
+Sweden,2013,total,81.9560975609756,9600379.0
+Switzerland,2013,female,85.0,4094044.0
+Switzerland,2013,male,80.7,3995302.0
+Switzerland,2013,total,82.7975609756098,8089346.0
+Ukraine,2013,female,76.22,24656161.0
+Ukraine,2013,male,66.34,21470609.0
+Ukraine,2013,total,71.159512195122,46126770.0
+United Kingdom,2013,female,82.9,32731068.0
+United Kingdom,2013,male,79.2,31397205.0
+United Kingdom,2013,total,81.0048780487805,64128273.0
