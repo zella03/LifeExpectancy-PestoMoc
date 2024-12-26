@@ -217,7 +217,7 @@ header p {
 
 .factor:hover {
     transform: scale(1.05);
-    border-color: #007bff;
+    border-color: #364956;
 }
 
 
@@ -250,6 +250,10 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+a{
+    text-decoration: none;
 }
 
 /* 
