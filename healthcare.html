@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Circular&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Dela+Gothic+One&family=Rubik+Mono+One&family=Shrikhand&display=swap" rel="stylesheet">
+    <title>How to Live Longer?</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="top-bar">
+    <div class="menu-icon">&#9776;</div>
+    <div class="top-options">
+        <a href="#" class="option">Team</a>
+        <a href="#" class="option">Project</a>
+    </div>
+</div>
+
+<header>
+    <div class="header-text">
+        <h1>Healthcare Expenditures</h1>
+        <p></p>
+    </div>
+    <div class="header-img">
+        <img src="style/img/fam.jpg" alt="Image representing life expectancy" />
+    </div>
+</header>
+
+<main>
+  <div id="controls">
+    <label for="year-selector">Year:</label>
+    <select id="year-selector"></select>
+
+    <label for="value-toggle">Display:</label>
+    <select id="value-toggle">
+        <option value="Health Expenditure per Capita">Per Capita Expenditure</option>
+        <option value="Total Health Expenditure">Total Expenditure</option>
+    </select>
+  </div>
+
+  <div class="tooltip" id="tooltip_map"></div>
+  <svg id="choropleth-map"></svg>
+  <div id="legend"></div>
+
+    <div class="container-events">
+        <div class="section-title">
+            <h2>One event can affect a whole country or even a world...</h2>
+        </div>
+        
+        <div>
+            Abchnxjiwpfneda<br> bchdaojw
+        </div>
+        
+    </div>
+
+    <h2>Life Expectancy vs Healthcare Expenditures (2000-2022)</h2>
+    <div class="country-selection">
+        <label for="country1">Select Country 1:</label>
+        <select id="country1"></select>
+
+        <label for="country2">Select Country 2:</label>
+        <select id="country2"></select>
+    </div>
+    <div class="slider-container">
+        <label for="yearSlider">Select Year: <span id="currentYear">2000</span></label>
+        <div class="slider-wrapper">
+            <span class="min-year">2000</span>
+            <input type="range" id="yearSlider" min="2000" max="2022" value="2000" step="1">
+            <span class="max-year">2022</span>
+        </div>
+    </div>
+    
+
+    <div class="controls">
+        <button id="pauseButton" class="control-button" disabled>
+            <i class="fas fa-pause"></i>
+        </button>
+        <button id="resumeButton" class="control-button" disabled>
+            <i class="fas fa-play"></i>
+        </button>
+        <button id="replayButton" class="control-button">
+            <i class="fas fa-undo"></i>
+        </button>
+    </div>
+    <canvas id="lifeExpectancyChart"></canvas>
+
+</main>
+
+<footer>
+    <p>&copy; Data Visualization | Unige 2024/2025</p>
+</footer>
+
+<script src="scripts/healthcare-map.js"></script>
+<script src="scripts/healthcare-lineplot.js"></script>
+</body>
+</html>

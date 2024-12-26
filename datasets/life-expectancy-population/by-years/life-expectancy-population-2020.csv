@@ -1,0 +1,145 @@
+Country,Year,Total,Life_expectancy,Population
+Albania,2020,female,79.676,1433321.0
+Albania,2020,male,74.632,1404528.0
+Albania,2020,total,76.989,2837849.0
+Andorra,2020,female,,37994.0
+Andorra,2020,male,,39386.0
+Andorra,2020,total,,77380.0
+Austria,2020,female,83.6,4530017.0
+Austria,2020,male,78.9,4386847.0
+Austria,2020,total,81.1926829268293,8916864.0
+Belarus,2020,female,77.866,5007632.0
+Belarus,2020,male,67.306,4372320.0
+Belarus,2020,total,72.4572195121951,9379952.0
+Belgium,2020,female,83.0,5847609.0
+Belgium,2020,male,78.5,5690995.0
+Belgium,2020,total,80.6951219512195,11538604.0
+Bosnia and Herzegovina,2020,female,78.414,1730652.0
+Bosnia and Herzegovina,2020,male,74.04,1568697.0
+Bosnia and Herzegovina,2020,total,76.225,3299349.0
+Bulgaria,2020,female,77.5,3574351.0
+Bulgaria,2020,male,70.0,3359664.0
+Bulgaria,2020,total,73.6585365853659,6934015.0
+Channel Islands,2020,female,83.387,84074.0
+Channel Islands,2020,male,79.141,82161.0
+Channel Islands,2020,total,81.264,166235.0
+Croatia,2020,female,80.9,2028487.0
+Croatia,2020,male,74.7,1885719.0
+Croatia,2020,total,77.7243902439024,3914206.0
+Cyprus,2020,female,83.448,645595.0
+Cyprus,2020,male,79.345,656652.0
+Cyprus,2020,total,81.391,1302247.0
+Czechia,2020,female,81.3,5424401.0
+Czechia,2020,male,75.2,5273457.0
+Czechia,2020,total,78.1756097560976,10697858.0
+Denmark,2020,female,83.6,2930630.0
+Denmark,2020,male,79.7,2900774.0
+Denmark,2020,total,81.6024390243903,5831404.0
+Estonia,2020,female,83.0,699591.0
+Estonia,2020,male,74.4,629931.0
+Estonia,2020,total,78.5951219512195,1329522.0
+Faroe Islands,2020,female,85.1,25379.0
+Faroe Islands,2020,male,80.8,27192.0
+Faroe Islands,2020,total,82.8975609756098,52571.0
+Finland,2020,female,84.8,2798495.0
+Finland,2020,male,79.2,2731048.0
+Finland,2020,total,81.9317073170732,5529543.0
+France,2020,female,85.3,34855924.0
+France,2020,male,79.2,32745186.0
+France,2020,total,82.1756097560976,67601110.0
+Germany,2020,female,83.5,42100629.0
+Germany,2020,male,78.7,41060242.0
+Germany,2020,total,81.0414634146342,83160871.0
+Gibraltar,2020,female,84.112,18158.0
+Gibraltar,2020,male,80.249,18015.0
+Gibraltar,2020,total,82.198,36173.0
+Greece,2020,female,83.9,5513797.0
+Greece,2020,male,78.8,5184802.0
+Greece,2020,total,81.2878048780488,10698599.0
+Hungary,2020,female,79.0,5077743.0
+Hungary,2020,male,72.3,4672406.0
+Hungary,2020,total,75.5682926829269,9750149.0
+Iceland,2020,female,84.6,178499.0
+Iceland,2020,male,81.6,187964.0
+Iceland,2020,total,83.0634146341463,366463.0
+Ireland,2020,female,84.4,2516845.0
+Ireland,2020,male,80.8,2468537.0
+Ireland,2020,total,82.5560975609756,4985382.0
+Isle of Man,2020,female,82.536,42401.0
+Isle of Man,2020,male,78.672,41663.0
+Isle of Man,2020,total,80.588,84064.0
+Italy,2020,female,84.5,30440455.0
+Italy,2020,male,80.0,28998396.0
+Italy,2020,total,82.1951219512195,59438851.0
+Kosovo,2020,female,79.268,909319.0
+Kosovo,2020,male,73.99,880833.0
+Kosovo,2020,total,76.567,1790152.0
+Latvia,2020,female,80.0,1022507.0
+Latvia,2020,male,70.6,877942.0
+Latvia,2020,total,75.1853658536585,1900449.0
+Liechtenstein,2020,female,83.4,19601.0
+Liechtenstein,2020,male,80.0,19300.0
+Liechtenstein,2020,total,81.6585365853659,38901.0
+Lithuania,2020,female,80.1,1486173.0
+Lithuania,2020,male,70.1,1308712.0
+Lithuania,2020,total,74.9780487804878,2794885.0
+Luxembourg,2020,female,84.5,313203.0
+Luxembourg,2020,male,79.9,317216.0
+Luxembourg,2020,total,82.1439024390244,630419.0
+Moldova,2020,female,74.852,1419764.0
+Moldova,2020,male,65.692,1215366.0
+Moldova,2020,total,70.166,2635130.0
+Monaco,2020,female,,19426.0
+Monaco,2020,male,,18624.0
+Monaco,2020,total,,38050.0
+Montenegro,2020,female,78.8,322163.0
+Montenegro,2020,male,73.2,299143.0
+Montenegro,2020,total,75.9317073170732,621306.0
+Netherlands,2020,female,83.1,8786981.0
+Netherlands,2020,male,79.7,8654519.0
+Netherlands,2020,total,81.3585365853659,17441500.0
+North Macedonia,2020,female,76.7,952111.0
+North Macedonia,2020,male,72.2,904013.0
+North Macedonia,2020,total,74.3951219512195,1856124.0
+Norway,2020,female,84.9,2666588.0
+Norway,2020,male,81.6,2712887.0
+Norway,2020,total,83.209756097561,5379475.0
+Poland,2020,female,80.7,19512222.0
+Poland,2020,male,72.5,18386848.0
+Poland,2020,total,76.5,37899070.0
+Portugal,2020,female,84.1,5405235.0
+Portugal,2020,male,78.0,4891846.0
+Portugal,2020,total,80.9756097560976,10297081.0
+Romania,2020,female,78.3,9931477.0
+Romania,2020,male,70.4,9333773.0
+Romania,2020,total,74.2536585365854,19265250.0
+Russian Federation,2020,female,76.43,77792851.0
+Russian Federation,2020,male,66.49,67452297.0
+Russian Federation,2020,total,71.3387804878049,145245148.0
+San Marino,2020,female,,17887.0
+San Marino,2020,male,,16883.0
+San Marino,2020,total,,34770.0
+Serbia,2020,female,77.5,3612250.0
+Serbia,2020,male,71.6,3286876.0
+Serbia,2020,total,74.4780487804878,6899126.0
+Slovakia,2020,female,80.4,2792564.0
+Slovakia,2020,male,73.5,2666263.0
+Slovakia,2020,total,76.8658536585366,5458827.0
+Slovenia,2020,female,83.4,1047544.0
+Slovenia,2020,male,77.8,1054875.0
+Slovenia,2020,total,80.5317073170732,2102419.0
+Spain,2020,female,85.2,24102549.0
+Spain,2020,male,79.6,23263106.0
+Spain,2020,total,82.3317073170732,47365655.0
+Sweden,2020,female,84.2,5144095.0
+Sweden,2020,male,80.6,5209347.0
+Sweden,2020,total,82.3560975609756,10353442.0
+Switzerland,2020,female,85.1,4352266.0
+Switzerland,2020,male,81.0,4285901.0
+Switzerland,2020,total,83.0,8638167.0
+Ukraine,2020,female,76.22,23859257.0
+Ukraine,2020,male,66.39,20820757.0
+Ukraine,2020,total,71.1851219512195,44680014.0
+United Kingdom,2020,female,82.4,34085589.0
+United Kingdom,2020,male,78.4,32995645.0
+United Kingdom,2020,total,80.3512195121951,67081234.0
