@@ -110,7 +110,7 @@ async function initializeChart() {
             scales: {
                 x: {
                     type: 'linear',
-                    title: { display: true, text: 'Healthcare Expenditure ($)' },
+                    title: { display: true, text: 'Healthcare Expenditure (€)' },
                 },
                 y: {
                     title: { display: true, text: 'Life Expectancy (Years)' },

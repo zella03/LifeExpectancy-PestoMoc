@@ -1,14 +1,14 @@
 const width = window.innerWidth, height = window.innerHeight * 0.8;
 
-function formatNumber(num, currencySymbol) {
+function formatNumber(num) {
   if (Math.abs(num) >= 1e9) {
-    return (num / 1e9).toFixed(2) + "B" + currencySymbol;
+    return ((num / 1e9).toFixed(2) + "B");
   } else if (Math.abs(num) >= 1e6) {
-    return (num / 1e6).toFixed(2) + "M" + currencySymbol;
+    return ((num / 1e6).toFixed(2) + "M");
   } else if (Math.abs(num) >= 1e3) {
-    return (num / 1e3).toFixed(2) + "K" + currencySymbol;
+    return ((num / 1e3).toFixed(2) + "K");
   } else {
-    return num.toFixed(2) + currencySymbol;
+    return (num.toFixed(2));
   }
 }
 
@@ -42,7 +42,6 @@ availableYears.forEach(year => {
 yearSelector.value = 2021;
 
 function loadData(year, valueType) {
-  const currencySymbol = "€";
   Promise.all([
     d3.json("datasets/geojson/eu.geo.json"), 
     d3.csv(`datasets/healthcare/with-life-expectancy-by-years/life-expectancy-health-expenditure-${year}.csv`)
@@ -94,7 +93,7 @@ function loadData(year, valueType) {
 
         tooltip_map.transition().duration(200).style("opacity", 0.9);
         tooltip_map
-          .html(`<b>Country:</b> ${country}<br><b>${valueType}:</b> ${expenditure ? formatNumber(expenditure, currencySymbol) : "No data"}`)
+          .html(`<b>Country:</b> ${country}<br><b>${valueType}:</b> ${expenditure ? formatNumber(expenditure) + "€" : "No data"}`)
           .style("left", (event.pageX + 10) + "px")
           .style("top", (event.pageY - 20) + "px");
       })
@@ -137,14 +136,14 @@ function loadData(year, valueType) {
       .attr("x", (d, i) => i * 60)
       .attr("y", 35)
       .attr("text-anchor", "middle")
-      .text(d => formatNumber(d, currencySymbol));
+      .text(d => formatNumber(d) + "€");
 
 
     legend.append("text")
       .attr("x", 5 * 60)
       .attr("y", 35)
       .attr("text-anchor", "middle")
-      .text(formatNumber(maxExpenditure, currencySymbol));
+      .text(formatNumber(maxExpenditure) + "€");
 
     legend.append("text")
       .text(valueType)

@@ -20,19 +20,24 @@ main {
 }
 
 .top-bar {
+    position: sticky;
+    top: 0;
     width: 100%;
-    margin-top: 2px;
-    background-color: #f4f4f4;
-    color: #fff;
-    padding: 5px;
+    font-size: 18px;
+    background-color: #FFA500;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 60px;
 }
+
 
 .top-options {
     display: flex;
-    gap: 15px;
+    gap: 5px;
 }
 
 .option {
@@ -42,7 +47,7 @@ main {
     font-size: 18px;
     padding: 5px 20px;
     margin-right: 20px;
-    border-radius: 100px;
+    border-radius: 15px;
     transition: background-color 0.3s ease;
 }
 
@@ -52,11 +57,13 @@ main {
 }
 
 .menu-icon {
+    color: white;
     font-size: 30px;
+    padding: 5px;
+    padding-left: 10px;
+    text-decoration: none;
     cursor: pointer;
-    color: #000000;
 }
-
 
 header {
     display: flex;
