@@ -331,19 +331,56 @@ a{
 /* 
 healthcare page
 */
-
-#controls {
-    padding: 10px;
-    background-color: #f4f4f4;
-    border-bottom: 1px solid #ccc;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#year-selector{
+    width: 60px;
 }
+
+#value-toggle{
+    width: 190px;
+}
+
+#country1{
+    width: 150px;
+}
+
+#country2{
+    width: 150px;
+}
+
+.chart-container, .map-container {
+background: #fff;
+box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+padding: 20px;
+margin-bottom: 20px;
+}
+.form-control{
+    background-color: #f8f9fa;
+    border: 2px solid #ced4da;
+    border-radius: 5px;
+    padding: 5px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;}
+
+.form-control:focus {
+    background-color: #ffffff;
+    border-color: #007bff;
+    outline: none;}
+
+
+.form-control:hover {
+    background-color: #e9f7fe;
+    border-color: #007bff;}
+
+.chart-description, .map-description {
+font-size: 1rem;
+color: #6c757d;
+}
+
 #choropleth-map {
     width: 100%;
     height: 80vh;
 }
+
 .tooltip {
     position: absolute;
     background-color: white;
@@ -371,77 +408,73 @@ healthcare page
 }
 
 .slider-container {
-    position: relative;
-    width: 80%;
-    max-width: 600px;
-    margin-top: 20px;
-}
-.slider-track {
-    position: relative;
-    width: 100%;
-    height: 4px;
-    background-color: black;
-    border-radius: 2px;
-}
-.slider-labels {
     display: flex;
-    justify-content: space-between;
-    position: absolute;
-    top: -25px;
-    width: 100%;
-    font-size: 14px;
-    font-weight: bold;
-}
-.slider-knob {
-    position: absolute;
-    top: -8px;
-    left: 0;
-    width: 12px;
-    height: 12px;
-    background-color: red;
-    border-radius: 50%;
-    cursor: pointer;
-    transform: translateX(-50%);
-    transition: left 0.2s;
-}
-.current-year {
-    position: absolute;
-    top: 20px;
-    left: 0;
-    font-size: 14px;
-    font-weight: bold;
-    transform: translateX(-50%);
-}
-canvas {
-    max-width: 100%;
-    height: auto;
-}
-.slider-container {
-    width: 100%;
+    justify-content: center;
     align-items: center;
+    margin: 20px auto;
+    width: 80%;
 }
 
 .slider-wrapper {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 15px;
+    width: 100%;
 }
 
 .min-year, .max-year {
-    font-size: 14px;
+    font-size: 1.2rem;
     font-weight: bold;
+    color: #1f7abf; /* Modern blue */
 }
 
-
-.country-selection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-}
 #yearSlider {
+    -webkit-appearance: none;
+    appearance: none;
     width: 100%;
+    height: 12px;
+    border-radius: 10px;
+    background: #99cce6; /* Light blue track */
+    outline: none;
+    opacity: 0.9;
+    transition: background 0.3s;
 }
+
+#yearSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #1f7abf; /* Darker blue for thumb */
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#yearSlider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    background: #004d80; /* Even darker blue on hover */
+}
+
+#yearSlider::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #1f7abf;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#yearSlider::-moz-range-thumb:hover {
+    transform: scale(1.2);
+    background: #004d80;
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
 #currentYear {
     font-size: 24px;
     font-weight: bold;
@@ -465,4 +498,23 @@ canvas {
 .control-button:disabled {
     cursor: not-allowed;
     opacity: 0.5;
+}
+
+.next-page-button {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4c81af;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #4572a0;
 }
