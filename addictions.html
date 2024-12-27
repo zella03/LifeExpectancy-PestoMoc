@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Circular&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Dela+Gothic+One&family=Rubik+Mono+One&family=Shrikhand&display=swap" rel="stylesheet">
+    <title>How to Live Longer?</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="top-bar">
+    <div class="menu-icon">&#9776;</div>
+    <div class="top-options">
+        <a href="#" class="option">Team</a>
+        <a href="#" class="option">Project</a>
+    </div>
+</div>
+
+<header>
+    <div class="header-text">
+        <h1>Addictions</h1>
+        <p></p>
+    </div>
+    <div class="header-img">
+        <img src="/style/img/addictions.jpg" alt="Image of addictions" />
+    </div>
+</header>
+
+<main>
+    <div class="header-text">Correlation Matrix (2019)</div>
+    <div id="matrix"></div>
+    <div id="comment">
+        <p>The heatmap shows weak correlations between life expectancy and various substance use disorders. This means that while there is some relationship, it's not strong enough to draw definitive conclusions. So, why is life expectancy more influenced by other factors?</p>
+        <p>Life expectancy is significantly influenced by a combination of healthcare quality, economic stability, education, environmental factors, and social support. These elements work together to create a healthier and longer life for individuals.</p>
+        <p>Additionally, it's important to note that substance use disorders are often more prevalent in wealthier countries. In these countries, the negative impacts of substance use may be somewhat offset by the positive effects of better healthcare, higher economic stability, better education, cleaner environments, and stronger social support systems. This compensation helps maintain higher life expectancy despite the presence of substance use disorders.</p>
+        
+    </div>
+    
+    <div id="controls">
+        <label for="countrySelect">Select Country:</label>
+        <select id="countrySelect">
+            <option value="All">All</option>
+        </select>
+        <label for="addictionSelect">Select Addiction:</label>
+        <select id="addictionSelect">
+        </select>
+    </div>
+    <div id="chart"></div>
+
+</main>
+
+<footer>
+    <p>&copy; Data Visualization | Unige 2024/2025</p>
+</footer>
+
+<script src="scripts/addictions-heatmap.js"></script>
+<script src="scripts/addictions-line-chart.js"></script>
+
+</body>
+</html>
