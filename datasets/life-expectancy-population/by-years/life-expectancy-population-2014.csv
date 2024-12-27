@@ -1,0 +1,145 @@
+Country,Year,Total,Life_expectancy,Population
+Albania,2014,female,81.013,1459483.0
+Albania,2014,male,76.114,1429621.0
+Albania,2014,total,78.407,2889104.0
+Andorra,2014,female,,36337.0
+Andorra,2014,male,,37400.0
+Andorra,2014,total,,73737.0
+Austria,2014,female,84.0,4368617.0
+Austria,2014,male,79.1,4177739.0
+Austria,2014,total,81.490243902439,8546356.0
+Belarus,2014,female,78.4,5055280.0
+Belarus,2014,male,67.8,4393235.0
+Belarus,2014,total,72.9707317073171,9448515.0
+Belgium,2014,female,83.9,5700102.0
+Belgium,2014,male,78.8,5508955.0
+Belgium,2014,total,81.2878048780488,11209057.0
+Bosnia and Herzegovina,2014,female,77.709,1870555.0
+Bosnia and Herzegovina,2014,male,73.539,1694274.0
+Bosnia and Herzegovina,2014,total,75.659,3564829.0
+Bulgaria,2014,female,78.0,3710395.0
+Bulgaria,2014,male,71.1,3513543.0
+Bulgaria,2014,total,74.4658536585366,7223938.0
+Channel Islands,2014,female,84.057,82279.0
+Channel Islands,2014,male,79.649,80447.0
+Channel Islands,2014,total,81.884,162726.0
+Croatia,2014,female,80.5,2178527.0
+Croatia,2014,male,74.6,2023071.0
+Croatia,2014,total,77.4780487804878,4201598.0
+Cyprus,2014,female,82.723,594485.0
+Cyprus,2014,male,78.817,607316.0
+Cyprus,2014,total,80.771,1201801.0
+Czechia,2014,female,82.0,5351090.0
+Czechia,2014,male,75.8,5174257.0
+Czechia,2014,total,78.8243902439024,10525347.0
+Denmark,2014,female,82.8,2841902.0
+Denmark,2014,male,78.7,2801573.0
+Denmark,2014,total,80.7,5643475.0
+Estonia,2014,female,81.9,699883.0
+Estonia,2014,male,72.4,614662.0
+Estonia,2014,total,77.0341463414634,1314545.0
+Faroe Islands,2014,female,84.0,23445.0
+Faroe Islands,2014,male,79.3,24983.0
+Faroe Islands,2014,total,81.5926829268293,48428.0
+Finland,2014,female,84.1,2775309.0
+Finland,2014,male,78.4,2686203.0
+Finland,2014,total,81.1804878048781,5461512.0
+France,2014,female,86.1,34204877.0
+France,2014,male,79.5,32107190.0
+France,2014,total,82.719512195122,66312067.0
+Germany,2014,female,83.6,41250774.0
+Germany,2014,male,78.7,39731726.0
+Germany,2014,total,81.090243902439,80982500.0
+Gibraltar,2014,female,86.29,16423.0
+Gibraltar,2014,male,77.803,16390.0
+Gibraltar,2014,total,81.882,32813.0
+Greece,2014,female,84.1,5619195.0
+Greece,2014,male,78.8,5273218.0
+Greece,2014,total,81.3853658536585,10892413.0
+Hungary,2014,female,79.4,5167126.0
+Hungary,2014,male,72.3,4699342.0
+Hungary,2014,total,75.7634146341463,9866468.0
+Iceland,2014,female,84.5,163159.0
+Iceland,2014,male,81.3,164227.0
+Iceland,2014,total,82.8609756097561,327386.0
+Ireland,2014,female,83.5,2353093.0
+Ireland,2014,male,79.3,2304647.0
+Ireland,2014,total,81.3487804878049,4657740.0
+Isle of Man,2014,female,81.939,42289.0
+Isle of Man,2014,male,78.11,41603.0
+Isle of Man,2014,total,80.037,83892.0
+Italy,2014,female,85.6,31302540.0
+Italy,2014,male,80.7,29486600.0
+Italy,2014,total,83.090243902439,60789140.0
+Kosovo,2014,female,81.694,921520.0
+Kosovo,2014,male,76.174,891268.0
+Kosovo,2014,total,78.88,1812788.0
+Latvia,2014,female,79.4,1079758.0
+Latvia,2014,male,69.1,914024.0
+Latvia,2014,total,74.1243902439024,1993782.0
+Liechtenstein,2014,female,83.2,18764.0
+Liechtenstein,2014,male,81.0,18484.0
+Liechtenstein,2014,total,82.0731707317073,37248.0
+Lithuania,2014,female,80.1,1581358.0
+Lithuania,2014,male,69.2,1351009.0
+Lithuania,2014,total,74.5170731707317,2932367.0
+Luxembourg,2014,female,85.2,277781.0
+Luxembourg,2014,male,79.4,278538.0
+Luxembourg,2014,total,82.2292682926829,556319.0
+Moldova,2014,female,73.524,1529419.0
+Moldova,2014,male,64.695,1328396.0
+Moldova,2014,total,69.031,2857815.0
+Monaco,2014,female,,18437.0
+Monaco,2014,male,,17691.0
+Monaco,2014,total,,36128.0
+Montenegro,2014,female,78.9,322304.0
+Montenegro,2014,male,74.1,299506.0
+Montenegro,2014,total,76.4414634146341,621810.0
+Netherlands,2014,female,83.5,8524757.0
+Netherlands,2014,male,80.0,8340251.0
+Netherlands,2014,total,81.7073170731707,16865008.0
+North Macedonia,2014,female,77.5,975849.0
+North Macedonia,2014,male,73.5,941708.0
+North Macedonia,2014,total,75.4512195121951,1917557.0
+Norway,2014,female,84.2,2554241.0
+Norway,2014,male,80.1,2582991.0
+Norway,2014,total,82.1,5137232.0
+Poland,2014,female,81.7,19584440.0
+Poland,2014,male,73.7,18427295.0
+Poland,2014,total,77.6024390243903,38011735.0
+Portugal,2014,female,84.4,5458055.0
+Portugal,2014,male,78.0,4943007.0
+Portugal,2014,total,81.1219512195122,10401062.0
+Romania,2014,female,78.7,10292083.0
+Romania,2014,male,71.3,9616896.0
+Romania,2014,total,74.909756097561,19908979.0
+Russian Federation,2014,female,76.47,77389058.0
+Russian Federation,2014,male,65.29,66848165.0
+Russian Federation,2014,total,70.7436585365854,144237223.0
+San Marino,2014,female,,16826.0
+San Marino,2014,male,,15829.0
+San Marino,2014,total,,32655.0
+Serbia,2014,female,78.0,3735593.0
+Serbia,2014,male,72.8,3396194.0
+Serbia,2014,total,75.3365853658537,7131787.0
+Slovakia,2014,female,80.5,2777754.0
+Slovakia,2014,male,73.3,2640895.0
+Slovakia,2014,total,76.8121951219512,5418649.0
+Slovenia,2014,female,84.1,1040109.0
+Slovenia,2014,male,78.2,1021871.0
+Slovenia,2014,total,81.0780487804878,2061980.0
+Spain,2014,female,86.2,23585638.0
+Spain,2014,male,80.4,22895244.0
+Spain,2014,total,83.2292682926829,46480882.0
+Sweden,2014,female,84.2,4852888.0
+Sweden,2014,male,80.4,4843222.0
+Sweden,2014,total,82.2536585365854,9696110.0
+Switzerland,2014,female,85.4,4140660.0
+Switzerland,2014,male,81.1,4047989.0
+Switzerland,2014,total,83.1975609756098,8188649.0
+Ukraine,2014,female,76.37,24567807.0
+Ukraine,2014,male,66.25,21404573.0
+Ukraine,2014,total,71.1865853658537,45972380.0
+United Kingdom,2014,female,83.2,32949985.0
+United Kingdom,2014,male,79.5,31652313.0
+United Kingdom,2014,total,81.3048780487805,64602298.0

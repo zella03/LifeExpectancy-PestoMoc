@@ -1,0 +1,145 @@
+Country,Year,Total,Life_expectancy,Population
+Albania,2022,female,79.472,1404107.0
+Albania,2022,male,74.502,1373582.0
+Albania,2022,total,76.833,2777689.0
+Andorra,2022,female,,38912.0
+Andorra,2022,male,,40793.0
+Andorra,2022,total,,79705.0
+Austria,2022,female,83.5,4592386.0
+Austria,2022,male,78.8,4449465.0
+Austria,2022,total,81.0926829268293,9041851.0
+Belarus,2022,female,78.384,4928161.0
+Belarus,2022,male,68.09,4299910.0
+Belarus,2022,total,73.1114634146342,9228071.0
+Belgium,2022,female,83.9,5923682.0
+Belgium,2022,male,79.6,5756528.0
+Belgium,2022,total,81.6975609756098,11680210.0
+Bosnia and Herzegovina,2022,female,77.498,1680628.0
+Bosnia and Herzegovina,2022,male,73.126,1524174.0
+Bosnia and Herzegovina,2022,total,75.293,3204802.0
+Bulgaria,2022,female,78.1,3427234.0
+Bulgaria,2022,male,70.8,3216090.0
+Bulgaria,2022,total,74.3609756097561,6643324.0
+Channel Islands,2022,female,83.635,84597.0
+Channel Islands,2022,male,79.521,82618.0
+Channel Islands,2022,total,81.583,167215.0
+Croatia,2022,female,80.7,1997208.0
+Croatia,2022,male,74.6,1858433.0
+Croatia,2022,total,77.5756097560976,3855641.0
+Cyprus,2022,female,83.673,660545.0
+Cyprus,2022,male,80.068,670825.0
+Cyprus,2022,total,81.889,1331370.0
+Czechia,2022,female,82.0,5410575.0
+Czechia,2022,male,76.2,5261543.0
+Czechia,2022,total,79.0292682926829,10672118.0
+Denmark,2022,female,83.2,2967128.0
+Denmark,2022,male,79.5,2935909.0
+Denmark,2022,total,81.3048780487805,5903037.0
+Estonia,2022,female,82.4,708704.0
+Estonia,2022,male,73.7,640136.0
+Estonia,2022,total,77.9439024390244,1348840.0
+Faroe Islands,2022,female,85.4,26024.0
+Faroe Islands,2022,male,81.3,27928.0
+Faroe Islands,2022,total,83.3,53952.0
+Finland,2022,female,83.8,2809620.0
+Finland,2022,male,78.7,2746486.0
+Finland,2022,total,81.1878048780488,5556106.0
+France,2022,female,85.2,35081787.0
+France,2022,male,79.4,32983228.0
+France,2022,total,82.2292682926829,68065015.0
+Germany,2022,female,83.2,42428700.0
+Germany,2022,male,78.33,41369285.0
+Germany,2022,total,80.7056097560976,83797985.0
+Gibraltar,2022,female,84.691,18895.0
+Gibraltar,2022,male,80.93,18714.0
+Gibraltar,2022,total,82.83,37609.0
+Greece,2022,female,83.3,5382141.0
+Greece,2022,male,78.1,5054741.0
+Greece,2022,total,80.6365853658537,10436882.0
+Hungary,2022,female,79.5,5018394.0
+Hungary,2022,male,72.7,4625983.0
+Hungary,2022,total,76.0170731707317,9644377.0
+Iceland,2022,female,83.4,186312.0
+Iceland,2022,male,81.0,195691.0
+Iceland,2022,total,82.1707317073171,382003.0
+Ireland,2022,female,84.9,2608057.0
+Ireland,2022,male,81.3,2557643.0
+Ireland,2022,total,83.0560975609756,5165700.0
+Isle of Man,2022,female,82.732,42457.0
+Isle of Man,2022,male,78.833,41675.0
+Isle of Man,2022,total,80.762,84132.0
+Italy,2022,female,85.0,30199743.0
+Italy,2022,male,80.9,28813924.0
+Italy,2022,total,82.9,59013667.0
+Kosovo,2022,female,81.742,898350.0
+Kosovo,2022,male,77.211,869746.0
+Kosovo,2022,total,79.524,1768096.0
+Latvia,2022,female,79.6,1009582.0
+Latvia,2022,male,69.8,869801.0
+Latvia,2022,total,74.580487804878,1879383.0
+Liechtenstein,2022,female,85.6,19886.0
+Liechtenstein,2022,male,83.1,19607.0
+Liechtenstein,2022,total,84.319512195122,39493.0
+Lithuania,2022,female,80.3,1498514.0
+Lithuania,2022,male,71.5,1333125.0
+Lithuania,2022,total,75.7926829268293,2831639.0
+Luxembourg,2022,female,85.3,324321.0
+Luxembourg,2022,male,80.9,328782.0
+Luxembourg,2022,total,83.0463414634146,653103.0
+Moldova,2022,female,73.32,1364474.0
+Moldova,2022,male,64.217,1164180.0
+Moldova,2022,total,68.621,2528654.0
+Monaco,2022,female,,19859.0
+Monaco,2022,male,,19072.0
+Monaco,2022,total,,38931.0
+Montenegro,2022,female,78.8,320255.0
+Montenegro,2022,male,73.7,296958.0
+Montenegro,2022,total,76.1878048780488,617213.0
+Netherlands,2022,female,83.2,8911982.0
+Netherlands,2022,male,80.3,8789000.0
+Netherlands,2022,total,81.7146341463415,17700982.0
+North Macedonia,2022,female,76.74,940844.0
+North Macedonia,2022,male,72.22,890868.0
+North Macedonia,2022,total,74.4248780487805,1831712.0
+Norway,2022,female,84.2,2705700.0
+Norway,2022,male,81.0,2751427.0
+Norway,2022,total,82.5609756097561,5457127.0
+Poland,2022,female,81.3,18975738.0
+Poland,2022,male,73.5,17846011.0
+Poland,2022,total,77.3048780487805,36821749.0
+Portugal,2022,female,84.5,5463636.0
+Portugal,2022,male,78.8,4970696.0
+Portugal,2022,total,81.5804878048781,10434332.0
+Romania,2022,female,79.3,9822455.0
+Romania,2022,male,71.5,9226047.0
+Romania,2022,total,75.3048780487805,19048502.0
+Russian Federation,2022,female,77.77,77230340.0
+Russian Federation,2022,male,67.57,67006593.0
+Russian Federation,2022,total,72.5456097560976,144236933.0
+San Marino,2022,female,,17210.0
+San Marino,2022,male,,16545.0
+San Marino,2022,total,,33755.0
+Serbia,2022,female,78.12,3493763.0
+Serbia,2022,male,72.97,3170686.0
+Serbia,2022,total,75.4821951219512,6664449.0
+Slovakia,2022,female,80.6,2779322.0
+Slovakia,2022,male,73.7,2652430.0
+Slovakia,2022,total,77.0658536585366,5431752.0
+Slovenia,2022,female,84.1,1051860.0
+Slovenia,2022,male,78.6,1060216.0
+Slovenia,2022,total,81.2829268292683,2112076.0
+Spain,2022,female,85.9,24307494.0
+Spain,2022,male,80.4,23451633.0
+Spain,2022,total,83.0829268292683,47759127.0
+Sweden,2022,female,84.8,5207363.0
+Sweden,2022,male,81.5,5279578.0
+Sweden,2022,total,83.109756097561,10486941.0
+Switzerland,2022,female,85.4,4419358.0
+Switzerland,2022,male,81.6,4357730.0
+Switzerland,2022,total,83.4536585365854,8777088.0
+Ukraine,2022,female,73.904,21931325.0
+Ukraine,2022,male,63.525,19117441.0
+Ukraine,2022,total,68.5879268292683,41048766.0
+United Kingdom,2022,female,83.8,34423876.0
+United Kingdom,2022,male,80.4,33367124.0
+United Kingdom,2022,total,82.0585365853659,67791000.0

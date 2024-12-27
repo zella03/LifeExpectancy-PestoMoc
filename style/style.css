@@ -327,3 +327,142 @@ footer p {
 a{
     text-decoration: none;
 }
+
+/* 
+healthcare page
+*/
+
+#controls {
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#choropleth-map {
+    width: 100%;
+    height: 80vh;
+}
+.tooltip {
+    position: absolute;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+    opacity: 0;
+}
+.legend {
+    font-size: 12px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+}
+
+.slider-container {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+.slider-track {
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    border-radius: 2px;
+}
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: -25px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+}
+.slider-knob {
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    background-color: red;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translateX(-50%);
+    transition: left 0.2s;
+}
+.current-year {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    font-size: 14px;
+    font-weight: bold;
+    transform: translateX(-50%);
+}
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+.slider-container {
+    width: 100%;
+    align-items: center;
+}
+
+.slider-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.min-year, .max-year {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.country-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+#yearSlider {
+    width: 100%;
+}
+#currentYear {
+    font-size: 24px;
+    font-weight: bold;
+}
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.control-button {
+    font-size: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.control-button:hover {
+    transform: scale(1.2);
+}
+.control-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}

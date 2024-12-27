@@ -1,0 +1,145 @@
+Country,Year,Total,Life_expectancy,Population
+Albania,2009,female,80.544,1481568.0
+Albania,2009,male,75.316,1445951.0
+Albania,2009,total,77.781,2927519.0
+Andorra,2009,female,,40123.0
+Andorra,2009,male,,43765.0
+Andorra,2009,total,,83888.0
+Austria,2009,female,83.2,4281935.0
+Austria,2009,male,77.6,4061388.0
+Austria,2009,total,80.3317073170732,8343323.0
+Belarus,2009,female,76.4,5084640.0
+Belarus,2009,male,64.7,4419943.0
+Belarus,2009,total,70.4073170731707,9504583.0
+Belgium,2009,female,82.8,5503286.0
+Belgium,2009,male,77.4,5293207.0
+Belgium,2009,total,80.0341463414634,10796493.0
+Bosnia and Herzegovina,2009,female,79.726,2030314.0
+Bosnia and Herzegovina,2009,male,74.067,1849480.0
+Bosnia and Herzegovina,2009,total,76.976,3879794.0
+Bulgaria,2009,female,77.1,3823787.0
+Bulgaria,2009,male,69.9,3620656.0
+Bulgaria,2009,total,73.4121951219512,7444443.0
+Channel Islands,2009,female,83.175,80044.0
+Channel Islands,2009,male,78.721,77467.0
+Channel Islands,2009,total,80.995,157511.0
+Croatia,2009,female,79.6,2233038.0
+Croatia,2009,male,72.9,2072143.0
+Croatia,2009,total,76.1682926829268,4305181.0
+Cyprus,2009,female,81.766,547513.0
+Cyprus,2009,male,77.109,561858.0
+Cyprus,2009,total,79.401,1109371.0
+Czechia,2009,female,80.1,5324047.0
+Czechia,2009,male,74.2,5119889.0
+Czechia,2009,total,77.0780487804878,10443936.0
+Denmark,2009,female,80.8,2785501.0
+Denmark,2009,male,76.5,2737594.0
+Denmark,2009,total,78.5975609756098,5523095.0
+Estonia,2009,female,80.1,713460.0
+Estonia,2009,male,69.8,621055.0
+Estonia,2009,total,74.8243902439024,1334515.0
+Faroe Islands,2009,female,83.0,23457.0
+Faroe Islands,2009,male,77.8,25334.0
+Faroe Islands,2009,total,80.3365853658537,48791.0
+Finland,2009,female,83.1,2720424.0
+Finland,2009,male,76.5,2618447.0
+Finland,2009,total,79.719512195122,5338871.0
+France,2009,female,85.0,33377741.0
+France,2009,male,78.0,31328695.0
+France,2009,total,81.4146341463415,64706436.0
+Germany,2009,female,82.5,41973689.0
+Germany,2009,male,77.3,39928618.0
+Germany,2009,total,79.8365853658537,81902307.0
+Gibraltar,2009,female,83.745,15417.0
+Gibraltar,2009,male,78.598,15406.0
+Gibraltar,2009,total,81.243,30823.0
+Greece,2009,female,82.8,5660762.0
+Greece,2009,male,77.7,5446255.0
+Greece,2009,total,80.1878048780488,11107017.0
+Hungary,2009,female,77.9,5261256.0
+Hungary,2009,male,70.1,4761394.0
+Hungary,2009,total,73.9048780487805,10022650.0
+Iceland,2009,female,83.8,157515.0
+Iceland,2009,male,79.8,160984.0
+Iceland,2009,total,81.7512195121951,318499.0
+Ireland,2009,female,82.7,2278401.0
+Ireland,2009,male,77.8,2256974.0
+Ireland,2009,total,80.190243902439,4535375.0
+Isle of Man,2009,female,81.043,41806.0
+Isle of Man,2009,male,76.332,41133.0
+Isle of Man,2009,total,78.681,82939.0
+Italy,2009,female,84.3,30453636.0
+Italy,2009,male,79.1,28641729.0
+Italy,2009,total,81.6365853658537,59095365.0
+Kosovo,2009,female,80.223,909091.0
+Kosovo,2009,male,75.24,885590.0
+Kosovo,2009,total,77.665,1794681.0
+Latvia,2009,female,78.1,1159916.0
+Latvia,2009,male,68.3,981753.0
+Latvia,2009,total,73.0804878048781,2141669.0
+Liechtenstein,2009,female,83.6,18044.0
+Liechtenstein,2009,male,79.5,17698.0
+Liechtenstein,2009,total,81.5,35742.0
+Lithuania,2009,female,78.6,1701064.0
+Lithuania,2009,male,67.5,1461852.0
+Lithuania,2009,total,72.9146341463415,3162916.0
+Luxembourg,2009,female,83.3,250598.0
+Luxembourg,2009,male,78.1,247185.0
+Luxembourg,2009,total,80.6365853658537,497783.0
+Moldova,2009,female,73.876,1535993.0
+Moldova,2009,male,65.275,1329220.0
+Moldova,2009,total,69.573,2865213.0
+Monaco,2009,female,,16599.0
+Monaco,2009,male,,15765.0
+Monaco,2009,total,,32364.0
+Montenegro,2009,female,77.5,321266.0
+Montenegro,2009,male,72.9,297028.0
+Montenegro,2009,total,75.1439024390244,618294.0
+Netherlands,2009,female,82.7,8364852.0
+Netherlands,2009,male,78.5,8165536.0
+Netherlands,2009,total,80.5487804878049,16530388.0
+North Macedonia,2009,female,76.7,997455.0
+North Macedonia,2009,male,72.3,961327.0
+North Macedonia,2009,total,74.4463414634146,1958782.0
+Norway,2009,female,83.1,2417866.0
+Norway,2009,male,78.6,2410860.0
+Norway,2009,total,80.7951219512195,4828726.0
+Poland,2009,female,80.1,19782008.0
+Poland,2009,male,71.5,18369595.0
+Poland,2009,total,75.6951219512195,38151603.0
+Portugal,2009,female,81.8,5504912.0
+Portugal,2009,male,75.8,5063335.0
+Portugal,2009,total,78.7268292682927,10568247.0
+Romania,2009,female,77.1,10554494.0
+Romania,2009,male,69.7,9812993.0
+Romania,2009,total,73.309756097561,20367487.0
+Russian Federation,2009,female,74.79,76746264.0
+Russian Federation,2009,male,62.87,66039084.0
+Russian Federation,2009,total,68.6846341463415,142785348.0
+San Marino,2009,female,,17169.0
+San Marino,2009,male,,15897.0
+San Marino,2009,total,,33066.0
+Serbia,2009,female,76.7,3839789.0
+Serbia,2009,male,71.4,3481018.0
+Serbia,2009,total,73.9853658536585,7320807.0
+Slovakia,2009,female,78.7,2765994.0
+Slovakia,2009,male,71.3,2620412.0
+Slovakia,2009,total,74.909756097561,5386406.0
+Slovenia,2009,female,82.3,1030478.0
+Slovenia,2009,male,75.8,1009191.0
+Slovenia,2009,total,78.9707317073171,2039669.0
+Spain,2009,female,84.6,23395627.0
+Spain,2009,male,78.5,22967319.0
+Spain,2009,total,81.4756097560976,46362946.0
+Sweden,2009,female,83.4,4672148.0
+Sweden,2009,male,79.4,4626367.0
+Sweden,2009,total,81.3512195121951,9298515.0
+Switzerland,2009,female,84.4,3933824.0
+Switzerland,2009,male,79.8,3810007.0
+Switzerland,2009,total,82.0439024390244,7743831.0
+Ukraine,2009,female,74.86,24958395.0
+Ukraine,2009,male,63.79,21665336.0
+Ukraine,2009,total,69.19,46623731.0
+United Kingdom,2009,female,82.1,31880512.0
+United Kingdom,2009,male,78.1,30395758.0
+United Kingdom,2009,total,80.0512195121951,62276270.0

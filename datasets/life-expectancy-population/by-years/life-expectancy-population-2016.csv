@@ -1,0 +1,145 @@
+Country,Year,Total,Life_expectancy,Population
+Albania,2016,female,81.377,1452738.0
+Albania,2016,male,76.639,1423363.0
+Albania,2016,total,78.86,2876101.0
+Andorra,2016,female,,35679.0
+Andorra,2016,male,,36502.0
+Andorra,2016,total,,72181.0
+Austria,2016,female,84.1,4444184.0
+Austria,2016,male,79.3,4292484.0
+Austria,2016,total,81.6414634146342,8736668.0
+Belarus,2016,female,79.0,5060389.0
+Belarus,2016,male,68.9,4408990.0
+Belarus,2016,total,73.8268292682927,9469379.0
+Belgium,2016,female,84.0,5752119.0
+Belgium,2016,male,79.0,5579303.0
+Belgium,2016,total,81.4390243902439,11331422.0
+Bosnia and Herzegovina,2016,female,78.768,1822354.0
+Bosnia and Herzegovina,2016,male,74.775,1650649.0
+Bosnia and Herzegovina,2016,total,76.808,3473003.0
+Bulgaria,2016,female,78.5,3664227.0
+Bulgaria,2016,male,71.3,3463595.0
+Bulgaria,2016,total,74.8121951219512,7127822.0
+Channel Islands,2016,female,83.474,82837.0
+Channel Islands,2016,male,79.22,81046.0
+Channel Islands,2016,total,81.366,163883.0
+Croatia,2016,female,81.3,2128986.0
+Croatia,2016,male,74.9,1977881.0
+Croatia,2016,total,78.0219512195122,4106867.0
+Cyprus,2016,female,83.185,612478.0
+Cyprus,2016,male,78.945,624634.0
+Cyprus,2016,total,81.056,1237112.0
+Czechia,2016,female,82.1,5366453.0
+Czechia,2016,male,76.1,5199879.0
+Czechia,2016,total,79.0268292682927,10566332.0
+Denmark,2016,female,82.8,2879019.0
+Denmark,2016,male,79.0,2848991.0
+Denmark,2016,total,80.8536585365854,5728010.0
+Estonia,2016,female,82.2,698661.0
+Estonia,2016,male,73.3,617129.0
+Estonia,2016,total,77.6414634146342,1315790.0
+Faroe Islands,2016,female,84.4,23938.0
+Faroe Islands,2016,male,79.8,25526.0
+Faroe Islands,2016,total,82.0439024390244,49464.0
+Finland,2016,female,84.4,2788351.0
+Finland,2016,male,78.6,2706952.0
+Finland,2016,total,81.4292682926829,5495303.0
+France,2016,female,85.8,34430680.0
+France,2016,male,79.5,32293424.0
+France,2016,total,82.5731707317073,66724104.0
+Germany,2016,female,83.5,41709920.0
+Germany,2016,male,78.6,40638749.0
+Germany,2016,total,80.990243902439,82348669.0
+Gibraltar,2016,female,84.007,16850.0
+Gibraltar,2016,male,79.331,16808.0
+Gibraltar,2016,total,81.702,33658.0
+Greece,2016,female,84.0,5573396.0
+Greece,2016,male,78.9,5202575.0
+Greece,2016,total,81.3878048780488,10775971.0
+Hungary,2016,female,79.7,5132249.0
+Hungary,2016,male,72.6,4681774.0
+Hungary,2016,total,76.0634146341464,9814023.0
+Iceland,2016,female,84.1,166317.0
+Iceland,2016,male,80.4,169122.0
+Iceland,2016,total,82.2048780487805,335439.0
+Ireland,2016,female,83.6,2401795.0
+Ireland,2016,male,79.8,2353540.0
+Ireland,2016,total,81.6536585365854,4755335.0
+Isle of Man,2016,female,82.21,42102.0
+Isle of Man,2016,male,78.41,41364.0
+Isle of Man,2016,total,80.314,83466.0
+Italy,2016,female,85.6,31163286.0
+Italy,2016,male,81.0,29464212.0
+Italy,2016,total,83.2439024390244,60627498.0
+Kosovo,2016,female,81.494,903541.0
+Kosovo,2016,male,76.494,874027.0
+Kosovo,2016,total,78.981,1777568.0
+Latvia,2016,female,79.6,1059653.0
+Latvia,2016,male,69.8,899884.0
+Latvia,2016,total,74.580487804878,1959537.0
+Liechtenstein,2016,female,84.0,19001.0
+Liechtenstein,2016,male,80.6,18715.0
+Liechtenstein,2016,total,82.2585365853659,37716.0
+Lithuania,2016,female,80.1,1547506.0
+Lithuania,2016,male,69.5,1320725.0
+Lithuania,2016,total,74.6707317073171,2868231.0
+Luxembourg,2016,female,85.4,289817.0
+Luxembourg,2016,male,80.1,292197.0
+Luxembourg,2016,total,82.6853658536585,582014.0
+Moldova,2016,female,74.51,1503935.0
+Moldova,2016,male,65.474,1299251.0
+Moldova,2016,total,69.917,2803186.0
+Monaco,2016,female,,19012.0
+Monaco,2016,male,,18264.0
+Monaco,2016,total,,37276.0
+Montenegro,2016,female,78.9,322466.0
+Montenegro,2016,male,74.1,299837.0
+Montenegro,2016,total,76.4414634146341,622303.0
+Netherlands,2016,female,83.2,8596978.0
+Netherlands,2016,male,80.0,8433336.0
+Netherlands,2016,total,81.5609756097561,17030314.0
+North Macedonia,2016,female,77.5,972195.0
+North Macedonia,2016,male,73.4,934118.0
+North Macedonia,2016,total,75.4,1906313.0
+Norway,2016,female,84.2,2598195.0
+Norway,2016,male,80.7,2636324.0
+Norway,2016,total,82.4073170731707,5234519.0
+Poland,2016,female,82.0,19556897.0
+Poland,2016,male,73.9,18413190.0
+Poland,2016,total,77.8512195121951,37970087.0
+Portugal,2016,female,84.3,5425240.0
+Portugal,2016,male,78.1,4900212.0
+Portugal,2016,total,81.1243902439025,10325452.0
+Romania,2016,female,79.0,10174312.0
+Romania,2016,male,71.6,9527955.0
+Romania,2016,total,75.209756097561,19702267.0
+Russian Federation,2016,female,77.06,77749859.0
+Russian Federation,2016,male,66.5,67265601.0
+Russian Federation,2016,total,71.6512195121951,145015460.0
+San Marino,2016,female,,17059.0
+San Marino,2016,male,,16042.0
+San Marino,2016,total,,33101.0
+Serbia,2016,female,78.3,3697361.0
+Serbia,2016,male,73.2,3360961.0
+Serbia,2016,total,75.6878048780488,7058322.0
+Slovakia,2016,female,80.7,2781615.0
+Slovakia,2016,male,73.8,2649183.0
+Slovakia,2016,total,77.1658536585366,5430798.0
+Slovenia,2016,female,84.3,1040428.0
+Slovenia,2016,male,78.2,1024614.0
+Slovenia,2016,total,81.1756097560976,2065042.0
+Spain,2016,female,86.3,23619035.0
+Spain,2016,male,80.5,22865027.0
+Spain,2016,total,83.3292682926829,46484062.0
+Sweden,2016,female,84.1,4950928.0
+Sweden,2016,male,80.6,4972157.0
+Sweden,2016,total,82.3073170731707,9923085.0
+Switzerland,2016,female,85.6,4225870.0
+Switzerland,2016,male,81.7,4147468.0
+Switzerland,2016,total,83.6024390243903,8373338.0
+Ukraine,2016,female,76.46,24365768.0
+Ukraine,2016,male,66.73,21251064.0
+Ukraine,2016,total,71.4763414634146,45616832.0
+United Kingdom,2016,female,83.0,33404170.0
+United Kingdom,2016,male,79.4,32207423.0
+United Kingdom,2016,total,81.1560975609756,65611593.0
