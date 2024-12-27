@@ -231,6 +231,78 @@ header p {
     border-radius: 20px 20px 0 0;
 }
 
+
+/*team intro*/
+.team{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+#our_team{
+    margin-top: -4%;
+    margin-bottom: 5%;
+}
+
+.intro h2{
+    font-size: 1.2em;
+    font-family: 'Fira Sans', sans-serif;
+    border-bottom:none;
+    color: rgb(70, 70, 70);
+    text-align: center;
+    font-weight:500;
+}
+
+.intro p{
+    font-size: 0.9em;
+    font-family: 'Fira Sans', sans-serif;
+    border-bottom:none;
+    color: rgb(95, 95, 95);
+    font-weight:lighter;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    background-color: #d3d8e1;
+    border-radius: 50px 50px 0 0;
+}
+.intro img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: -10%;
+    gap: 20px;
+    width: auto; /* Set to auto or 100% */
+}
+
+.icons img{
+    width: 40px;
+    height: 40px;
+}
+
 html {
     overflow-y: scroll;
 }
