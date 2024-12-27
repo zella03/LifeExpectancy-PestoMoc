@@ -222,13 +222,108 @@ header p {
 
 
 .container-events{
-    background-color: #d3d8e1;
+    background-color: #f0ebe2;
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
     box-sizing: border-box;
     border-radius: 20px 20px 0 0;
+}
+
+
+.timeline {
+    position: relative;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    background-color: #000;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.event {
+    position: relative;
+    width: 50%;
+    margin: 20px 0;
+    padding: 10px 20px;
+}
+
+.event.left {
+    text-align: right;
+    left: -20px;
+}
+
+.event.right {
+    text-align: left;
+    left: 48%;
+}
+
+.event::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    border-radius: 50%;
+    top: 15px;
+    transform: translateX(-50%);
+}
+
+.event.left::before {
+    left: 100%;
+}
+
+.event.right::before {
+    left: -10px;
+}
+
+.year {
+    position: absolute;
+    top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    transform: translateX(-50%);
+}
+
+.event.left .year {
+    left: calc(100% + 30px);
+}
+
+.event.right .year {
+    left: calc(-40px);
+}
+
+.content {
+    display: flex;
+    align-items: center;
+}
+
+.content img {
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+    margin: 0 15px;
+    border-radius: 10%;
+}
+
+.content .description {
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.description h3 {
+    margin-bottom: 10px;
+    text-align: left;
 }
 
 
@@ -328,6 +423,16 @@ a{
     text-decoration: none;
 }
 
+
+
+.header-text-factorEvent{
+    padding: 30px;
+    background-color: #f4f4f4;
+    height: 20vh;
+    width: 100%;
+    margin-bottom: 10%;
+    text-align: center;
+}
 /* 
 healthcare page
 */
@@ -465,4 +570,42 @@ canvas {
 .control-button:disabled {
     cursor: not-allowed;
     opacity: 0.5;
+}
+
+
+/* life expectancy page */
+#map {
+    width: 100%;
+    height: 600px;
+    margin-bottom: 20px;
+}
+.year-select {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 20px;
+    background-color: #fcecdb;
+}
+
+.tooltip-map {
+    position: absolute;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 4px;
+    pointer-events: none;
+    display: none;
+}
+
+.bar {
+    fill: steelblue;
+}
+.bar:hover {
+    fill: orange;
+}
+.axis-label {
+    font-size: 12px;
+}
+.chart-title {
+    font-size: 20px;
+    margin-bottom: 10px;
 }
