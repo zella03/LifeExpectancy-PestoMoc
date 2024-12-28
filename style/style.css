@@ -725,3 +725,11 @@ canvas {
     font-size: 20px;
     margin-bottom: 10px;
 }
+
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    width: 100%;
+}

@@ -10,9 +10,9 @@
     <script src="https://d3js.org/d3.v6.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
 
-    <script src="scripts/data.js" defer></script>
+    <!--<script src="scripts/data.js" defer></script>
     <script src="scripts/lifeExpectancy-map.js" defer></script>
-    <script src="scripts/lifeExpectancy-barchart.js" defer></script>
+    <script src="scripts/lifeExpectancy-barchart.js" defer></script>-->
     <title>How to Live Longer?</title>
 </head>
 <body>
@@ -47,16 +47,18 @@
         </div>
 
         <div id="lifeExp-bar">
+            <h2 class="chart-title">Top 10 Countries by Life Expectancy</h2>
             <div>
                 <label for="year">Select Year: </label>
                 <select id="year-bar" class="year-select"></select>
             </div>
-
-            <h2 class="chart-title">Top 10 Countries by Life Expectancy</h2>
-            <svg id="chart"></svg>
+        
+            <div class="chart-container">
+                <svg id="chart"></svg>
+            </div>
         </div>
 
-
+        <script src="scripts/lifeExpectancy.js" defer></script>
     </main>
 
     <footer>
