@@ -12,10 +12,17 @@ const dataPromises = [
     d3.json("datasets/geojson/eu.geo.json"),
     ...years.map(year => d3.csv(`datasets/life-expectancy-population/by-years/life-expectancy-population-${year}.csv`)
         .then(data => {
-            allData[year] = data.filter(d => d.Total === "total").map(d => ({
+            /*allData[year] = data.filter(d => d.Total === "total").map(d => ({
                 Country: d.Country,
                 Year: d.Year,
                 Life_expectancy: parseFloat(d.Life_expectancy)
+            }));*/
+
+            allData[year] = data.map(d => ({
+                Country: d.Country,
+                Year: d.Year,
+                Total: d.Total,
+                Life_expectancy: parseFloat(d.Life_expectancy) || 0
             }));
         }))
 ];
@@ -70,10 +77,17 @@ function renderMap(geoData, year) {
         .style("stroke", "#333")
         .on("mouseover", function (event, d) {
             const countryName = d.properties.name;
-            const countryData = data.find(e => e.Country === countryName);
+            const countryData = data.filter(e => e.Country === countryName);
 
-            if (countryData) {
-                const lifeExpectancy = countryData.Life_expectancy.toFixed(2);
+            if (countryData.length > 0) {
+                const totalData = countryData.find(e => e.Total === "total");
+                //const femaleData = countryData.find(e => e.Total === "female");
+                //const maleData = countryData.find(e => e.Total === "male");
+
+                const totalLifeExpectancy = totalData ? totalData.Life_expectancy.toFixed(2) : 'N/A';
+                //const femaleLifeExpectancy = femaleData ? femaleData.Life_expectancy.toFixed(2) : 'N/A';
+                //const maleLifeExpectancy = maleData ? maleData.Life_expectancy.toFixed(2) : 'N/A';
+
                 d3.select(this).style("fill", "#58768a");
 
                 svgMap.selectAll("path")
@@ -83,7 +97,11 @@ function renderMap(geoData, year) {
                     .style("fill", "#ccc");
 
                 tooltipMap.style("display", "block")
-                    .html(`${countryName}: ${lifeExpectancy} years`)
+                    .html(`
+                        <strong>${countryName}</strong><br>
+                        Total: ${totalLifeExpectancy} years<br>
+                        
+                    `) //Female: ${femaleLifeExpectancy} years<br> Male: ${maleLifeExpectancy} years
                     .style("left", (event.pageX + 5) + "px")
                     .style("top", (event.pageY - 28) + "px");
             }
@@ -102,34 +120,86 @@ const y = d3.scaleLinear().range([chartHeight - margin.bottom, margin.top]);
 
 function renderBarChart(year) {
     const data = allData[year];
-    const top10Countries = data
-        .filter(d => !isNaN(d.Life_expectancy))
-        .sort((a, b) => b.Life_expectancy - a.Life_expectancy)
-        .slice(0, 10); // Take the top 10
-
-    x.domain(top10Countries.map(d => d.Country));
-    y.domain([0, d3.max(top10Countries, d => d.Life_expectancy)]);
+    const showGender = d3.select("#gender-toggle").property("checked");
 
     svgBar.selectAll("*").remove();
 
-    svgBar.selectAll(".bar")
-        .data(top10Countries)
-        .enter()
-        .append("rect")
-        .attr("class", "bar")
-        .attr("x", d => x(d.Country))
-        .attr("y", d => y(d.Life_expectancy))
-        .attr("width", x.bandwidth())
-        .attr("height", d => chartHeight - margin.bottom - y(d.Life_expectancy))
-        .on("mouseover", function (event, d) {
-            tooltipBar.transition().duration(200).style("opacity", .9);
-            tooltipBar.html(`${d.Country}: ${d.Life_expectancy.toFixed(2)} years`)
-                .style("left", (event.pageX + 5) + "px")
-                .style("top", (event.pageY - 28) + "px");
-        })
-        .on("mouseout", function () {
-            tooltipBar.transition().duration(200).style("opacity", 0);
-        });
+    const top10Countries = data
+        .filter(d => d.Total === "total" && !isNaN(d.Life_expectancy))
+        .sort((a, b) => b.Life_expectancy - a.Life_expectancy)
+        .slice(0, 10)
+        .map(d => d.Country);
+
+    const filteredData = data.filter(d => top10Countries.includes(d.Country));
+
+    if (showGender) {
+        const groupedData = filteredData.filter(d => d.Total !== "total");
+        const countries = top10Countries;
+
+        groupedData.sort((a, b) => b.Life_expectancy - a.Life_expectancy);
+
+        x.domain(countries);
+        y.domain([0, d3.max(groupedData, d => d.Life_expectancy)]);
+
+        const subgroups = ["male", "female"];
+        const subgroupScale = d3.scaleBand()
+            .domain(subgroups)
+            .range([0, x.bandwidth()])
+            .padding(0.05);
+
+        svgBar.selectAll(".group")
+            .data(countries)
+            .enter()
+            .append("g")
+            .attr("transform", d => `translate(${x(d)},0)`)
+            .selectAll("rect")
+            .data(country => subgroups.map(subgroup => {
+                const subgroupData = groupedData.find(d => d.Country === country && d.Total === subgroup) || {};
+                return { subgroup, country, Life_expectancy: subgroupData.Life_expectancy || 0 };
+            }))
+            .enter()
+            .append("rect")
+            .attr("x", d => subgroupScale(d.subgroup))
+            .attr("y", d => y(d.Life_expectancy))
+            .attr("width", subgroupScale.bandwidth())
+            .attr("height", d => chartHeight - margin.bottom - y(d.Life_expectancy))
+            .attr("class", d => `bar bar-${d.subgroup}`)
+            .on("mouseover", function (event, d) {
+                tooltipBar.transition().duration(200).style("opacity", .9);
+                tooltipBar.html(`${d.country} (${d.subgroup}): ${d.Life_expectancy.toFixed(2)} years`)
+                    .style("left", (event.pageX + 5) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+            })
+            .on("mouseout", function () {
+                tooltipBar.transition().duration(200).style("opacity", 0);
+            });
+    } else {
+        const totalData = filteredData.filter(d => d.Total === "total");
+
+        totalData.sort((a, b) => b.Life_expectancy - a.Life_expectancy);
+
+        x.domain(totalData.map(d => d.Country));
+        y.domain([0, d3.max(totalData, d => d.Life_expectancy)]);
+
+        svgBar.selectAll(".bar")
+            .data(totalData)
+            .enter()
+            .append("rect")
+            .attr("x", d => x(d.Country))
+            .attr("y", d => y(d.Life_expectancy))
+            .attr("width", x.bandwidth())
+            .attr("height", d => chartHeight - margin.bottom - y(d.Life_expectancy))
+            .attr("class", "bar")
+            .on("mouseover", function (event, d) {
+                tooltipBar.transition().duration(200).style("opacity", .9);
+                tooltipBar.html(`${d.Country}: ${d.Life_expectancy.toFixed(2)} years`)
+                    .style("left", (event.pageX + 5) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+            })
+            .on("mouseout", function () {
+                tooltipBar.transition().duration(200).style("opacity", 0);
+            });
+    }
 
     svgBar.append("g")
         .attr("class", "x-axis")
@@ -160,5 +230,12 @@ function renderBarChart(year) {
         .attr("x", chartWidth / 2)
         .attr("y", margin.top - 10)
         .style("text-anchor", "middle")
-        .text(`Top 10 Countries by Life Expectancy in ${year}`);
+        .text(showGender ? `Male and Female Life Expectancy in ${year}` : `Top 10 Countries by Life Expectancy in ${year}`);
 }
+
+
+
+d3.select("#gender-toggle").on("change", function () {
+    const selectedYear = +d3.select("#year-bar").property("value");
+    renderBarChart(selectedYear);
+});

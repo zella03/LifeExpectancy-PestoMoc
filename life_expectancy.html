@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Dela+Gothic+One&family=Rubik+Mono+One&family=Shrikhand&display=swap" rel="stylesheet">
     <script src="https://d3js.org/d3.v6.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
 
     <!--<script src="scripts/data.js" defer></script>
     <script src="scripts/lifeExpectancy-map.js" defer></script>
@@ -24,38 +23,78 @@
         </div>
     </div>
 
-    <header class="header-text-factorEvent">
-        <h1>Life expectancy</h1>
+    <header>
+        <div class="header-text">
+            <h1>Life expectancy</h1>
+            
+            <p>
+                Life expectancy constitutes a crucial indicator of the overall health and well-being of populations around the world. <b>It is defined as the average number of years a person can expect to live, based on current mortality rates.</b> 
+            </p>
+        </div>
+        <div class="header-img">
+            <img src="style/img/life_expectancy/life_exp.jpg" alt="Image representing life expectancy" />
+        </div>
     </header>
 
     <main>
         <div id="lifeExp-map">
-            <div>
-                <label for="year">Select Year: </label>
-                <select id="year-map" class="year-select"></select>
+            <div class="map-container">
+                <h2>Life Expectancy on Map</h2>
+                <p class="map-description">Look at the map and search for Life expectancy in each country. Chose a year and see how it changed.</p>
+                <div>
+                    <label for="year">Select Year: </label>
+                    <select id="year-map" class="year-select"></select>
+                </div>
+                <svg id="map"></svg>
             </div>
-            <svg id="map"></svg>
             <div class="tooltip-map" id="tooltip-map"></div>
 
-            <div class="comment">
+            <section>
                 <p>
-                    Life expectancy constitutes a crucial indicator of the overall health and well-being of populations around the world. It is defined as the average number of years a person can expect to live, based on current mortality rates. As an essential metric, it assists policymakers, researchers, and health professionals in evaluating the effectiveness of healthcare systems, economic stability, and social factors such as nutrition and sanitation.
-                    <br>
-                    The depiction of life expectancy has undergone significant development over time, and current capabilities allow for the use of advanced data visualizations to explore these trends in great detail. The map presented here displays life expectancy across a range of countries, offering a snapshot of European health. It facilitates navigation through different countries, allowing the user to observe the life expectancy in those countries.
+                    The depiction of life expectancy has undergone <b>significant development over time</b>, and current capabilities allow for the use of advanced data visualizations to explore these trends in great detail. The map presented here displays life expectancy across a range of countries, offering a snapshot of European health. It facilitates navigation through different countries, allowing the user to observe the life expectancy in those countries.
                 </p>
-            </div>
+            </section>
         </div>
 
+        <h1 class="title-separator">But Where is the Best Place to Live?</h1>
+
         <div id="lifeExp-bar">
-            <h2 class="chart-title">Top 10 Countries by Life Expectancy</h2>
-            <div>
-                <label for="year">Select Year: </label>
-                <select id="year-bar" class="year-select"></select>
-            </div>
-        
-            <div class="chart-container">
+            <div class="chart-container-life_exp">
+                <h2>Top 10 Countries by Life Expectancy</h2>
+                <p class="chart-description">
+                    The bar chart below <b>highlights the top 10 countries with the highest life expectancy</b> for the selected year. 
+                    <br>
+                    Use the dropdown menu to change the year and see how the rankings evolve. Hover over each bar to see precise life expectancy values. Chose option to see division between male and female.
+                </p>
+                <div class="controls">
+                    <div class="year-selector">
+                        <label for="year-bar">Select Year:</label>
+                        <select id="year-bar" class="year-select"></select>
+                    </div>
+                    <label class="gender-toggle">
+                        <input type="checkbox" id="gender-toggle" /> Show Male/Female Life Expectancy
+                    </label>
+                </div>
                 <svg id="chart"></svg>
             </div>
+
+            <section>
+                <p>
+                    Looking across the years, one country consistently stands out among the top three for life expectancy: <b>Switzerland</b>.
+                    <br>
+                    With only a few exceptions, Switzerland has maintained its position as a global leader in longevity. Other countries that frequently appear in the top three include Spain, Italy, Iceland, and Liechtenstein.
+                    <br>
+                    What makes these nations so remarkable? Could it be their healthcare systems, dietary habits, or social stability?
+                </p>
+                
+                <div class="woman-comment">
+                    <img src="style/img/life_expectancy/woman.png">
+                    <div>
+                        <h3>Women take the lead!</h3>
+                        Another thing that is important to be mentioned is that there is a clear difference in life expectancy between men and women. Generally, <b style="color: palevioletred;">women</b> tend to live longer than men, which can be attributed to a variety of biological, social, and lifestyle factors.
+                    </div>
+                </div>
+            </section>
         </div>
 
         <script src="scripts/lifeExpectancy.js" defer></script>
