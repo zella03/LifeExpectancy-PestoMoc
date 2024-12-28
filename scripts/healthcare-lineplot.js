@@ -1,5 +1,17 @@
+function formatNumber(num) {
+    if (Math.abs(num) >= 1e9) {
+        return (num / 1e9).toFixed(2) + "B";
+    } else if (Math.abs(num) >= 1e6) {
+        return (num / 1e6).toFixed(2) + "M";
+    } else if (Math.abs(num) >= 1e3) {
+        return (num / 1e3).toFixed(2) + "K";
+    } else {
+        return num.toFixed(2);
+    }
+}
+
 async function initializeChart() {
-    // Function to load CSV data
+
     async function loadCSVData(year) {
         return fetch(`datasets/healthcare/with-life-expectancy-by-years/life-expectancy-health-expenditure-${year}.csv`)
             .then(response => response.text())
@@ -7,7 +19,6 @@ async function initializeChart() {
             .catch(error => console.error(`Error loading ${year}.csv`, error));
     }
 
-    // Function to parse CSV data
     function parseCSV(data) {
         const rows = data.split('\n');
         const parsedData = [];
@@ -30,7 +41,6 @@ async function initializeChart() {
     const allData = {};
     const availableCountries = new Set();
 
-    // Function to populate country dropdowns
     function populateCountrySelection(data) {
         data.forEach(item => availableCountries.add(item.country));
 
@@ -48,11 +58,10 @@ async function initializeChart() {
             country2Select.appendChild(option2);
         });
 
-        country1Select.value = "Poland";//[...availableCountries][0];
-        country2Select.value = "Italy";//[...availableCountries][1];
+        country1Select.value = "Poland";
+        country2Select.value = "Italy";
     }
 
-    // Load initial data
     const initialData = await loadCSVData(2021);
     populateCountrySelection(initialData);
 
@@ -90,40 +99,18 @@ async function initializeChart() {
                     callbacks: {
                         title: tooltipItems => `Year: ${tooltipItems[0].raw.year}`,
                         label: tooltipItem => [
-                            `Life Expectancy: ${tooltipItem.raw.y.toFixed(2)}`,
-                            `Expenditure: $${tooltipItem.raw.x.toFixed(2)}`,
-                            `Population: ${tooltipItem.raw.population}`
+                            `Life Expectancy: ${formatNumber(tooltipItem.raw.y)}`,
+                            `Expenditure: ${formatNumber(tooltipItem.raw.x)}€`,
+                            `Population: ${formatNumber(tooltipItem.raw.population)}`
                         ],
                     },
                 },
-                // customTextPlugin: {
-                //     id: 'customTextPlugin',
-                //     afterDatasetsDraw(chart) {
-                //         const ctx = chart.ctx;
-                //         const datasets = chart.data.datasets;
-
-                //         datasets.forEach((dataset, datasetIndex) => {
-                //             const data = dataset.data;
-                //             const meta = chart.getDatasetMeta(datasetIndex);
-                //             if (data.length > 0) {
-                //                 const firstPoint = meta.data[0];
-                //                 const { x, y } = firstPoint.getCenterPoint();
-
-                //                 ctx.save();
-                //                 ctx.font = '12px Arial';
-                //                 ctx.fillStyle = dataset.borderColor;
-                //                 ctx.fillText('2000', x + 5, y - 10); // Adjust positioning as needed
-                //                 ctx.restore();
-                //             }
-                //         });
-                //     }
-                // }
             },
             
             scales: {
                 x: {
                     type: 'linear',
-                    title: { display: true, text: 'Healthcare Expenditure ($)' },
+                    title: { display: true, text: 'Healthcare Expenditure (€)' },
                 },
                 y: {
                     title: { display: true, text: 'Life Expectancy (Years)' },
@@ -142,14 +129,12 @@ async function initializeChart() {
                         const meta = chart.getDatasetMeta(datasetIndex);
                         if (data.length > 0) {
                             const firstPoint = meta.data[0];
-                            const lastPoint = meta.data[data.length - 1]; // Get the last point
+                            const lastPoint = meta.data[data.length - 1];
                             const { x: xFirst, y: yFirst } = firstPoint.getCenterPoint();
                             const { x: xLast, y: yLast } = lastPoint.getCenterPoint();
 
                             ctx.save();
 
-                            // **Label for the first year (2000)**
-                            //const labelTextFirst = '2000';
                             const firstYear = data[0].year;
                             const labelTextFirst = `${firstYear}`;
                             const padding = 5;
@@ -159,7 +144,6 @@ async function initializeChart() {
                             const labelWidthFirst = textWidthFirst + padding * 2;
                             const labelHeightFirst = fontSize + padding * 2;
 
-                            // Draw label box for the first point
                             ctx.fillStyle = 'white';
                             ctx.strokeStyle = dataset.borderColor;
                             ctx.lineWidth = 1;
@@ -168,19 +152,18 @@ async function initializeChart() {
                             ctx.fill();
                             ctx.stroke();
 
-                            // Draw text for the first point
+
                             ctx.fillStyle = dataset.borderColor;
                             ctx.textAlign = 'center';
                             ctx.textBaseline = 'middle';
                             ctx.fillText(labelTextFirst, xFirst - 20, yFirst - labelHeightFirst / 2 + 50);
 
-                            // **Label for the last year**
-                            const labelTextLast = `${data[data.length - 1].year}`; // Dynamically fetch the last year
+
+                            const labelTextLast = `${data[data.length - 1].year}`;
                             const textWidthLast = ctx.measureText(labelTextLast).width;
                             const labelWidthLast = textWidthLast + padding * 2;
                             const labelHeightLast = fontSize + padding * 2;
 
-                            // Draw label box for the last point
                             ctx.fillStyle = 'white';
                             ctx.strokeStyle = dataset.borderColor;
                             ctx.lineWidth = 1;
@@ -189,7 +172,6 @@ async function initializeChart() {
                             ctx.fill();
                             ctx.stroke();
 
-                            // Draw text for the last point
                             ctx.fillStyle = dataset.borderColor;
                             ctx.textAlign = 'center';
                             ctx.textBaseline = 'middle';
@@ -212,7 +194,6 @@ async function initializeChart() {
     const resumeButton = document.getElementById('resumeButton');
     const replayButton = document.getElementById('replayButton');
 
-    // Function to update the chart
     async function createOrUpdateChart(year) {
         if (!allData[year]) {
             allData[year] = await loadCSVData(year);

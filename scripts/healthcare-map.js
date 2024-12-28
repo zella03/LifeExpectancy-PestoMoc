@@ -1,14 +1,14 @@
 const width = window.innerWidth, height = window.innerHeight * 0.8;
 
-function formatNumber(num, currencySymbol) {
+function formatNumber(num) {
   if (Math.abs(num) >= 1e9) {
-    return (num / 1e9).toFixed(2) + "B " + currencySymbol;
+    return ((num / 1e9).toFixed(2) + "B");
   } else if (Math.abs(num) >= 1e6) {
-    return (num / 1e6).toFixed(2) + "M " + currencySymbol;
+    return ((num / 1e6).toFixed(2) + "M");
   } else if (Math.abs(num) >= 1e3) {
-    return (num / 1e3).toFixed(2) + "K " + currencySymbol;
+    return ((num / 1e3).toFixed(2) + "K");
   } else {
-    return num.toFixed(2) + " " + currencySymbol;
+    return (num.toFixed(2));
   }
 }
 
@@ -42,7 +42,6 @@ availableYears.forEach(year => {
 yearSelector.value = 2021;
 
 function loadData(year, valueType) {
-  const currencySymbol = "€";
   Promise.all([
     d3.json("datasets/geojson/eu.geo.json"), 
     d3.csv(`datasets/healthcare/with-life-expectancy-by-years/life-expectancy-health-expenditure-${year}.csv`)
@@ -63,7 +62,7 @@ function loadData(year, valueType) {
     const maxExpenditure = d3.max(Object.values(expenditures), d => d ? d[valueType] : 0);
     const colorScale = d3.scaleThreshold()
       .domain([0, maxExpenditure * 0.05, maxExpenditure * 0.1, maxExpenditure * 0.3, maxExpenditure * 0.6, maxExpenditure])
-      .range(["#d6f5d6", "#99e699", "#4ddb4d", "#1f7a1f", "#095e09", "#004d00"]);
+      .range(["#d6e9f5", "#99cce6", "#4da6db", "#1f7abf", "#095e99", "#004d80"]);
 
     svg.selectAll("path")
       .data(geojson.features)
@@ -94,7 +93,7 @@ function loadData(year, valueType) {
 
         tooltip_map.transition().duration(200).style("opacity", 0.9);
         tooltip_map
-          .html(`<b>Country:</b> ${country}<br><b>${valueType}:</b> ${expenditure ? formatNumber(expenditure, currencySymbol) : "No data"}`)
+          .html(`<b>Country:</b> ${country}<br><b>${valueType}:</b> ${expenditure ? formatNumber(expenditure) + "€" : "No data"}`)
           .style("left", (event.pageX + 10) + "px")
           .style("top", (event.pageY - 20) + "px");
       })
@@ -137,14 +136,14 @@ function loadData(year, valueType) {
       .attr("x", (d, i) => i * 60)
       .attr("y", 35)
       .attr("text-anchor", "middle")
-      .text(d => formatNumber(d, currencySymbol));
+      .text(d => formatNumber(d) + "€");
 
 
     legend.append("text")
       .attr("x", 5 * 60)
       .attr("y", 35)
       .attr("text-anchor", "middle")
-      .text(formatNumber(maxExpenditure, currencySymbol));
+      .text(formatNumber(maxExpenditure) + "€");
 
     legend.append("text")
       .text(valueType)
