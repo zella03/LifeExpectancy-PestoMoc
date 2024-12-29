@@ -35,8 +35,8 @@
 <main>
     <h1>Is life expectancy directly correlated with addictions?</h1>
     <h2>2019 deaths per capita in Europe</h2>
-    <div id="matrix"></div>
-    <div id="comment">
+    <div id="matrix" class="chart-container"></div>
+    <div id="comment" class="description-container">
         The heatmap reveals weak correlations between life expectancy and various substance use disorders, indicating that while there is some relationship, it is not strong enough to suggest that these factors significantly impact life expectancy. Since the correlations are low, we can reasonably conclude that substance use disorders do not strongly influence life expectancy on a population level.
 
 Life expectancy is primarily shaped by a broader combination of factors such as healthcare quality, economic stability, education, environmental conditions, and social support. These factors have a more substantial and direct impact on ensuring longer and healthier lives, often outweighing the effects of substance use disorders.
@@ -47,14 +47,25 @@ It is also important to clarify that substance use disorders encompass issues re
     
     <h1>Addiction trends over time in Europe</h1>
     <h2>Per capita deaths (Top 5 countries)</h2>
-    <label for="addiction-select">Select Addiction Type:</label>
-    <select id="addiction-select"></select>
-    <div id="chart"></div>
+    <h3>By addiction type</h3>
+    <div><label for="addiction-select" >Select Addiction Type:</label>
+        <select id="addiction-select" class="year-select"></select></div>
+    
+    <div id="chart" class="chart-container"></div>
+    
+    <h3>By country</h3>
+    <div><label for="addiction-select" >Select Country:</label>
+        <select id="addiction-select" class="year-select"></select></div>
+    
+    <div id="chart4" class="chart-container"></div>
 
+    <h2>Alcohol consumption</h2>
+    <div id="chart2" class="chart-container"></div>
+    <h2>Smoking</h2>
+    <div id="chart3" class="chart-container"></div>
     <div class="next-page-button">
         <a href="healthcare.html" class="button">Check other factors: <strong>Healthcare</strong></a>
     </div>
-
 </main>
 
 <footer>
@@ -63,6 +74,9 @@ It is also important to clarify that substance use disorders encompass issues re
 
 <script src="scripts/addictions-heatmap.js"></script>
 <script src="scripts/addictions-line-chart.js"></script>
+<script src="scripts/addictions-line-chart2.js"></script>
+<script src="scripts/alcohol-lineplot.js"></script>
+<script src="scripts/smoking-lineplot.js"></script>
 
 </body>
 </html>
