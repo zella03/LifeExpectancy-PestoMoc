@@ -108,7 +108,7 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
                     tooltip.html(`
                         <p>Country: ${d.Entity}</p>
                         <p>Year: ${d.Year}</p>
-                        <p>Alcohol consumption(liters): ${d[tobaccoColumn].toFixed(2)}%</p>
+                        <p>Alcohol consumption(liters): ${d[tobaccoColumn].toFixed(2)}</p>
                     `)
                         .style("left", (mouseX + 10) + "px")
                         .style("top", (mouseY - 20) + "px");

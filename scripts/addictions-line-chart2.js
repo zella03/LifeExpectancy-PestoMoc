@@ -36,7 +36,7 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
     const countries = Array.from(new Set(data.map(d => d.Entity))).sort();
 
     // Populate the dropdown menu for country selection
-    const select = d3.select("#addiction-select");
+    const select = d3.select("#country-select");
     select.selectAll("option")
         .data(countries)
         .enter().append("option")
