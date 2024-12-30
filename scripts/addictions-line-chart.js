@@ -1,9 +1,7 @@
-// Set chart dimensions
 const margin = { top: 40, right: 140, bottom: 60, left: 80 },
     width = 900 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
-// Set up the SVG container
 const svg = d3.select("#chart")
     .append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -11,12 +9,10 @@ const svg = d3.select("#chart")
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-// Load and process the data
 d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").then(function(data) {
     const years = d3.range(2000, 2022);
     data = data.filter(d => years.includes(+d.Year));
 
-    // Convert numerical columns to numbers
     data.forEach(d => {
         d.Year = +d.Year;
         for (const key in d) {
@@ -26,7 +22,6 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
         }
     });
 
-    // List the last 7 columns that represent the "Normalized Total deaths" fields
     const addictionTypes = [
         { label: "Opioid use disorders", value: "Normalized Total deaths from opioid use disorders among both sexes" },
         { label: "Cocaine use disorders", value: "Normalized Total deaths from cocaine use disorders among both sexes" },
@@ -37,7 +32,6 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
         { label: "Substance use disorders", value: "Normalized Total deaths from substance use disorders among both sexes" }
     ];
 
-    // Populate the dropdown menu
     const select = d3.select("#addiction-select");
     select.selectAll("option")
         .data(addictionTypes)
@@ -45,20 +39,17 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
         .attr("value", d => d.value)
         .text(d => d.label);
 
-    // Set up the x scale (outside updateChart for efficiency)
     const x = d3.scaleBand()
         .domain(years)
         .range([0, width])
         .padding(0.2);
 
-    // Filter the years to display on the x-axis
     const displayedYears = years.filter(year => year % 5 === 0 || year === 2000 || year === 2021);
 
     svg.append("g")
         .attr("transform", `translate(0, ${height})`)
         .call(d3.axisBottom(x).tickValues(displayedYears));
 
-    // Function to update the chart based on the selected addiction type
     function updateChart(selectedType) {
         svg.selectAll(".line").remove();
         svg.selectAll(".y-axis").remove();
@@ -67,7 +58,6 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
         svg.selectAll(".tooltip").remove();
         svg.selectAll(".dot").remove();
 
-        // Filter data to get the top 5 countries for the selected type
         const top5Countries = Array.from(d3.rollup(data, v => d3.mean(v, d => d[selectedType]), d => d.Entity))
             .sort((a, b) => b[1] - a[1])
             .slice(0, 5)
@@ -110,7 +100,7 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
                     const tooltip = d3.select("body").append("div")
                         .attr("class", "tooltip")
                         .style("opacity", 0)
-                        .style("position", "absolute"); // Important for positioning
+                        .style("position", "absolute");
 
                     const mouseX = event.pageX;
                     const mouseY = event.pageY;
@@ -128,7 +118,6 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
                         .style("top", (mouseY - 20) + "px");
                 })
                 .on("mouseout", function() {
-                    // Properly remove the tooltip when mouse leaves
                     d3.selectAll(".tooltip")
                         .transition()
                         .duration(500)
@@ -173,10 +162,8 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
             .text(d => d);
     }
 
-    // Initially, update the chart with the first addiction type
     updateChart(addictionTypes[0].value);
 
-    // Dropdown change event
     select.on("change", function() {
         const selectedType = d3.select(this).property("value");
         updateChart(selectedType);

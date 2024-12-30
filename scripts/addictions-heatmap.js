@@ -9,7 +9,6 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
         return;
     }
 
-    // Mapping for display labels
     const labelMapping = {
         "Normalized Total deaths from opioid use disorders among both sexes": "Opioid Deaths",
         "Normalized Total deaths from cocaine use disorders among both sexes": "Cocaine Deaths",
