@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Circular&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Dela+Gothic+One&family=Rubik+Mono+One&family=Shrikhand&display=swap" rel="stylesheet">
+    <title>How to Live Longer?</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="top-bar">
+    <a href="home_page.html" class="menu-icon">&#9776;</a>
+    <div class="top-options">
+        <a href="team_intro.html" class="option">Team</a>
+        <a href="#" class="option">Project</a>
+    </div>
+</div>
+
+<header>
+    <div class="header-text">
+        <h1>Ukraine</h1>
+        <p></p>
+    </div>
+    <div class="header-img">
+        <img src="/style/img/events/UkraineWar.jpg" alt="Image of war in Ukraine" />
+    </div>
+</header>
+
+<main>
+
+    <h1>Life expectancy</h1>
+    <label><input type="checkbox" id="maleCheckbox" checked> Male</label>
+    <label><input type="checkbox" id="femaleCheckbox" checked> Female</label>
+    <label><input type="checkbox" id="totalCheckbox" checked> Total</label>
+    <div id="chart" class="chart-container"></div>
+    <div id="comment" class="description-container">
+
+    </div>
+    
+    
+    <div class="next-page-button">
+        <a href="covid.html" class="button">Check other events: <strong>Covid</strong></a>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; Data Visualization | Unige 2024/2025</p>
+</footer>
+
+<script src="scripts/ukraine.js"></script>
+
+</body>
+</html>
