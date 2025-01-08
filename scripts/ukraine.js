@@ -14,11 +14,10 @@ d3.csv("datasets/life-expectancy-population/EU-life-expectancy-population-(1960-
         return;
     }
 
-    // Group data by Country and the "Total" column
     const dataByCountryAndTotal = d3.group(filteredData, d => d.Country, d => d.Total);
 
-    const margin = { top: 50, right: 150, bottom: 50, left: 80 };
-    const width = 800 - margin.left - margin.right;
+    const margin = { top: 50, right: 230, bottom: 50, left: 80 };
+    const width = 1300 - margin.left - margin.right;
     const height = 500 - margin.top - margin.bottom;
 
     const svg = d3.select("#chart")
@@ -33,10 +32,8 @@ d3.csv("datasets/life-expectancy-population/EU-life-expectancy-population-(1960-
         .range([0, width]);
 
     const yScale = d3.scaleLinear()
-        .domain([
-            d3.min(filteredData, d => d.Life_expectancy) - 5, 
-            d3.max(filteredData, d => d.Life_expectancy) + 5
-        ])
+        .domain([d3.min(filteredData, d => d.Life_expectancy) - 5, 
+                 d3.max(filteredData, d => d.Life_expectancy) + 5])
         .range([height, 0]);
 
     const xAxis = d3.axisBottom(xScale).tickFormat(d3.format("d"));
@@ -53,41 +50,41 @@ d3.csv("datasets/life-expectancy-population/EU-life-expectancy-population-(1960-
         .x(d => xScale(d.Year))
         .y(d => yScale(d.Life_expectancy));
 
-    // Define separate color scales for each country
     const countryColors = {
         "Russian Federation": d3.scaleOrdinal()
-            .domain(["MALE", "FEMALE", "TOTAL"])
-            .range(["#1f77b4", "#aec7e8", "#2ca02c"]), // Blue-green palette for Russia
+            .domain(["male", "female"])
+            .range(["#ff0000", "#ff0aaa"]),
         "Ukraine": d3.scaleOrdinal()
-            .domain(["MALE", "FEMALE", "TOTAL"])
-            .range(["#ff7f0e", "#ffbb78", "#d62728"])  // Orange-red palette for Ukraine
+            .domain(["male", "female"])
+            .range(["#0000ff", "#0000af"])
     };
 
-    // Draw lines for each country and Total group
     for (let [country, totalData] of dataByCountryAndTotal) {
         for (let [total, values] of totalData) {
+            if (total === "total") continue;
+            const lineStyle = total === "female" ? "dashed" : "solid";
             svg.append("path")
-                .datum(values.sort((a, b) => a.Year - b.Year)) // Sort data by year
-                .attr("class", `line ${country.replace(/\s+/g, '')} ${total.toLowerCase()}`) // Add classes for selection
+                .datum(values.sort((a, b) => a.Year - b.Year))
+                .attr("class", `line ${total.toLowerCase()}`)
                 .attr("fill", "none")
-                .attr("stroke", countryColors[country](total.toUpperCase()))
-                .attr("stroke-width", 2)
+                .attr("stroke", countryColors[country](total.toLowerCase()))
+                .attr("stroke-width", total === "female" ? 3 : 2)
+                .attr("stroke-dasharray", lineStyle === "dashed" ? "5,5" : "0")
                 .attr("d", line);
         }
     }
 
-    // Add legend
     const legend = svg.append("g")
         .attr("transform", `translate(${width + 20}, 20)`);
 
     const legendData = [
-        { country: "Russian Federation", label: "Russia (MALE, FEMALE, TOTAL)", colors: countryColors["Russian Federation"] },
-        { country: "Ukraine", label: "Ukraine (MALE, FEMALE, TOTAL)", colors: countryColors["Ukraine"] }
+        { country: "Russia", colors: countryColors["Russian Federation"] },
+        { country: "Ukraine", colors: countryColors["Ukraine"] }
     ];
 
     let i = 0;
-    legendData.forEach(({ country, label, colors }) => {
-        ["MALE", "FEMALE", "TOTAL"].forEach((total, j) => {
+    legendData.forEach(({ country, colors }) => {
+        ["male", "female"].forEach((total, j) => {
             const g = legend.append("g")
                 .attr("transform", `translate(0, ${(i + j) * 20})`);
             g.append("rect")
@@ -97,20 +94,25 @@ d3.csv("datasets/life-expectancy-population/EU-life-expectancy-population-(1960-
             g.append("text")
                 .attr("x", 20)
                 .attr("y", 10)
-                .text(`${label.split(" ")[0]} (${total})`)
+                .text(`${country} (${total.toUpperCase()})${total === 'female' ? ' (Dashed Line)' : ''}`)
                 .attr("font-size", "12px")
                 .attr("alignment-baseline", "middle");
         });
-        i += 3;
+        i += 2;
     });
 
-    // Add event listeners to checkboxes
-    d3.selectAll("input[type=checkbox]").on("change", function() {
+    d3.selectAll("input[type=checkbox]").on("change", function () {
         const id = this.id;
         const isChecked = this.checked;
         const total = id.replace("Checkbox", "").toLowerCase();
+
         d3.selectAll(`.line.${total}`).classed("hidden", !isChecked);
     });
+
+    d3.selectAll(".line").classed("hidden", true);
+
+    if (d3.select("#maleCheckbox").property("checked")) d3.selectAll(".line.male").classed("hidden", false);
+    if (d3.select("#femaleCheckbox").property("checked")) d3.selectAll(".line.female").classed("hidden", false);
 }).catch(error => {
     console.error("Error loading the CSV file:", error);
     d3.select("#chart").append("p").text("Error loading data. Please check the console.");

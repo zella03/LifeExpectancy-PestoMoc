@@ -756,3 +756,7 @@ canvas {
     height: auto; 
     margin-right: 15px;
 }
+
+.hidden {
+    display: none;
+}
