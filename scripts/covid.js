@@ -6,12 +6,23 @@ Promise.all([
 
     const latestData = {};
 
+    const countryNameMap = {
+        "Russia": "Russian Federation",
+        "United States": "United States of America",
+        "Democratic Republic of Congo": "Dem. Rep. Congo",
+        "South Sudan": "S. Sudan",
+        "Western Sahara": "W. Sahara",
+        "Central African Republic": "Central African Rep."
+    };
+
     data.forEach(d => {
         const country = d.Entity;
         const date = new Date(d.Day);
 
         if (date.getTime() === selectedDate.getTime()) {
-            latestData[country] = d;
+            // If the country name in data is Russia, United States, etc., map it to GeoJSON name
+            const geoCountry = countryNameMap[country] || country;
+            latestData[geoCountry] = d;
         }
     });
 
@@ -20,7 +31,8 @@ Promise.all([
         const date = new Date(d.Day);
 
         if (!latestData[country] && date < selectedDate) {
-            latestData[country] = d;
+            const geoCountry = countryNameMap[country] || country;
+            latestData[geoCountry] = d;
         }
     });
 
@@ -81,28 +93,47 @@ Promise.all([
             tooltip.style("opacity", 0);
         });
 
-    const legend = svg.append("g")
-        .attr("transform", `translate(${width - 150}, 20)`);
-
+        const legend = svg.append("g")
+        .attr("transform", `translate(20, ${height - 150})`);
+    
     const legendScale = d3.scaleLinear()
         .domain(colorScale.domain())
         .range([0, 100]);
-
-    const legendAxis = d3.axisRight(legendScale).ticks(5);
-
+    
+    const legendAxis = d3.axisRight(legendScale)
+        .ticks(5);
+    
+    const legendBarWidth = 30; // Store the width of the colored bars
+    
     legend.selectAll("rect")
         .data(d3.range(0, 100, 1))
         .enter()
         .append("rect")
         .attr("x", 0)
         .attr("y", d => d)
-        .attr("width", 20)
-        .attr("height", 1)
+        .attr("width", legendBarWidth) // Use the stored width
+        .attr("height", 5)
         .attr("fill", d => colorScale(legendScale.invert(d)));
-
-    legend.append("g")
-        .attr("transform", "translate(20, 0)")
-        .call(legendAxis);
-
     
+    legend.append("g")
+        .attr("transform", `translate(${legendBarWidth + 5}, 0)`) // Shift the ticks and labels
+        .call(legendAxis);
+    
+    // Add a title to the legend with date context
+    legend.append("text")
+        .attr("x", 10)
+        .attr("y", -10)
+        .attr("font-size", "12px")
+        .attr("fill", "black")
+        .text("COVID-19 Deaths per 100k People as of February 15, 2024");
+    
+    
+    legend.append("text")
+        .attr("x", legendBarWidth + 10) // Shifted to the right
+        .attr("y", 100)
+        .attr("dy", "0.8em") // Minor vertical adjustment
+        .attr("font-size", "10px")
+        .attr("fill", "black")
+        .attr("text-anchor", "start") // Anchor text to the start (left)
+        .text(colorScale.domain()[1]);
 });
