@@ -24,9 +24,9 @@ const tooltip = d3.select("body")
 
 // Load the CSV data
 d3.csv('datasets/life-exp/life-expectancy.csv').then(function(data) {
-    // Filter data to only include COVID-19 years (2020, 2021, 2022)
+    // Filter data to only include the years 2019 and 2020
     const covidYearsData = data.filter(d => {
-        return d['Year'] >= 2019 && d['Year'] <= 2021 && d['Period life expectancy at birth - Sex: total - Age: 0'] !== '';
+        return d['Year'] === '2019' || d['Year'] === '2020' && d['Period life expectancy at birth - Sex: total - Age: 0'] !== '';
     });
 
     // Parse the data
@@ -35,29 +35,34 @@ d3.csv('datasets/life-exp/life-expectancy.csv').then(function(data) {
         d.life_expectancy = +d['Period life expectancy at birth - Sex: total - Age: 0'];
     });
 
-    // Group the data by entity (country) and calculate the difference in life expectancy
+    // Group the data by entity (country) and calculate the difference between 2020 and 2019 life expectancy
     const countries = d3.groups(covidYearsData, d => d['Entity'])
         .map(([entity, values]) => {
-            const lifeExpectancies = values.map(d => d.life_expectancy);
-            const minLifeExpectancy = d3.min(lifeExpectancies);
-            const maxLifeExpectancy = d3.max(lifeExpectancies);
-            return { entity, values, difference: maxLifeExpectancy - minLifeExpectancy };
-        });
+            // Get life expectancy for 2019 and 2020
+            const life2019 = values.find(d => d.Year === 2019)?.life_expectancy;
+            const life2020 = values.find(d => d.Year === 2020)?.life_expectancy;
 
-    // Sort by the difference and take the top 5 countries
+            // Only consider countries with both 2019 and 2020 data
+            if (life2019 && life2020) {
+                const difference = life2019 - life2020; // Decrease = positive difference
+                return { entity, life2019, life2020, difference };
+            }
+            return null;
+        })
+        .filter(d => d !== null) // Filter out countries with missing data for 2019 or 2020
+        .filter(d => d.difference > 0); // Only consider countries where life expectancy decreased
+
+    // Sort by the largest decrease in life expectancy
     const topCountries = countries.sort((a, b) => b.difference - a.difference).slice(0, 5);
 
     // Set the scales for X and Y axes
     const x = d3.scaleBand()
-        .domain(covidYearsData.map(d => d.Year))
+        .domain([2019, 2020]) // Only use 2019 and 2020
         .range([0, width])
         .padding(0.1);
 
     const y = d3.scaleLinear()
-        .domain([
-            d3.min(topCountries, d => d3.min(d.values, v => v.life_expectancy)),
-            d3.max(topCountries, d => d3.max(d.values, v => v.life_expectancy))
-        ])
+        .domain([d3.min(topCountries, d => Math.min(d.life2019, d.life2020)), d3.max(topCountries, d => Math.max(d.life2019, d.life2020))])
         .nice()
         .range([height, 0]);
 
@@ -86,7 +91,7 @@ d3.csv('datasets/life-exp/life-expectancy.csv').then(function(data) {
         .attr("fill", "none")
         .attr("stroke", "steelblue")
         .attr("stroke-width", 1.5)
-        .attr("d", d => line(d.values))
+        .attr("d", d => line([{ Year: 2019, life_expectancy: d.life2019 }, { Year: 2020, life_expectancy: d.life2020 }]))
         .on("mouseover", function(event, d) {
             d3.select(this).attr("stroke", "orange"); // Highlight the line
             tooltip.style("visibility", "visible")
@@ -100,6 +105,20 @@ d3.csv('datasets/life-exp/life-expectancy.csv').then(function(data) {
             d3.select(this).attr("stroke", "steelblue"); // Reset line color
             tooltip.style("visibility", "hidden");
         });
+
+    // Add labels for the country names
+    svg.selectAll(".country-label")
+        .data(topCountries)
+        .enter()
+        .append("text")
+        .attr("class", "country-label")
+        .attr("x", x(2020) + x.bandwidth()) // Position the label at the right of 2020
+        .attr("y", d => y(d.life2020)) // Position based on the life expectancy for 2020
+        .attr("dy", ".35em") // Vertically center the label
+        .attr("text-anchor", "start") // Align the text to the left
+        .text(d => d.entity) // Country name
+        .style("font-size", "12px")
+        .style("fill", "black");
 
     // Add labels for axes
     svg.append("text")
