@@ -55,11 +55,14 @@ d3.csv('datasets/life-exp/life-expectancy.csv').then(function(data) {
     // Sort by the largest decrease in life expectancy
     const topCountries = countries.sort((a, b) => b.difference - a.difference).slice(0, 5);
 
+    // Create a color scale using d3.scaleOrdinal
+    const colorScale = d3.scaleOrdinal(d3.schemeCategory10); // Use d3's built-in categorical color scheme
+
     // Set the scales for X and Y axes
     const x = d3.scaleBand()
         .domain([2019, 2020]) // Only use 2019 and 2020
         .range([0, width])
-        .padding(0.1);
+        .padding(0.3);
 
     const y = d3.scaleLinear()
         .domain([d3.min(topCountries, d => Math.min(d.life2019, d.life2020)), d3.max(topCountries, d => Math.max(d.life2019, d.life2020))])
@@ -82,15 +85,15 @@ d3.csv('datasets/life-exp/life-expectancy.csv').then(function(data) {
         .x(d => x(d.Year) + x.bandwidth() / 2) // Align data to the center of each band
         .y(d => y(d.life_expectancy));
 
-    // Add lines for each top country
+    // Add lines for each top country with distinct colors
     svg.selectAll(".line")
         .data(topCountries)
         .enter()
         .append("path")
         .attr("class", "line")
         .attr("fill", "none")
-        .attr("stroke", "steelblue")
-        .attr("stroke-width", 1.5)
+        .attr("stroke", d => colorScale(d.entity)) // Assign a unique color to each country
+        .attr("stroke-width", 3) // Increase the stroke width to make the lines thicker
         .attr("d", d => line([{ Year: 2019, life_expectancy: d.life2019 }, { Year: 2020, life_expectancy: d.life2020 }]))
         .on("mouseover", function(event, d) {
             d3.select(this).attr("stroke", "orange"); // Highlight the line
@@ -102,9 +105,57 @@ d3.csv('datasets/life-exp/life-expectancy.csv').then(function(data) {
                 .style("left", (event.pageX + 10) + "px");
         })
         .on("mouseout", function() {
-            d3.select(this).attr("stroke", "steelblue"); // Reset line color
+            d3.select(this).attr("stroke", d => colorScale(d.entity)); // Reset line color to original
             tooltip.style("visibility", "hidden");
         });
+
+    // Add vertical lines for each country at 2019 and 2020
+    svg.selectAll(".line-2019")
+        .data(topCountries)
+        .enter()
+        .append("line")
+        .attr("class", "line-2019")
+        .attr("x1", x(2019) + x.bandwidth() / 2)
+        .attr("x2", x(2019) + x.bandwidth() / 2)
+        .attr("y1", d => y(d.life2019))
+        .attr("y2", height)
+        .attr("stroke", d => colorScale(d.entity)) // Use the same color for vertical lines
+        .attr("stroke-width", 1)
+        .style("stroke-dasharray", "4,4");
+
+    svg.selectAll(".line-2020")
+        .data(topCountries)
+        .enter()
+        .append("line")
+        .attr("class", "line-2020")
+        .attr("x1", x(2020) + x.bandwidth() / 2)
+        .attr("x2", x(2020) + x.bandwidth() / 2)
+        .attr("y1", d => y(d.life2020))
+        .attr("y2", height)
+        .attr("stroke", d => colorScale(d.entity)) // Use the same color for vertical lines
+        .attr("stroke-width", 1)
+        .style("stroke-dasharray", "4,4");
+
+    // Add dots for each data point (2019 and 2020) with distinct colors
+    svg.selectAll(".dot-2019")
+        .data(topCountries)
+        .enter()
+        .append("circle")
+        .attr("class", "dot-2019")
+        .attr("cx", x(2019) + x.bandwidth() / 2)
+        .attr("cy", d => y(d.life2019))
+        .attr("r", 6) // Size of the dot
+        .attr("fill", d => colorScale(d.entity)); // Use the same color for dots
+
+    svg.selectAll(".dot-2020")
+        .data(topCountries)
+        .enter()
+        .append("circle")
+        .attr("class", "dot-2020")
+        .attr("cx", x(2020) + x.bandwidth() / 2)
+        .attr("cy", d => y(d.life2020))
+        .attr("r", 6) // Size of the dot
+        .attr("fill", d => colorScale(d.entity)); // Use the same color for dots
 
     // Add labels for the country names
     svg.selectAll(".country-label")
@@ -118,7 +169,7 @@ d3.csv('datasets/life-exp/life-expectancy.csv').then(function(data) {
         .attr("text-anchor", "start") // Align the text to the left
         .text(d => d.entity) // Country name
         .style("font-size", "12px")
-        .style("fill", "black");
+        .style("fill", d => colorScale(d.entity)); // Use the same color for country labels
 
     // Add labels for axes
     svg.append("text")
