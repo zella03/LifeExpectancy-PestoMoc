@@ -20,7 +20,6 @@ Promise.all([
         const date = new Date(d.Day);
 
         if (date.getTime() === selectedDate.getTime()) {
-            // If the country name in data is Russia, United States, etc., map it to GeoJSON name
             const geoCountry = countryNameMap[country] || country;
             latestData[geoCountry] = d;
         }
@@ -103,7 +102,7 @@ Promise.all([
     const legendAxis = d3.axisRight(legendScale)
         .ticks(5);
     
-    const legendBarWidth = 30; // Store the width of the colored bars
+    const legendBarWidth = 30; 
     
     legend.selectAll("rect")
         .data(d3.range(0, 100, 1))
@@ -111,15 +110,14 @@ Promise.all([
         .append("rect")
         .attr("x", 0)
         .attr("y", d => d)
-        .attr("width", legendBarWidth) // Use the stored width
+        .attr("width", legendBarWidth) 
         .attr("height", 5)
         .attr("fill", d => colorScale(legendScale.invert(d)));
     
     legend.append("g")
-        .attr("transform", `translate(${legendBarWidth + 5}, 0)`) // Shift the ticks and labels
+        .attr("transform", `translate(${legendBarWidth + 5}, 0)`) 
         .call(legendAxis);
     
-    // Add a title to the legend with date context
     legend.append("text")
         .attr("x", 10)
         .attr("y", -10)
@@ -129,11 +127,11 @@ Promise.all([
     
     
     legend.append("text")
-        .attr("x", legendBarWidth + 10) // Shifted to the right
+        .attr("x", legendBarWidth + 10) 
         .attr("y", 100)
-        .attr("dy", "0.8em") // Minor vertical adjustment
+        .attr("dy", "0.8em") 
         .attr("font-size", "10px")
         .attr("fill", "black")
-        .attr("text-anchor", "start") // Anchor text to the start (left)
+        .attr("text-anchor", "start") 
         .text(colorScale.domain()[1]);
 });
