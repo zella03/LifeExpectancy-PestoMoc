@@ -125,7 +125,7 @@ Promise.all([
         .attr("y", -10)
         .attr("font-size", "12px")
         .attr("fill", "black")
-        .text("COVID-19 Deaths per 100k People as of February 15, 2024");
+        .text("COVID-19 Deaths per 100k");
     
     
     legend.append("text")
