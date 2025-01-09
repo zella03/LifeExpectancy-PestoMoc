@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Circular&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Dela+Gothic+One&family=Rubik+Mono+One&family=Shrikhand&display=swap" rel="stylesheet">
+    <title>How to Live Longer?</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="top-bar">
+    <a href="home_page.html" class="menu-icon">&#9776;</a>
+    <div class="top-options">
+        <a href="team_intro.html" class="option">Team</a>
+        <a href="#" class="option">Project</a>
+    </div>
+</div>
+
+<header>
+    <div class="header-text">
+        <h1>Covid</h1>
+        <p></p>
+    </div>
+    <div class="header-img">
+        <img src="/style/img/events/covid.jpg" alt="Image of covid" />
+    </div>
+</header>
+
+<main>
+
+    <div id="comment" class="description-container">
+        <h2>Background</h2>    
+        COVID-19, caused by the SARS-CoV-2 virus, first emerged in late 2019 in Wuhan, China. Initially identified as a pneumonia-like illness, it rapidly spread due to its high transmissibility. By March 2020, the World Health Organization declared it a global pandemic.
+
+The virus spread across continents, driven by international travel and community transmission, overwhelming healthcare systems worldwide. Governments imposed measures like lockdowns, mask mandates, and social distancing to curb the spread.
+
+Mutations led to variants like Alpha, Delta, and Omicron, each affecting transmissibility and severity. Vaccination campaigns began in late 2020, significantly reducing severe cases and deaths. Over time, countries transitioned from emergency responses to managing COVID-19 as an endemic disease, focusing on vaccinations, therapeutics, and surveillance.
+
+Data visualization has been crucial in tracking cases, vaccination rates, and the virus's evolution, helping policymakers and the public make informed decisions.
+    </div>
+
+    <h2>Deaths due to covid</h2>
+    
+    <div id="map" style="width: 100%; height: 600px;"></div>
+
+    
+    <div id="comment" class="description-container">
+        This map visualizes COVID-19 deaths per 100,000 people as of February 15, 2024. Darker shades indicate higher death rates, revealing significant geographic disparities. Peru exhibits the highest death rate, while regions in Africa and parts of Asia report lower rates. The data highlights the uneven global impact of the pandemic, shaped by healthcare access, population demographics, and pandemic management strategies.
+    </div>
+
+    <h2>Biggest life expectancy decrease</h2>
+    
+    <div id="life-expectancy-chart" style="width: 100%; height: 600px;"></div>
+
+    
+    <div id="comment" class="description-container">
+        This line chart shows the largest decreases in life expectancy globally between 2019 and 2020. Even among the countries most severely affected, the declines vary significantly, with Bolivia experiencing the steepest drop and Andorra the smallest. While the COVID-19 pandemic is likely a primary factor, other contributing factors may have played a role in these varying declines. This highlights that decreases in life expectancy are not solely correlated with deaths per 100k people from a single cause, but rather a complex interplay of factors impacting overall mortality.</div>
+
+    <div class="next-page-button">
+        <a href="ukraine.html" class="button">Check other events: <strong>War in Ukraine</strong></a>
+    </div>
+
+</main>
+
+<footer>
+    <p>&copy; Data Visualization | Unige 2024/2025</p>
+</footer>
+
+<script src="scripts/covid.js"></script>
+<script src="scripts/covid2.js"></script>
+
+</body>
+</html>
