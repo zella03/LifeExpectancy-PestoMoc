@@ -1,6 +1,6 @@
 const svg2 = d3.select("#chart4")
     .append("svg")
-    .attr("width", width + margin.left + margin.right)
+    .attr("width", width + margin.left + margin.right + 100)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -93,6 +93,8 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
         const colorScale = d3.scaleOrdinal(d3.schemeCategory10)
             .domain(addictionTypes.map(d => d.label));
 
+        const labelPositions = [];
+
         addictionTypes.forEach(type => {
             const values = filteredData.map(d => ({
                 Year: d.Year,
@@ -132,10 +134,19 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
 
             const lastPoint = values[values.length - 1];
             if (lastPoint) {
+                let labelX = x(lastPoint.Year) + x.bandwidth() / 2 + 5;
+                let labelY = y(lastPoint.value);
+
+                while (labelPositions.some(pos => Math.abs(pos.y - labelY) < 20)) {
+                    labelY += 20;  // Increase space between labels
+                }
+
+                labelPositions.push({ x: labelX, y: labelY });
+
                 svg2.append("text")
                     .attr("class", "line-label")
-                    .attr("x", x(lastPoint.Year) + x.bandwidth() / 2 + 5)
-                    .attr("y", y(lastPoint.value))
+                    .attr("x", labelX)
+                    .attr("y", labelY)
                     .text(type.label)
                     .style("font-size", "12px")
                     .style("fill", colorScale(type.label))
