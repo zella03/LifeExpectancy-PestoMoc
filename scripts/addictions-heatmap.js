@@ -64,7 +64,7 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     const x = d3.scaleBand().rangeRound([0, width]).paddingInner(0.1).domain(otherColumns);
-    const y = d3.scaleBand().rangeRound([0, height]).paddingInner(0.1).domain([lifeExpectancyCol]);
+    const y = d3.scaleBand().rangeRound([0, height]).paddingInner(0.1).domain(["Life Expectancy at Birth"]);
 
     const colorScale = d3.scaleDiverging().domain([-1, 0, 1]).range(["#1f77b4", "#EEEEEE", "#d62728"]);
 
