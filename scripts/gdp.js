@@ -31,7 +31,7 @@ const dataPromise = d3.csv("./datasets/gdp/merged-gdp-life_expectancy.csv")
         });
     });
 
-    const projection = d3.geoMercator()
+const projection = d3.geoMercator()
     .center([15, 50])
     .scale(800)
     .translate([mapWidth / 2, mapHeight / 2]);
@@ -122,13 +122,14 @@ function renderMap(geoData, year, column) {
                     })
                     .style("fill", "#ccc");
 
+                
                 tooltipMap.style("display", "block")
                     .html(`
                         <strong>${countryName}</strong><br>
                         ${column === "Total_GDP" ? "GDP" : "Income_per_Person"}: ${value} €<br>
                     `)
-                    .style("left", (event.pageX + 5) + "px")
-                    .style("top", (event.pageY - 28) + "px");
+                    .style("left", (event.pageX + 10) + "px")
+                    .style("top", (event.pageY + 10) + "px");
             }
         })
         .on("mouseout", function () {
