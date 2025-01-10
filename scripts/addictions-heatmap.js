@@ -101,20 +101,12 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
     .attr("transform", "translate(0," + height + ")")
     .call(d3.axisBottom(x))
     .selectAll("text")
-    .attr("y", 15) // Adjust the distance of labels from the axis
+    .attr("y", 15)
     .attr("x", 9).attr("dy", ".35em")
     .attr("transform", "rotate(-45)")
     .style("text-anchor", "end").style("font-size", "12px");
-    
 
     svg.append("g").call(d3.axisLeft(y)).selectAll("text").style("font-size", "10px");
-
-    const tooltip = d3.select("body").append("div")
-        .attr("class", "tooltip")
-        .style("opacity", 0).style("position", "absolute")
-        .style("background", "rgba(255, 255, 255, 0.9)").style("border", "1px solid #ccc")
-        .style("padding", "8px").style("border-radius", "4px").style("font-size", "12px")
-        .style("font-family", "sans-serif").style("pointer-events", "none");
 
     const cells = svg.selectAll(".cell")
         .data(otherColumns.map(col => ({ x: col, y: lifeExpectancyCol })))
@@ -124,17 +116,7 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
     cells.append("rect")
         .attr("class", "cell")
         .attr("width", cellSize).attr("height", cellSize)
-        .attr("fill", d => colorScale(correlations[d.x]))
-        .on("mouseover", function(event, d) {
-            tooltip.transition().duration(200).style("opacity", .9);
-            const correlationValue = correlations[d.x];
-            const correlationText = (correlationValue === null || isNaN(correlationValue)) ? "N/A" : correlationValue.toFixed(2);
-            tooltip.html(`Correlation between ${d.x} and ${d.y}: <strong>${correlationText}</strong>`)
-                .style("left", (event.pageX + 10) + "px").style("top", (event.pageY - 35) + "px");
-        })
-        .on("mouseout", function(d) {
-            tooltip.transition().duration(500).style("opacity", 0);
-        });
+        .attr("fill", d => colorScale(correlations[d.x]));
 
     cells.append("text")
         .attr("class", "cell-text")

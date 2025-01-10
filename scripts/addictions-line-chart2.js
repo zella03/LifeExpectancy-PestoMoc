@@ -28,7 +28,9 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
         { label: "Substance use disorders", value: "Normalized Total deaths from substance use disorders among both sexes" }
     ];
 
-    const countries = Array.from(new Set(data.map(d => d.Entity))).sort();
+    const countries = Array.from(new Set(data.map(d => d.Entity)))
+        .filter(country => data.some(d => d.Entity === country && addictionTypes.some(type => d[type.value] > 0)))
+        .sort();
 
     const select = d3.select("#country-select");
     select.selectAll("option")

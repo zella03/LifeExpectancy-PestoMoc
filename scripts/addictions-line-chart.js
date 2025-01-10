@@ -142,6 +142,7 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
             .attr("class", "y-axis")
             .call(d3.axisLeft(y));
 
+        /*
         const legend = svg.selectAll(".legend")
             .data(groupedData.keys())
             .enter().append("g")
@@ -159,7 +160,7 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
             .attr("y", 9)
             .attr("dy", ".35em")
             .style("text-anchor", "start")
-            .text(d => d);
+            .text(d => d);*/
     }
 
     updateChart(addictionTypes[0].value);

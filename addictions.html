@@ -17,7 +17,6 @@
     <nav class="navbar">
         <div class="nav-left">
             How to Live Longer?
-            <!-- <a href="home_page.html" class="menu-icon">&#9776;</a> -->
         </div>
         <ul class="nav-list">
             <li><a href="home_page.html" class="nav-item">HOME</a></li>
@@ -38,7 +37,6 @@
 <main>
     <h1>Is life expectancy directly correlated with addictions?</h1>
     <h2>2019 deaths per capita in Europe</h2>
-    <h3>Correlation Matrix</h3>
     <div id="matrix" class="chart-container"></div>
     <div id="comment" class="description-container">
         The heatmap reveals weak correlations between life expectancy and various substance use disorders, indicating that while there is some relationship, it is not strong enough to suggest that these factors significantly impact life expectancy. Since the correlations are low, we can reasonably conclude that substance use disorders do not strongly influence life expectancy on a population level.
@@ -50,38 +48,54 @@ Moreover, it is worth noting that substance use disorders tend to be more preval
 It is also important to clarify that substance use disorders encompass issues related to alcohol and all illicit drugs (including opioids, cocaine, amphetamines, and cannabis) but do not include smoking. The relatively low correlations observed in this analysis suggest that, while substance use disorders are a concern, they are not a dominant driver of life expectancy trends.</div>
     
     <h1>Addiction trends over time in Europe</h1>
-    <h2>Per capita deaths (Top 5 countries)</h2>
-    <h3>By addiction type</h3>
-    <div><label for="addiction-select" >Select Addiction Type:</label>
-        <select id="addiction-select" class="year-select"></select></div>
-    
-    <div id="chart" class="chart-container"></div>
-
-    <div id="comment" class="description-container" >
-        The visualization highlights the top 5 countries with the highest deaths per capita due to addiction-related disorders, offering a detailed comparison across years and addiction types. Key patterns emerge: Estonia frequently leads in opioid and other drug-related deaths, reflecting long-term challenges, while Iceland shows a sharp increase in amphetamine-related deaths in recent years. Norway maintains consistently high rankings across multiple categories, indicating persistent issues despite likely interventions. The trends also reveal regional disparities, with Nordic and Baltic countries often dominating the charts. These insights underline the urgency for tailored public health strategies and policy evaluations to mitigate addiction's impact effectively.
-    </div>
-    <h3>By country</h3>
-    <div><label for="addiction-select" >Select Country:</label>
-        <select id="country-select" class="year-select"></select></div>
-    
-    <div id="chart4" class="chart-container"></div>
-    <div id="comment" class="description-container" >
-        This visualization highlights stark contrasts in addiction rates across Europe. Some countries show declines (e.g., Albania, Lithuania, Moldova), while others experience significant increases (e.g., Czech Republic, UK, Netherlands). Notably, the COVID-19 pandemic appears to have exacerbated the issue in Greece and Latvia. Addressing this complex problem requires a nuanced understanding of the factors driving these trends and tailored interventions for each country.
+    <div>
+        <label for="chart-select">Select Chart:</label>
+        <select id="chart-select" class="year-select" onchange="showChart()">
+            <option value="chart">Per capita deaths (Top 5 countries) by addiction type</option>
+            <option value="chart4">Per capita deaths (Top 5 countries) by country</option>
+            <option value="chart2">Alcohol consumption</option>
+            <option value="chart3">Smoking</option>
+        </select>
     </div>
 
-    <h2>Alcohol consumption</h2>
-    <h3>Consumption per capita (liters of pure alcohol, 15+ years of age)</h3>
-    <div id="chart2" class="chart-container"></div>
-    <div id="comment" class="description-container">This visualization raises questions about the factors influencing alcohol consumption patterns in these European countries. The divergent trends suggest the influence of various social, economic, and policy factors. The significant fluctuation observed in Estonia warrants further investigation into specific interventions or societal changes that may have contributed to this pattern.</div>
-    <h2>Smoking</h2>
-    <h3>% of smokers (Top 5 countries)</h3>
-    <div id="chart3" class="chart-container"></div>
-    <div id="comment" class="description-container">
-        This chart shows the decline in smoking prevalence across several European countries from 2000 to 2019. While most countries show a steady linear decline, Greece appears to have had a more accelerated decline.
+    <div id="chart-container">
+        <div><label for="addiction-select">Select Addiction Type:</label>
+            <select id="addiction-select" class="year-select"></select></div>
+        <div id="chart" class="chart-container"></div>
+        <div id="comment" class="description-container">
+            The visualization highlights the top 5 countries with the highest deaths per capita due to addiction-related disorders, offering a detailed comparison across years and addiction types. Key patterns emerge: Estonia frequently leads in opioid and other drug-related deaths, reflecting long-term challenges, while Iceland shows a sharp increase in amphetamine-related deaths in recent years. Norway maintains consistently high rankings across multiple categories, indicating persistent issues despite likely interventions. The trends also reveal regional disparities, with Nordic and Baltic countries often dominating the charts. These insights underline the urgency for tailored public health strategies and policy evaluations to mitigate addiction's impact effectively.
+        </div>
     </div>
+
+    <div id="chart4-container" style="display:none;">
+        <div><label for="country-select">Select Country:</label>
+            <select id="country-select" class="year-select"></select></div>
+        <div id="chart4" class="chart-container"></div>
+        <div id="comment" class="description-container">
+            This visualization highlights stark contrasts in addiction rates across Europe. Some countries show declines (e.g., Albania, Lithuania, Moldova), while others experience significant increases (e.g., Czech Republic, UK, Netherlands). Notably, the COVID-19 pandemic appears to have exacerbated the issue in Greece and Latvia. Addressing this complex problem requires a nuanced understanding of the factors driving these trends and tailored interventions for each country.
+        </div>
+    </div>
+
+    <div id="chart2-container" style="display:none;">
+        <h4>Consumption per capita (liters of pure alcohol, 15+ years of age)</h4>
+        <div id="chart2" class="chart-container"></div>
+        <div id="comment" class="description-container">
+            This visualization raises questions about the factors influencing alcohol consumption patterns in these European countries. The divergent trends suggest the influence of various social, economic, and policy factors. The significant fluctuation observed in Estonia warrants further investigation into specific interventions or societal changes that may have contributed to this pattern.
+        </div>
+    </div>
+
+    <div id="chart3-container" style="display:none;">
+        <h4>% of smokers (Top 5 countries)</h4>
+        <div id="chart3" class="chart-container"></div>
+        <div id="comment" class="description-container">
+            This chart shows the decline in smoking prevalence across several European countries from 2000 to 2019. While most countries show a steady linear decline, Greece appears to have had a more accelerated decline.
+        </div>
+    </div>
+
     <div class="next-page-button">
         <a href="healthcare.html" class="button">Check other factors: <strong>Healthcare</strong></a>
     </div>
+    <br>
 </main>
 
 <footer>
@@ -93,6 +107,24 @@ It is also important to clarify that substance use disorders encompass issues re
 <script src="scripts/addictions-line-chart2.js"></script>
 <script src="scripts/alcohol-lineplot.js"></script>
 <script src="scripts/smoking-lineplot.js"></script>
+<script>
+    function showChart() {
+        var chartSelect = document.getElementById("chart-select").value;
+        document.getElementById("chart-container").style.display = "none";
+        document.getElementById("chart4-container").style.display = "none";
+        document.getElementById("chart2-container").style.display = "none";
+        document.getElementById("chart3-container").style.display = "none";
 
+        if (chartSelect === "chart") {
+            document.getElementById("chart-container").style.display = "block";
+        } else if (chartSelect === "chart4") {
+            document.getElementById("chart4-container").style.display = "block";
+        } else if (chartSelect === "chart2") {
+            document.getElementById("chart2-container").style.display = "block";
+        } else if (chartSelect === "chart3") {
+            document.getElementById("chart3-container").style.display = "block";
+        }
+    }
+</script>
 </body>
 </html>
