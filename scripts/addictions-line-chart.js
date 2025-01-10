@@ -50,6 +50,13 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
         .attr("transform", `translate(0, ${height})`)
         .call(d3.axisBottom(x).tickValues(displayedYears));
 
+    svg.append("text")
+        .attr("class", "x-axis-label")
+        .attr("x", width / 2)
+        .attr("y", height + margin.bottom - 10)
+        .style("text-anchor", "middle")
+        .text("Years");
+
     function updateChart(selectedType) {
         svg.selectAll(".line").remove();
         svg.selectAll(".y-axis").remove();
@@ -57,6 +64,7 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
         svg.selectAll(".legend").remove();
         svg.selectAll(".tooltip").remove();
         svg.selectAll(".dot").remove();
+        svg.selectAll(".y-axis-label").remove();
 
         const top5Countries = Array.from(d3.rollup(data, v => d3.mean(v, d => d[selectedType]), d => d.Entity))
             .sort((a, b) => b[1] - a[1])
@@ -142,25 +150,13 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
             .attr("class", "y-axis")
             .call(d3.axisLeft(y));
 
-        /*
-        const legend = svg.selectAll(".legend")
-            .data(groupedData.keys())
-            .enter().append("g")
-            .attr("class", "legend")
-            .attr("transform", (d, i) => `translate(0,${i * 20})`);
-
-        legend.append("rect")
-            .attr("x", width + 20)
-            .attr("width", 18)
-            .attr("height", 18)
-            .style("fill", colorScale);
-
-        legend.append("text")
-            .attr("x", width + 40)
-            .attr("y", 9)
-            .attr("dy", ".35em")
-            .style("text-anchor", "start")
-            .text(d => d);*/
+        svg.append("text")
+            .attr("class", "y-axis-label")
+            .attr("transform", "rotate(-90)")
+            .attr("x", -height / 2)
+            .attr("y", -margin.left + 20)
+            .style("text-anchor", "middle")
+            .text("Deaths per capita");
     }
 
     updateChart(addictionTypes[0].value);
