@@ -53,10 +53,10 @@ d3.csv("datasets/life-expectancy-population/EU-life-expectancy-population-(1960-
     const countryColors = {
         "Russian Federation": d3.scaleOrdinal()
             .domain(["male", "female"])
-            .range(["#ff0000", "#ff0aaa"]),
+            .range(["#ff0000", "#ff0000"]),
         "Ukraine": d3.scaleOrdinal()
             .domain(["male", "female"])
-            .range(["#0000ff", "#0000af"])
+            .range(["#0000ff", "#0000ff"])
     };
 
     for (let [country, totalData] of dataByCountryAndTotal) {
