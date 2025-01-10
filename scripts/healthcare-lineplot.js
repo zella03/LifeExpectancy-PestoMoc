@@ -58,8 +58,8 @@ async function initializeChart() {
             country2Select.appendChild(option2);
         });
 
-        country1Select.value = "Poland";
-        country2Select.value = "Italy";
+        country1Select.value = "Russian Federation";
+        country2Select.value = "United Kingdom";
     }
 
     const initialData = await loadCSVData(2021);
