@@ -6,6 +6,8 @@ const svg = d3.select("#life-expectancy-chart")
     .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
+    .style("display", "block")
+    .style("margin", "0 auto")
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
