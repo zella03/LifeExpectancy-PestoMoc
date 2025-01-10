@@ -4,24 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
     <link href="https://fonts.googleapis.com/css2?family=Circular&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Dela+Gothic+One&family=Rubik+Mono+One&family=Shrikhand&display=swap" rel="stylesheet">
     <title>How to Live Longer?</title>
 </head>
 <body>
-    <div class="top-bar">
-        <a href="home_page.html" class="menu-icon">&#9776;</a>
-        <div class="top-options">
-            <a href="team_intro.html" class="option">Team</a>
-            <a href="#" class="option">Project</a>
+    <nav class="navbar">
+        <div class="nav-left">
+            How to Live Longer?
+            <!-- <a href="home_page.html" class="menu-icon">&#9776;</a> -->
         </div>
-    </div>
+        <ul class="nav-list">
+            <li><a href="#" class="nav-item active">HOME</a></li>
+            <!-- <li><a href="#" class="nav-item">FACTORS</a></li>
+            <li><a href="#" class="nav-item">EVENTS</a></li> -->
+            <li><a href="team_intro.html" class="nav-item">TEAM</a></li>
+            <!-- <li><a href="project" class="nav-item">ABOUT PROJECT</a></li> -->
+        </ul>
+    </nav>
 
     <header>
         <div class="header-text">
             <h1>How to Live Longer?</h1>
-            <p>What are the factors and events that affect life expectancy in Europe?</p>
+            <p>Explore the factors and events shaping life expectancy in Europe!</p>
         </div>
         <div class="header-img">
             <img src="style/img/fam.jpg" alt="Image representing life expectancy" />
@@ -29,123 +37,136 @@
     </header>
 
     <main>
-        <div class="container">
+        <div class="orange-container">
             <div class="life-exp-section">
-                <div class="section-title">
-                    <h2>Get some genenral insight</h2>
+                <img src="style/img/life-exp.jpg" alt="Life Expectancy Image" class="one-side-img">
+                <div class="text-box">
+                    <h2>Life Expectancy</h2>
+                    <p>
+                        A crucial indicator of the overall health 
+                        and well-being of populations around the world. <br> Defined as the average number of years a 
+                        person can expect to live. <br> Check how it differ among European countries...
+                    </p>
+                    <a href="life_expectancy.html" class="explore-btn">Learn More &#8594;</a>
                 </div>
-                <a href="life_expectancy.html" div class="insight-box">
+
+            </div>
+        </div>
+
+        <div class="factors-section">
+            <h2 class="factors-title">What are the factors affecting the <u>life expectancy</u>?</h2>
+            <div class="factors">
+                <a href="gdp.html" class="factor">
                     <div class="insight-img">
-                        <img src="style/img/life_bcg.jpg" alt="Life Expectancy Image">
+                        <img src="style/img/gdp.jpg" alt="GDP" />
                     </div>
                     <div class="insight-footer">
-                        <p class="section-name">Life Expectancy</p>
+                        <button class="explore-btn">GDP</button>
+                    </div>
+                </a>
+                <a href="healthcare.html" class="factor">
+                    <div class="insight-img">
+                        <img src="style/img/healthExp.jpg" alt="Health Expenditure" />
+                    </div>
+                    <div class="insight-footer">
+                        <button class="explore-btn">Health Expenditure</button>
+                    </div>
+                </a>
+                <a href="addictions.html" class="factor">
+                    <div class="insight-img">
+                        <img src="style/img/addictions.jpg" alt="Addictions" />
+                    </div>
+                    <div class="insight-footer">
+                        <button class="explore-btn">Addictions</button>
                     </div>
                 </a>
             </div>
-        
-            <div class="factors-section">
-                <div class="section-title">
-                    <h2>Get some general insight</h2>
-                </div>
-                <div class="factors">
-                    <a href="gdp.html" class="factor">
-                        <div class="insight-img">
-                            <img src="style/img/gdp.jpg" alt="GDP" />
-                        </div>
-                        <div class="insight-footer">
-                            <p class="section-name">GDP</p>
-                        </div>
-                    </a>
-                    <a href="healthcare.html" class="factor">
-                        <div class="insight-img">
-                            <img src="style/img/healthExp.jpg" alt="Health Expenditure" />
-                        </div>
-                        <div class="insight-footer">
-                            <p class="section-name">Health Expenditure</p>
-                        </div>
-                    </a>
-                    <a href="addictions.html" class="factor">
-                        <div class="insight-img">
-                            <img src="style/img/addictions.jpg" alt="Addictions" />
-                        </div>
-                        <div class="insight-footer">
-                            <p class="section-name">Addictions</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
         </div>
-        
-        
-        <div class="section-title">
-            <h2>One event can affect a whole country or even a world...</h2>
-        </div>
-        <div class="container-events">
-            
-            
+
+        <div class="orange-container">
+            <h2 class="factors-title">One event can affect a <u>country</u> or even a <u>whole world ...</u></h2>
             <div class="timeline">
                 <!-- 1974 Event -->
-                <div class="event left">
-                    <div class="year">1974</div>
-                    <div class="content">
-                        <img src="style/img/events/turkishInv.jpg" alt="Turkish invasion of Cyprus">
-                        <div class="description">
-                            <h3>Turkish invasion of Cyprus</h3>
-                            Click to see the story and the inpact on life expectancy.
-                        </div>
-                    </div>
-                </div>
-            
-                <!-- 1988 Event -->
-                <div class="event right">
-                    <div class="year">1988</div>
-                    <div class="content">
-                        <img src="style/img/events/armenianEarth.jpg" alt="Armenian earthquake">
-                        <div class="description">
-                            <h3>Armenian earthquake</h3>
-                            Click to see the story and the inpact on life expectancy.
-                        </div>
-                    </div>
-                </div>
-            
-                <!-- 2019 Event -->
-                <div class="event left">
-                    <div class="year">2019</div>
-                    <div class="content">
-                        <a href="covid.html"><img src="style/img/events/covid.jpg" alt="Covid"></a>
-                        <div class="description">
-                            <h3>Covid</h3>
-                            Click to see the story and the inpact on life expectancy.
-                        </div>
-                    </div>
-                </div>
-            
-                <!-- 2022 Event -->
-                <div class="event right">
-                    <div class="year">2022</div>
-                    <div class="content">
-                        <a href="ukraine.html">
-                            <img src="style/img/events/UkraineWar.jpg" alt="War in Ukraine">
+                <div class="event-wrapper">
+                    <div class="timeline-event left">
+                        
+                        <a href="turkish_invasion.html">
+                            <img src="style/img/events/turkishInv.jpg" alt="Turkish invasion of Cyprus" class="event-img">
                         </a>
-                        <div class="description">
-                            <h3>War in Ukraine</h3>
-                            Click to see the story and the impact on life expectancy.
+                        <div class="text-box">
+                            <h2>Turkish invasion of Cyprus</h2>
+                            <p>Political conflict altered health and stability in the region</p>
                         </div>
+                    
+                        <div class="year">1974</div>
+                        
                     </div>
                 </div>
                 
-            </div>
-            
-        </div>
 
+                <div class="separator">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+
+                <!-- 1988 Event -->
+                <div class="timeline-event right">
+                    <a href="armenian_earthquake.html">
+                        <img src="style/img/events/armenianEarth.jpg" alt="Armenian earthquake" class="event-img">
+                    </a>
+                    <div class="text-box">
+                        <h2>Armenian earthquake</h2>
+                        <p>A devastating natural disaster reshaped life expectancy trends</p>
+                    </div>
+                    <div class="year">1988</div>
+                </div>
+
+                <div class="separator">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
         
+                <!-- 2019 Event -->
+                <div class="event-wrapper">
+                    <div class="timeline-event left">
+                        <a href="covid.html">
+                            <img src="style/img/events/covid.jpg" alt="Covid" class="event-img">
+                        </a>
+                        <div class="text-box">
+                            <h2>Coronavirus disease (COVID-19)</h2>
+                            <p>A global pandemic drastically impacted health systems and mortality</p>
+                        </div>
+                        <div class="year">2019</div>
+                    </div>
+                </div>
+
+                <div class="separator">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+        
+                <!-- 2022 Event -->
+                <div class="timeline-event right">
+                    <a href="ukraine.html">
+                        <img src="style/img/events/UkraineWar.jpg" alt="War in Ukraine" class="event-img-right">
+                    </a>
+                    <div class="text-box">
+                        <h2>War in Ukraine</h2>
+                        <p>Ongoing conflict affects population health and longevity</p>
+                    </div>
+                    <div class="year">2022</div>
+                </div>
+            </div>
+        </div>
         
     </main>
 
     <footer>
         <p>&copy; Data Visualization | Unige 2024/2025</p>
     </footer>
-
+    <script src="scripts/scrolling-animation.js"></script>
 </body>
 </html>

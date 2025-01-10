@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Circular&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Dela+Gothic+One&family=Rubik+Mono+One&family=Shrikhand&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <title>How to Live Longer?</title>
     <script src="https://d3js.org/d3.v6.min.js"></script>
@@ -17,30 +17,33 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="top-bar">
-        <a href="home_page.html" class="menu-icon">&#9776;</a>
-        <div class="top-options">
-            <a href="team_intro.html" class="option">Team</a>
-            <a href="#" class="option">Project</a>
+    <nav class="navbar">
+        <div class="nav-left">
+            How to Live Longer?
+            <!-- <a href="home_page.html" class="menu-icon">&#9776;</a> -->
         </div>
-    </div>
+        <ul class="nav-list">
+            <li><a href="home_page.html" class="nav-item">HOME</a></li>
+            <li><a href="team_intro.html" class="nav-item">TEAM</a></li>
+        </ul>
+    </nav>
 
-<header>
-    <div class="header-text">
-        <h1>Healthcare Expenditures</h1>
-        <p>How healthcare spending impacts life expectancy?</p>
-    </div>
-    <div class="header-img">
-        <img src="style/img/healthcare/healthcare_page.jpg" alt="Image representing healthcare" />
-    </div>
-</header>
+    <header class="sub-page">
+        <div class="header-text">
+            <h1>Healthcare Expenditures</h1>
+            <p>How healthcare spending impacts life expectancy?</p>
+        </div>
+        <div class="header-img">
+            <img src="style/img/healthcare/healthcare_page.jpg" alt="Image representing healthcare" />
+        </div>
+    </header>
 
 <main>
     <div class="container">
         <div class="map-container">
           <h2>Healthcare Expenditures on Map</h2>
           <p class="map-description">Discover how healthcare expenditure varies across European countries.<br> Use the year selector to observe trends over time <strong>in your country</strong>. Switch between per capita or total expenditure views.</p>
-          <div class="d-flex justify-content-between mb-3">
+          <div class="selectors-panel">
             <select id="year-selector" class="form-control"></select>
             <select id="value-toggle" class="form-control">
               <option value="Health Expenditure per Capita">Expenditure Per Capita</option>
@@ -49,7 +52,12 @@
           </div>
           <div class="tooltip" id="tooltip_map"></div>
           <svg id="choropleth-map"></svg>
+          <div class="info-icon-container">
+            <i class="fas fa-info-circle info-icon"></i>
+            <span class="info-tooltip">How to read the map?</span>
         </div>
+        </div>
+
 
         <div class="description-container">
             <h3>Western Europe Dominance</h3>
@@ -66,11 +74,13 @@
         <div class="chart-container">
           <h2>Does Healthcare Expenditures Affect Life Expectancy?</h2>
           <p class="chart-description">Compare life expectancy and healthcare spending trends for two countries over time. Use the dropdown menus to select countries of interest.</p>
-          <div class="d-flex justify-content-between mb-3">
+          <div class="selectors-panel justify-content-between">
             <select id="country1" class="form-control"></select>
-            <span id="currentYear">2000</span>
             <select id="country2" class="form-control"></select>
           </div>
+          <div class="centered-container">
+            <span id="currentYear">2000</span>
+        </div>
           <canvas id="lifeExpectancyChart"></canvas>
           <div class="animate-controls">
             <button id="pauseButton" class="control-button" disabled>
@@ -90,6 +100,10 @@
                     <input type="range" id="yearSlider" min="2000" max="2022" value="2000" step="1">
                     <span class="max-year">2022</span>
                 </div>
+            </div>
+            <div class="info-icon-container">
+                <i class="fas fa-info-circle info-icon"></i>
+                <span class="info-tooltip">How to read the chart?</span>
             </div>
             
         </div>
@@ -115,6 +129,39 @@
 
 <script src="scripts/healthcare-map.js"></script>
 <script src="scripts/healthcare-lineplot.js"></script>
+<script src="scripts/modal-windows.js"></script>
+
+<div id="mapInfoModal" class="info-modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>How to Read the Choropleth Map?</h2>
+        <p>
+            The choropleth map visualizes healthcare expenditures across countries:
+            <ul>
+                <li>Hover over a country to see detailed data for the selected year.</li>
+                <li>Use the year selector to view data for different years.</li>
+                <li>Switch between per capita and total expenditure using the dropdown menu.</li>
+                <li>Darker colors represent higher expenditures.</li>
+            </ul>
+        </p>
+    </div>
+</div>
+
+<div id="chartInfoModal" class="info-modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>How to Read the Chart?</h2>
+        <p>
+            The chart compares healthcare expenditure and life expectancy trends for selected countries. 
+            <ul>
+                <li>Use the dropdown menus to select countries of interest.</li>
+                <li>The X-axis represents years, while the Y-axis shows respective values.</li>
+                <li>Hover over points to see detailed data for a particular year.</li>
+                <li>Use the slider to visualize changes over time dynamically.</li>
+            </ul>
+        </p>
+    </div>
+</div>
 
 </body>
 </html>

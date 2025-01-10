@@ -110,12 +110,37 @@ async function initializeChart() {
             scales: {
                 x: {
                     type: 'linear',
-                    title: { display: true, text: 'Healthcare Expenditure (€)' },
+                    title: {
+                        display: true,
+                        text: 'Healthcare Expenditure (€)',
+                        font: {
+                            size: 16,
+                            weight: 'bold',
+                        }
+                    },
+                    ticks: {
+                        callback: function(value) {
+                            return formatNumber(value);
+                        },
+                    },
                 },
                 y: {
-                    title: { display: true, text: 'Life Expectancy (Years)' },
-                }
+                    title: {
+                        display: true,
+                        text: 'Life Expectancy (Years)',
+                        font: {
+                            size: 16,
+                            weight: 'bold',
+                        }
+                    },
+                    ticks: {
+                        callback: function(value) {
+                            return formatNumber(value);
+                        },
+                    },
+                },
             }
+            
         },
         plugins: [
             {
@@ -249,7 +274,7 @@ async function initializeChart() {
         pauseButton.disabled = false;
         resumeButton.disabled = true;
 
-        for (; currentYear <= 2022; currentYear++) {
+        for (; currentYear <= 2021; currentYear++) {
             if (!animationRunning) break;
             slider.value = currentYear;
             currentYearLabel.textContent = currentYear;
@@ -257,7 +282,7 @@ async function initializeChart() {
             await new Promise(resolve => setTimeout(resolve, 800));
         }
 
-        if (currentYear > 2022) {
+        if (currentYear > 2021) {
             replayButton.disabled = false;
             pauseButton.disabled = true;
         }
