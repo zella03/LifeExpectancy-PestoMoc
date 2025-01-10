@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .append("g")
         .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
-    const tooltip = d3.select("#tooltip");
+    const tooltip = d3.select("#tooltip-bubble");
     const yearDropdown = document.getElementById("year-select");
 
     const xScale = d3.scaleLog().range([0, width]);
@@ -124,18 +124,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 .attr("opacity", 0.7)
                 .on("mouseover", (event, d) => {
                     tooltip
-                        .style("opacity", 1)
+                        .style("opacity", 1) // Make tooltip visible
                         .html(
                             `<strong>${d.Country}</strong><br>
-                             GDP: ${(+d.Total_GDP).toLocaleString()} €<br>
-                             Life Expectancy: ${parseFloat(d.Life_expectancy).toFixed(2)} years<br>
-                             Population: ${(+d.Population).toLocaleString()}`
+                            GDP: ${(+d.Total_GDP).toLocaleString()} €<br>
+                            Life Expectancy: ${parseFloat(d.Life_expectancy).toFixed(2)} years<br>
+                            Population: ${(+d.Population).toLocaleString()}`
                         )
-                        .style("left", `${event.pageX + 10}px`)
-                        .style("top", `${event.pageY - 20}px`);
+                        .style("left", `${event.pageX + 10}px`) // Adjust the tooltip position
+                        .style("top", `${event.pageY - 20}px`)
+                        .style("transform", "translateX(10px)"); // Make sure the tooltip doesn't get clipped on the left
                 })
                 .on("mouseout", () => {
-                    tooltip.style("opacity", 0);
+                    tooltip.style("opacity", 0); // Hide tooltip on mouseout
                 })
                 .merge(bubbles)
                 .transition()

@@ -2,31 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Circular&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Dela+Gothic+One&family=Rubik+Mono+One&family=Shrikhand&display=swap" rel="stylesheet">
-    <script src="https://d3js.org/d3.v6.min.js" defer></script>
 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <title>How to Live Longer?</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="top-bar">
-        <a href="home_page.html" class="menu-icon">&#9776;</a>
-        <div class="top-options">
-            <a href="team_intro.html" class="option">Team</a>
-            <a href="#" class="option">Project</a>
+    <nav class="navbar">
+        <div class="nav-left">
+            How to Live Longer?
+            <!-- <a href="home_page.html" class="menu-icon">&#9776;</a> -->
         </div>
-    </div>
+        <ul class="nav-list">
+            <li><a href="home_page.html" class="nav-item">HOME</a></li>
+            <li><a href="team_intro.html" class="nav-item">TEAM</a></li>
+        </ul>
+    </nav>
 
-    <header>
+    <header class="header-subpage">
         <div class="header-text">
             <h1>GDP</h1>
-            
             <p>
-                Gross Domestic Product (GDP) is a key measure of a country's economic performance. It reflects the total value of goods and services produced within a country.<br><br>
-                On the other hand, GDP per Person, or income per capita, represents the average economic output per individual, offering insights into the standard of living.
+                Is GDP a key factor in determining life expectancy?
             </p>
         </div>
         <div class="header-img">
@@ -35,12 +41,21 @@
     </header>
 
     <main>
-        <div id="lifeExp-map">
+        <div class="container">
+            <div class="description-container">
+                <h3>What is actually GDP?</h3>
+                <p>
+                    <b>Gross domestic product (GDP)</b> is the total monetary or market value of all the finished goods and services produced within a country’s borders in a specific time period. As a broad measure of overall domestic production, 
+                    it functions as a comprehensive scorecard of a given country’s economic health. Here we want to explore the relationship between GDP and life expectancy across European countries. 
+                </p>
+            </div>
+
+            <div class="separator"></div>
+
             <div class="map-container">
                 <h2>GDP on Map</h2>
                 <p class="map-description">Look at the map and search for <b></b>GDP in each country as well as income per person. Chose a year and see how it changed.</p>
-                <div>
-                    <label for="year">Select: </label>
+                <div class="selectors-panel">
                     <select id="year-map" class="form-control"></select>
                     <select id="column-map" class="form-control">
                         <option value="Total_GDP" selected>Total GDP</option>
@@ -48,10 +63,16 @@
                     </select>
                 </div>
                 <svg id="map"></svg>
+                <div class="info-icon-container">
+                    <i class="fas fa-info-circle info-icon"></i>
+                    <span class="info-tooltip">How to read the map?</span>
+                </div>
             </div>
             <div class="tooltip-map" id="tooltip-map"></div>
+            
 
-            <section>
+            <div class="description-container">
+                <h3>What to take from the map..</h3>
                 <p>
                     This map provides a visual representation of two critical metrics across Europe (GDP per capita and income per person) from 1960 to 2022. By selecting either Total GDP or GDP per Person, you can explore how these indicators vary across regions and evolve over time.<br><br>
 
@@ -62,53 +83,92 @@
                         <li>Total GDP is influenced by both population size and economic output, with larger countries often dominating this metric.</li>
                     </ul>
                 </p>
-            </section>
-        </div>
-
-        <h1 class="title-separator">What about Life expectancy? Does it correlate?</h1>
-        
-        <div id="GDP-bubble">
-            <div class="chart-container-gdp">
-                <h2>Top 10 Countries by Life Expectancy</h2>
-                <p class="chart-description">
-                    The bubble chart below <b>highlights the top correlation between life expectancy and total GDP</b> for the selected year. 
-                    <br>
-                    Use the dropdown menu to change the year and see the changes.
-                </p>
-
-                <div class="controls">
-                    <div class="year-selector">
-                        <label for="year-select">Select Year:</label>
-                        <select id="year-select" class="form-control"></select>
-                    </div>
-
-                </div>
-
-                <div class="bubble-chart">
-                    <svg id="bubble-chart" width="1000" height="600"></svg>
-                    <div class="tooltip" id="tooltip"></div>
-                </div>
-                <div class="legend-container">
-                    <svg id="legend" width="500" height="60"></svg>
-                </div>
-                
             </div>
+        
 
-            <section>
-                <p>
-                    Looking across the year I don't see a clear correlation between life expectancy and GDP. We notice that countries with higher GDPs do not necessarily have higher life expectancies. For sure there are some slight correlations, but they are not strong enough to make a general statement.
-                    <br><br>
-                    This suggests that maybe other factors, such as healthcare, lifestyle, and social conditions, play a significant role in determining life expectancy.
-                    <div class="next-page-button">
-                        <a href="healthcare.html" class="button">Check other factors: <strong>Healthcare</strong></a>
+            <h1 class="title-separator">What about Life expectancy? Does it correlate?</h1>
+            
+            <div id="GDP-bubble">
+                <div class="chart-container">
+                    <h2>Top 10 Countries by Life Expectancy</h2>
+                    <p class="chart-description">
+                        The bubble chart below <b>highlights the top correlation between life expectancy and total GDP</b> for the selected year. 
+                        <br>
+                        Use the dropdown menu to change the year and see the changes.
+                    </p>
+
+                    <div class="controls">
+                        <div class="year-selector">
+                            <label for="year-select">Select Year:</label>
+                            <select id="year-select" class="form-control"></select>
+                        </div>
+
                     </div>
-                </p>
-            </section>
-        </div>
 
+                    <div class="bubble-chart">
+                        <svg id="bubble-chart" width="1000" height="600"></svg>
+                        <div class="tooltip" id="tooltip-bubble"></div>
+                    </div>
+                    <div class="legend-container">
+                        <svg id="legend" width="500" height="60"></svg>
+                    </div>
+                    <div class="info-icon-container">
+                        <i class="fas fa-info-circle info-icon"></i>
+                        <span class="info-tooltip">How to read the chart?</span>
+                    </div>
+                    
+                </div>
+
+                <section>
+                    <p>
+                        Looking across the year I don't see a clear correlation between life expectancy and GDP. We notice that countries with higher GDPs do not necessarily have higher life expectancies. For sure there are some slight correlations, but they are not strong enough to make a general statement.
+                        <br><br>
+                        This suggests that maybe other factors, such as healthcare, lifestyle, and social conditions, play a significant role in determining life expectancy.
+                        <div class="next-page-button">
+                            <a href="healthcare.html" class="button">Check other factors: <strong>Healthcare</strong></a>
+                        </div>
+                    </p>
+                </section>
+            </div>
+        </div>
         
         <script src="scripts/gdp-with-lifeExpectancy.js" defer></script>
         <script src="scripts/gdp.js" defer></script>
+        
+
+        <div id="mapInfoModal" class="info-modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>How to Read the Choropleth Map?</h2>
+                <p>
+                    Check total GDP and Income per person across countries:
+                    <ul>
+                        <li>Hover over a country to see detailed data for the selected year.</li>
+                        <li>Use the year selector to view data for different years.</li>
+                        <li>Switch between total GDP and income per person using the dropdown menu.</li>
+                        <li>Darker colors represent higher GDP or Income.</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+
+        <div id="chartInfoModal" class="info-modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>How to Read the Choropleth Map?</h2>
+                <p>
+                     expenditures across countries:
+                    <ul>
+                        <li>Hover over a country to see detailed data for the selected year.</li>
+                        <li>Use the year selector to view data for different years.</li>
+                        <li>Switch between per capita and total expenditure using the dropdown menu.</li>
+                        <li>Darker colors represent higher expenditures.</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+
+        <script src="scripts/modal-windows.js"></script>
         
     </main>
 
