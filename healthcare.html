@@ -54,7 +54,7 @@
           <svg id="choropleth-map"></svg>
           <div class="info-icon-container">
             <i class="fas fa-info-circle info-icon"></i>
-            <span class="info-tooltip">How to read the map?</span>
+            <span>How to read the map?</span>
         </div>
         </div>
 
@@ -68,7 +68,10 @@
                  relative to each population unit, correlating to better life quality of individuals and individuals well-being.
                  When switching to total expenditures, the map reveals that wealthier nations not only have higher per 
                  capita spending but also dominate in overall healthcare expenditure.
-                 <br><br> What is good for us - we can observe that total healthcare expenditures are increasing across all countries over the years!</p>
+                 <div class="increase-comment">
+                    What is good for us - we can observe that total healthcare expenditures are increasing across all countries over the years!</p>
+                    <img src="style/img/healthcare/increase.png" alt="Image representing increase of money" />
+                 </div>
         </div>
     
         <div class="chart-container">
@@ -103,7 +106,7 @@
             </div>
             <div class="info-icon-container">
                 <i class="fas fa-info-circle info-icon"></i>
-                <span class="info-tooltip">How to read the chart?</span>
+                <span>How to read the chart?</span>
             </div>
             
         </div>
@@ -120,7 +123,12 @@
     <div class="next-page-button">
         <a href="addictions.html" class="button">Check other factors: <strong>Addictions</strong></a>
     </div>
-
+    <div class="data-sources">
+        <div class="info-icon-container">
+            <span><u>Data Sources: Helthcare Expenditure & Life Expectancy</u></span>
+        </div>
+    </div>
+    
 </main>
 
 <footer>
@@ -159,6 +167,38 @@
                 <li>Hover over points to see detailed data for a particular year.</li>
                 <li>Use the slider to visualize changes over time dynamically.</li>
             </ul>
+        </p>
+    </div>
+</div>
+
+<div id="dataInfoModal" class="info-modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Data Sources</h2>
+        <p>
+            <ul>
+                <li><a href="https://geojson-maps.kyd.au/">GeoJson file with countries bondaries</a>
+                </li>
+                <li><a href="https://ourworldindata.org/grapher/annual-healthcare-expenditure-per-capita">Our World In Data - Annual Healthcare Expenditure per Capita</a>
+                </li>
+                <li><a href="https://databank.worldbank.org/source/population-estimates-and-projections#">Data Bank - Population and Life Expectancy at birth</a>
+                </li>
+            </ul>
+            
+            <strong>Preparation Activities</strong><br>
+            Life Expectancy data was transformed into a long format, we renamed the columns, 
+            extracted the years and exported into yearly subsets to CSV files.
+            <br><br>
+            Healthcare dataset was reshaped it to long format using, extracted years, 
+            dropped rows with missing values, and 
+            converted healthcare expenditure from USD to EUR using a conversion rate (0.85).
+            <br><br>
+            Datasets were loaded and merged together on 
+            country and year.
+            Additinally total healthcare expenditure was calculated (by multiplication using population), and then again saved to yearly datasets.
+            <br><br>
+            To display countries on a map some of the countries names needed to be standardized to the ones from geojson file.
+            
         </p>
     </div>
 </div>
