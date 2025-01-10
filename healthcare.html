@@ -41,23 +41,22 @@
 <main>
     <div class="container">
         <div class="map-container">
-          <h2>Healthcare Expenditures on Map</h2>
-          <p class="map-description">Discover how healthcare expenditure varies across European countries.<br> Use the year selector to observe trends over time <strong>in your country</strong>. Switch between per capita or total expenditure views.</p>
-          <div class="selectors-panel">
-            <select id="year-selector" class="form-control"></select>
-            <select id="value-toggle" class="form-control">
-              <option value="Health Expenditure per Capita">Expenditure Per Capita</option>
-              <option value="Total Health Expenditure">Total Expenditure</option>
-            </select>
-          </div>
-          <div class="tooltip" id="tooltip_map"></div>
-          <svg id="choropleth-map"></svg>
-          <div class="info-icon-container">
-            <i class="fas fa-info-circle info-icon"></i>
-            <span>How to read the map?</span>
+            <h2>Healthcare Expenditures on Map</h2>
+            <p class="map-description">Discover how healthcare expenditure varies across European countries.<br> Use the year selector to observe trends over time <strong>in your country</strong>. Switch between per capita or total expenditure views.</p>
+            <div class="selectors-panel">
+                <select id="year-selector" class="form-control"></select>
+                <select id="value-toggle" class="form-control">
+                <option value="Health Expenditure per Capita">Expenditure Per Capita</option>
+                <option value="Total Health Expenditure">Total Expenditure</option>
+                </select>
+            </div>
+            <div class="tooltip" id="tooltip_map"></div>
+            <svg id="choropleth-map"></svg>
+            <div class="info-icon-container">
+                <i class="fas fa-info-circle info-icon"></i>
+                <span>How to read the map?</span>
+            </div>
         </div>
-        </div>
-
 
         <div class="description-container">
             <h3>Western Europe Dominance</h3>
@@ -75,27 +74,26 @@
         </div>
     
         <div class="chart-container">
-          <h2>Does Healthcare Expenditures Affect Life Expectancy?</h2>
-          <p class="chart-description">Compare life expectancy and healthcare spending trends for two countries over time. Use the dropdown menus to select countries of interest.</p>
-          <div class="selectors-panel justify-content-between">
-            <select id="country1" class="form-control"></select>
-            <select id="country2" class="form-control"></select>
-          </div>
-          <div class="centered-container">
-            <span id="currentYear">2000</span>
-        </div>
-          <canvas id="lifeExpectancyChart"></canvas>
-          <div class="animate-controls">
-            <button id="pauseButton" class="control-button" disabled>
-                <i class="fas fa-pause"></i>
-            </button>
-            <button id="resumeButton" class="control-button" disabled>
-                <i class="fas fa-play"></i>
-            </button>
-            <button id="replayButton" class="control-button">
-                <i class="fas fa-undo"></i>
-            </button>
-            
+            <h2>Does Healthcare Expenditures Affect Life Expectancy?</h2>
+            <p class="chart-description">Compare life expectancy and healthcare spending trends for two countries over time. Use the dropdown menus to select countries of interest.</p>
+            <div class="selectors-panel justify-content-between">
+                <select id="country1" class="form-control"></select>
+                <select id="country2" class="form-control"></select>
+            </div>
+            <div class="centered-container">
+                <span id="currentYear">2000</span>
+            </div>
+            <canvas id="lifeExpectancyChart"></canvas>
+            <div class="animate-controls">
+                <button id="pauseButton" class="control-button" disabled>
+                    <i class="fas fa-pause"></i>
+                </button>
+                <button id="resumeButton" class="control-button" disabled>
+                    <i class="fas fa-play"></i>
+                </button>
+                <button id="replayButton" class="control-button">
+                    <i class="fas fa-undo"></i>
+                </button>
             </div>
             <div class="slider-container">
                 <div class="slider-wrapper">
@@ -111,15 +109,16 @@
             
         </div>
 
-      <div class="description-container">
+        <div class="description-container">
         <h3>We are living longer, longer, and longer...</h3>
         <p>The line plot helps visualize how life expectancy improvements often correlate with healthcare spending increases.
             We can conclude that there is a positive relationship between those two values!
             What's more, as stated previously: we face increasing healthcare spending. Given this correlation, <strong>we are going to live longer!</strong></p>
         <p>The plot highlights the importance of healthcare spending for improving life expectancy. 
-            However, it also indicates that the effectiveness of spending depends also on other factors, and the relationship is not that strong...</p>
+            However, it also indicates that the healthcare relationship is not only factor motivating our livespan. We should also consider other factors such as lifestyle, and social conditions.</p>
+        </div>
     </div>
-    
+
     <div class="next-page-button">
         <a href="addictions.html" class="button">Check other factors: <strong>Addictions</strong></a>
     </div>
@@ -128,7 +127,6 @@
             <span><u>Data Sources: Helthcare Expenditure & Life Expectancy</u></span>
         </div>
     </div>
-    
 </main>
 
 <footer>
@@ -170,6 +168,7 @@
         </p>
     </div>
 </div>
+
 
 <div id="dataInfoModal" class="info-modal">
     <div class="modal-content">

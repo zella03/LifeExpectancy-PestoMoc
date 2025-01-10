@@ -1,3 +1,6 @@
+const tooltip = d3.select("#tooltip-bubble");
+console.log(tooltip)
+
 document.addEventListener("DOMContentLoaded", () => {
     const margin = { top: 50, right: 50, bottom: 150, left: 70 };
     const width = 1000 - margin.left - margin.right;
@@ -8,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
         .append("g")
         .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
-    const tooltip = d3.select("#tooltip-bubble");
     const yearDropdown = document.getElementById("year-select");
 
     const xScale = d3.scaleLog().range([0, width]);

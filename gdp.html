@@ -28,7 +28,7 @@
         </ul>
     </nav>
 
-    <header class="header-subpage">
+    <header class="sub-page">
         <div class="header-text">
             <h1>GDP</h1>
             <p>
@@ -65,7 +65,7 @@
                 <svg id="map"></svg>
                 <div class="info-icon-container">
                     <i class="fas fa-info-circle info-icon"></i>
-                    <span class="info-tooltip">How to read the map?</span>
+                    <span>How to read the map?</span>
                 </div>
             </div>
             <div class="tooltip-map" id="tooltip-map"></div>
@@ -106,8 +106,8 @@
                     </div>
 
                     <div class="bubble-chart">
+                        
                         <svg id="bubble-chart" width="1000" height="600"></svg>
-                        <div class="tooltip" id="tooltip-bubble"></div>
                     </div>
                     <div class="legend-container">
                         <svg id="legend" width="500" height="60"></svg>
@@ -116,59 +116,75 @@
                         <i class="fas fa-info-circle info-icon"></i>
                         <span class="info-tooltip">How to read the chart?</span>
                     </div>
+                    <div class="tooltip" id="tooltip-bubble"></div>
                     
                 </div>
+            </div>
+            <div class="description-container">
+                <p>
+                Looking across the year you don't see a clear correlation between life expectancy and GDP. We notice that countries with higher GDPs do not necessarily have higher life expectancies. For sure there are some slight correlations, but they are not strong enough to make a general statement.
+                <br><br>
+                <span class="icon-mark">!</span> 
+                <br> Remind yourselves that GDP reveals not just the economic power of the countries but also how much they invest 
+                in healthcare - <b>one of critical factors</b> in shaping life expectancy!
+                
+                </p>
+            </div>
 
-                <section>
-                    <p>
-                        Looking across the year I don't see a clear correlation between life expectancy and GDP. We notice that countries with higher GDPs do not necessarily have higher life expectancies. For sure there are some slight correlations, but they are not strong enough to make a general statement.
-                        <br><br>
-                        This suggests that maybe other factors, such as healthcare, lifestyle, and social conditions, play a significant role in determining life expectancy.
-                        <div class="next-page-button">
-                            <a href="healthcare.html" class="button">Check other factors: <strong>Healthcare</strong></a>
-                        </div>
-                    </p>
-                </section>
+            <div class="chart-container">
+                <h2>Countries with highest GDP Expenditures</h2>
+                <p class="chart-description">
+                    The chart below shows the <b>top 3 countries with the highest total GDP</b> for the selected year, along with the <b>percentage of healthcare expenditure as part of the GDP</b>.
+                    <br>
+                    Use the dropdown menu to change the year and see the changes.
+                </p>
+
+                <div class="selectors-panel">
+                    <select id="year-selector" class="form-control"></select>
+                </div>
+
+                <div class="waffle-charts-container" id="waffle-charts"></div>
+                <div class="waffle-modal">
+                    <div class="info-icon-container">
+                        <i class="fas fa-info-circle info-icon"></i>
+                        <span class="info-tooltip">How to read the chart?</span>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <div class="description-container">
+                <p>
+                    GDP reveals not just the economic power of the countries but also how much they invest 
+                    in healthcare - critical factor shaping life expectancy! <br> 
+                    
+                    Explore the balance between wealth and health and see how these nations prioritize their citizens' 
+                    quality of life!
+                </p>
+            </div>
+
+        </div>
+
+        
+
+
+        <div class="next-page-button">
+            <a href="healthcare.html" class="button">Check other factors: <strong>Healthcare</strong></a>
+        </div>
+
+        <div class="data-sources">
+            <div class="info-icon-container">
+                <span><u>Data Sources: GDP & Life Expectancy</u></span>
             </div>
         </div>
         
         <script src="scripts/gdp-with-lifeExpectancy.js" defer></script>
+        <script src="scripts/gdp-waffle-chart.js" defer></script>
         <script src="scripts/gdp.js" defer></script>
         
 
-        <div id="mapInfoModal" class="info-modal">
-            <div class="modal-content">
-                <span class="close-btn">&times;</span>
-                <h2>How to Read the Choropleth Map?</h2>
-                <p>
-                    Check total GDP and Income per person across countries:
-                    <ul>
-                        <li>Hover over a country to see detailed data for the selected year.</li>
-                        <li>Use the year selector to view data for different years.</li>
-                        <li>Switch between total GDP and income per person using the dropdown menu.</li>
-                        <li>Darker colors represent higher GDP or Income.</li>
-                    </ul>
-                </p>
-            </div>
-        </div>
+        
 
-        <div id="chartInfoModal" class="info-modal">
-            <div class="modal-content">
-                <span class="close-btn">&times;</span>
-                <h2>How to Read the Choropleth Map?</h2>
-                <p>
-                     expenditures across countries:
-                    <ul>
-                        <li>Hover over a country to see detailed data for the selected year.</li>
-                        <li>Use the year selector to view data for different years.</li>
-                        <li>Switch between per capita and total expenditure using the dropdown menu.</li>
-                        <li>Darker colors represent higher expenditures.</li>
-                    </ul>
-                </p>
-            </div>
-        </div>
-
-        <script src="scripts/modal-windows.js"></script>
         
     </main>
 
@@ -176,5 +192,88 @@
         <p>&copy; Data Visualization | Unige 2024/2025</p>
     </footer>
 
+    <script src="scripts/modal-windows-waffle.js"></script>
+    <div id="mapInfoModal" class="info-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>How to Read the Choropleth Map?</h2>
+            <p>
+                Check total GDP and Income per person across countries:
+                <ul>
+                    <li>Hover over a country to see detailed data for the selected year.</li>
+                    <li>Use the year selector to view data for different years.</li>
+                    <li>Switch between total GDP and income per person using the dropdown menu.</li>
+                    <li>Darker colors represent higher GDP or Income.</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+
+    <div id="chartInfoModal" class="info-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>How to Read the Choropleth Map?</h2>
+            <p>
+                 expenditures across countries:
+                <ul>
+                    <li>Hover over a country to see detailed data for the selected year.</li>
+                    <li>Use the year selector to view data for different years.</li>
+                    <li>Switch between per capita and total expenditure using the dropdown menu.</li>
+                    <li>Darker colors represent higher expenditures.</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+
+    <div id="chart1InfoModal" class="info-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>How to Read the Waffle Chart?</h2>
+            <p>
+                <ul>
+                    <li>At the top of each chart, you'll see the name of the country and its total GDP for the selected year, displayed in euros.
+                    </li>
+                    <li>The grid below represents 100%.</li>
+                    <li>The <b class="blue-text">blue</b> blocks show the proportion of GDP spent on healthcare.</li>
+                    <li>Below the chart, you'll find the percentage of total GDP dedicated to healthcare.</li>
+                </ul>
+                This visualization helps you understand how much of the country's wealth is invested in health-related expenditures
+            </p>
+        </div>
+    </div>
+
+    <div id="dataInfoModal" class="info-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Data Sources</h2>
+            <p>
+                <ul>
+                    <li><a href="https://geojson-maps.kyd.au/">GeoJson file with countries bondaries</a>
+                    </li>
+                    <li><a href="https://ourworldindata.org/grapher/annual-healthcare-expenditure-per-capita">Our World In Data - Annual Healthcare Expenditure per Capita</a>
+                    </li>
+                    <li><a href="https://databank.worldbank.org/source/population-estimates-and-projections#">Data Bank - Population and Life Expectancy at birth</a>
+                    </li>
+                </ul>
+                
+                <strong>Preparation Activities</strong><br>
+                Life Expectancy data was transformed into a long format, we renamed the columns, 
+                extracted the years and exported into yearly subsets to CSV files.
+                <br><br>
+                Healthcare dataset was reshaped it to long format using, extracted years, 
+                dropped rows with missing values, and 
+                converted healthcare expenditure from USD to EUR using a conversion rate (0.85).
+                <br><br>
+                Datasets were loaded and merged together on 
+                country and year.
+                Additinally total healthcare expenditure was calculated (by multiplication using population), and then again saved to yearly datasets.
+                <br><br>
+                To display countries on a map some of the countries names needed to be standardized to the ones from geojson file.
+                
+            </p>
+        </div>
+    </div>
+
+    
 </body>
 </html>
