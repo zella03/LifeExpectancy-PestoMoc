@@ -1,9 +1,19 @@
 const svg2 = d3.select("#chart4")
     .append("svg")
-    .attr("width", width + margin.left + margin.right)
+    .attr("width", width + margin.left + margin.right + 100)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+const tooltip = d3.select("#chart4")
+    .append("div")
+    .style("position", "absolute")
+    .style("background", "white")
+    .style("border", "1px solid #ccc")
+    .style("padding", "5px")
+    .style("border-radius", "5px")
+    .style("pointer-events", "none")
+    .style("display", "none");
 
 d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").then(function(data) {
     const years = d3.range(2000, 2022);
@@ -50,11 +60,20 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
         .attr("transform", `translate(0, ${height})`)
         .call(d3.axisBottom(x).tickValues(displayedYears));
 
+    svg2.append("text")
+        .attr("class", "x-axis-label")
+        .attr("x", width / 2)
+        .attr("y", height + margin.bottom - 10)
+        .style("text-anchor", "middle")
+        .text("Years");
+
     function updateChart(selectedCountry) {
         svg2.selectAll(".line").remove();
+        svg2.selectAll(".dot").remove();
         svg2.selectAll(".y-axis").remove();
         svg2.selectAll(".line-label").remove();
         svg2.selectAll(".tooltip").remove();
+        svg2.selectAll(".y-axis-label").remove();
 
         const filteredData = data.filter(d => d.Entity === selectedCountry);
 
@@ -74,6 +93,8 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
         const colorScale = d3.scaleOrdinal(d3.schemeCategory10)
             .domain(addictionTypes.map(d => d.label));
 
+        const labelPositions = [];
+
         addictionTypes.forEach(type => {
             const values = filteredData.map(d => ({
                 Year: d.Year,
@@ -88,12 +109,44 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
                 .attr("stroke-width", 2)
                 .attr("fill", "none");
 
+            svg2.selectAll(`.dot-${type.label.replace(/\s+/g, '-')}`)
+                .data(values)
+                .enter()
+                .append("circle")
+                .attr("class", `dot dot-${type.label.replace(/\s+/g, '-')}`)
+                .attr("cx", d => x(d.Year) + x.bandwidth() / 2)
+                .attr("cy", d => y(d.value))
+                .attr("r", 3)
+                .attr("fill", colorScale(type.label))
+                .on("mouseover", function(event, d) {
+                    tooltip.style("display", "block")
+                        .html(`<strong>${type.label}</strong><br>Year: ${d.Year}<br>Value: ${d.value}`)
+                        .style("left", (event.pageX + 10) + "px")
+                        .style("top", (event.pageY - 25) + "px");
+                })
+                .on("mousemove", function(event) {
+                    tooltip.style("left", (event.pageX + 10) + "px")
+                        .style("top", (event.pageY - 25) + "px");
+                })
+                .on("mouseout", function() {
+                    tooltip.style("display", "none");
+                });
+
             const lastPoint = values[values.length - 1];
             if (lastPoint) {
+                let labelX = x(lastPoint.Year) + x.bandwidth() / 2 + 5;
+                let labelY = y(lastPoint.value);
+
+                while (labelPositions.some(pos => Math.abs(pos.y - labelY) < 20)) {
+                    labelY += 20;  // Increase space between labels
+                }
+
+                labelPositions.push({ x: labelX, y: labelY });
+
                 svg2.append("text")
                     .attr("class", "line-label")
-                    .attr("x", x(lastPoint.Year) + x.bandwidth() / 2 + 5)
-                    .attr("y", y(lastPoint.value))
+                    .attr("x", labelX)
+                    .attr("y", labelY)
                     .text(type.label)
                     .style("font-size", "12px")
                     .style("fill", colorScale(type.label))
@@ -104,6 +157,14 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
         svg2.append("g")
             .attr("class", "y-axis")
             .call(d3.axisLeft(y));
+
+        svg2.append("text")
+            .attr("class", "y-axis-label")
+            .attr("transform", "rotate(-90)")
+            .attr("x", -height / 2)
+            .attr("y", -margin.left + 20)
+            .style("text-anchor", "middle")
+            .text("Deaths per capita");
     }
 
     updateChart(countries[0]);
