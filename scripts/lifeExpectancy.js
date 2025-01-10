@@ -65,6 +65,23 @@ Promise.all(dataPromises).then(([geoData]) => {
 function renderMap(geoData, year) {
     const data = allData[year];
 
+    // dividing life exp into buckets
+    const lifeExpectancyValues = data.map(d => d.Life_expectancy).filter(d => d > 0);// mssing data
+    const minLifeExpectancy = d3.min(lifeExpectancyValues);
+    const maxLifeExpectancy = d3.max(lifeExpectancyValues);
+    const numBuckets = 6;
+    const step = (maxLifeExpectancy - minLifeExpectancy) / numBuckets;
+
+    const ranges = d3.range(numBuckets).map(i => ({
+        range: [minLifeExpectancy + i * step, minLifeExpectancy + (i + 1) * step],
+        color: d3.schemeBlues[numBuckets][i]
+    }));
+
+    function getColor(value) {
+        const range = ranges.find(r => value >= r.range[0] && value < r.range[1]);
+        return range ? range.color : "#ccc";
+    }
+
     svgMap.selectAll("path").remove();
 
     svgMap.selectAll("path")
@@ -73,7 +90,10 @@ function renderMap(geoData, year) {
         .append("path")
         .attr("d", path)
         .attr("class", "country")
-        .style("fill", "#58768a")
+        .style("fill", d => {
+            const countryData = data.find(e => e.Country === d.properties.name && e.Total === "total");
+            return countryData ? getColor(countryData.Life_expectancy) : "#ccc";
+        })
         .style("stroke", "#333")
         .on("mouseover", function (event, d) {
             const countryName = d.properties.name;
@@ -81,14 +101,12 @@ function renderMap(geoData, year) {
 
             if (countryData.length > 0) {
                 const totalData = countryData.find(e => e.Total === "total");
-                //const femaleData = countryData.find(e => e.Total === "female");
-                //const maleData = countryData.find(e => e.Total === "male");
 
                 const totalLifeExpectancy = totalData ? totalData.Life_expectancy.toFixed(2) : 'N/A';
-                //const femaleLifeExpectancy = femaleData ? femaleData.Life_expectancy.toFixed(2) : 'N/A';
-                //const maleLifeExpectancy = maleData ? maleData.Life_expectancy.toFixed(2) : 'N/A';
 
-                d3.select(this).style("fill", "#58768a");
+                d3.select(this)
+                .style("stroke", "#000")
+                .raise();
 
                 svgMap.selectAll("path")
                     .filter(function () {
@@ -100,17 +118,62 @@ function renderMap(geoData, year) {
                     .html(`
                         <strong>${countryName}</strong><br>
                         Total: ${totalLifeExpectancy} years<br>
-                        
-                    `) //Female: ${femaleLifeExpectancy} years<br> Male: ${maleLifeExpectancy} years
+                    `)
                     .style("left", (event.pageX + 5) + "px")
                     .style("top", (event.pageY - 28) + "px");
             }
         })
         .on("mouseout", function () {
-            svgMap.selectAll("path").style("fill", "#58768a");
+            svgMap.selectAll("path").style("fill", d => {
+                const countryData = data.find(e => e.Country === d.properties.name && e.Total === "total");
+                return countryData ? getColor(countryData.Life_expectancy) : "#ccc";
+            });
             tooltipMap.style("display", "none");
         });
+
+    const legendWidth = 400;
+    const legendHeight = 10;
+
+    const legend = svgMap.selectAll(".legend").data([0]).enter()
+        .append("g")
+        .attr("class", "legend")
+        .attr("transform", `translate(${mapWidth}, ${mapHeight - legendHeight * 4})`);
+
+    const legendItemWidth = legendWidth / numBuckets;
+
+    legend.selectAll("rect").remove();
+
+    legend.selectAll("rect")
+        .data(ranges)
+        .enter()
+        .append("rect")
+        .attr("x", (d, i) => i * legendItemWidth)
+        .attr("y", 5)
+        .attr("width", legendItemWidth)
+        .attr("height", legendHeight)
+        .style("fill", d => d.color);
+
+    legend.selectAll("text").remove();
+
+    legend.selectAll("text")
+        .data(ranges)
+        .enter()
+        .append("text")
+        .attr("x", (d, i) => i * legendItemWidth + legendItemWidth / 2)
+        .attr("y", legendHeight*3)
+        .attr("text-anchor", "middle")
+        .style("font-size", "10px")
+        .text(d => `${d.range[0].toFixed(1)}-${d.range[1].toFixed(1)}`);
+    
+    legend.append("text")
+        .attr("x", legendWidth / 2)
+        .attr("y", 0) // Positioned above the legend rectangles
+        .attr("text-anchor", "middle")
+        .style("font-size", "12px")
+        .style("font-weight", "bold")
+        .text("Years");
 }
+
 
 /* Bar chart */
 const tooltipBar = d3.select("body").append("div").attr("class", "tooltip").style("opacity", 0);
@@ -135,18 +198,21 @@ function renderBarChart(year) {
     if (showGender) {
         const groupedData = filteredData.filter(d => d.Total !== "total");
         const countries = top10Countries;
-
+    
         groupedData.sort((a, b) => b.Life_expectancy - a.Life_expectancy);
-
+    
         x.domain(countries);
-        y.domain([0, d3.max(groupedData, d => d.Life_expectancy)]);
-
+    
+        const minValue = d3.min(groupedData, d => d.Life_expectancy);
+        const maxValue = d3.max(groupedData, d => d.Life_expectancy);
+        y.domain([Math.max(minValue - 5, 0), maxValue]);
+    
         const subgroups = ["male", "female"];
         const subgroupScale = d3.scaleBand()
             .domain(subgroups)
             .range([0, x.bandwidth()])
             .padding(0.05);
-
+    
         svgBar.selectAll(".group")
             .data(countries)
             .enter()
@@ -175,12 +241,15 @@ function renderBarChart(year) {
             });
     } else {
         const totalData = filteredData.filter(d => d.Total === "total");
-
+    
         totalData.sort((a, b) => b.Life_expectancy - a.Life_expectancy);
-
+    
         x.domain(totalData.map(d => d.Country));
-        y.domain([0, d3.max(totalData, d => d.Life_expectancy)]);
-
+    
+        const minValue = d3.min(totalData, d => d.Life_expectancy);
+        const maxValue = d3.max(totalData, d => d.Life_expectancy);
+        y.domain([Math.max(minValue - 4, 0), maxValue]);
+    
         svgBar.selectAll(".bar")
             .data(totalData)
             .enter()
@@ -200,6 +269,7 @@ function renderBarChart(year) {
                 tooltipBar.transition().duration(200).style("opacity", 0);
             });
     }
+    
 
     svgBar.append("g")
         .attr("class", "x-axis")
@@ -232,8 +302,6 @@ function renderBarChart(year) {
         .style("text-anchor", "middle")
         .text(showGender ? `Male and Female Life Expectancy in ${year}` : `Top 10 Countries by Life Expectancy in ${year}`);
 }
-
-
 
 d3.select("#gender-toggle").on("change", function () {
     const selectedYear = +d3.select("#year-bar").property("value");
