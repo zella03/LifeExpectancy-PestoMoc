@@ -104,14 +104,35 @@
     </div>
     <div class="data-sources">
         <div class="info-icon-container">
-            <span><u>Data Sources: Addictions & Life Expectancy</u></span>
+            <span><u id="data-sources-link" style="cursor:pointer;">Data Sources: Addictions & Life Expectancy</u></span>
         </div>
     </div>
+    
 </main>
 
 <footer>
     <p>&copy; Data Visualization | Unige 2024/2025</p>
 </footer>
+
+<div id="dataInfoModal" class="info-modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Data Sources</h2>
+        <p>
+            <ul>
+                <li><a href="https://ourworldindata.org/life-expectancy">Life expectancy</a></li>
+                <li><a href="https://ourworldindata.org/illicit-drug-use">Drugs</a></li>
+                <li><a href="https://ourworldindata.org/alcohol-consumption">Alcohol</a></li>
+                <li><a href="https://ourworldindata.org/smoking">Smoking</a></li>
+                </ul>
+            
+            <strong>Preparation Activities</strong><br>
+            CSV files were merged by country, only european countries were kept, and countries with no data were ignored.
+            <br><br>
+            </p>
+    </div>
+</div>
+
 
 <script src="scripts/addictions-heatmap.js"></script>
 <script src="scripts/addictions-line-chart.js"></script>
@@ -137,5 +158,8 @@
         }
     }
 </script>
+<script src="scripts/addictions-info.js"></script>
+    
+
 </body>
 </html> 
