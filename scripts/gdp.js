@@ -147,13 +147,16 @@ function renderMap(geoData, year, column) {
     svgMap.selectAll(".legend").remove();
 
     const legend = svgMap.selectAll(".legend").data([0])
-        .enter()
-        .append("g")
-        .attr("class", "legend")
-        .attr("transform", `translate(${mapWidth + legendWidth + 20}, ${mapHeight - legendHeight + 0})`);  // Adjust position to ensure it's within the view
+    .enter()
+    .append("g")
+    .attr("class", "legend")
+    .attr("transform", `translate(${mapWidth + legendWidth + 150}, ${mapHeight - legendHeight + 0})`);
+
+    // Reverse ranges for the legend
+    const reversedRanges = [...ranges].reverse();
 
     legend.selectAll(".legend-item")
-        .data(ranges)
+        .data(reversedRanges)
         .enter()
         .append("rect")
         .attr("class", "legend-item")
@@ -166,7 +169,7 @@ function renderMap(geoData, year, column) {
         .style("stroke-width", "1px");
 
     legend.selectAll(".legend-label")
-        .data(ranges)
+        .data(reversedRanges)
         .enter()
         .append("text")
         .attr("class", "legend-label")

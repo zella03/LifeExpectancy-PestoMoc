@@ -682,11 +682,10 @@ healthcare page
 
 
 .chart-description, .map-description {
-font-size: 1rem;
-color: #6c757d;
-margin-top: 0;
-margin-bottom: 1rem;
-
+    font-size: 1rem;
+    color: #6c757d;
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 
 .description-container {
@@ -1079,7 +1078,7 @@ header.subpage-life-exp{
     pointer-events: all; /* Ensure mouse events are captured */
 }
 
-.chart-container {
+.chart-container{
     width: 100%;
     margin: 20px auto;
 }

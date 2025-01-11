@@ -3,7 +3,7 @@ console.log(tooltip)
 
 document.addEventListener("DOMContentLoaded", () => {
     const margin = { top: 50, right: 50, bottom: 150, left: 70 };
-    const width = 1000 - margin.left - margin.right;
+    const width = 900 - margin.left - margin.right;
     const height = 600 - margin.top - margin.bottom;
 
     const svg = d3
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .ticks(5)
         .tickFormat(d => d);
 
-    /*
+    
     // Function to create X axis with grid lines
     function make_x_axis() {
         return d3.axisBottom(xScale)
@@ -47,11 +47,11 @@ document.addEventListener("DOMContentLoaded", () => {
             .tickSize(-width)
             .tickFormat("");
     }
-*/
+
     svg.append("g").attr("class", "x-axis").attr("transform", `translate(0, ${height})`);
     svg.append("g").attr("class", "y-axis");
 
-    /*
+    
     // Grid lines for X and Y axes using make_x_axis and make_y_axis functions
     svg.append("g")
         .attr("class", "grid")
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     svg.append("g")
         .attr("class", "grid")
         .call(make_y_axis());
-*/
+
     svg.append("text")
         .attr("class", "x-label")
         .attr("x", width / 2)
@@ -133,13 +133,22 @@ document.addEventListener("DOMContentLoaded", () => {
                             Life Expectancy: ${parseFloat(d.Life_expectancy).toFixed(2)} years<br>
                             Population: ${(+d.Population).toLocaleString()}`
                         )
-                        .style("left", `${event.pageX + 10}px`) // Adjust the tooltip position
+                        .style("left", `${event.pageX + 10}px`)
                         .style("top", `${event.pageY - 20}px`)
-                        .style("transform", "translateX(10px)"); // Make sure the tooltip doesn't get clipped on the left
+                        .style("transform", "translateX(10px)");
+                    
+                    svg.selectAll(".bubble")
+                        .style("opacity", 0.2);
+                    
+                    d3.select(event.target)
+                        .style("opacity", 1);
                 })
                 .on("mouseout", () => {
-                    tooltip.style("opacity", 0); // Hide tooltip on mouseout
-                })
+                    tooltip.style("opacity", 0);
+                
+                    svg.selectAll(".bubble")
+                        .style("opacity", 0.7);
+                })                
                 .merge(bubbles)
                 .transition()
                 .duration(800)
@@ -197,17 +206,16 @@ document.addEventListener("DOMContentLoaded", () => {
         yearDropdown.addEventListener("change", () => renderChart(+yearDropdown.value));
     });
 
-    /*
-    // CSS for grid lines and opacity
+    
     const style = document.createElement("style");
     style.textContent = `
-        .grid .tick {
+        .grid .tick line {
             stroke: lightgrey;
-            opacity: 0.05;
+            opacity: 0.3;
         }
         .grid path {
             stroke-width: 0;
         }
-    `
-    document.head.appendChild(style);;*/
+    `;
+    document.head.appendChild(style);
 });

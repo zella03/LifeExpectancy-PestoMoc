@@ -134,24 +134,32 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
 
             const lastPoint = values[values.length - 1];
             if (lastPoint) {
-                let labelX = x(lastPoint.Year) + x.bandwidth() / 2 + 5;
-                let labelY = y(lastPoint.value);
-
-                while (labelPositions.some(pos => Math.abs(pos.y - labelY) < 20)) {
-                    labelY += 20;  // Increase space between labels
-                }
-
-                labelPositions.push({ x: labelX, y: labelY });
-
-                svg2.append("text")
-                    .attr("class", "line-label")
-                    .attr("x", labelX)
-                    .attr("y", labelY)
-                    .text(type.label)
-                    .style("font-size", "12px")
-                    .style("fill", colorScale(type.label))
-                    .style("alignment-baseline", "middle");
+                labelPositions.push({
+                    y: y(lastPoint.value),
+                    text: type.label,
+                    color: colorScale(type.label),
+                    x: x(lastPoint.Year) + x.bandwidth() / 2 + 5
+                });
             }
+        });
+
+        labelPositions.sort((a, b) => b.y - a.y);
+
+        let lastY = null;
+        labelPositions.forEach(pos => {
+            if (lastY !== null && Math.abs(lastY - pos.y) < 15) {
+                pos.y = lastY - 15;
+            }
+            lastY = pos.y;
+
+            svg2.append("text")
+                .attr("class", "line-label")
+                .attr("x", pos.x)
+                .attr("y", pos.y)
+                .text(pos.text)
+                .style("font-size", "12px")
+                .style("fill", pos.color)
+                .style("alignment-baseline", "middle");
         });
 
         svg2.append("g")

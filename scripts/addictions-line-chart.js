@@ -87,6 +87,8 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
         const groupedData = d3.group(filteredData, d => d.Entity);
         const colorScale = d3.scaleOrdinal(d3.schemeCategory10).domain(groupedData.keys());
 
+        const labelPositions = [];
+
         groupedData.forEach((values, key) => {
             svg.append("path")
                 .datum(values)
@@ -136,13 +138,29 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
                 });
 
             const lastPoint = values[values.length - 1];
+            labelPositions.push({
+                y: y(lastPoint[selectedType]),
+                key,
+                color: colorScale(key),
+                x: x(lastPoint.Year) + x.bandwidth() / 2 + 5
+            });
+        });
+
+        labelPositions.sort((a, b) => b.y - a.y);
+
+        let lastY = null;
+        labelPositions.forEach((pos, i) => {
+            if (lastY !== null && Math.abs(lastY - pos.y) < 15) {
+                pos.y = lastY - 15;
+            }
+            lastY = pos.y;
             svg.append("text")
                 .attr("class", "line-label")
-                .attr("x", x(lastPoint.Year) + x.bandwidth() / 2 + 5)
-                .attr("y", y(lastPoint[selectedType]))
-                .text(key)
+                .attr("x", pos.x)
+                .attr("y", pos.y)
+                .text(pos.key)
                 .style("font-size", "12px")
-                .style("fill", colorScale(key))
+                .style("fill", pos.color)
                 .style("alignment-baseline", "middle");
         });
 

@@ -120,15 +120,38 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
                             d3.select(this).remove();
                         });
                 });
+        });
 
-            const lastPoint = values[values.length - 1];
+        const labels = Array.from(groupedData.keys()).map(key => {
+            const lastPoint = groupedData.get(key).slice(-1)[0];
+            return {
+                key: key,
+                x: x(lastPoint.Year) + x.bandwidth() / 2 + 5,
+                y: y(lastPoint[tobaccoColumn]),
+                color: colorScale(key),
+                originalY: y(lastPoint[tobaccoColumn])
+            };
+        });
+
+        labels.sort((a, b) => a.originalY - b.originalY);
+
+        let previousY = -Infinity;
+
+        labels.forEach(label => {
+            if (label.y - previousY < 15) {
+                label.y = previousY + 15;
+            }
+            previousY = label.y;
+        });
+
+        labels.forEach(label => {
             svg3.append("text")
                 .attr("class", "line-label")
-                .attr("x", x(lastPoint.Year) + x.bandwidth() / 2 + 5)
-                .attr("y", y(lastPoint[tobaccoColumn]))
-                .text(key)
+                .attr("x", label.x)
+                .attr("y", label.y)
+                .text(label.key)
                 .style("font-size", "12px")
-                .style("fill", colorScale(key))
+                .style("fill", label.color)
                 .style("alignment-baseline", "middle");
         });
 

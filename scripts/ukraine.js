@@ -46,6 +46,18 @@ d3.csv("datasets/life-expectancy-population/EU-life-expectancy-population-(1960-
     svg.append("g")
         .call(yAxis);
 
+    svg.append("text")
+        .attr("transform", `translate(${width / 2}, ${height + margin.bottom - 10})`)
+        .style("text-anchor", "middle")
+        .text("Year");
+
+    svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("x", -height / 2)
+        .attr("y", -margin.left + 15)
+        .style("text-anchor", "middle")
+        .text("Life Expectancy");
+
     const line = d3.line()
         .x(d => xScale(d.Year))
         .y(d => yScale(d.Life_expectancy));
