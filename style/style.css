@@ -120,6 +120,10 @@ header.subpage-gdp{
     background-color: rgb(240, 225, 255);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+header.subpage-turkey{
+    background-color: rgb(204, 204, 204);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 .header-img {
     margin-right: 10%;
     flex: 0 0 auto;
@@ -296,6 +300,11 @@ header p {
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-weight: bold;
+}
+
+.explore-btn.events{
+    font-size: 12px;
+    padding: 15px 15px;
 }
 
 .explore-btn:hover {
@@ -651,8 +660,9 @@ healthcare page
 .event-wrapper {
     background-color: #fff; 
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 25px;
+    padding: 30px;
     border-radius: 100px 100px 0 0;
+    margin-top: 5%;
 }
 
 
@@ -975,7 +985,7 @@ header.subpage-life-exp{
 }
 
 .bar {
-    fill: steelblue;
+    fill: rgb(5, 75, 132);
 }
 .bar:hover {
     fill: orange;
@@ -994,6 +1004,14 @@ header.subpage-life-exp{
 
 .bar-1974 {
     fill: red; /* Red for the year 1974 */
+}
+
+.text-male{
+    color: #4A90E2;
+}
+
+.text-female{
+    color: #FF69B4;
 }
 
 .chart-title {
@@ -1136,6 +1154,12 @@ header.subpage-life-exp{
 
 .axis .domain {
     stroke: black; /* Ensure domain line is visible */
+}
+
+#pie-chart {
+    margin: 0 auto;
+    width: 60%;
+    height: 400px;
 }
 
 .topic_intro {

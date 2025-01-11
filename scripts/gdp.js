@@ -109,12 +109,12 @@ function renderMap(geoData, year, column) {
             const countryName = d.properties.name;
             const countryData = data.find(e => e.Country === countryName);
 
+            d3.select(this).style("opacity", 1).style("stroke-width", "2px");
+
             if (countryData) {
                 const value = formatValue(countryData[column]);
 
-                d3.select(this)
-                    .style("stroke", "#000")
-                    .raise();
+                
 
                 svgMap.selectAll("path")
                     .filter(function () {
@@ -136,7 +136,8 @@ function renderMap(geoData, year, column) {
             svgMap.selectAll("path").style("fill", d => {
                 const countryData = data.find(e => e.Country === d.properties.name);
                 return countryData ? getColor(countryData[column]) : "#ccc";
-            });
+            })
+            .style("stroke-width", "1px");;
             tooltipMap.style("display", "none");
         });
 
