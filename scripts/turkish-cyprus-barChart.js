@@ -9,11 +9,17 @@ const svg = d3.select("#chart")
     .append("g")
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
-const tooltip = d3.select("#tooltip")
-    .style("display", "none");
+const tooltip = d3.select("body").append("div")
+    .attr("id", "tooltip")
+    .style("display", "none")
+    .style("position", "absolute")
+    .style("background-color", "rgba(0, 0, 0, 0.7)")
+    .style("color", "#fff")
+    .style("border-radius", "4px")
+    .style("padding", "5px")
+    .style("pointer-events", "none");
 
 d3.csv("./datasets/life-expectancy-population/EU-life-expectancy-population-(1960-2023).csv").then(data => {
-    // Filter dataset for Cyprus and years 1968-1978
     const filteredData = data.filter(d => 
         d.Country === "Cyprus" && 
         d.Year >= 1968 && 
@@ -24,10 +30,8 @@ d3.csv("./datasets/life-expectancy-population/EU-life-expectancy-population-(196
         Life_expectancy: +(+d.Life_expectancy).toFixed(2)
     }));
 
-    // Group data by year
     const groupedData = d3.group(filteredData, d => d.Year);
 
-    // Function to get data for either total or male/female
     const getData = (showGender) => {
         if (showGender) {
             return Array.from(groupedData, ([year, values]) => {
@@ -50,31 +54,27 @@ d3.csv("./datasets/life-expectancy-population/EU-life-expectancy-population-(196
         }
     };
 
-    // Initial state
     let showGender = false;
     renderChart(getData(showGender));
 
-    // Add event listener for checkbox
     d3.select("#toggle-view").on("change", function () {
         showGender = this.checked;
         renderChart(getData(showGender));
     });
 
     function renderChart(data) {
-        svg.selectAll("*").remove(); // Clear previous chart
+        svg.selectAll("*").remove();
     
-        // Scales
         const xScale = d3.scaleBand()
             .domain(data.map(d => d.Year))
             .range([0, width])
-            .padding(showGender ? 0.4 : 0.2); // Adjust spacing for grouped bars
+            .padding(showGender ? 0.4 : 0.2);
     
         const yMax = d3.max(data, d => showGender ? Math.max(d.Male, d.Female) : d.Life_expectancy);
         const yScale = d3.scaleLinear()
             .domain([40, yMax + 5])
             .range([height, 0]);
     
-        // Axes
         const xAxis = d3.axisBottom(xScale).tickFormat(d3.format("d"));
         const yAxis = d3.axisLeft(yScale);
     
@@ -98,7 +98,6 @@ d3.csv("./datasets/life-expectancy-population/EU-life-expectancy-population-(196
             .attr("fill", "black")
             .text("Life Expectancy");
     
-        // Bars
         const updateBars = (bars, color, opacity = 1) => {
             bars.attr("fill", color)
                 .style("opacity", opacity);
@@ -131,21 +130,23 @@ d3.csv("./datasets/life-expectancy-population/EU-life-expectancy-population-(196
     
             const bars = svg.selectAll("rect");
     
-            bars.on("mouseover", (event, d) => {
+            bars.on("mouseover", function(event, d) {
                 const gender = event.target.classList.contains("bar-male") ? "Male" : "Female";
                 const lifeExpectancy = gender === "Male" ? d.Male : d.Female;
-                
+    
                 tooltip.style("display", "block")
-                    .html(`<strong>Year:</strong> ${d.Year}<br><strong>${gender} Life Expectancy:</strong> ${lifeExpectancy}`)
+                    .html(`<strong>${gender} Life Expectancy:</strong> ${lifeExpectancy}`)
                     .style("left", (event.pageX + 10) + "px")
                     .style("top", (event.pageY - 20) + "px");
-
+    
                 updateBars(bars, "gray", 0.5);
-                d3.select(event.target).attr("fill", "orange").style("opacity", 1);
-            }).on("mousemove", (event) => {
+                d3.select(this).attr("fill", "orange").style("opacity", 1);
+            })
+            .on("mousemove", function(event) {
                 tooltip.style("left", (event.pageX + 10) + "px")
                     .style("top", (event.pageY - 20) + "px");
-            }).on("mouseout", () => {
+            })
+            .on("mouseout", function() {
                 tooltip.style("display", "none");
                 updateBars(maleBars, "blue");
                 updateBars(femaleBars, "pink");
@@ -156,24 +157,36 @@ d3.csv("./datasets/life-expectancy-population/EU-life-expectancy-population-(196
                 .data(data)
                 .enter()
                 .append("rect")
-                .attr("class", "bar")
+                .attr("class", d => d.Year === 1974 ? "bar bar-1974" : "bar")
                 .attr("x", d => xScale(d.Year))
                 .attr("y", d => yScale(d.Life_expectancy))
                 .attr("width", xScale.bandwidth())
                 .attr("height", d => height - yScale(d.Life_expectancy))
-                .attr("fill", "steelblue");
-    
-            bars.on("mouseover", (event, d) => {
+                .attr("fill", d => d.Year === 1974 ? "red" : "steelblue");
+        
+            bars.on("mouseover", function(event, d) {
                 tooltip.style("display", "block")
-                    .html(`<strong>Year:</strong> ${d.Year}<br><strong>Life Expectancy:</strong> ${d.Life_expectancy}`)
+                    .html(`<strong>Life Expectancy:</strong> ${d.Life_expectancy}`)
                     .style("left", (event.pageX + 10) + "px")
                     .style("top", (event.pageY - 20) + "px");
-    
-                d3.select(event.target).attr("fill", "orange");
-            }).on("mouseout", () => {
+        
+                svg.selectAll(".bar")
+                    .style("opacity", 0.6);
+        
+                d3.select(this)
+                    .attr("fill", "orange")
+                    .style("opacity", 1);
+            }).on("mousemove", function(event) {
+                tooltip.style("left", (event.pageX + 10) + "px")
+                    .style("top", (event.pageY - 20) + "px");
+            }).on("mouseout", function() {
                 tooltip.style("display", "none");
-                bars.attr("fill", "steelblue");
+        
+                svg.selectAll(".bar")
+                    .attr("fill", d => d.Year === 1974 ? "red" : "steelblue")
+                    .style("opacity", 1);
             });
         }
+        
     }
 });

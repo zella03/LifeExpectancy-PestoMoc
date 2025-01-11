@@ -714,6 +714,17 @@ select {
     transition: background-color 0.3s ease;
 }
 
+.chart-container.center .info-icon-container {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
 .info-icon-container:hover {
     background-color: #d3d3d369;
     border-radius: 6px;
@@ -975,12 +986,16 @@ canvas {
     fill: #FF69B4; /* Pink for women */
 }
 
+.bar-1974 {
+    fill: red; /* Red for the year 1974 */
+}
+
 .chart-title {
     font-size: 20px;
     margin-bottom: 10px;
 }
 
-.chart-container-life_exp {
+.chart-container.center {
     display: flex;
     flex-direction: column; /* Arrange controls and chart vertically */
     justify-content: center;
@@ -991,9 +1006,10 @@ canvas {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 20px;
+    position: relative; /* Ensure that the info-icon-container can be positioned relative to the chart container */
 }
 
-.chart-container-life_exp h2, .chart-container-life_exp p{
+.chart-container.center h2, .chart-container.center p{
     align-self: flex-start;
     margin-bottom: 20px;
 }
@@ -1068,8 +1084,9 @@ canvas {
     padding: 5px 10px;
     font-size: 12px;
     border-radius: 5px;
-    pointer-events: none;
     opacity: 0;
+    pointer-events: none; /* Tooltip won't block mouse events */
+    z-index: 100; /* Ensure tooltip is above other elements */
 }
 
 .dropdown {
