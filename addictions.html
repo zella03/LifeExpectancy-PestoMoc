@@ -35,22 +35,24 @@
 </header>
 
 <main>
+    <div class="container">
     <h1>Is life expectancy directly correlated with addictions?</h1>
     <h2>Deaths per capita in Europe</h2>
     <div id="matrix" class="chart-container"></div>
     <div id="comment" class="description-container">
-        The heatmap reveals weak correlations between life expectancy and various substance use disorders, indicating that while there is some relationship, it is not strong enough to suggest that these factors significantly impact life expectancy. Since the correlations are low, we can reasonably conclude that substance use disorders do not strongly influence life expectancy on a population level.
+        <p>The heatmap reveals weak correlations between life expectancy and various substance use disorders, indicating that while there is some relationship, it is not strong enough to suggest that these factors significantly impact life expectancy. Since the correlations are low, we can reasonably conclude that substance use disorders do not strongly influence life expectancy on a population level.</p>
 
-Life expectancy is primarily shaped by a broader combination of factors such as healthcare quality, economic stability, education, environmental conditions, and social support. These factors have a more substantial and direct impact on ensuring longer and healthier lives, often outweighing the effects of substance use disorders.
+<p>Life expectancy is primarily shaped by a broader combination of factors such as <b>healthcare quality</b>, <b>economic stability</b>, <b>education</b>, <b>environmental conditions</b>, and <b>social support</b>. These factors have a more substantial and direct impact on ensuring longer and healthier lives, often outweighing the effects of substance use disorders.</p>
 
-Moreover, it is worth noting that substance use disorders tend to be more prevalent in wealthier countries. In these countries, the negative effects of substance use may be partially mitigated by the advantages of better healthcare systems, higher economic stability, greater educational opportunities, cleaner environments, and stronger social safety nets. These compensating factors help maintain relatively high life expectancy even in the presence of substance use disorders.
+<p>Moreover, it is worth noting that substance use disorders tend to be more prevalent in wealthier countries. In these countries, the negative effects of substance use may be partially mitigated by the advantages of better <b>healthcare systems</b>, higher <b>economic stability</b>, greater <b>educational opportunities</b>, cleaner <b>environments</b>, and stronger <b>social safety nets</b>. These compensating factors help maintain relatively high life expectancy even in the presence of substance use disorders.</p>
 
-It is also important to clarify that substance use disorders encompass issues related to alcohol and all illicit drugs (including opioids, cocaine, amphetamines, and cannabis) but do not include smoking. The relatively low correlations observed in this analysis suggest that, while substance use disorders are a concern, they are not a dominant driver of life expectancy trends.</div>
+<p>It is also important to clarify that substance use disorders encompass issues related to <b>alcohol</b> and all <b>illicit drugs</b> (including <b>opioids</b>, <b>cocaine</b>, <b>amphetamines</b>, and <b>cannabis</b>) but do not include <b>smoking</b>. The relatively low correlations observed in this analysis suggest that, while substance use disorders are a concern, they are not a dominant driver of life expectancy trends.</p>
+</div>
     
     <h1>Addiction trends over time in Europe</h1>
     <div>
         <label for="chart-select">Select Chart:</label>
-        <select id="chart-select" class="year-select" onchange="showChart()">
+        <select id="chart-select" class="form-control" onchange="showChart()">
             <option value="chart">Per capita deaths (Top 5 countries) by addiction type</option>
             <option value="chart4">Per capita deaths by country</option>
             <option value="chart2">Alcohol consumption</option>
@@ -60,19 +62,21 @@ It is also important to clarify that substance use disorders encompass issues re
 
     <div id="chart-container">
         <div><label for="addiction-select">Select Addiction Type:</label>
-            <select id="addiction-select" class="year-select"></select></div>
+            <select id="addiction-select" class="form-control"></select></div>
         <div id="chart" class="chart-container"></div>
         <div id="comment" class="description-container">
-            The visualization highlights the top 5 countries with the highest deaths per capita due to addiction-related disorders, offering a detailed comparison across years and addiction types. Key patterns emerge: Estonia frequently leads in opioid and other drug-related deaths, reflecting long-term challenges, while Iceland shows a sharp increase in amphetamine-related deaths in recent years. Norway maintains consistently high rankings across multiple categories, indicating persistent issues despite likely interventions. The trends also reveal regional disparities, with Nordic and Baltic countries often dominating the charts. These insights underline the urgency for tailored public health strategies and policy evaluations to mitigate addiction's impact effectively.
+            <p>The visualization highlights the top 5 countries with the highest deaths per capita due to addiction-related disorders, offering a detailed comparison across years and addiction types. Key patterns emerge: <b>Estonia</b> frequently leads in <b>opioid</b> and other <b>drug-related deaths</b>, reflecting long-term challenges, while <b>Iceland</b> shows a sharp increase in <b>amphetamine-related deaths</b> in recent years. <b>Norway</b> maintains consistently high rankings across multiple categories, indicating persistent issues despite likely interventions. The trends also reveal regional disparities, with <b>Nordic</b> and <b>Baltic countries</b> often dominating the charts. These insights underline the urgency for tailored <b>public health strategies</b> and <b>policy evaluations</b> to mitigate addiction's impact effectively.</p>
+
         </div>
     </div>
 
     <div id="chart4-container" style="display:none;">
         <div><label for="country-select">Select Country:</label>
-            <select id="country-select" class="year-select"></select></div>
+            <select id="country-select" class="form-control"></select></div>
         <div id="chart4" class="chart-container"></div>
         <div id="comment" class="description-container">
-            This visualization highlights stark contrasts in addiction rates across Europe. Some countries show declines (e.g., Albania, Lithuania, Moldova), while others experience significant increases (e.g., Czech Republic, UK, Netherlands). Notably, the COVID-19 pandemic appears to have exacerbated the issue in Greece and Latvia. Addressing this complex problem requires a nuanced understanding of the factors driving these trends and tailored interventions for each country.
+            <p>This visualization highlights stark contrasts in addiction rates across Europe. Some countries show declines (e.g., <b>Albania</b>, <b>Lithuania</b>, <b>Moldova</b>), while others experience significant increases (e.g., <b>Czech Republic</b>, <b>UK</b>, <b>Netherlands</b>). Notably, the <b>COVID-19 pandemic</b> appears to have exacerbated the issue in <b>Greece</b> and <b>Latvia</b>. Addressing this complex problem requires a nuanced understanding of the factors driving these trends and tailored interventions for each country.</p>
+
         </div>
     </div>
 
@@ -80,7 +84,8 @@ It is also important to clarify that substance use disorders encompass issues re
         <h4>Consumption per capita (liters of pure alcohol, 15+ years of age)</h4>
         <div id="chart2" class="chart-container"></div>
         <div id="comment" class="description-container">
-            This visualization raises questions about the factors influencing alcohol consumption patterns in these European countries. The divergent trends suggest the influence of various social, economic, and policy factors. The significant fluctuation observed in Estonia warrants further investigation into specific interventions or societal changes that may have contributed to this pattern.
+            <p>This visualization raises questions about the factors influencing alcohol consumption patterns in these European countries. The divergent trends suggest the influence of various social, economic, and policy factors. The significant fluctuation observed in <b>Estonia</b> warrants further investigation into specific interventions or societal changes that may have contributed to this pattern.</p>
+
         </div>
     </div>
 
@@ -88,14 +93,20 @@ It is also important to clarify that substance use disorders encompass issues re
         <h4>% of smokers (Top 5 countries)</h4>
         <div id="chart3" class="chart-container"></div>
         <div id="comment" class="description-container">
-            This chart shows the decline in smoking prevalence across several European countries from 2000 to 2019. While most countries show a steady linear decline, Greece appears to have had a more accelerated decline.
+            <p>This chart shows the decline in smoking prevalence across several European countries from 2000 to 2019. While most countries show a steady linear decline, <b>Greece</b> appears to have had a more accelerated decline.</p>
+
         </div>
+    </div>
     </div>
 
     <div class="next-page-button">
         <a href="healthcare.html" class="button">Check other factors: <strong>Healthcare</strong></a>
     </div>
-    <br>
+    <div class="data-sources">
+        <div class="info-icon-container">
+            <span><u>Data Sources: Addictions & Life Expectancy</u></span>
+        </div>
+    </div>
 </main>
 
 <footer>
@@ -127,4 +138,4 @@ It is also important to clarify that substance use disorders encompass issues re
     }
 </script>
 </body>
-</html>
+</html> 
