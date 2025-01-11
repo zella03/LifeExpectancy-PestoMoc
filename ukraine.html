@@ -65,6 +65,10 @@
         Use the checkbox to see life expectancy of both genders.</p>
     <label><input type="checkbox" id="maleCheckbox" checked> Male</label>
     <label><input type="checkbox" id="femaleCheckbox" checked> Female</label>
+    <div class="info-icon-container">
+        <i class="fas fa-info-circle info-icon"></i>
+        <span>How to read the chart?</span>
+    </div>
     </div>
     <h2>War has had a visible impact</h2>
     <div id="comment" class="description-container">
@@ -89,6 +93,24 @@
 
 <script src="scripts/ukraine.js"></script>
 <script src="scripts/modal-ukr.js"></script>
+
+
+<div id="chartInfoModal" class="info-modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>How to Read the Chart?</h2>
+        <p>The plot shows life expectancy for <strong>Russia</strong> and <strong>Ukraine</strong> (2014-2022) by gender. You can use checkboxes to toggle visibility of <strong>male</strong> and <strong>female</strong> data.</p>
+
+<ul>
+  <li><strong>Male</strong> data: Solid lines, red (Russia) or blue (Ukraine).</li>
+  <li><strong>Female</strong> data: Dashed lines, red (Russia) or blue (Ukraine).</li>
+</ul>
+
+<p>Hover over any dot to see the <strong>Country</strong>, <strong>Sex</strong>, <strong>Year</strong>, and <strong>Life expectancy</strong>.</p>
+
+
+    </div>
+</div>
 
 
 <div id="dataInfoModal" class="info-modal">
