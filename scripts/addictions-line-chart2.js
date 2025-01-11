@@ -103,7 +103,7 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
 
             svg2.append("path")
                 .datum(values)
-                .attr("class", "line")
+                .attr("class", `line line-${type.label.replace(/\s+/g, '-')}`)
                 .attr("d", line)
                 .attr("stroke", colorScale(type.label))
                 .attr("stroke-width", 2)
@@ -119,6 +119,11 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
                 .attr("r", 3)
                 .attr("fill", colorScale(type.label))
                 .on("mouseover", function(event, d) {
+                    d3.selectAll(".line").style("opacity", 0.2);
+                    d3.selectAll(".dot").style("opacity", 0.2);
+                    d3.selectAll(`.line-${type.label.replace(/\s+/g, '-')}`).style("opacity", 1);
+                    d3.selectAll(`.dot-${type.label.replace(/\s+/g, '-')}`).style("opacity", 1);
+
                     tooltip.style("display", "block")
                         .html(`<strong>${type.label}</strong><br>Year: ${d.Year}<br>Value: ${d.value}`)
                         .style("left", (event.pageX + 10) + "px")
@@ -129,6 +134,9 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
                         .style("top", (event.pageY - 25) + "px");
                 })
                 .on("mouseout", function() {
+                    d3.selectAll(".line").style("opacity", 1);
+                    d3.selectAll(".dot").style("opacity", 1);
+
                     tooltip.style("display", "none");
                 });
 
