@@ -1,6 +1,18 @@
-const margin = { top: 40, right: 100, bottom: 50, left: 60 };
-const width = 800 - margin.left - margin.right;
+const margin = { top: 40, right: 230, bottom: 50, left: 60 };
+const width = window.innerWidth - margin.left - margin.right - 100;
 const height = 500 - margin.top - margin.bottom;
+
+const euCountries = new Set([
+    'Albania', 'Andorra', 'Austria', 'Belarus', 'Belgium',
+    'Bosnia and Herzegovina', 'Bulgaria', 'Channel Islands', 'Croatia', 'Cyprus',
+    'Czechia', 'Denmark', 'Estonia', 'Faroe Islands', 'Finland', 'France',
+    'Germany', 'Gibraltar', 'Greece', 'Hungary', 'Iceland', 'Ireland',
+    'Isle of Man', 'Italy', 'Kosovo', 'Latvia', 'Liechtenstein', 'Lithuania',
+    'Luxembourg', 'Moldova', 'Monaco', 'Montenegro', 'Netherlands',
+    'North Macedonia', 'Norway', 'Poland', 'Portugal', 'Romania',
+    'Russian Federation', 'San Marino', 'Serbia', 'Slovakia', 'Slovenia', 'Spain',
+    'Sweden', 'Switzerland', 'Ukraine', 'United Kingdom'
+]);
 
 const svg = d3.select("#life-expectancy-chart")
     .append("svg")
@@ -23,40 +35,40 @@ const tooltip = d3.select("body")
     .style("font-size", "14px");
 
 d3.csv('datasets/life-exp/life-expectancy.csv').then(function(data) {
-    const covidYearsData = data.filter(d => {
-        return d['Year'] === '2019' || d['Year'] === '2020' && d['Period life expectancy at birth - Sex: total - Age: 0'] !== '';
-    });
+    const euData = data.filter(d => euCountries.has(d['Entity']) && +d['Year'] >= 2010 && d['Period life expectancy at birth - Sex: total - Age: 0'] !== '');
 
-    covidYearsData.forEach(d => {
+    euData.forEach(d => {
         d.Year = +d['Year'];
         d.life_expectancy = +d['Period life expectancy at birth - Sex: total - Age: 0'];
     });
 
-    const countries = d3.groups(covidYearsData, d => d['Entity'])
+    const countries = d3.groups(euData, d => d['Entity'])
         .map(([entity, values]) => {
             const life2019 = values.find(d => d.Year === 2019)?.life_expectancy;
             const life2020 = values.find(d => d.Year === 2020)?.life_expectancy;
+            const life2022 = values.find(d => d.Year === 2021)?.life_expectancy;
 
             if (life2019 && life2020) {
-                const difference = life2019 - life2020; 
-                return { entity, life2019, life2020, difference };
+                const difference = life2019 - life2020;
+                return { entity, life2019, life2020, difference, values };
             }
             return null;
         })
-        .filter(d => d !== null) 
-        .filter(d => d.difference > 0); 
+        .filter(d => d !== null)
+        .filter(d => d.difference > 0);
 
     const topCountries = countries.sort((a, b) => b.difference - a.difference).slice(0, 5);
 
     const colorScale = d3.scaleOrdinal(d3.schemeTableau10);
 
     const x = d3.scaleBand()
-        .domain([2019, 2020])
+        .domain(topCountries[0].values.map(d => d.Year))
         .range([0, width])
         .padding(0.3);
 
     const y = d3.scaleLinear()
-        .domain([d3.min(topCountries, d => Math.min(d.life2019, d.life2020)), d3.max(topCountries, d => Math.max(d.life2019, d.life2020))])
+        .domain([d3.min(topCountries, d => d3.min(d.values, v => v.life_expectancy)), 
+                 d3.max(topCountries, d => d3.max(d.values, v => v.life_expectancy))])
         .nice()
         .range([height, 0]);
 
@@ -74,11 +86,12 @@ d3.csv('datasets/life-exp/life-expectancy.csv').then(function(data) {
         .style("font-size", "14px");
 
     const line = d3.line()
-        .x(d => x(d.Year) + x.bandwidth() / 2) 
+        .x(d => x(d.Year) + x.bandwidth() / 2)
         .y(d => y(d.life_expectancy))
         .curve(d3.curveMonotoneX);
 
-    svg.selectAll(".line")
+    
+        svg.selectAll(".line")
         .data(topCountries)
         .enter()
         .append("path")
@@ -86,23 +99,65 @@ d3.csv('datasets/life-exp/life-expectancy.csv').then(function(data) {
         .attr("fill", "none")
         .attr("stroke", d => colorScale(d.entity))
         .attr("stroke-width", 4)
-        .attr("d", d => line([{ Year: 2019, life_expectancy: d.life2019 }, { Year: 2020, life_expectancy: d.life2020 }]))
+        .attr("d", d => line(d.values))
         .on("mouseover", function(event, d) {
-            d3.select(this).attr("stroke", "orange");
-            tooltip.style("visibility", "visible")
-                .html(`Country: ${d.entity}<br>2019: ${d.life2019}<br>2020: ${d.life2020}<br>Difference: ${d.difference.toFixed(2)}`);
+            svg.selectAll("circle")
+            .filter(dot => dot.entity !== d.entity)
+            .transition()
+            .duration(200)
+            .style("opacity", 0.2);
+    
+            svg.selectAll(".line")
+                .filter(line => line.entity !== d.entity)
+                .transition()
+                .duration(200)
+                .style("opacity", 0.2);
+            tooltip.transition()
+                .duration(200)
+                .style("visibility", "visible")
+                .style("opacity", 1);
+    
+            tooltip.html(`<b>${d.entity}</b><br>2019: ${d.life2019}<br>2020: ${d.life2020}<br><b class="darkred-text">Difference: -${d.difference.toFixed(2)}</b>`);
+        
+             
         })
         .on("mousemove", function(event) {
             tooltip.style("top", (event.pageY - 10) + "px")
                 .style("left", (event.pageX + 10) + "px");
         })
-        .on("mouseout", function() {
-            d3.select(this).attr("stroke", d => colorScale(d.entity));
-            tooltip.style("visibility", "hidden");
+        .on("mouseout", function(event, d) {
+            d3.select(this)
+                .transition()
+                .duration(200)
+                .attr("stroke", d => colorScale(d.entity));
+    
+                svg.selectAll("circle")
+                .filter(dot => dot.entity !== d.entity)
+                .transition()
+                .duration(200)
+                .style("opacity", 1);
+    
+            svg.selectAll(".line")
+                .transition()
+                .duration(200)
+                .style("opacity", 1);
+            tooltip.transition()
+                .duration(200)
+                .style("opacity", 0)
+                .on("end", function() {
+                    tooltip.style("visibility", "hidden"); 
+                });
+    
+            
         });
-
+    
     svg.selectAll(".dot")
-        .data(topCountries.flatMap(d => [{ ...d, Year: 2019, life_expectancy: d.life2019 }, { ...d, Year: 2020, life_expectancy: d.life2020 }]))
+        .data(topCountries.flatMap(d => 
+            d.values.filter(v => v.Year === 2019 || v.Year === 2020).map(v => ({
+                ...v,
+                entity: d.entity
+            }))
+        ))
         .enter()
         .append("circle")
         .attr("cx", d => x(d.Year) + x.bandwidth() / 2)
@@ -110,28 +165,71 @@ d3.csv('datasets/life-exp/life-expectancy.csv').then(function(data) {
         .attr("r", 8)
         .attr("fill", d => colorScale(d.entity))
         .on("mouseover", function(event, d) {
-            tooltip.style("visibility", "visible")
-                .html(`Year: ${d.Year}<br>Life Expectancy: ${d.life_expectancy}`);
+            d3.select(this)
+                .transition()
+                .duration(200)
+                .attr("r", 12);
+            svg.selectAll("circle")
+                .filter(dot => dot.entity !== d.entity)
+                .transition()
+                .duration(200)
+                .style("opacity", 0.2);
+            svg.selectAll(".line")
+                .filter(line => line.entity !== d.entity)
+                .transition()
+                .duration(200)
+                .style("opacity", 0.2);
+
+            tooltip.transition()
+                .duration(200)
+                .style("visibility", "visible")
+                .style("opacity", 1);
+    
+            tooltip.html(`<b>Life Expectancy:</b> ${d.life_expectancy}<br>Year: ${d.Year}`);
         })
         .on("mousemove", function(event) {
             tooltip.style("top", (event.pageY - 10) + "px")
                 .style("left", (event.pageX + 10) + "px");
         })
         .on("mouseout", function() {
-            tooltip.style("visibility", "hidden");
+            d3.select(this)
+                .transition()
+                .duration(200)
+                .attr("r", 8);
+
+            svg.selectAll(".line")
+                .transition()
+                .duration(200)
+                .style("opacity", 1);
+
+            svg.selectAll("circle")
+                .transition()
+                .duration(200)
+                .style("opacity", 1)
+                .attr("r", 8);
+
+            tooltip.transition()
+                .duration(200)
+                .style("opacity", 0) 
+                .on("end", function() {
+                    tooltip.style("visibility", "hidden"); 
+                });
         });
+    
 
     svg.selectAll(".country-label")
         .data(topCountries)
         .enter()
         .append("text")
         .attr("class", "country-label")
-        .attr("x", x(2020) + x.bandwidth() + 5)
-        .attr("y", d => y(d.life2020))
+        .attr("x", d => x(d.values[d.values.length - 1].Year) + x.bandwidth())
+        .attr("y", d => y(d.values[d.values.length - 1].life_expectancy))
         .attr("dy", ".35em")
         .text(d => d.entity)
         .style("font-size", "14px")
-        .style("fill", d => colorScale(d.entity));
+        .style("font-weight", "bold")
+        .style("fill", d => colorScale(d.entity))
+        .style("text-anchor", "start");
 
     svg.append("text")
         .attr("x", width / 2)
@@ -147,14 +245,6 @@ d3.csv('datasets/life-exp/life-expectancy.csv').then(function(data) {
         .style("text-anchor", "middle")
         .style("font-size", "16px")
         .text("Life Expectancy (years)");
-
-    svg.append("text")
-        .attr("x", width / 2)
-        .attr("y", -10)
-        .style("text-anchor", "middle")
-        .style("font-size", "20px")
-        .style("font-weight", "bold")
-        .text("Biggest Life Expectancy Decrease");
 
 }).catch(function(error) {
     console.error("Error loading the data: ", error);

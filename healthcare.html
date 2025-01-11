@@ -67,14 +67,14 @@
         <div class="description-container">
             <h3>Western Europe Dominance</h3>
             <p>Spanning the years 2000-2021 it becomes evident that most of the countries with high healthcare expenditure
-                 per capita (Germany, Norway, Switzerland) are located in the western part of Europe. 
-                 <br><br>In recent years, <strong>Switzerland</strong> stands out with the highest per capita expenditure.
+                 per capita (Germany, Norway, Switzerland) are located in the <b>western part of Europe.</b> 
+                 <br><br>In recent years, <strong>Switzerland</strong> stands out with the <b>highest per capita expenditure</b>.
                  We should know that per capita expenditres are more reliable than total expenditures as they reflect the amount spent
                  relative to each population unit, correlating to better life quality of individuals and individuals well-being.
-                 When switching to total expenditures, the map reveals that wealthier nations not only have higher per 
-                 capita spending but also dominate in overall healthcare expenditure.
+                 When switching to total expenditures, the map reveals that <b>wealthier nations</b> not only have higher per 
+                 capita spending but also <b>dominate</b> in healthcare expenditure.
                  <div class="increase-comment">
-                    What is good for us - we can observe that total healthcare expenditures are increasing across all countries over the years!</p>
+                    What is good for us - we can observe that total healthcare expenditures are <b>increasing</b> across all countries over the years!</p>
                     <img src="style/img/healthcare/increase.png" alt="Image representing increase of money" />
                  </div>
         </div>
@@ -117,12 +117,20 @@
 
         <div class="description-container">
         <h3>We are living longer, longer, and longer...</h3>
-        <p>The line plot helps visualize how life expectancy improvements often correlate with healthcare spending increases.
-            We can conclude that there is a positive relationship between those two values!
-            What's more, as stated previously: we face increasing healthcare spending. Given this correlation, <strong>we are going to live longer!</strong></p>
-        <p>The plot highlights the importance of healthcare spending for improving life expectancy. 
-            However, it also indicates that the healthcare relationship is not only factor motivating our time of live. We should also consider other factors such as lifestyle, and social conditions.</p>
-        </div>
+        <p>Life expectancy improvements often correlate with healthcare spending increases.
+            We can conclude that there is a <b>small</b> but <b>positive</b> relationship between those two values!
+            <p>When comparing the <b class="lightblue-text">Russian Federation</b> and the <b class="pink-text">United 
+                Kingdom</b>, we can observe something interesting. Over the same time period, both countries saw an increase in healthcare spending. However, 
+            despite spending less on healthcare, <b class="lightblue-text">Russia</b> experienced a significantly <b>higher rate of growth</b> in
+             life expectancy compared to the UK.
+            <br>
+            <br>In contrast, the <b class="pink-text">United 
+                Kingdom</b>, which is actually allocating more resources to healthcare, 
+            saw a <b>relatively smaller improvement</b> in life expectancy during the same time period!<br>
+
+            
+            It can be seen that we face <b>overall increase in many european countries in healthcare spending</b>. Given this correlation, <strong>we are going to live longer!</strong></p>
+</div>
     </div>
 
     <div class="next-page-button">
@@ -197,14 +205,14 @@
             <br><br>
             Healthcare dataset was reshaped it to long format using, extracted years, 
             dropped rows with missing values, and 
-            converted healthcare expenditure from USD to EUR using a conversion rate (0.85).
+            converted healthcare expenditure from USD to EUR using a conversion rate (0.97).
             <br><br>
             Datasets were loaded and merged together on 
             country and year.
             Additinally total healthcare expenditure was calculated (by multiplication using population), and then again saved to yearly datasets.
             <br><br>
             To display countries on a map some of the countries names needed to be standardized to the ones from geojson file.
-            
+            <br><br><b>JavaScript library: D3.js, Chart.js</b>
         </p>
     </div>
 </div>

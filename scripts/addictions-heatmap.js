@@ -52,7 +52,7 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
     }
 
     const numCols = otherColumns.length;
-    const margin = { top: 50, right: 100, bottom: 250, left: 250 };
+    const margin = { top: 50, right: 300, bottom: 350, left: 250 };
     const width = Math.min((window.innerWidth || document.documentElement.clientWidth) - margin.left - margin.right, numCols * 80);
     const cellSize = width / numCols;
     const height = cellSize;
@@ -64,21 +64,21 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     const x = d3.scaleBand().rangeRound([0, width]).paddingInner(0.1).domain(otherColumns);
-    const y = d3.scaleBand().rangeRound([0, height]).paddingInner(0.1).domain(["Life Expectancy at Birth"]);
+    const y = d3.scaleBand().rangeRound([0, height]).paddingInner(0.1).domain(["Life Expectancy"]);
 
     const colorScale = d3.scaleDiverging().domain([-1, 0, 1]).range(["#1f77b4", "#EEEEEE", "#d62728"]);
 
     const legend = svg.append("g")
         .attr("class", "legend")
-        .attr("transform", `translate(${width + 20}, 0)`);
+        .attr("transform", `translate(${width / 2 + 300}, ${height + 150})`);
 
-    const legendHeight = 300;
-    const legendWidth = 20;
+    const legendHeight = 20;
+    const legendWidth = 250;
 
     const gradient = legend.append("defs")
         .append("linearGradient")
         .attr("id", "gradient")
-        .attr("x1", "0%").attr("y1", "0%").attr("x2", "0%").attr("y2", "100%");
+        .attr("x1", "0%").attr("y1", "0%").attr("x2", "100%").attr("y2", "0%");
 
     gradient.append("stop").attr("offset", "0%").attr("stop-color", colorScale(1));
     gradient.append("stop").attr("offset", "50%").attr("stop-color", colorScale(0));
@@ -88,14 +88,33 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
         .attr("x", 0).attr("y", 0).attr("width", legendWidth).attr("height", legendHeight)
         .style("fill", "url(#gradient)");
 
-    legend.selectAll("text")
-        .data([1, 0, -1])
-        .enter().append("text")
-        .attr("x", legendWidth + 5)
-        .attr("y", d => legendHeight * (1 - (d + 1) / 2))
-        .text(d => d)
+    legend.append("text")
+        .attr("x", legendWidth / 2)
+        .attr("y", legendHeight + 15)
         .style("font-size", "12px")
-        .style("text-anchor", "start");
+        .style("text-anchor", "middle")
+        .text("Correlation");
+
+    legend.append("text")
+        .attr("x", 0)
+        .attr("y", -5)
+        .style("font-size", "12px")
+        .style("text-anchor", "middle")
+        .text("-1");
+
+    legend.append("text")
+        .attr("x", legendWidth / 2)
+        .attr("y", -5)
+        .style("font-size", "12px")
+        .style("text-anchor", "middle")
+        .text("0");
+
+    legend.append("text")
+        .attr("x", legendWidth)
+        .attr("y", -5)
+        .style("font-size", "12px")
+        .style("text-anchor", "middle")
+        .text("1");
 
     svg.append("g")
     .attr("transform", "translate(0," + height + ")")

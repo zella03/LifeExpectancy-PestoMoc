@@ -92,16 +92,16 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
         groupedData.forEach((values, key) => {
             svg.append("path")
                 .datum(values)
-                .attr("class", "line")
+                .attr("class", `line line-${key.replace(/\s+/g, "-")}`)
                 .attr("d", line)
                 .attr("stroke", colorScale(key))
                 .attr("stroke-width", 2)
                 .attr("fill", "none");
 
-            svg.selectAll(`.dot-${key}`)
+            svg.selectAll(`.dot-${key.replace(/\s+/g, "-")}`)
                 .data(values)
                 .enter().append("circle")
-                .attr("class", `dot dot-${key}`)
+                .attr("class", `dot dot-${key.replace(/\s+/g, "-")}`)
                 .attr("cx", d => x(d.Year) + x.bandwidth() / 2)
                 .attr("cy", d => y(d[selectedType]))
                 .attr("r", 4)
@@ -126,6 +126,11 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
                     `)
                         .style("left", (mouseX + 10) + "px")
                         .style("top", (mouseY - 20) + "px");
+
+                    d3.selectAll(".line").style("opacity", 0.2);
+                    d3.selectAll(".dot").style("opacity", 0.2);
+                    d3.selectAll(`.line-${d.Entity.replace(/\s+/g, "-")}`).style("opacity", 1);
+                    d3.selectAll(`.dot-${d.Entity.replace(/\s+/g, "-")}`).style("opacity", 1);
                 })
                 .on("mouseout", function() {
                     d3.selectAll(".tooltip")
@@ -135,6 +140,9 @@ d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").the
                         .on("end", function() {
                             d3.select(this).remove();
                         });
+
+                    d3.selectAll(".line").style("opacity", 1);
+                    d3.selectAll(".dot").style("opacity", 1);
                 });
 
             const lastPoint = values[values.length - 1];
