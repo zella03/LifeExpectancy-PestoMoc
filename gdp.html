@@ -193,7 +193,7 @@
 
         <div class="data-sources">
             <div class="info-icon-container">
-                <span><u>Data Sources: GDP & Life Expectancy</u></span>
+                <span><u>Data Sources: GDP & Life Expectancy & Helthcare Expenditure</u></span>
             </div>
         </div>
         
@@ -269,6 +269,8 @@
                     </li>
                     <li><a href="https://databank.worldbank.org/source/population-estimates-and-projections#">Data Bank - Population and Life Expectancy at birth</a>
                     </li>
+                    <li><a href="https://ourworldindata.org/grapher/annual-healthcare-expenditure-per-capita">Our World In Data - Annual Healthcare Expenditure per Capita</a>
+                    </li>
                 </ul>
                 
                 <strong>Preparation Activities</strong><br>
@@ -281,8 +283,14 @@
                 Datasets were loaded and merged together on 
                 country and year.
                 <br><br>
+                For the waffle chart - Healthcare dataset was reshaped it to long format using, extracted years, 
+                dropped rows with missing values, and 
+                converted healthcare expenditure from USD to EUR using a conversion rate (0.97).
+                It was merged with the life expectancy dataset and total healthcare expenditure was calculated (by multiplication using population), and then again merged 
+                with GDP dataset filtering only years 2000-2022.
+                <br><br>
                 To display countries on a map some of the countries names needed to be standardized to the ones from geojson file.
-                
+                <br><br><b>JavaScript library: D3.js</b>
             </p>
         </div>
     </div>

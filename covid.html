@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Dela+Gothic+One&family=Rubik+Mono+One&family=Shrikhand&display=swap" rel="stylesheet">
     <title>How to Live Longer?</title>
     <script src="https://d3js.org/d3.v6.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
@@ -38,41 +37,95 @@
 <main>
     <div class="container">
         <h3>The Pandemic That Changed the World</h3>
-        <p>Coronavirus Disease 2019 (COVID-19) is a highly contagious respiratory illness caused 
-            by the novel coronavirus SARS-CoV-2. First identified in late 2019, it rapidly 
+        <p><b>Coronavirus Disease 2019 (COVID-19)</b> is a highly contagious respiratory illness caused 
+            by the novel coronavirus <b>SARS-CoV-2</b>. First identified in late 2019, it rapidly 
             evolved into a global pandemic, disrupting lives, economies, and healthcare systems. 
-            Characterized by symptoms ranging from mild coughs to severe respiratory distress, the 
-            virus has profoundly impacted public health and highlighted the importance of global 
+            <br>Characterized by symptoms ranging from mild coughs to severe respiratory distress, the 
+            <b>virus has profoundly impacted public health</b> and highlighted the importance of global 
             collaboration in combating emerging diseases.
-            </p>    
+            <div class="chart-person">
+                <img src="/style/img/events/covid-in-EU.png" alt="Number of people affected by COVID" />
+                <span>
+                    <br><br>
+                    <b>Covid affected <b class="red-text bigger-text">3</b> out of <b class="darkblue-text bigger-text">5</b> people in Europe</b>
+                    <br>That's about <b class="bigger-text">61%</b> of total EU population
+                </span>
+            </div>
+
+        </p>
         <div class="map-container">
+            <h2>Deaths due to COVID-19</h2>
+            <p class="map-description">
+                Map below highlights the <b>total confirmed COVID-19 deaths per 100,000 people</b> across various countries.
+                <br>Which continent appears to be <b>affected the most</b>?
+            </p>
+            <div class="zoom-controls">
+                <button id="zoom-in">+</button>
+                <button id="zoom-out">-</button>
+            </div>
+            
+            <div id="covid-map"></div>
 
+            <div class="info-icon-container">
+                <i class="fas fa-info-circle info-icon"></i>
+                <span>How to read the map?</span>
+            </div>
         </div>
-    </div>
-    <div id="comment" class="description-container">
+
+        <div class="description-container">
+            <h3>Global Comparison and Europe's High Impact</h3>
+            As of <b>February 15, 2024</b>, <b class="darkred-text">Peru</b> exhibits the <b>highest COVID death rate</b>. 
+            Focusing on Europe, the <b>highest death rate</b> is observed in <b class="darkred-text">Bulgaria</b>, which 
+            stands out with <b class="darkred-text">566.81</b> excess deaths per 100,000 people. 
+            Europe</b> generally shows <b>higher 
+            excess death rates</b> compared to regions like Africa and Asia, 
+            but some countries in South America, as well as some individual European nations like Italy or Belgium, 
+            exceed Europe’s average. 
+            <br>
+            <br>
+            From the global map, the <b>impact of the pandemic is evident</b>, significantly influencing mortality rates and, consequently... <b>life expectancy</b> across various regions.
+            </div>
+
+        <div class="chart-container">
+            <h2>Andorra with biggest life expectancy decrease!</h2>
+            <p class="chart-description">
+                Take a look at the <b>Europen countries</b> with highest <b>life expectancy difference</b> between 2020 and 2019 year due to covid pandemic. 
+                <br><b>Explore</b> differences between those two years!
+            </p>
+            <div id="life-expectancy-chart"></div>
+            <div class="info-icon-container">
+                <i class="fas fa-info-circle info-icon"></i>
+                <span>How to read the chart?</span>
+            </div>
         </div>
 
-    <h2>Deaths due to covid</h2>
-    
-    <div id="map" style="width: 100%; height: 600px;"></div>
+        <div class="description-container">
+            <h3>Life Expectancy Drops Significantly After COVID</h3>
+            <p>From years, we clearly observed a steady <b>increase in life expectancy</b>, as people across Europe were living longer year by year. Unfortunately, this positive trend was interrupted by the COVID-19 pandemic.</p>
+            
+            <p><b class="darkblue-text">Andorra</b> experienced the <b>highest decline</b> in life expectancy, with a drop of <b class="darkred-text">-4.68 years</b> between 2019 and 2020.
+                This means that, during this period, people in Andorra were expected to live <b>nearly 5 years shorter</b> than before the pandemic hit.
+                Many countries have quickly recovered, returning to pre-pandemic life expectancy levels and resuming the upward trend.</p>
+            
+                
+                <span class="icon-mark">!</span> 
+                <br>
+                It also serves as a reminder of <b>how deeply interconnected</b> we are with the world around us. 
+                Sometimes, external forces - such as pandemics or other events - <b>can dramatically 
+                    affect</b> our lives in ways we cannot predict...
+        </div>
 
-    
-    <div id="comment" class="description-container">
-        This map visualizes COVID-19 deaths per 100,000 people as of February 15, 2024. Darker shades indicate higher death rates, revealing significant geographic disparities. Peru exhibits the highest death rate, while regions in Africa and parts of Asia report lower rates. The data highlights the uneven global impact of the pandemic, shaped by healthcare access, population demographics, and pandemic management strategies.
+        
     </div>
-
-    <h2>Biggest life expectancy decrease</h2>
-    
-    <div id="life-expectancy-chart" style="width: 100%; height: 600px;"></div>
-
-    
-    <div id="comment" class="description-container">
-        This line chart shows the largest decreases in life expectancy globally between 2019 and 2020. Even among the countries most severely affected, the declines vary significantly, with Bolivia experiencing the steepest drop and Andorra the smallest. While the COVID-19 pandemic is likely a primary factor, other contributing factors may have played a role in these varying declines. This highlights that decreases in life expectancy are not solely correlated with deaths per 100k people from a single cause, but rather a complex interplay of factors impacting overall mortality.</div>
 
     <div class="next-page-button">
         <a href="ukraine.html" class="button">Check other events: <strong>War in Ukraine</strong></a>
     </div>
-    <br>
+    <div class="data-sources">
+        <div class="info-icon-container">
+            <span><u>Data Sources: Life Expectancy & Covid Deaths</u></span>
+        </div>
+    </div>
 
 </main>
 
@@ -82,6 +135,68 @@
 
 <script src="scripts/covid.js"></script>
 <script src="scripts/covid2.js"></script>
+<script src="scripts/modal-windows.js"></script>
+
+<div id="mapInfoModal" class="info-modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>How to Read the Orthographic Map?</h2>
+        <p>
+            This map visualizes the total confirmed COVID-19 deaths per 100,000 people as of February 15, 2024 across various countries.
+            <ul>
+                <li>Darker shades indicate higher death rates.</li>
+                <li>Hover over a country to see specific data for that region.</li>
+                <li>Use the legend on the side to understand the color scale and compare countries.</li>
+                <li>Zoom and pan to explore detailed data for smaller regions.</li>
+            </ul>
+        </p>
+    </div>
+</div>
+
+<div id="chartInfoModal" class="info-modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>How to Read the Chart?</h2>
+        <p>
+            The chart visualizes life expectancy trends for countries with the highest decrease during covid pandemic.
+            <ul>
+                <li>The X-axis represents the years, while the Y-axis shows life expectancy values.</li>
+                <li>Each line represents a different country, with its color corresponding to a specific country.</li>
+                <li>Hover over a line to see detailed information about a country, including life expectancy for 2019 and 2020, and the difference between those years.</li>
+                <li>Dots on the chart represent life expectancy values for specific years (2019 and 2020). </li>
+            </ul>
+        </p>
+
+    </div>
+</div>
+
+
+<div id="dataInfoModal" class="info-modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Data Sources</h2>
+        <p>
+            <ul>
+                <li><a href="https://geojson-maps.kyd.au/">GeoJson file with countries bondaries</a>
+                </li>
+                <li><a href="https://ourworldindata.org/coronavirus">Our World In Data - Covid 19</a>
+                </li>
+                <li><a href="https://databank.worldbank.org/source/population-estimates-and-projections#">Data Bank - Population and Life Expectancy at birth</a>
+                </li>
+            </ul>
+            
+            <strong>Preparation Activities</strong><br>
+            Life Expectancy data was transformed into a long format, we renamed the columns, 
+            extracted the years and exported into yearly subsets to CSV files.
+            <br><br>
+            Covid 19 Pandemics dataset was filtered for the lastest possible day in dataset '2024-02-15' and saved to separate file.
+            <br><br>
+            To display countries on a map some of the countries names needed to be standardized to the ones from geojson file.
+            <br><br>
+            <b>JavaScript library: D3.js</b>
+        </p>
+    </div>
+</div>
 
 </body>
 </html>

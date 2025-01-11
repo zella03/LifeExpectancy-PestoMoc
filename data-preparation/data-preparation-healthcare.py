@@ -15,7 +15,7 @@ health_long = pd.melt(
 health_long["Year"] = health_long["Year"].str.extract(r"(\d{4})").astype(float).astype("Int64")
 health_long = health_long.dropna(subset=["Health Expenditure", "Year"])
 
-usd_to_eur_rate = 0.85
+usd_to_eur_rate = 0.97
 
 health_long.rename(columns={"Health Expenditure": "Health Expenditure per Capita"}, inplace=True)
 health_long = health_long[["Country Name", "Year", "Health Expenditure per Capita"]]

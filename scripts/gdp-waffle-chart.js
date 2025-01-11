@@ -64,7 +64,7 @@ async function initializeChart(year) {
 
         chartDiv.append("div")
             .attr("class", "gdp-bar")
-            .text(`${formatCurrency.format(country.Total_GDP)}`);
+            .text(`GDP: ${formatCurrency.format(country.Total_GDP)}`);
 
         chartDiv.append("h3").text(country.Country);
 
@@ -76,7 +76,7 @@ async function initializeChart(year) {
             .attr("class", d => `block ${d}`);
 
         const ratio = (country.Total_Health_Expenditure / country.Total_GDP) * 100;
-        chartDiv.append("p").text(`Healthcare to GDP ratio: ${ratio.toFixed(2)}%`);
+        chartDiv.append("p").html(`Healthcare to GDP ratio: <b class="bigger-text">${ratio.toFixed(2)}%</b>`);
     });
 }
 
