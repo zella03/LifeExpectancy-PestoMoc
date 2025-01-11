@@ -45,8 +45,20 @@
             <div class="description-container">
                 <h3>What is actually GDP?</h3>
                 <p>
-                    <b>Gross domestic product (GDP)</b> is the total monetary or market value of all the finished goods and services produced within a country’s borders in a specific time period. As a broad measure of overall domestic production, 
-                    it functions as a comprehensive scorecard of a given country’s economic health. Here we want to explore the relationship between GDP and life expectancy across European countries. 
+                    <b>Gross Domestic Product (GDP)</b> is one of the most widely recognized indicators of a country's economic performance. 
+                    It represents the total monetary or market value of all finished goods and services produced within a country's borders during a specific time period, 
+                    typically measured annually or quarterly.
+                    <br>
+                    As a comprehensive scorecard of a nation's economic activity, GDP provides insight into the size and health of an economy and serves as a 
+                    benchmark for comparing the economic performance of different countries.
+                    <br><br>
+                    <b>Why is GDP Important?</b><br>
+                    GDP matters because it provides a snapshot of a country's economic health and influences:
+                    <ul>
+                        <li><b>Policy Decisions</b>: Governments and central banks rely on GDP data to guide fiscal and monetary policies.</li>
+                        <li><b>Investment Choices</b>: Businesses and investors use GDP trends to identify opportunities and risks.</li>
+                        <li><b>Standard of Living</b>: While GDP does not directly measure quality of life, higher GDP often correlates with improved living standards.</li>
+                    </ul>
                 </p>
             </div>
 
@@ -72,7 +84,7 @@
             
 
             <div class="description-container">
-                <h3>What to take from the map..</h3>
+                <h3>What to take from the map?</h3>
                 <p>
                     This map provides a visual representation of two critical metrics across Europe (GDP per capita and income per person) from 1960 to 2022. By selecting either Total GDP or GDP per Person, you can explore how these indicators vary across regions and evolve over time.<br><br>
 
@@ -104,11 +116,11 @@
                         </div>
 
                     </div>
-
-                    <div class="bubble-chart">
-                        
-                        <svg id="bubble-chart" width="1000" height="600"></svg>
+                    
+                    <div class="centered-container">
+                        <svg id="bubble-chart" width="900" height="600"></svg>
                     </div>
+                    
                     <div class="legend-container">
                         <svg id="legend" width="500" height="60"></svg>
                     </div>
@@ -121,9 +133,13 @@
                 </div>
             </div>
             <div class="description-container">
+                <h3>Not much to conclude..</h3>
                 <p>
-                Looking across the year you don't see a clear correlation between life expectancy and GDP. We notice that countries with higher GDPs do not necessarily have higher life expectancies. For sure there are some slight correlations, but they are not strong enough to make a general statement.
-                <br><br>
+                    Looking across the data, a clear correlation between life expectancy and GDP is <b>not</b> immediately apparent.<br> 
+                    While countries with higher GDPs may show some improvements in life expectancy, this relationship is not consistent. In fact, there are numerous instances where nations with higher economic 
+                    output do not necessarily enjoy longer life expectancies. Though slight correlations exist, they are not strong enough to make a broad, definitive statement about the link between wealth and longevity. 
+                    <br>This suggests that factors beyond just economic prosperity—such as healthcare systems, social policies, and lifestyle—play significant roles in shaping life expectancy outcomes.
+                <br><br><br><br><br>
                 <span class="icon-mark">!</span> 
                 <br> Remind yourselves that GDP reveals not just the economic power of the countries but also how much they invest 
                 in healthcare!
@@ -171,9 +187,6 @@
             </div>
         </div>
 
-        
-
-
         <div class="next-page-button">
             <a href="healthcare.html" class="button">Check other factors: <strong>Healthcare</strong></a>
         </div>
@@ -187,10 +200,6 @@
         <script src="scripts/gdp-with-lifeExpectancy.js" defer></script>
         <script src="scripts/gdp-waffle-chart.js" defer></script>
         <script src="scripts/gdp.js" defer></script>
-        
-
-        
-
         
     </main>
 
@@ -218,14 +227,14 @@
     <div id="chartInfoModal" class="info-modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
-            <h2>How to Read the Choropleth Map?</h2>
+            <h2>How to Read the Bubble Chart?</h2>
             <p>
-                 expenditures across countries:
+                Life expectancy vs GDP:
                 <ul>
-                    <li>Hover over a country to see detailed data for the selected year.</li>
+                    <li>Each bubble persent another country and size presents its population.</li>
+                    <li>Hover over a bubble to see detailed data for the selected year.</li>
                     <li>Use the year selector to view data for different years.</li>
-                    <li>Switch between per capita and total expenditure using the dropdown menu.</li>
-                    <li>Darker colors represent higher expenditures.</li>
+                    <li>Color scale on the bottom describe ranges for size of the population.</li>
                 </ul>
             </p>
         </div>
@@ -256,7 +265,7 @@
                 <ul>
                     <li><a href="https://geojson-maps.kyd.au/">GeoJson file with countries bondaries</a>
                     </li>
-                    <li><a href="https://ourworldindata.org/grapher/annual-healthcare-expenditure-per-capita">Our World In Data - Annual Healthcare Expenditure per Capita</a>
+                    <li><a href="https://docs.google.com/spreadsheets/d/1RuGcXnt6mrhXumhUuRv4-lC4DmPyohznCiJy8paPM7Q/edit?gid=176703676#gid=176703676">Gapminder - GDP per capita in constant PPP dollars</a>
                     </li>
                     <li><a href="https://databank.worldbank.org/source/population-estimates-and-projections#">Data Bank - Population and Life Expectancy at birth</a>
                     </li>
@@ -266,13 +275,11 @@
                 Life Expectancy data was transformed into a long format, we renamed the columns, 
                 extracted the years and exported into yearly subsets to CSV files.
                 <br><br>
-                Healthcare dataset was reshaped it to long format using, extracted years, 
-                dropped rows with missing values, and 
-                converted healthcare expenditure from USD to EUR using a conversion rate (0.85).
+                GDP data was presented in csv format. Main thing that was needed to do, for easier connection with other datasets later, was to 
+                change the naming of some columns. Data for GDP and income was also converted from $ to € using a conversion rate (0.97).
                 <br><br>
                 Datasets were loaded and merged together on 
                 country and year.
-                Additinally total healthcare expenditure was calculated (by multiplication using population), and then again saved to yearly datasets.
                 <br><br>
                 To display countries on a map some of the countries names needed to be standardized to the ones from geojson file.
                 
