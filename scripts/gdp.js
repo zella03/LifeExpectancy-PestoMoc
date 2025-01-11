@@ -126,7 +126,7 @@ function renderMap(geoData, year, column) {
                 tooltipMap.style("display", "block")
                     .html(`
                         <strong>${countryName}</strong><br>
-                        ${column === "Total_GDP" ? "GDP" : "Income_per_Person"}: ${value} €<br>
+                        ${column === "Total_GDP" ? "GDP" : "Income per Person"}: ${value} €<br>
                     `)
                     .style("left", (event.pageX + 10) + "px")
                     .style("top", (event.pageY + 10) + "px");
@@ -150,7 +150,7 @@ function renderMap(geoData, year, column) {
         .enter()
         .append("g")
         .attr("class", "legend")
-        .attr("transform", `translate(${mapWidth + legendWidth * 2}, ${mapHeight - legendHeight})`);  // Adjust position to ensure it's within the view
+        .attr("transform", `translate(${mapWidth + legendWidth + 20}, ${mapHeight - legendHeight + 0})`);  // Adjust position to ensure it's within the view
 
     legend.selectAll(".legend-item")
         .data(ranges)

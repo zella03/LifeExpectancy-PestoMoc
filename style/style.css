@@ -110,12 +110,12 @@ header {
     justify-content: justify;
 }
 
-/* .header-subpage{
-    background-color: #faeedc;
-} */
-
 header.sub-page{
     background-color: rgb(234, 252, 255);
+}
+
+header.subpage-gdp{
+    background-color: rgb(240, 225, 255);
 }
 .header-img {
     margin-right: 10%;
@@ -575,8 +575,8 @@ healthcare page
 }
 
 .increase-comment img {
-    position: absolute;
-    left: 900px;
+    position:absolute;
+    left: 88%;
     width: 9%;
     z-index: 1;
     pointer-events: none;
@@ -593,11 +593,11 @@ healthcare page
 }
 
 #country1{
-    width: 150px;
+    width: 200px;
 }
 
 #country2{
-    width: 150px;
+    width: 200px;
 }
 
 .chart-container, .map-container{
@@ -1064,8 +1064,8 @@ canvas {
 .bubble-chart {
     overflow: hidden;
     width: 100%;
-    height: 600px;  /* or your desired height */
-    position: relative; /* Ensure that the positioning of the tooltip works correctly */
+    height: 600px;
+    position: relative;
 }
 
 .bubble {
@@ -1084,9 +1084,8 @@ canvas {
     padding: 5px 10px;
     font-size: 12px;
     border-radius: 5px;
+    pointer-events: none;
     opacity: 0;
-    pointer-events: none; /* Tooltip won't block mouse events */
-    z-index: 100; /* Ensure tooltip is above other elements */
 }
 
 .dropdown {
@@ -1115,4 +1114,68 @@ canvas {
     border-radius: 20px;
     margin-top: 50px;
     padding: 20px;
+}
+
+.icon-mark {
+    font-size: 4rem;
+    font-weight: bold;
+    color: purple;
+    line-height: 1;
+    position: absolute;
+    left: 25px;
+}
+
+.blue-text {
+    color: #63a5f7;
+}
+
+
+.waffle-charts-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.chart {
+    margin: 50px;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gdp-bar {
+    color: black;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.waffle-chart {
+    display: grid;
+    grid-template-columns: repeat(10, 20px);
+    gap: 2px;
+    margin-top: 10px;
+}
+
+.block {
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+}
+
+.gdp {
+    background-color: #ebebeb;
+}
+
+.healthcare {
+    background-color: #63a5f7;
+}
+
+.text-centre {
+    text-align: center;
 }
