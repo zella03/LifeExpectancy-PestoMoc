@@ -28,7 +28,7 @@
         </ul>
     </nav>
 
-    <header class="header-subpage">
+    <header class="subpage-turkey">
         <div class="header-text">
             <h1>Turkish invision on Cyprus - 1974</h1>
             <p>What happened and how it affected Life Expectancy?</p>
@@ -76,11 +76,9 @@
         
     <div class="container">
         <div class="chart-container center">
-            <h2>Change in Life Expectancy on Cyprus (1968-1978) </h2>
+            <h2>The Impact of Conflict</h2>
             <p class="chart-description">
-                The bar chart below illustrates the change in life expectancy in Cyprus from 1968 to 1978. <b>1974</b> is a clearly marked year of the invasion.
-                <br>
-                Use the checkbox to see life expectancy of both genders.
+                The bar chart below illustrates the <u>change in life expectancy in Cyprus from 1968 to 1978</u>. <b>1974</b> is a clearly marked year of the invasion. Use the checkbox to see life expectancy of both genders - <b class="text-male">male</b> and <b class="text-female">female</b>.
                 <br><br>
                 <label>
                     <input type="checkbox" id="toggle-view"> Show Male and Female Life Expectancy
@@ -90,6 +88,10 @@
             <div class="tooltip" id="tooltip"></div>
             <div id="chart"></div>
             <script src="scripts/turkish-cyprus-barChart.js"></script>
+            <div class="info-icon-container">
+                <i class="fas fa-info-circle info-icon"></i>
+                <span class="info-tooltip">How to read the chart?</span>
+            </div>
         </div>
 
         <div class="description-container">
@@ -97,18 +99,61 @@
             <p>
                 As demonstrated in the chart, the Turkish invasion of Cyprus had a <b>significant impact</b> on life expectancy in the year of the invasion. 
                 However, this impact was only temporary, with life expectancy returning to its previous levels in subsequent years. 
-                This is due to the fact that life expectancy is calculated based on current mortality rates, which were significantly affected by the war.
+                This is due to the fact that life expectancy is calculated based on <u>current</u> mortality rates, which were significantly affected by the war.
                 It is also important to note that the timing of wars and invasions is not predictable. Consequently, a significant decrease in life expectancy may 
                 be observed in a given year, followed by a return to normal levels in subsequent years.
                 <br><br>
                 Examining the data, it becomes evident that the life expectancy of females did not undergo a substantial decline when compared to that of males. 
-                This observation indicates that, during the aforementioned invasion, the proportion of male casualties was predominantly higher, resulting in the observed decrease in female life expectancy.              
-                <br><br><b>JavaScript library: D3.js</b>
+                This observation indicates that, during the aforementioned invasion, the proportion of <b>male casualties were predominantly higher</b>.              
             </p>
         </div>
 
         <div class="next-page-button">
-            <a href="armenian_earthquake.html" class="button">Check other events: <strong>armenian earthquake</strong></a>
+            <a href="covid.html" class="button">Check other events: <strong>Covid</strong></a>
+        </div>
+    </div>
+
+    <div class="data-sources">
+        <div class="info-icon-container">
+            <span><u>Data Sources: Helthcare Expenditure & Life Expectancy</u></span>
+        </div>
+    </div>
+
+    <script src="scripts/modal-windows-turkey.js"></script>
+
+    <div id="chartInfoModal" class="info-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>How to Read the Bar Chart?</h2>
+            <p>
+                Life expectancy during Cyprus invasion:
+                <ul>
+                    <li>Red bar shows the year of invasion - 1974.</li>
+                    <li>Height of the bar shows the value of life expectancy.</li>
+                    <li>Hover over bar to see detailed data for the selected country.</li>
+                    <li>Use the year selector to view data for different years.</li>
+                    <li>Mark checkbox to see male/female life expectancy</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+
+    <div id="dataInfoModal" class="info-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Data Sources</h2>
+            <p>
+                <ul>
+                    <li><a href="https://databank.worldbank.org/source/population-estimates-and-projections#">Data Bank - Population and Life Expectancy at birth</a></li>
+                </ul>
+                
+                <strong>Preparation Activities</strong><br>
+                Life Expectancy data was transformed into a long format, we renamed the columns, 
+                extracted the years and exported into yearly subsets to CSV files.
+                <br><br>
+                Data were filtered to obtain the life expectancy values only for Cyprus from 1968 to 1978.
+                <br><br><b>JavaScript library: D3.js</b>
+            </p>
         </div>
     </div>
     
