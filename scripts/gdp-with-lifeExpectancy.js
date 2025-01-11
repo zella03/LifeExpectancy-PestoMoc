@@ -1,6 +1,14 @@
 const tooltip = d3.select("#tooltip-bubble");
 console.log(tooltip)
 
+function formatNumber(value) {
+    if (value >= 1e12) return `${value / 1e12}T`;
+    if (value >= 1e9) return `${value / 1e9}B`;
+    if (value >= 1e6) return `${value / 1e6}M`;
+    if (value >= 1e3) return `${value / 1e3}K`;
+    return value;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const margin = { top: 50, right: 50, bottom: 150, left: 70 };
     const width = 900 - margin.left - margin.right;
@@ -18,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const sizeScale = d3.scaleSqrt().range([4, 40]);
 
     const xAxis = d3.axisBottom(xScale)
-        .ticks(3)  // Show only 3 ticks for years
+        .ticks(3)
         .tickFormat(d => {
             if (d >= 1e12) return `${d / 1e12}T`;
             if (d >= 1e9) return `${d / 1e9}B`;
@@ -32,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
         .tickFormat(d => d);
 
     
-    // Function to create X axis with grid lines
     function make_x_axis() {
         return d3.axisBottom(xScale)
             .ticks(3)
@@ -40,10 +47,9 @@ document.addEventListener("DOMContentLoaded", () => {
             .tickFormat("");
     }
 
-    // Function to create Y axis with grid lines
     function make_y_axis() {
         return d3.axisLeft(yScale)
-            .ticks(5)  // Use equal ticks based on the life expectancy range
+            .ticks(5)
             .tickSize(-width)
             .tickFormat("");
     }
@@ -52,22 +58,32 @@ document.addEventListener("DOMContentLoaded", () => {
     svg.append("g").attr("class", "y-axis");
 
     
-    // Grid lines for X and Y axes using make_x_axis and make_y_axis functions
     svg.append("g")
-        .attr("class", "grid")
+        .attr("class", "grid x-grid")
         .attr("transform", `translate(0, ${height})`)
-        .call(make_x_axis());
+        .call(
+        d3.axisBottom(xScale)
+            .ticks(3)
+            .tickSize(-height)
+            .tickFormat("")
+    );
 
     svg.append("g")
-        .attr("class", "grid")
-        .call(make_y_axis());
+        .attr("class", "grid y-grid")
+        .call(
+        d3.axisLeft(yScale)
+            .ticks(5)
+            .tickSize(-width)
+            .tickFormat("")
+    );
+
 
     svg.append("text")
         .attr("class", "x-label")
         .attr("x", width / 2)
         .attr("y", height + 40)
         .style("text-anchor", "middle")
-        .text("total GDP in euros");
+        .text("total GDP in €");
 
     svg.append("text")
         .attr("class", "y-label")
@@ -126,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 .attr("opacity", 0.7)
                 .on("mouseover", (event, d) => {
                     tooltip
-                        .style("opacity", 1) // Make tooltip visible
+                        .style("opacity", 1)
                         .html(
                             `<strong>${d.Country}</strong><br>
                             GDP: ${(+d.Total_GDP).toLocaleString()} €<br>
@@ -156,8 +172,36 @@ document.addEventListener("DOMContentLoaded", () => {
                 .attr("cy", d => yScale(+d.Life_expectancy))
                 .attr("r", d => sizeScale(+d.Population));
 
-            svg.select(".x-axis").transition().duration(800).call(xAxis);
-            svg.select(".y-axis").transition().duration(800).call(yAxis);
+                const xAxis = d3.axisBottom(xScale)
+                .ticks(3)
+                .tickFormat(formatNumber);
+
+            const yAxis = d3.axisLeft(yScale)
+                .ticks(5)
+                .tickFormat(d => d);
+
+            // Apply gridlines with ticks
+            svg.select(".x-grid")
+                .call(
+                    d3.axisBottom(xScale)
+                        .ticks(3)
+                        .tickSize(-height)
+                        .tickFormat("")
+                );
+
+            svg.select(".y-grid")
+                .call(
+                    d3.axisLeft(yScale)
+                        .ticks(5)
+                        .tickSize(-width)
+                        .tickFormat("")
+                );
+
+            svg.select(".x-axis")
+                .call(xAxis);
+
+            svg.select(".y-axis")
+                .call(yAxis);
 
             const legendHeight = 20;
             const legendWidth = 500;
@@ -198,7 +242,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 .attr("y", legendHeight + 35)
                 .attr("text-anchor", "middle")
                 .style("font-size", "14px")
-                .text("Population");
+                .text("Population (Bubble Size)");
         }
 
         renderChart(+yearDropdown.value);
@@ -211,7 +255,7 @@ document.addEventListener("DOMContentLoaded", () => {
     style.textContent = `
         .grid .tick line {
             stroke: lightgrey;
-            opacity: 0.3;
+            opacity: 0.5;
         }
         .grid path {
             stroke-width: 0;

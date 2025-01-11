@@ -1093,17 +1093,49 @@ header.subpage-life-exp{
     margin-bottom: 20px;
 }
 
+#legend-size {
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+}
+
 .legend-container {
     display: flex;
     justify-content: center;
     margin-top: -50px;
 }
+
 .legend-axis path {
     display: none;
 }
 
 .legend-axis .tick line {
     stroke: #000;
+}
+
+.grid .tick line {
+    stroke: lightgray;
+    stroke-opacity: 0.6; /* Adjust for better visibility */
+}
+.grid path {
+    stroke-width: 0; /* No border for the grid path */
+}
+
+.axis .tick line {
+    stroke: black;
+}
+
+.x-axis path,
+.y-axis path {
+    stroke: black; /* Ensure the axis line is visible */
+}
+
+.x-axis line,
+.y-axis line {
+    stroke: black; /* Ensure tick marks are visible */
+}
+
+.axis .domain {
+    stroke: black; /* Ensure domain line is visible */
 }
 
 .topic_intro {
