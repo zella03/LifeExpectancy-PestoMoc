@@ -104,9 +104,7 @@ function renderMap(geoData, year) {
 
                 const totalLifeExpectancy = totalData ? totalData.Life_expectancy.toFixed(2) : 'N/A';
 
-                d3.select(this)
-                .style("stroke", "#000")
-                .raise();
+                d3.select(this).style("opacity", 1).style("stroke-width", "2px");
 
                 svgMap.selectAll("path")
                     .filter(function () {
@@ -127,7 +125,8 @@ function renderMap(geoData, year) {
             svgMap.selectAll("path").style("fill", d => {
                 const countryData = data.find(e => e.Country === d.properties.name && e.Total === "total");
                 return countryData ? getColor(countryData.Life_expectancy) : "#ccc";
-            });
+            })
+            .style("stroke-width", "1px");;
             tooltipMap.style("display", "none");
         });
 
