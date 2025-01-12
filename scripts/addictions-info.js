@@ -4,13 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const chart3InfoIcon = document.querySelector('.chart3 .info-icon-container');
     const chart4InfoIcon = document.querySelector('.chart4 .info-icon-container');
     const chart5InfoIcon = document.querySelector('.chart5 .info-icon-container');
-    
+    const dataInfoIcon = document.querySelector('.data-sources .info-icon-container');
+
     const chart1Modal = document.getElementById('chart1InfoModal');
     const chart2Modal = document.getElementById('chart2InfoModal');
     const chart3Modal = document.getElementById('chart3InfoModal');
     const chart4Modal = document.getElementById('chart4InfoModal');
     const chart5Modal = document.getElementById('chart5InfoModal');
-    
+    const dataModal = document.getElementById('dataInfoModal');
+
     console.log(chart1InfoIcon)
     console.log(chart1Modal)
 
@@ -36,6 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
     chart5InfoIcon.addEventListener('click', () => {
         chart5Modal.style.display = 'block';
     });
+    dataInfoIcon.addEventListener('click', () => {
+        dataModal.style.display = 'block';
+    });
+
 
     closeButtons.forEach((button) => {
         button.addEventListener('click', () => {
@@ -45,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             chart3Modal.style.display = 'none';
             chart4Modal.style.display = 'none';
             chart5Modal.style.display = 'none';
+            dataModal.style.display = 'none';
         });
     });
 
@@ -64,6 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         if (event.target === chart5Modal) {
             chart5Modal.style.display = 'none';
+        }
+        if (event.target === dataModal) {
+            dataModal.style.display = 'none';
         }
 
     });

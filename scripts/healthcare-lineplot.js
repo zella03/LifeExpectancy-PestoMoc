@@ -311,12 +311,39 @@ async function initializeChart() {
     pauseButton.disabled = true;
     resumeButton.disabled = false;
     //animateYears();
+    updateCountryHighlighting();
 }
 
-const resumeButton = document.getElementById('resumeButton');
-
-resumeButton.addEventListener('click', () => {
-    resumeButton.classList.remove('pulse');
-});
-
 initializeChart();
+
+function updateCountryHighlighting() {
+    const country1 = document.getElementById('country1').value;
+    const country2 = document.getElementById('country2').value;
+    console.log(country1)
+    const descriptionContainer = document.querySelector('.countries-values');
+    descriptionContainer.innerHTML = `
+        <h3>We are living longer, longer, and longer...</h3>
+        <p>Life expectancy improvements often correlate with healthcare spending increases.
+            We can conclude that there is a <b>small</b> but <b>positive</b> relationship between those two values!
+        </p>
+        <p>You remember the countries we compared at the end of GDP section? Looking at the 
+            <b class="${country1 === 'Russian Federation' ? 'lightblue-text' : ''}">Russian Federation</b> 
+            and the <b class="${country2 === 'United Kingdom' ? 'pink-text' : ''}">United Kingdom</b>, 
+            we can observe something interesting. Over the same time period, both countries saw an increase in 
+            healthcare spending. However, despite spending less on healthcare, 
+            <b class="${country1 === 'Russian Federation' ? 'lightblue-text' : ''}">Russia</b> experienced 
+            a significantly <b>higher rate of growth</b> in life expectancy compared to the UK.
+        <br>
+        In contrast, the <b class="${country2 === 'United Kingdom' ? 'pink-text' : ''}">United Kingdom</b>, 
+            which is actually allocating more resources to healthcare, saw a 
+            <b>relatively smaller improvement</b> in life expectancy during the same time period!<br>
+            It can be seen that we face <b>overall increase in many European countries in healthcare spending</b>. 
+            Given this correlation, <strong>we are going to live longer!</strong>
+        </p>
+    `;
+}
+
+document.getElementById('country1').addEventListener('change', updateCountryHighlighting);
+document.getElementById('country2').addEventListener('change', updateCountryHighlighting);
+
+updateCountryHighlighting();

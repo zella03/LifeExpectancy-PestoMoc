@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mapInfoIcon = document.querySelector('.map-container .info-icon-container');
     const chartInfoIcon = document.querySelector('.chart-container .info-icon-container');
     const dataInfoIcon = document.querySelector('.data-sources .info-icon-container');
-
+    
     const mapModal = document.getElementById('mapInfoModal');
     console.log(mapInfoIcon)
     console.log(mapModal)

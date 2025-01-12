@@ -194,6 +194,9 @@ header p {
     position: relative;
 }
 
+#lifeExpectancyChart{
+    width: 10px;
+}
 .text-box {
     position: absolute;
     top: 12%;
@@ -894,7 +897,7 @@ select {
 
 canvas {
     max-width: 100%;
-    height: auto;
+    max-height: 60%;
 }
 
 #currentYear {
