@@ -1,4 +1,4 @@
-d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").then(function(data) {
+d3.csv("datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").then(function(data) {
     const lifeExpectancyCol = "Period life expectancy at birth - Sex: total - Age: 0";
 
     const data2019 = data.filter(d => +d.Year === 2019);
