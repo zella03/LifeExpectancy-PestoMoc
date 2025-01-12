@@ -1253,3 +1253,11 @@ header.subpage-covid{
 .darkred-text{
     color: rgb(131, 0, 0);
 }
+
+.lightblue-text{
+    color:rgba(54, 162, 235, 1);
+}
+
+.pink-text{
+    color:rgba(255, 99, 132, 1);
+}
