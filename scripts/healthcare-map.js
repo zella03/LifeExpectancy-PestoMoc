@@ -83,9 +83,16 @@ function loadData(year, valueType) {
 
         tooltip_map.transition().duration(200).style("opacity", 0.9);
         tooltip_map
-          .html(`<b>Country:</b> ${country}<br><b>${valueType}:</b> ${expenditure ? formatNumber(expenditure) + "€" : "No data"}`)
+          .html(`<div style="font-size: 16px; margin-bottom: 0;">
+                <b>${country}</b><br>${valueType}:
+            </div>
+             <div style="font-size: 36px; color:rgb(80, 118, 255);">
+                <b>${expenditure ? formatNumber(expenditure) + "€" : "No data"}</b>
+            </div>
+            `)
           .style("left", (event.pageX + 10) + "px")
           .style("top", (event.pageY - 20) + "px");
+
       })
       .on("mousemove", function (event) {
         tooltip_map

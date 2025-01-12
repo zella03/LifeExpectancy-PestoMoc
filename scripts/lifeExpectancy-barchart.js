@@ -55,8 +55,8 @@ function renderBarChart(year) {
 
     const top10Countries = data.sort((a, b) => b.Life_expectancy - a.Life_expectancy).slice(0, 10);
 
-    x.domain(top10Countries.map(d => d.Country));
-    y.domain([0, d3.max(top10Countries, d => d.Life_expectancy)]);
+    y.domain(top10Countries.map(d => d.Country)); // Y axis: countries
+    x.domain([0, d3.max(top10Countries, d => d.Life_expectancy)]); // X axis: life expectancy
 
     svg.selectAll("*").remove();
 
@@ -65,10 +65,10 @@ function renderBarChart(year) {
         .enter()
         .append("rect")
         .attr("class", "bar")
-        .attr("x", d => x(d.Country))
-        .attr("y", d => y(d.Life_expectancy))
-        .attr("width", x.bandwidth())
-        .attr("height", d => height - margin.bottom - y(d.Life_expectancy))
+        .attr("y", d => y(d.Country)) // Position along the Y-axis for countries
+        .attr("x", margin.left) // All bars start from the left margin
+        .attr("height", y.bandwidth()) // Bar height based on Y-axis scale
+        .attr("width", d => x(d.Life_expectancy) - margin.left) // Bar width proportional to life expectancy
         .on("mouseover", function (event, d) {
             tooltip.transition().duration(200).style("opacity", .9);
             tooltip.html(`${d.Country}: ${d.Life_expectancy.toFixed(2)} years`)
@@ -79,16 +79,19 @@ function renderBarChart(year) {
             tooltip.transition().duration(200).style("opacity", 0);
         });
 
+    // X-axis for life expectancy
     svg.append("g")
         .attr("class", "x-axis")
         .attr("transform", `translate(0,${height - margin.bottom})`)
-        .call(d3.axisBottom(x));
+        .call(d3.axisBottom(x).ticks(10).tickFormat(d => `${d} years`));
 
+    // Y-axis for countries
     svg.append("g")
         .attr("class", "y-axis")
         .attr("transform", `translate(${margin.left},0)`)
         .call(d3.axisLeft(y));
 
+    // Title
     svg.append("text")
         .attr("x", width / 2)
         .attr("y", margin.top - 10)

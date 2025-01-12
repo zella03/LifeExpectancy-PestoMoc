@@ -90,7 +90,7 @@ Promise.all([
                 <div style="font-size: 36px; font-weight: bold; color:rgb(255, 80, 80);">
                     ${deaths}
                 </div>
-                Deaths per 100k
+                Deaths per 100,000
             `)
             .style("left", (event.pageX + 10) + "px")
             .style("top", (event.pageY + 10) + "px");
@@ -160,7 +160,7 @@ Promise.all([
         .attr("font-size", "14px")
         .attr("font-weight", "bold")
         .attr("fill", "black")
-        .text("Deaths per 100k");
+        .text("Deaths per 100,000");
 
 
     const drag = d3.drag()

@@ -100,7 +100,7 @@ async function initializeChart() {
                         title: tooltipItems => `Year: ${tooltipItems[0].raw.year}`,
                         label: tooltipItem => [
                             `Life Expectancy: ${formatNumber(tooltipItem.raw.y)}`,
-                            `Expenditure: ${formatNumber(tooltipItem.raw.x)}€`,
+                            `Healthcare per capita: ${formatNumber(tooltipItem.raw.x)}€`,
                             `Population: ${formatNumber(tooltipItem.raw.population)}`
                         ],
                     },
@@ -112,7 +112,7 @@ async function initializeChart() {
                     type: 'linear',
                     title: {
                         display: true,
-                        text: 'Healthcare Expenditure (€)',
+                        text: 'Healthcare Expenditure per Capita(€)',
                         font: {
                             size: 16,
                             weight: 'bold',

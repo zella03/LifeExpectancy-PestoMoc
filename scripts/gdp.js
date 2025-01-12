@@ -31,10 +31,8 @@ const dataPromise = d3.csv("./datasets/gdp/merged-gdp-life_expectancy.csv")
         });
     });
 
-const projection = d3.geoMercator()
-    .center([15, 50])
-    .scale(800)
-    .translate([mapWidth / 2, mapHeight / 2]);
+const width = window.innerWidth, height = window.innerHeight * 0.8;
+const projection = d3.geoMercator().scale(700).translate([width/2 - 300, height/2 + 700]);
 
 const path = d3.geoPath().projection(projection);
 const tooltipMap = d3.select("#tooltip-map");
@@ -117,12 +115,10 @@ function renderMap(geoData, year, column) {
                 
 
                 svgMap.selectAll("path")
-                    .filter(function () {
-                        return this !== event.target;
-                    })
-                    .style("fill", "#ccc");
+                    .filter(pathData => pathData !== d)
+                    .style("opacity", 0.3);
 
-                
+                tooltipMap.transition().duration(200).style("opacity", 0.9);
                 tooltipMap.style("display", "block")
                     .html(`
                         <strong>${countryName}</strong><br>
@@ -132,13 +128,16 @@ function renderMap(geoData, year, column) {
                     .style("top", (event.pageY + 10) + "px");
             }
         })
+        .on("mousemove", function (event) {
+            tooltipMap
+              .style("left", (event.pageX + 10) + "px")
+              .style("top", (event.pageY - 10) + "px");
+          })
         .on("mouseout", function () {
-            svgMap.selectAll("path").style("fill", d => {
-                const countryData = data.find(e => e.Country === d.properties.name);
-                return countryData ? getColor(countryData[column]) : "#ccc";
-            })
-            .style("stroke-width", "1px");;
-            tooltipMap.style("display", "none");
+            svgMap.selectAll("path")
+            .style("opacity", 1)
+            .style("stroke-width", "1px");
+            tooltipMap.transition().duration(200).style("opacity", 0);
         });
 
     const legendWidth = 150;
@@ -151,7 +150,7 @@ function renderMap(geoData, year, column) {
     .enter()
     .append("g")
     .attr("class", "legend")
-    .attr("transform", `translate(${mapWidth + legendWidth + 150}, ${mapHeight - legendHeight + 0})`);
+    .attr("transform", `translate(${20}, ${mapHeight - legendHeight })`);
 
     // Reverse ranges for the legend
     const reversedRanges = [...ranges].reverse();
@@ -178,7 +177,7 @@ function renderMap(geoData, year, column) {
         .attr("y", (d, i) => i * legendItemHeight + legendItemHeight / 2)
         .attr("dy", "0.35em")
         .style("font-size", "10px")
-        .text(d => `${formatValue(d.range[0])} - ${formatValue(d.range[1])}`);
+        .text(d => `[${formatValue(d.range[0])} - ${formatValue(d.range[1])}]`);
 
     legend.append("text")
         .attr("x", 0)
