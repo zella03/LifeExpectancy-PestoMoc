@@ -15,7 +15,7 @@ const tooltip = d3.select("#chart4")
     .style("pointer-events", "none")
     .style("display", "none");
 
-d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").then(function(data) {
+d3.csv("datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").then(function(data) {
     const years = d3.range(2000, 2022);
     data = data.filter(d => years.includes(+d.Year));
 

@@ -47,8 +47,9 @@
             </p>
         
         <div class="map-container">
-            <h2>Healthcare Expenditures on Map</h2>
-            <p class="map-description">Discover how healthcare expenditure varies across European countries.<br> Use the year selector to observe trends over time <strong>in your country</strong>. Switch between per capita or total expenditure views.</p>
+            <h2>Switzerland’s Leadership in Healthcare Expenditure</h2>
+            <p class="map-description">
+                The map shows countries spendings on healthcare. Discover how healthcare expenditure varies across European countries.<br> Use the year selector to observe trends over time <strong>in your country</strong>. Switch between per capita or total expenditure views.</p>
             <div class="selectors-panel">
                 <select id="year-selector" class="form-control"></select>
                 <select id="value-toggle" class="form-control">
@@ -72,16 +73,30 @@
                  We should know that per capita expenditres are more reliable than total expenditures as they reflect the amount spent
                  relative to each population unit, correlating to better life quality of individuals and individuals well-being.
                  When switching to total expenditures, the map reveals that <b>wealthier nations</b> not only have higher per 
-                 capita spending but also <b>dominate</b> in healthcare expenditure.
+                 capita spending but also <b>dominate</b> in healthcare expenditure.</p>
                  <div class="increase-comment">
-                    What is good for us - we can observe that total healthcare expenditures are <b>increasing</b> across all countries over the years!</p>
-                    <img src="style/img/healthcare/increase.png" alt="Image representing increase of money" />
+                    <p>What is good for us - we can observe that total healthcare expenditures are <b>increasing</b> across all countries over the years!</p>
+                    <img src="style/img/healthcare/increase.png" alt="Image representing increase of money" /></p>
+                    
                  </div>
         </div>
     
         <div class="chart-container">
-            <h2>Does Healthcare Expenditures Affect Life Expectancy?</h2>
-            <p class="chart-description">Compare life expectancy and healthcare spending trends for two countries over time. Use the dropdown menus to select countries of interest.</p>
+            <h2>More we care about the health, more we live</h2>
+            <p class="chart-description">Plot compare life expectancy and healthcare spending trends for two 
+                countries over time. Use the dropdown menus to select countries of interest.
+            <br><b>Click play button to see animation!</b></p>
+            <div class="animate-controls">
+                <button id="pauseButton" class="control-button" disabled>
+                    <i class="fas fa-pause"></i>
+                </button>
+                <button id="resumeButton" class="control-button pulse" disabled>
+                    <i class="fas fa-play"></i>
+                </button>
+                <button id="replayButton" class="control-button">
+                    <i class="fas fa-undo"></i>
+                </button>
+            </div>
             <div class="selectors-panel justify-content-between">
                 <select id="country1" class="form-control"></select>
                 <select id="country2" class="form-control"></select>
@@ -90,17 +105,7 @@
                 <span id="currentYear">2000</span>
             </div>
             <canvas id="lifeExpectancyChart"></canvas>
-            <div class="animate-controls">
-                <button id="pauseButton" class="control-button" disabled>
-                    <i class="fas fa-pause"></i>
-                </button>
-                <button id="resumeButton" class="control-button" disabled>
-                    <i class="fas fa-play"></i>
-                </button>
-                <button id="replayButton" class="control-button">
-                    <i class="fas fa-undo"></i>
-                </button>
-            </div>
+            
             <div class="slider-container">
                 <div class="slider-wrapper">
                     <span class="min-year">2000</span>

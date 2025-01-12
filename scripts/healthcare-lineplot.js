@@ -313,4 +313,10 @@ async function initializeChart() {
     //animateYears();
 }
 
+const resumeButton = document.getElementById('resumeButton');
+
+resumeButton.addEventListener('click', () => {
+    resumeButton.classList.remove('pulse');
+});
+
 initializeChart();

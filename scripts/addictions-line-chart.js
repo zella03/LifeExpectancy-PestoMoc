@@ -9,7 +9,7 @@ const svg = d3.select("#chart")
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.csv("../datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").then(function(data) {
+d3.csv("datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").then(function(data) {
     const years = d3.range(2000, 2022);
     data = data.filter(d => years.includes(+d.Year));
 
