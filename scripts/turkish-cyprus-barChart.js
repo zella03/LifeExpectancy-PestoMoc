@@ -112,10 +112,16 @@ d3.csv("./datasets/life-expectancy-population/EU-life-expectancy-population-(196
                 .append("rect")
                 .attr("class", "bar-male")
                 .attr("x", d => xScale(d.Year))
-                .attr("y", d => yScale(d.Male))
+                .attr("y", height)  // Initially place the bars at the bottom (height = bottom of chart)
+                .attr("height", 0)   // Initially set the height to 0
                 .attr("width", barWidth)
-                .attr("height", d => height - yScale(d.Male))
-                .attr("fill", "blue");
+                .attr("fill", "blue")
+                .transition()
+                .duration(1000)  // Duration of the transition
+                .attr("y", d => yScale(d.Male))  // Transition the bars to their correct position
+                .attr("height", d => height - yScale(d.Male));
+                
+                
     
             const femaleBars = svg.selectAll(".bar-female")
                 .data(data)
@@ -123,10 +129,14 @@ d3.csv("./datasets/life-expectancy-population/EU-life-expectancy-population-(196
                 .append("rect")
                 .attr("class", "bar-female")
                 .attr("x", d => xScale(d.Year) + barWidth)
-                .attr("y", d => yScale(d.Female))
+                .attr("y", height)  // Initially place the bars at the bottom (height = bottom of chart)
+                .attr("height", 0)   // Initially set the height to 0
                 .attr("width", barWidth)
-                .attr("height", d => height - yScale(d.Female))
-                .attr("fill", "pink");
+                .attr("fill", "pink")
+                .transition()
+                .duration(1000)  // Duration of the transition
+                .attr("y", d => yScale(d.Female))  // Transition the bars to their correct position
+                .attr("height", d => height - yScale(d.Female));
     
             const bars = svg.selectAll("rect");
     
@@ -163,6 +173,7 @@ d3.csv("./datasets/life-expectancy-population/EU-life-expectancy-population-(196
                 .attr("width", xScale.bandwidth())
                 .attr("height", d => height - yScale(d.Life_expectancy))
                 .attr("fill", d => d.Year === 1974 ? "red" : "steelblue");
+
         
             bars.on("mouseover", function(event, d) {
                 tooltip.style("display", "block")
