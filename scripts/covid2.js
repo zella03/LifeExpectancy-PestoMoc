@@ -58,6 +58,7 @@ d3.csv('datasets/life-exp/life-expectancy.csv').then(function(data) {
         .filter(d => d.difference > 0);
 
     const topCountries = countries.sort((a, b) => b.difference - a.difference).slice(0, 5);
+    const maxLifeCountry = topCountries[0];
 
     const colorScale = d3.scaleOrdinal(d3.schemeTableau10);
 
@@ -89,8 +90,8 @@ d3.csv('datasets/life-exp/life-expectancy.csv').then(function(data) {
         .x(d => x(d.Year) + x.bandwidth() / 2)
         .y(d => y(d.life_expectancy))
         .curve(d3.curveMonotoneX);
-
     
+        
         svg.selectAll(".line")
         .data(topCountries)
         .enter()
@@ -99,19 +100,33 @@ d3.csv('datasets/life-exp/life-expectancy.csv').then(function(data) {
         .attr("fill", "none")
         .attr("stroke", d => colorScale(d.entity))
         .attr("stroke-width", 4)
+        .attr("opacity", d => d.entity === maxLifeCountry.entity ? 1 : 0.2)
         .attr("d", d => line(d.values))
         .on("mouseover", function(event, d) {
             svg.selectAll("circle")
-            .filter(dot => dot.entity !== d.entity)
+            .filter(dot => dot.entity !== d.entity && dot.entity !== maxLifeCountry.entity)
             .transition()
             .duration(200)
             .style("opacity", 0.2);
+
+            svg.selectAll("circle")
+            .filter(dot => dot.entity === d.entity)
+            .transition()
+            .duration(200)
+            .style("opacity", 1);
     
             svg.selectAll(".line")
-                .filter(line => line.entity !== d.entity)
+                .filter(line => line.entity !== d.entity && line.entity !== maxLifeCountry.entity)
                 .transition()
                 .duration(200)
                 .style("opacity", 0.2);
+
+            svg.selectAll(".line")
+                .filter(line => line.entity === d.entity)
+                .transition()
+                .duration(200)
+                .style("opacity", 1);
+
             tooltip.transition()
                 .duration(200)
                 .style("visibility", "visible")
@@ -126,21 +141,32 @@ d3.csv('datasets/life-exp/life-expectancy.csv').then(function(data) {
                 .style("left", (event.pageX + 10) + "px");
         })
         .on("mouseout", function(event, d) {
-            d3.select(this)
+            
+
+            svg.selectAll("circle")
+                .filter(dot => dot.entity !== maxLifeCountry.entity)
                 .transition()
                 .duration(200)
-                .attr("stroke", d => colorScale(d.entity));
-    
-                svg.selectAll("circle")
-                .filter(dot => dot.entity !== d.entity)
+                .style("opacity", 0.2);
+
+            svg.selectAll("circle")
+                .filter(dot => dot.entity === maxLifeCountry.entity)
                 .transition()
                 .duration(200)
                 .style("opacity", 1);
     
             svg.selectAll(".line")
+                .filter(dot => dot.entity !== maxLifeCountry.entity)
+                .transition()
+                .duration(200)
+                .style("opacity", 0.2);
+
+            svg.selectAll(".line")
+                .filter(dot => dot.entity === maxLifeCountry.entity)
                 .transition()
                 .duration(200)
                 .style("opacity", 1);
+                
             tooltip.transition()
                 .duration(200)
                 .style("opacity", 0)
@@ -160,25 +186,37 @@ d3.csv('datasets/life-exp/life-expectancy.csv').then(function(data) {
         ))
         .enter()
         .append("circle")
+        .attr("opacity", d => d.entity === maxLifeCountry.entity ? 1 : 0.2)
         .attr("cx", d => x(d.Year) + x.bandwidth() / 2)
         .attr("cy", d => y(d.life_expectancy))
         .attr("r", 8)
         .attr("fill", d => colorScale(d.entity))
         .on("mouseover", function(event, d) {
-            d3.select(this)
-                .transition()
-                .duration(200)
-                .attr("r", 12);
+
             svg.selectAll("circle")
-                .filter(dot => dot.entity !== d.entity)
+                .filter(dot => dot.entity !== d.entity && dot.entity !== maxLifeCountry.entity)
                 .transition()
                 .duration(200)
                 .style("opacity", 0.2);
-            svg.selectAll(".line")
-                .filter(line => line.entity !== d.entity)
+    
+                svg.selectAll("circle")
+                .filter(dot => dot.entity === d.entity)
                 .transition()
                 .duration(200)
-                .style("opacity", 0.2);
+                .attr("r", 12)
+                .style("opacity", 1);
+        
+                svg.selectAll(".line")
+                    .filter(line => line.entity !== d.entity && line.entity !== maxLifeCountry.entity)
+                    .transition()
+                    .duration(200)
+                    .style("opacity", 0.2);
+    
+                svg.selectAll(".line")
+                    .filter(line => line.entity === d.entity)
+                    .transition()
+                    .duration(200)
+                    .style("opacity", 1);
 
             tooltip.transition()
                 .duration(200)
@@ -192,21 +230,31 @@ d3.csv('datasets/life-exp/life-expectancy.csv').then(function(data) {
                 .style("left", (event.pageX + 10) + "px");
         })
         .on("mouseout", function() {
-            d3.select(this)
-                .transition()
-                .duration(200)
-                .attr("r", 8);
-
-            svg.selectAll(".line")
-                .transition()
-                .duration(200)
-                .style("opacity", 1);
 
             svg.selectAll("circle")
                 .transition()
                 .duration(200)
-                .style("opacity", 1)
-                .attr("r", 8);
+                .attr("r", 8)
+                .style("opacity", 0.2);
+
+            svg.selectAll("circle")
+                .filter(dot => dot.entity === maxLifeCountry.entity)
+                .transition()
+                .duration(200)
+                .attr("r", 8)
+                .style("opacity", 1);
+    
+            svg.selectAll(".line")
+                .filter(dot => dot.entity !== maxLifeCountry.entity)
+                .transition()
+                .duration(200)
+                .style("opacity", 0.2);
+
+            svg.selectAll(".line")
+                .filter(dot => dot.entity === maxLifeCountry.entity)
+                .transition()
+                .duration(200)
+                .style("opacity", 1);
 
             tooltip.transition()
                 .duration(200)

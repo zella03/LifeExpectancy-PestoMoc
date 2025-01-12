@@ -52,7 +52,7 @@ d3.csv("datasets/addictions/normalized_europe_data_per_capita_FINAL.csv").then(f
     }
 
     const numCols = otherColumns.length;
-    const margin = { top: 50, right: 300, bottom: 350, left: 250 };
+    const margin = { top: 50, right: 300, bottom: 200, left: 250 };
     const width = Math.min((window.innerWidth || document.documentElement.clientWidth) - margin.left - margin.right, numCols * 80);
     const cellSize = width / numCols;
     const height = cellSize;

@@ -50,15 +50,16 @@ Promise.all([
     const path = d3.geoPath().projection(projection);
 
     const tooltip = d3.select("body")
-        .append("div")
-        .style("position", "absolute")
-        .style("background", "rgba(0, 0, 0, 0.8)")
-        .style("color", "white")
-        .style("padding", "10px")
-        .style("border-radius", "5px")
-        .style("box-shadow", "0 0 10px rgba(0, 0, 0, 0.5)")
-        .style("pointer-events", "none")
-        .style("opacity", 0);
+    .append("div")
+    .style("position", "absolute")
+    .style("background", "white")
+    .style("color", "black")
+    .style("padding", "12px")
+    .style("border-radius", "10px")
+    .style("box-shadow", "0 4px 15px rgba(0, 0, 0, 0.2)")
+    .style("pointer-events", "none")
+    .style("opacity", 0);
+
 
     const map = svg.selectAll("path")
         .data(geojson.features)
@@ -83,8 +84,13 @@ Promise.all([
                 .style("opacity", 0.3);
             tooltip.transition().duration(200).style("opacity", 0.9);
             tooltip.html(`
-                <strong>${country}</strong><br>
-                Deaths per 100k: ${deaths}
+                <div style="font-size: 16px; font-weight: bold; margin-bottom: 0;">
+                    ${country}
+                </div>
+                <div style="font-size: 36px; font-weight: bold; color:rgb(255, 80, 80);">
+                    ${deaths}
+                </div>
+                Deaths per 100k
             `)
             .style("left", (event.pageX + 10) + "px")
             .style("top", (event.pageY + 10) + "px");

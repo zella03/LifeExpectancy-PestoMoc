@@ -1,84 +1,71 @@
-var modal = document.getElementById("dataInfoModal");
-var modal0 = document.getElementById("chart0InfoModal");
-var modal1 = document.getElementById("chart1InfoModal");
-var modal2 = document.getElementById("chart2InfoModal");
-var modal3 = document.getElementById("chart3InfoModal");
-var modal4 = document.getElementById("chart4InfoModal");
+document.addEventListener('DOMContentLoaded', () => {
+    const chart1InfoIcon = document.querySelector('.chart1 .info-icon-container');
+    const chart2InfoIcon = document.querySelector('.chart2 .info-icon-container');
+    const chart3InfoIcon = document.querySelector('.chart3 .info-icon-container');
+    const chart4InfoIcon = document.querySelector('.chart4 .info-icon-container');
+    const chart5InfoIcon = document.querySelector('.chart5 .info-icon-container');
+    
+    const chart1Modal = document.getElementById('chart1InfoModal');
+    const chart2Modal = document.getElementById('chart2InfoModal');
+    const chart3Modal = document.getElementById('chart3InfoModal');
+    const chart4Modal = document.getElementById('chart4InfoModal');
+    const chart5Modal = document.getElementById('chart5InfoModal');
+    
+    console.log(chart1InfoIcon)
+    console.log(chart1Modal)
 
-var btn = document.getElementById("data-sources-link");
-var btn0 = document.getElementById("chart0-link");
-var btn1 = document.getElementById("chart1-link");
-var btn2 = document.getElementById("chart2-link");
-var btn3 = document.getElementById("chart3-link");
-var btn4 = document.getElementById("chart4-link");
+    const closeButtons = document.querySelectorAll('.close-btn');
 
-var span = document.getElementsByClassName("close-btn")[0];
-var span0 = document.getElementsByClassName("close-btn")[1];
-var span1 = document.getElementsByClassName("close-btn")[2];
-var span2 = document.getElementsByClassName("close-btn")[3];
-var span3 = document.getElementsByClassName("close-btn")[4];
-var span4 = document.getElementsByClassName("close-btn")[5];
+    console.log(closeButtons)
+    chart1InfoIcon.addEventListener('click', () => {
+        chart1Modal.style.display = 'block';
+    });
 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
+    chart2InfoIcon.addEventListener('click', () => {
+        chart2Modal.style.display = 'block';
+    });
 
-span.onclick = function() {
-    modal.style.display = "none";
-}
+    chart3InfoIcon.addEventListener('click', () => {
+        chart3Modal.style.display = 'block';
+    });
 
-btn0.onclick = function() {
-    modal0.style.display = "block";
-}
+    chart4InfoIcon.addEventListener('click', () => {
+        chart4Modal.style.display = 'block';
+    });
 
-span0.onclick = function() {
-    modal0.style.display = "none";
-}
+    chart5InfoIcon.addEventListener('click', () => {
+        chart5Modal.style.display = 'block';
+    });
 
-btn1.onclick = function() {
-    modal1.style.display = "block";
-}
+    closeButtons.forEach((button) => {
+        button.addEventListener('click', () => {
 
-span1.onclick = function() {
-    modal1.style.display = "none";
-}
+            chart1Modal.style.display = 'none';
+            chart2Modal.style.display = 'none';
+            chart3Modal.style.display = 'none';
+            chart4Modal.style.display = 'none';
+            chart5Modal.style.display = 'none';
+        });
+    });
 
-btn2.onclick = function() {
-    modal2.style.display = "block";
-}
+    window.addEventListener('click', (event) => {
 
-span2.onclick = function() {
-    modal2.style.display = "none";
-}
+        if (event.target === chart1Modal) {
+            chart1Modal.style.display = 'none';
+        }
+        if (event.target === chart2Modal) {
+            chart2Modal.style.display = 'none';
+        }
+        if (event.target === chart3Modal) {
+            chart3Modal.style.display = 'none';
+        }
+        if (event.target === chart4Modal) {
+            chart4Modal.style.display = 'none';
+        }
+        if (event.target === chart5Modal) {
+            chart5Modal.style.display = 'none';
+        }
 
-btn3.onclick = function() {
-    modal3.style.display = "block";
-}
+    });
+});
 
-span3.onclick = function() {
-    modal3.style.display = "none";
-}
-
-btn4.onclick = function() {
-    modal4.style.display = "block";
-}
-
-span4.onclick = function() {
-    modal4.style.display = "none";
-}
-
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    } else if (event.target == modal0) {
-        modal0.style.display = "none";
-    } else if (event.target == modal1) {
-        modal1.style.display = "none";
-    } else if (event.target == modal2) {
-        modal2.style.display = "none";
-    } else if (event.target == modal3) {
-        modal3.style.display = "none";
-    } else if (event.target == modal4) {
-        modal4.style.display = "none";
-    }
-}

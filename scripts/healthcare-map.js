@@ -68,16 +68,6 @@ function loadData(year, valueType) {
       .data(geojson.features)
       .join("path")
       .attr("d", path)
-      .attr("fill", d => {
-        const country = d.properties.name;
-        const expenditure = d.properties.expenditure ? d.properties.expenditure[valueType] : null;
-
-        if (euCountries.has(country)) {
-          return expenditure ? colorScale(expenditure) : "#ccc";
-        } else {
-          return "#ccc";
-        }
-      })
       .attr("stroke", "#333")
       .on("mouseover", function (event, d) {
         const country = d.properties.name;
@@ -108,6 +98,18 @@ function loadData(year, valueType) {
           .style("stroke-width", "1px");
 
         tooltip_map.transition().duration(200).style("opacity", 0);
+      })
+      .transition()
+      .duration(800)
+      .attr("fill", d => {
+        const country = d.properties.name;
+        const expenditure = d.properties.expenditure ? d.properties.expenditure[valueType] : null;
+
+        if (euCountries.has(country)) {
+          return expenditure ? colorScale(expenditure) : "#ccc";
+        } else {
+          return "#ccc";
+        }
       });
 
     svg.selectAll(".legend").remove();
