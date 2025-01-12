@@ -184,8 +184,9 @@ function renderBarChart(year) {
     const data = allData[year];
     const showGender = d3.select("#gender-toggle").property("checked");
 
-    svgBar.selectAll("*").remove();
+    const transitionDuration = 1000;
 
+    // Get top 10 countries by life expectancy
     const top10Countries = data
         .filter(d => d.Total === "total" && !isNaN(d.Life_expectancy))
         .sort((a, b) => b.Life_expectancy - a.Life_expectancy)
@@ -195,69 +196,111 @@ function renderBarChart(year) {
     const filteredData = data.filter(d => top10Countries.includes(d.Country));
 
     if (showGender) {
+        // Remove total bars
+        svgBar.selectAll(".bar-total").remove();
+
+        // Filter for male and female data only
         const groupedData = filteredData.filter(d => d.Total !== "total");
         const countries = top10Countries;
-    
+
         groupedData.sort((a, b) => b.Life_expectancy - a.Life_expectancy);
-    
+
+        // Update scales
         x.domain(countries);
-    
         const minValue = d3.min(groupedData, d => d.Life_expectancy);
         const maxValue = d3.max(groupedData, d => d.Life_expectancy);
-        y.domain([Math.max(minValue - 5, 0), maxValue]);
-    
+        y.domain([Math.max(minValue - 5, 0), maxValue + 0.5]);
+
         const subgroups = ["male", "female"];
         const subgroupScale = d3.scaleBand()
             .domain(subgroups)
             .range([0, x.bandwidth()])
             .padding(0.05);
-    
-        svgBar.selectAll(".group")
-            .data(countries)
-            .enter()
+
+        // Bind data to groups
+        const groups = svgBar.selectAll(".group")
+            .data(countries, d => d);
+
+        groups.enter()
             .append("g")
+            .attr("class", "group")
             .attr("transform", d => `translate(${x(d)},0)`)
+            .merge(groups)
+            .transition()
+            .duration(transitionDuration)
+            .attr("transform", d => `translate(${x(d)},0)`);
+
+        groups.exit().remove();
+
+        // Bind data to bars
+        const bars = svgBar.selectAll(".group")
             .selectAll("rect")
             .data(country => subgroups.map(subgroup => {
                 const subgroupData = groupedData.find(d => d.Country === country && d.Total === subgroup) || {};
                 return { subgroup, country, Life_expectancy: subgroupData.Life_expectancy || 0 };
-            }))
-            .enter()
+            }), d => d.subgroup);
+
+        bars.enter()
             .append("rect")
             .attr("x", d => subgroupScale(d.subgroup))
-            .attr("y", d => y(d.Life_expectancy))
+            .attr("y", chartHeight - margin.bottom)
             .attr("width", subgroupScale.bandwidth())
-            .attr("height", d => chartHeight - margin.bottom - y(d.Life_expectancy))
-            .attr("class", d => `bar bar-${d.subgroup}`)
+            .attr("height", 0)
+            .attr("class", d => `bar bar-${d.subgroup} bar-${d.country}`)
             .on("mouseover", function (event, d) {
-                tooltipBar.transition().duration(200).style("opacity", .9);
+                // Show tooltip
+                tooltipBar.transition().duration(200).style("opacity", 0.9);
                 tooltipBar.html(`${d.country} (${d.subgroup}): ${d.Life_expectancy.toFixed(2)} years`)
                     .style("left", (event.pageX + 5) + "px")
                     .style("top", (event.pageY - 28) + "px");
+        
+                // Dim all other bars by reducing opacity
+                svgBar.selectAll(".bar").style("opacity", 0.4);
+        
+                // Highlight the hovered bar
+                d3.select(this).style("opacity", 1);
             })
             .on("mouseout", function () {
+                // Hide tooltip
                 tooltipBar.transition().duration(200).style("opacity", 0);
-            });
+        
+                // Reset all bars to full opacity
+                svgBar.selectAll(".bar").style("opacity", 1);
+            })
+            .merge(bars)
+            .transition()
+            .duration(transitionDuration)
+            .attr("x", d => subgroupScale(d.subgroup))
+            .attr("y", d => y(d.Life_expectancy))
+            .attr("height", d => chartHeight - margin.bottom - y(d.Life_expectancy));
+
+        bars.exit().remove();
     } else {
+        // Remove male and female bars
+        svgBar.selectAll(".bar-male, .bar-female").remove();
+
+        // Total life expectancy bars
         const totalData = filteredData.filter(d => d.Total === "total");
-    
+
         totalData.sort((a, b) => b.Life_expectancy - a.Life_expectancy);
-    
+
+        // Update scales
         x.domain(totalData.map(d => d.Country));
-    
         const minValue = d3.min(totalData, d => d.Life_expectancy);
         const maxValue = d3.max(totalData, d => d.Life_expectancy);
-        y.domain([Math.max(minValue - 4, 0), maxValue]);
-    
-        svgBar.selectAll(".bar")
-            .data(totalData)
-            .enter()
+        y.domain([Math.max(minValue - 4, 0), maxValue + 0.5]);
+
+        // Bind data to bars
+        const bars = svgBar.selectAll(".bar")
+            .data(totalData, d => d.Country);
+
+        bars.enter()
             .append("rect")
+            .attr("class", "bar bar-total")
             .attr("x", d => x(d.Country))
-            .attr("y", d => y(d.Life_expectancy))
+            .attr("y", chartHeight - margin.bottom)
             .attr("width", x.bandwidth())
-            .attr("height", d => chartHeight - margin.bottom - y(d.Life_expectancy))
-            .attr("class", "bar")
+            .attr("height", 0)
             .on("mouseover", function (event, d) {
                 tooltipBar.transition().duration(200).style("opacity", .9);
                 tooltipBar.html(`${d.Country}: ${d.Life_expectancy.toFixed(2)} years`)
@@ -266,42 +309,44 @@ function renderBarChart(year) {
             })
             .on("mouseout", function () {
                 tooltipBar.transition().duration(200).style("opacity", 0);
-            });
-    }
-    
+            })
+            .merge(bars)
+            .transition()
+            .duration(transitionDuration)
+            .attr("x", d => x(d.Country))
+            .attr("y", d => y(d.Life_expectancy))
+            .attr("width", x.bandwidth())
+            .attr("height", d => chartHeight - margin.bottom - y(d.Life_expectancy));
 
+        bars.exit().remove();
+    }
+
+    // Update axes
+    svgBar.select(".x-axis").remove();
     svgBar.append("g")
         .attr("class", "x-axis")
         .attr("transform", `translate(0,${chartHeight - margin.bottom})`)
         .call(d3.axisBottom(x));
 
-    svgBar.append("text")
-        .attr("class", "x-axis-label")
-        .attr("x", chartWidth / 2)
-        .attr("y", chartHeight - margin.bottom + 40)
-        .style("text-anchor", "middle")
-        .text("Countries");
-
+    svgBar.select(".y-axis").remove();
     svgBar.append("g")
         .attr("class", "y-axis")
         .attr("transform", `translate(${margin.left},0)`)
         .call(d3.axisLeft(y));
 
+    // Update chart title
+    svgBar.select(".chart-title").remove();
     svgBar.append("text")
-        .attr("class", "y-axis-label")
-        .attr("transform", "rotate(-90)")
-        .attr("x", -chartHeight / 2)
-        .attr("y", margin.left - 50)
-        .style("text-anchor", "middle")
-        .text("Life Expectancy (Years)");
-
-    svgBar.append("text")
+        .attr("class", "chart-title")
         .attr("x", chartWidth / 2)
         .attr("y", margin.top - 10)
         .style("text-anchor", "middle")
         .text(showGender ? `Male and Female Life Expectancy in ${year}` : `Top 10 Countries by Life Expectancy in ${year}`);
 }
 
+
+
+// Gender toggle change event
 d3.select("#gender-toggle").on("change", function () {
     const selectedYear = +d3.select("#year-bar").property("value");
     renderBarChart(selectedYear);
