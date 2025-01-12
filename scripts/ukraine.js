@@ -81,10 +81,13 @@ d3.csv("datasets/life-expectancy-population/EU-life-expectancy-population-(1960-
         .style("pointer-events", "none")
         .style("display", "none");
 
+    const labels = {};
+
     for (let [country, totalData] of dataByCountryAndTotal) {
         for (let [total, values] of totalData) {
             if (total === "total") continue;
             const lineStyle = total === "female" ? "dashed" : "solid";
+
             svg.append("path")
                 .datum(values.sort((a, b) => a.Year - b.Year))
                 .attr("class", `line ${total.toLowerCase()}`)
@@ -93,6 +96,19 @@ d3.csv("datasets/life-expectancy-population/EU-life-expectancy-population-(1960-
                 .attr("stroke-width", total === "female" ? 3 : 2)
                 .attr("stroke-dasharray", lineStyle === "dashed" ? "5,5" : "0")
                 .attr("d", line);
+
+            const lastValue = values[values.length - 1];
+            const label = svg.append("text")
+                .datum(lastValue)
+                .attr("class", `label ${total.toLowerCase()}`)
+                .attr("x", xScale(lastValue.Year) + 5)
+                .attr("y", yScale(lastValue.Life_expectancy))
+                .attr("fill", countryColors[country](total.toLowerCase()))
+                .text(`${country} (${total.toUpperCase()})`)
+                .style("font-size", "12px")
+                .style("display", "none");
+
+            labels[`${total.toLowerCase()}_${country.toLowerCase().replace(/\s+/g, "_")}`] = label;
 
             svg.selectAll(`.dot-${country}-${total}`)
                 .data(values)
@@ -116,13 +132,6 @@ d3.csv("datasets/life-expectancy-population/EU-life-expectancy-population-(1960-
                         .style("opacity", 1);
                     d3.selectAll(`.dot.${total.toLowerCase()}`)
                         .style("opacity", 1);
-
-                    const otherCountry = country === "Russian Federation" ? "Ukraine" : "Russian Federation";
-
-                    d3.selectAll(`.line.${otherCountry.toLowerCase()}`)
-                        .style("opacity", 0.2);
-                    d3.selectAll(`.dot.${otherCountry.toLowerCase()}`)
-                        .style("opacity", 0.2);
                 })
                 .on("mousemove", event => {
                     tooltip.style("top", `${event.pageY + 10}px`)
@@ -138,33 +147,6 @@ d3.csv("datasets/life-expectancy-population/EU-life-expectancy-population-(1960-
         }
     }
 
-    const legend = svg.append("g")
-        .attr("transform", `translate(${width + 20}, 20)`);
-
-    const legendData = [
-        { country: "Russia", colors: countryColors["Russian Federation"] },
-        { country: "Ukraine", colors: countryColors["Ukraine"] }
-    ];
-
-    let i = 0;
-    legendData.forEach(({ country, colors }) => {
-        ["male", "female"].forEach((total, j) => {
-            const g = legend.append("g")
-                .attr("transform", `translate(0, ${(i + j) * 20})`);
-            g.append("rect")
-                .attr("width", 10)
-                .attr("height", 10)
-                .attr("fill", colors(total));
-            g.append("text")
-                .attr("x", 20)
-                .attr("y", 10)
-                .text(`${country} (${total.toUpperCase()})${total === 'female' ? ' (Dashed Line)' : ''}`)
-                .attr("font-size", "12px")
-                .attr("alignment-baseline", "middle");
-        });
-        i += 2;
-    });
-
     d3.selectAll("input[type=checkbox]").on("change", function () {
         const id = this.id;
         const isChecked = this.checked;
@@ -172,17 +154,33 @@ d3.csv("datasets/life-expectancy-population/EU-life-expectancy-population-(1960-
 
         d3.selectAll(`.line.${total}`).classed("hidden", !isChecked);
         d3.selectAll(`.dot.${total}`).classed("hidden", !isChecked);
+
+        for (let [key, label] of Object.entries(labels)) {
+            if (key.startsWith(total)) {
+                label.style("display", isChecked ? "block" : "none");
+            }
+        }
     });
 
-    d3.selectAll(".line, .dot").classed("hidden", true);
+    d3.selectAll(".line, .dot, .label").classed("hidden", true);
 
     if (d3.select("#maleCheckbox").property("checked")) {
         d3.selectAll(".line.male").classed("hidden", false);
         d3.selectAll(".dot.male").classed("hidden", false);
+        for (let [key, label] of Object.entries(labels)) {
+            if (key.startsWith("male")) {
+                label.style("display", "block");
+            }
+        }
     }
     if (d3.select("#femaleCheckbox").property("checked")) {
         d3.selectAll(".line.female").classed("hidden", false);
         d3.selectAll(".dot.female").classed("hidden", false);
+        for (let [key, label] of Object.entries(labels)) {
+            if (key.startsWith("female")) {
+                label.style("display", "block");
+            }
+        }
     }
 }).catch(error => {
     console.error("Error loading the CSV file:", error);
