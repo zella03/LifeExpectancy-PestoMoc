@@ -130,7 +130,7 @@ function renderMap(geoData, year) {
     const legend = svgMap.selectAll(".legend").data([0]).enter()
         .append("g")
         .attr("class", "legend")
-        .attr("transform", `translate(${mapWidth - 120}, ${mapHeight - legendHeight * 4})`);
+        .attr("transform", `translate(${mapWidth-100}, ${mapHeight - legendHeight * 3})`);
 
     const legendItemWidth = legendWidth / numBuckets;
 
